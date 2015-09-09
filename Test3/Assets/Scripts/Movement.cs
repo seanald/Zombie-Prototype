@@ -10,6 +10,8 @@ public class Movement : MonoBehaviour {
 	private bool walking = false;
 	private bool kicking = false;
 
+	private string currentDirection = "right";
+
 	void Start ()
 	{
 		rb = GetComponent<Rigidbody>();
@@ -25,6 +27,14 @@ public class Movement : MonoBehaviour {
 		}
 		else if (Input.GetKey ("right") || Input.GetKey ("left") || Input.GetKey ("up") || Input.GetKey ("down"))
 		{
+			if (Input.GetKey ("right"))
+			{
+				this.changeDirection("right");
+			}
+			if (Input.GetKey ("left"))
+			{
+				this.changeDirection("left");
+			}
 			walking = true;
 			animator.SetBool ("walking", walking);
 			float moveHorizontal = Input.GetAxis ("Horizontal");
@@ -34,6 +44,7 @@ public class Movement : MonoBehaviour {
 			
 			rb.AddForce (movement * speed);
 		}
+
 		else
 		{
 			walking = false;
@@ -48,6 +59,18 @@ public class Movement : MonoBehaviour {
 	//--------------------------------------
 	void changeDirection(string direction)
 	{
-		
+		if (currentDirection != direction)
+		{
+			if (direction == "right")
+			{
+				transform.Rotate (0, 180, 0);
+				currentDirection = "right";
+			}
+			else if (direction == "left")
+			{
+				transform.Rotate (0, 180, 0);
+				currentDirection = "left";
+			}
+		}
 	}
 }
