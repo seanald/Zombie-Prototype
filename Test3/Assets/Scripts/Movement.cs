@@ -68,7 +68,7 @@ public class Movement : MonoBehaviour {
 			}
 			else if (direction == "left")
 			{
-				transform.Rotate (0, 180, 0);
+				transform.Rotate (0, -180, 0);
 				currentDirection = "left";
 			}
 		}

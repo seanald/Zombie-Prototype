@@ -10,14 +10,15 @@ public class Follow : MonoBehaviour {
 	{
 		player = GameObject.FindWithTag("Player").transform; //target the player
 	}
-	
-	
-	void Update () {
-		if (Vector3.Distance (player.transform.position, transform.position) > 1.5) {
+		
+	void FixedUpdate () 
+	{
+		if (Vector3.Distance (player.transform.position, transform.position) > 1.5) 
+		{
 			float step = moveSpeed * Time.deltaTime;
 			//move towards the player
 			this.transform.position = Vector3.MoveTowards (transform.position, player.position, step);
 		}
-		
+		this.transform.rotation = this.player.rotation;
 	}
 }
