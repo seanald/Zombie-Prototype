@@ -24,19 +24,26 @@ public class Movement : MonoBehaviour {
 	{
 		CharacterController controller = GetComponent<CharacterController>();
 
-		if (controller.isGrounded) {
+		if (controller.isGrounded) 
+		{
 			float moveHorizontal = Input.GetAxis ("Horizontal");
 			float moveVertical = Input.GetAxis ("Vertical");
 
-			if (moveHorizontal != 0 || moveVertical != 0) {
+			if (moveHorizontal != 0 || moveVertical != 0) 
+			{
 				walking = true;
-			} else {
+			} else 
+			{
 				walking = false;
 			}
 
 			if (walking) {
-				moveDirection = new Vector3 (moveHorizontal * 0.5f, 0.0f, moveVertical);
+				moveDirection = new Vector3 (moveHorizontal, 0.0f, moveVertical);
 				moveDirection *= speed;
+			}
+			else
+			{
+				moveDirection = Vector3.zero;
 			}
 			if (Input.GetKey (KeyCode.Space)) {
 				moveDirection.y = jumpSpeed;
