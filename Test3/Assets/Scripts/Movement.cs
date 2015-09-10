@@ -11,17 +11,16 @@ public class Movement : MonoBehaviour
 	private bool walking = false;
 	private bool kicking = false;
 	private Vector3 moveDirection = Vector3.zero;
+	private CharacterController controller;
 
 	void Start()
 	{
 		this.animator = this.GetComponentInChildren<Animator>();
+		this.controller = this.GetComponent<CharacterController>();
 	}
 
 	void FixedUpdate()
 	{
-
-		CharacterController controller = GetComponent<CharacterController>();
-
 		if (this.isActivePlayer)
 		{
 			if (controller.isGrounded)
@@ -57,6 +56,10 @@ public class Movement : MonoBehaviour
 				walking = false;
 			}
 		}
+		else
+		{
+			this.moveDirection = Vector3.zero;
+		}
 
 		moveDirection.y -= 20 * Time.deltaTime;
 		controller.Move(moveDirection * Time.deltaTime);
@@ -75,5 +78,10 @@ public class Movement : MonoBehaviour
 			animator.SetBool("kicking", kicking);
 			animator.SetBool("walking", walking);
 		}
+	}
+
+	public void setActivePlayer(bool active)
+	{
+		this.isActivePlayer = active;
 	}
 }
