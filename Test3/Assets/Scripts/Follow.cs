@@ -8,7 +8,7 @@ public class Follow : MonoBehaviour {
 	
 	void Start()
 	{
-		player = GameObject.FindWithTag("Player").transform; //target the player
+		player = this.transform; //target the player
 	}
 		
 	void FixedUpdate () 

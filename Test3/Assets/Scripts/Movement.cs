@@ -4,13 +4,15 @@ using System.Collections;
 public class Movement : MonoBehaviour {
 	
 	public float speed;
-	private Rigidbody rb;
+	public float jumpSpeed = 8.0f;
 
-	Animator animator;
+	private Rigidbody rb;
+	private Animator animator;
 	private bool walking = false;
 	private bool kicking = false;
 
-	private string currentDirection = "right";
+
+	private Vector3 moveDirection = Vector3.zero;
 
 	void Start ()
 	{
@@ -20,57 +22,42 @@ public class Movement : MonoBehaviour {
 	
 	void FixedUpdate ()
 	{
-		if (Input.GetKey (KeyCode.Space))
-		{
-			kicking = true;
-			animator.SetBool ("kicking", kicking);
-		}
-		else if (Input.GetKey ("right") || Input.GetKey ("left") || Input.GetKey ("up") || Input.GetKey ("down"))
-		{
-			if (Input.GetKey ("right"))
-			{
-				this.changeDirection("right");
-			}
-			if (Input.GetKey ("left"))
-			{
-				this.changeDirection("left");
-			}
-			walking = true;
-			animator.SetBool ("walking", walking);
+		CharacterController controller = GetComponent<CharacterController>();
+
+		if (controller.isGrounded) {
 			float moveHorizontal = Input.GetAxis ("Horizontal");
 			float moveVertical = Input.GetAxis ("Vertical");
-			
-			Vector3 movement = new Vector3 (moveHorizontal, 0.0f, moveVertical);
-			
-			rb.AddForce (movement * speed);
-		}
 
+			if (moveHorizontal != 0 || moveVertical != 0) {
+				walking = true;
+			} else {
+				walking = false;
+			}
+
+			if (walking) {
+				moveDirection = new Vector3 (moveHorizontal * 0.5f, 0.0f, moveVertical);
+				moveDirection *= speed;
+			}
+			if (Input.GetKey (KeyCode.Space)) {
+				moveDirection.y = jumpSpeed;
+			}
+		} else {
+			walking = false;
+		}
+		animator.SetBool ("walking", walking);
+
+		moveDirection.y -= 20 * Time.deltaTime;
+		controller.Move(moveDirection * Time.deltaTime);
+
+		if (Input.GetKey(KeyCode.X))
+		{
+			kicking = true;
+		}
 		else
 		{
-			walking = false;
-			animator.SetBool ("kicking", false);
-			animator.SetBool ("walking", walking);
+			kicking = false;
 		}
+		animator.SetBool ("kicking", kicking);
 
-	}
-
-	//--------------------------------------
-	// Flip player sprite for left/right walking
-	//--------------------------------------
-	void changeDirection(string direction)
-	{
-		if (currentDirection != direction)
-		{
-			if (direction == "right")
-			{
-				transform.Rotate (0, 180, 0);
-				currentDirection = "right";
-			}
-			else if (direction == "left")
-			{
-				transform.Rotate (0, -180, 0);
-				currentDirection = "left";
-			}
-		}
 	}
 }
