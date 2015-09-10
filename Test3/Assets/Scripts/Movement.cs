@@ -1,57 +1,62 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Movement : MonoBehaviour {
-	
+public class Movement : MonoBehaviour
+{
+
 	public float speed;
 	public float jumpSpeed = 8.0f;
-
-	private Rigidbody rb;
+	public bool isActivePlayer;
 	private Animator animator;
 	private bool walking = false;
 	private bool kicking = false;
-
-
 	private Vector3 moveDirection = Vector3.zero;
 
-	void Start ()
+	void Start()
 	{
-		rb = GetComponent<Rigidbody>();
-		animator = this.GetComponentInChildren<Animator>();
+		this.animator = this.GetComponentInChildren<Animator>();
 	}
-	
-	void FixedUpdate ()
+
+	void FixedUpdate()
 	{
+
 		CharacterController controller = GetComponent<CharacterController>();
 
-		if (controller.isGrounded) 
+		if (this.isActivePlayer)
 		{
-			float moveHorizontal = Input.GetAxis ("Horizontal");
-			float moveVertical = Input.GetAxis ("Vertical");
-
-			if (moveHorizontal != 0 || moveVertical != 0) 
+			if (controller.isGrounded)
 			{
-				walking = true;
-			} else 
-			{
-				walking = false;
-			}
+				float moveHorizontal = Input.GetAxis("Horizontal");
+				float moveVertical = Input.GetAxis("Vertical");
 
-			if (walking) {
-				moveDirection = new Vector3 (moveHorizontal, 0.0f, moveVertical);
-				moveDirection *= speed;
+				if (moveHorizontal != 0 || moveVertical != 0)
+				{
+					walking = true;
+				}
+				else
+				{
+					walking = false;
+				}
+
+				if (walking)
+				{
+					moveDirection = new Vector3(moveHorizontal, 0.0f, moveVertical);
+					moveDirection *= speed;
+				}
+				else
+				{
+					moveDirection = Vector3.zero;
+				}
+				if (Input.GetKey(KeyCode.Space))
+				{
+					moveDirection.y = jumpSpeed;
+				}
 			}
 			else
 			{
-				moveDirection = Vector3.zero;
+				walking = false;
 			}
-			if (Input.GetKey (KeyCode.Space)) {
-				moveDirection.y = jumpSpeed;
-			}
-		} else {
-			walking = false;
 		}
-		animator.SetBool ("walking", walking);
 
 		moveDirection.y -= 20 * Time.deltaTime;
 		controller.Move(moveDirection * Time.deltaTime);
@@ -64,7 +69,11 @@ public class Movement : MonoBehaviour {
 		{
 			kicking = false;
 		}
-		animator.SetBool ("kicking", kicking);
 
+		if (this.animator)
+		{
+			animator.SetBool("kicking", kicking);
+			animator.SetBool("walking", walking);
+		}
 	}
 }

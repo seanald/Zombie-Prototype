@@ -1,11 +1,10 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class PlayerCamera : MonoBehaviour {
-
+public class PlayerCamera : MonoBehaviour
+{
 	public float LockedY = 0;
 	public float LockedZ = 0;
-	
 	public GameObject player;
 	public float dampTime = 0.15f;
 	private Vector3 velocity = Vector3.zero;

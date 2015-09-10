@@ -130,6 +130,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 3
   jumpSpeed: 8
+  isActivePlayer: 1
 --- !u!136 &500166762
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -304,7 +305,7 @@ Animator:
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 89db926ab123d4f4dbfc4f7337f78896, type: 2}
   m_CullingMode: 0
-  m_UpdateMode: 0
+  m_UpdateMode: 1
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_WarningMessage: 
@@ -592,12 +593,13 @@ GameObject:
   m_Component:
   - 4: {fileID: 1730396575}
   - 212: {fileID: 1730396574}
-  - 54: {fileID: 1730396576}
   - 136: {fileID: 1730396577}
   - 114: {fileID: 1730396578}
+  - 143: {fileID: 1730396576}
+  - 114: {fileID: 1730396579}
   m_Layer: 0
   m_Name: Ghost
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -635,26 +637,28 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1730396573}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -.795000017, y: 0, z: 0}
+  m_LocalPosition: {x: -.795000017, y: .5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
---- !u!54 &1730396576
-Rigidbody:
+--- !u!143 &1730396576
+CharacterController:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1730396573}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
   serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 112
-  m_CollisionDetection: 0
+  m_Height: 1.24000001
+  m_Radius: .319999993
+  m_SlopeLimit: 45
+  m_StepOffset: .300000012
+  m_SkinWidth: .0799999982
+  m_MinMoveDistance: .00100000005
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!136 &1730396577
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -667,7 +671,7 @@ CapsuleCollider:
   m_Radius: .319999993
   m_Height: 1.24000001
   m_Direction: 1
-  m_Center: {x: 0, y: .620000005, z: 0}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &1730396578
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -681,6 +685,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 500166765}
   moveSpeed: 3
+--- !u!114 &1730396579
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1730396573}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b34becdc08d3a554d90e93bbbb62b8c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 3
+  jumpSpeed: 8
+  isActivePlayer: 0
 --- !u!1 &2004337198
 GameObject:
   m_ObjectHideFlags: 0
