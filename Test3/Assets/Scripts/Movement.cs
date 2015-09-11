@@ -50,6 +50,15 @@ public class Movement : MonoBehaviour
 				{
 					moveDirection.y = jumpSpeed;
 				}
+				if (Input.GetKey(KeyCode.X))
+				{
+					kicking = true;
+				}
+				else
+				{
+					kicking = false;
+				}
+
 			}
 			else
 			{
@@ -63,15 +72,6 @@ public class Movement : MonoBehaviour
 
 		moveDirection.y -= 20 * Time.deltaTime;
 		controller.Move(moveDirection * Time.deltaTime);
-
-		if (Input.GetKey(KeyCode.X))
-		{
-			kicking = true;
-		}
-		else
-		{
-			kicking = false;
-		}
 
 		if (this.animator)
 		{

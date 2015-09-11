@@ -16,7 +16,7 @@ public class Enemy : MonoBehaviour {
 	{
 		if (player)
 		{
-			if (Vector3.Distance(player.transform.position, transform.position) < 10)
+			if (Vector3.Distance(player.transform.position, transform.position) < 10 && Vector3.Distance(player.transform.position, transform.position) > 1.5)
 			{
 				float step = moveSpeed * Time.deltaTime;
 				//move towards the player
