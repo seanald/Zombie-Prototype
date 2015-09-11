@@ -52,7 +52,7 @@
      <Compile Include="Assets\Scripts\PlayerAnimations.cs" />
      <Compile Include="Assets\Scripts\PlayerCamera.cs" />
      <Compile Include="Assets\Scripts\PlayerSwitch.cs" />
-     <None Include="Assets\Textures\$Sprites-Bumped Diffuse.shader" />
+     <None Include="Assets\Textures\Shadow and Diffuse.shader" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
