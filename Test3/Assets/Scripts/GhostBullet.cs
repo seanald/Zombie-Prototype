@@ -12,10 +12,15 @@ public class GhostBullet : MonoBehaviour {
 		{
 			if (Input.GetKey(KeyCode.X))
 			{
-				this.findClosestEnemy().GetComponentInChildren<Enemy>().moveSpeed = -3;
+				this.mytarget = this.findClosestEnemy();
+				this.mytarget.GetComponentInChildren<Enemy>().moveSpeed = -3;
+				LineRenderer lineRenderer = this.GetComponentInChildren<LineRenderer>();
+				lineRenderer.SetPosition(0, this.transform.position);
+				lineRenderer.SetPosition(1, this.mytarget.transform.position);
 			}
 		}
 	}
+
 	private GameObject findClosestEnemy()
 	{
 		GameObject[] enemies;

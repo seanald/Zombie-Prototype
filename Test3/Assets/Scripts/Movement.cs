@@ -9,7 +9,6 @@ public class Movement : MonoBehaviour
 	public bool isActivePlayer;
 	private Animator animator;
 	private bool walking = false;
-	private bool kicking = false;
 	private Vector3 moveDirection = Vector3.zero;
 	private CharacterController controller;
 
@@ -50,14 +49,6 @@ public class Movement : MonoBehaviour
 				{
 					moveDirection.y = jumpSpeed;
 				}
-				if (Input.GetKey(KeyCode.X))
-				{
-					kicking = true;
-				}
-				else
-				{
-					kicking = false;
-				}
 
 			}
 			else
@@ -75,7 +66,6 @@ public class Movement : MonoBehaviour
 
 		if (this.animator)
 		{
-			animator.SetBool("kicking", kicking);
 			animator.SetBool("walking", walking);
 		}
 	}
