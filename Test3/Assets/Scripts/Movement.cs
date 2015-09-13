@@ -20,21 +20,22 @@ public class Movement : MonoBehaviour
 
 	void FixedUpdate()
 	{
+		float moveHorizontal = Input.GetAxis("Horizontal");
+		float moveVertical = Input.GetAxis("Vertical");
+		
+		if (moveHorizontal != 0 || moveVertical != 0)
+		{
+			walking = true;
+		}
+		else
+		{
+			walking = false;
+		}
+
 		if (this.isActivePlayer)
 		{
 			if (controller.isGrounded)
 			{
-				float moveHorizontal = Input.GetAxis("Horizontal");
-				float moveVertical = Input.GetAxis("Vertical");
-
-				if (moveHorizontal != 0 || moveVertical != 0)
-				{
-					walking = true;
-				}
-				else
-				{
-					walking = false;
-				}
 
 				if (walking)
 				{
