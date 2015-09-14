@@ -392,6 +392,18 @@ CanvasRenderer:
 GameObject:
   m_PrefabParentObject: {fileID: 153630, guid: 6a69ff46567084716a9129ac4a24caf1, type: 2}
   m_PrefabInternal: {fileID: 1274664515}
+--- !u!114 &500166760
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 500166759}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b7a91e75563b410f887b79a2715c0ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 4
 --- !u!4 &500166765 stripped
 Transform:
   m_PrefabParentObject: {fileID: 489378, guid: 6a69ff46567084716a9129ac4a24caf1, type: 2}
@@ -511,7 +523,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 577623356}
   m_LocalRotation: {x: .258819073, y: 0, z: 0, w: .965925813}
-  m_LocalPosition: {x: 0, y: 5.26999998, z: -7.46999979}
+  m_LocalPosition: {x: -19.2000008, y: 5.26999998, z: -7.46999979}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1109257885}
@@ -708,6 +720,19 @@ LineRenderer:
       serializedVersion: 2
       rgba: 4290164406
   m_UseWorldSpace: 1
+--- !u!114 &771671913
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 771671911}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca8d9d9f8036c4056bf5f003e1e1db16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  plasmaSlider: {fileID: 64778469}
+  maxPlasma: 100
 --- !u!114 &771671917
 MonoBehaviour:
   m_ObjectHideFlags: 0
