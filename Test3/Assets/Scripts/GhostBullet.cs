@@ -10,7 +10,11 @@ public class GhostBullet : MonoBehaviour {
 	{
 		if (GetComponent<Movement>().isActivePlayer)
 		{
-			if (Input.GetKey(KeyCode.X) && this.GetComponentInChildren<Plasma>().getCurPlasma() > 0)
+			if(this.GetComponentInChildren<Plasma>().getCurPlasma() == 0)
+			{
+				StartCoroutine("Recovery");
+			}
+			else if (Input.GetKey(KeyCode.X) && this.GetComponentInChildren<Plasma>().getCurPlasma() > 0)
 			{
 				this.mytarget = this.findClosestEnemy();
 				this.mytarget.GetComponentInChildren<Enemy>().moveSpeed = -3;
@@ -41,5 +45,13 @@ public class GhostBullet : MonoBehaviour {
 			}
 		}
 		return closest;
+	}
+
+	IEnumerator Recovery ()
+	{
+		while(this.GetComponentInChildren<Plasma>().getCurPlasma() > this.GetComponentInChildren<Plasma>().maxPlasma)
+		{	
+			yield return null;
+		}
 	}
 }

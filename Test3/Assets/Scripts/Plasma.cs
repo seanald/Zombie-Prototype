@@ -19,11 +19,6 @@ public class Plasma : MonoBehaviour {
 	void Update () 
 	{
 		this.plasmaSlider.value = this.curPlasma;
-		if (this.curPlasma == 0)
-		{
-
-		}
-
 	}
 
 	private void restorePlasma()
