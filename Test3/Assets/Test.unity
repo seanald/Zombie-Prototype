@@ -350,6 +350,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 4
+  healthSlider: {fileID: 1459251922}
 --- !u!4 &500166765 stripped
 Transform:
   m_PrefabParentObject: {fileID: 489378, guid: 6a69ff46567084716a9129ac4a24caf1, type: 2}
