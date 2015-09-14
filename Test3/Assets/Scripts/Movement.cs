@@ -6,8 +6,6 @@ public class Movement : MonoBehaviour
 
 	public float speed;
 	public float jumpSpeed = 8.0f;
-	private float distance;
-	private float maxdistance = .5f;
 	public bool isActivePlayer;
 	private Animator animator;
 	private bool walking = false;
