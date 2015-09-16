@@ -8,8 +8,7 @@ public class GhostBullet : MonoBehaviour {
 	
 	void Update () 
 	{
-		if (GetComponent<Movement>().isActivePlayer)
-		{
+
 			if(this.GetComponentInChildren<Plasma>().getCurPlasma() == 0)
 			{
 				StartCoroutine("Recovery");
@@ -23,7 +22,7 @@ public class GhostBullet : MonoBehaviour {
 				lineRenderer.SetPosition(1, this.mytarget.transform.position);
 				this.GetComponentInChildren<Plasma>().usePlasma(1);
 			}
-		}
+
 	}
 
 	private GameObject findClosestEnemy()

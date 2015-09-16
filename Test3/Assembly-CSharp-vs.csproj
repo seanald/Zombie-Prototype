@@ -48,9 +48,12 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\Enemy\Enemy.cs" />
      <Compile Include="Assets\Scripts\Player\Follow.cs" />
+     <Compile Include="Assets\Scripts\Player\General\GhostModel.cs" />
+     <Compile Include="Assets\Scripts\Player\General\PlayerModel.cs" />
+     <Compile Include="Assets\Scripts\Player\General\ZombieModel.cs" />
      <Compile Include="Assets\Scripts\Player\GhostBullet.cs" />
      <Compile Include="Assets\Scripts\Player\Health.cs" />
-     <Compile Include="Assets\Scripts\Player\Movement.cs" />
+     <Compile Include="Assets\Scripts\Player\Movement\PlayerWalking.cs" />
      <Compile Include="Assets\Scripts\Player\Plasma.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerAnimations.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerSwitch.cs" />

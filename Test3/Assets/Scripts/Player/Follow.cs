@@ -8,8 +8,6 @@ public class Follow : MonoBehaviour
 		
 	void FixedUpdate()
 	{
-		if (!GetComponent<Movement>().isActivePlayer)
-		{
 			if (Vector3.Distance(player.transform.position, transform.position) > 1.5)
 			{
 				float step = moveSpeed * Time.deltaTime;
@@ -17,6 +15,5 @@ public class Follow : MonoBehaviour
 				this.transform.position = Vector3.MoveTowards(transform.position, player.position, step);
 			}
 			this.transform.rotation = this.player.rotation;
-		}
 	}
 }

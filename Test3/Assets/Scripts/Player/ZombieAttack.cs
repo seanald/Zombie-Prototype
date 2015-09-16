@@ -9,9 +9,7 @@ public class ZombieAttack : MonoBehaviour {
 	
 	// Use this for initialization
 	void FixedUpdate () {
-		
-		if(this.GetComponent<Movement>().isActivePlayer)
-		{
+
 			if (Input.GetKey(KeyCode.X))
 			{
 				
@@ -32,7 +30,7 @@ public class ZombieAttack : MonoBehaviour {
 				}
 				
 			}
-		}
+
 	}
 	
 	// Update is called once per frame
