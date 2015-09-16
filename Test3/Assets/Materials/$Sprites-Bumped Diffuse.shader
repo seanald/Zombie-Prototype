@@ -1,4 +1,4 @@
-﻿Shader "Sprites/Bumped Diffuse with Shadows"
+Shader "Sprites/Bumped Diffuse with Shadows"
 {
 	Properties
 	{
@@ -6,7 +6,7 @@
 		_BumpMap ("Normalmap", 2D) = "bump" {}
 		_Color ("Tint", Color) = (1,1,1,1)
 		[MaterialToggle] PixelSnap ("Pixel snap", Float) = 0
-		_Cutoff ("Alpha Cutoff", Range (0,1)) = 0.5
+				_Cutoff ("Alpha Cutoff", Range (0,1)) = 0.5
 
 	}
 
