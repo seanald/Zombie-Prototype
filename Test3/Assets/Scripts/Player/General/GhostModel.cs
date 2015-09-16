@@ -1,15 +1,17 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class GhostModel : MonoBehaviour {
+public class GhostModel : MonoBehaviour
+{
+	public int plasma;
 
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
+	public int Plasma
+	{
+		get {
+			return plasma;
+		}
+		set {
+			plasma = value;
+		}
 	}
 }

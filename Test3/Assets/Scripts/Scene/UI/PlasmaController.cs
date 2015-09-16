@@ -2,17 +2,21 @@
 using System.Collections;
 using UnityEngine.UI;
 
-public class Plasma : MonoBehaviour {
+public class PlasmaController : MonoBehaviour {
 
 	public Slider plasmaSlider;
-	public int maxPlasma;
+	public GhostModel ghostModel;
 
+	private int maxPlasma;
 	private int curPlasma;
 
 	void Start()
 	{
+		this.MaxPlasma = this.ghostModel.Plasma;
+
 		this.plasmaSlider.maxValue = this.maxPlasma;
-		this.curPlasma = this.maxPlasma;
+		this.CurPlasma = this.MaxPlasma;
+
 		InvokeRepeating("restorePlasma", 0, 0.2f);
 	}
 	// Update is called once per frame
@@ -26,10 +30,6 @@ public class Plasma : MonoBehaviour {
 		curPlasma++;
 	}
 
-	void Example() {
-		InvokeRepeating("restorePlasma", 2, 1);
-	}
-
 	public void usePlasma(int plasma)
 	{
 		if (this.curPlasma > 0)
@@ -38,8 +38,23 @@ public class Plasma : MonoBehaviour {
 		}
 	}
 
-	public int getCurPlasma()
+	public int MaxPlasma
 	{
-		return this.curPlasma;
+		get {
+			return maxPlasma;
+		}
+		set {
+			maxPlasma = value;
+		}
+	}
+
+	public int CurPlasma
+	{
+		get {
+			return curPlasma;
+		}
+		set {
+			curPlasma = value;
+		}
 	}
 }

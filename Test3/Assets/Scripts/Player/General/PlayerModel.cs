@@ -3,13 +3,12 @@ using System.Collections;
 
 // Script for holding the general character controller information
 public class PlayerModel : MonoBehaviour {
-
-	public int health;
+	
 	public float walkSpeed;
 	public bool isActivePlayer;
 	public Animator animator;
-	
-	
+	public GameObject followPlayerGameObject;
+		
 	public Animator Animator
 	{
 		get {
@@ -17,16 +16,6 @@ public class PlayerModel : MonoBehaviour {
 		}
 		set {
 			animator = value;
-		}
-	}
-	
-	public int Health
-	{
-		get {
-			return health;
-		}
-		set {
-			health = value;
 		}
 	}
 
@@ -47,6 +36,16 @@ public class PlayerModel : MonoBehaviour {
 		}
 		set {
 			isActivePlayer = value;
+		}
+	}
+
+	public GameObject FollowPlayerGameObject
+	{
+		get {
+			return followPlayerGameObject;
+		}
+		set {
+			followPlayerGameObject = value;
 		}
 	}
 }

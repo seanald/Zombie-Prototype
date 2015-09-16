@@ -23,7 +23,7 @@ public class PlayerWalking : MonoBehaviour
 		{
 			if (controller.isGrounded)
 			{
-				moveDirection = new Vector3(moveHorizontal, 0.0f, moveVertical);
+				moveDirection = new Vector3(moveHorizontal, -20f, moveVertical);
 				moveDirection *= this.playerModel.WalkSpeed;
 			}
 		}
