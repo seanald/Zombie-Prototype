@@ -4,12 +4,14 @@ using System.Collections;
 public class Enemy : MonoBehaviour {
 
 	public int moveSpeed;
+	public int init_health;
 
 	private Transform player;
 
 	void Update()
 	{
 		player = GameObject.Find("Zombie").transform;
+		print(init_health);
 	}
 
 	void FixedUpdate()
@@ -27,6 +29,10 @@ public class Enemy : MonoBehaviour {
 			{
 				moveSpeed = Mathf.Abs(moveSpeed);
 			}
+		}
+		if(init_health<=0)
+		{
+			Destroy(this.gameObject);
 		}
 	}
 }

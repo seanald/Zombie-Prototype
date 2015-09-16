@@ -65,6 +65,8 @@ public class Movement : MonoBehaviour
 		moveDirection.y -= 20 * Time.deltaTime;
 		controller.Move(moveDirection * Time.deltaTime);
 
+
+
 		if (this.animator)
 		{
 			animator.SetBool("walking", walking);
