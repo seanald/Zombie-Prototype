@@ -11,7 +11,7 @@ public class GhostHypnotize : MonoBehaviour {
 		if (Input.GetKey(KeyCode.X))
 		{
 			this.mytarget = this.findClosestEnemy();
-			this.mytarget.GetComponentInChildren<Enemy>().moveSpeed = -3;
+			this.mytarget.GetComponentInChildren<EnemyController>().WalkSpeed = -3;
 			LineRenderer lineRenderer = this.GetComponentInChildren<LineRenderer>();
 			lineRenderer.SetPosition(0, this.transform.position);
 			lineRenderer.SetPosition(1, this.mytarget.transform.position);

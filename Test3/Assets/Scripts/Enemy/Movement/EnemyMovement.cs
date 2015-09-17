@@ -1,38 +1,34 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Enemy : MonoBehaviour {
-
-	public int moveSpeed;
-	public int init_health;
+public class EnemyMovement : MonoBehaviour
+{
 
 	private Transform player;
+	private EnemyController enemyController;
 
-	void Update()
+	// Use this for initialization
+	void Start()
 	{
-		player = GameObject.Find("Zombie").transform;
-		print(init_health);
+		this.player = GameObject.Find("ZombieController").transform;
+		this.enemyController = this.GetComponentInParent<EnemyController>();
 	}
-
+	
 	void FixedUpdate()
 	{
 		if (player)
 		{
 			if (Vector3.Distance(player.transform.position, transform.position) < 10 && Vector3.Distance(player.transform.position, transform.position) > 1)
 			{
-				float step = moveSpeed * Time.deltaTime;
+				float step = enemyController.walkSpeed * Time.deltaTime;
 				//move towards the player
 				this.transform.position = Vector3.MoveTowards(transform.position, player.position, step);
 			}
-
+			
 			if (Vector3.Distance(player.transform.position, transform.position) > 10)
 			{
-				moveSpeed = Mathf.Abs(moveSpeed);
+				enemyController.walkSpeed = Mathf.Abs(enemyController.walkSpeed);
 			}
-		}
-		if(init_health<=0)
-		{
-			Destroy(this.gameObject);
 		}
 	}
 }
