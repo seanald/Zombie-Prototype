@@ -25,7 +25,7 @@ public class ZombieAttack : MonoBehaviour
 				if (distance < maxdistance && hit.transform.tag == "Enemy")
 				{
 					GameObject enemyhit = hit.transform.gameObject;
-					enemyhit.GetComponent<Enemy>().init_health--;
+					enemyhit.GetComponent<EnemyController>().Health--;
 				}
 			}
 				

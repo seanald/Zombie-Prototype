@@ -3,7 +3,6 @@ using System.Collections;
 
 public class ZombieAnimatorController : MonoBehaviour
 {
-	private string currentDirection = "right";
 	private Animator zombieAnimator;
 	private CharacterController controller;
 	

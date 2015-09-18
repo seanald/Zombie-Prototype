@@ -9,14 +9,13 @@ GameObject:
   m_Component:
   - 4: {fileID: 496036}
   - 143: {fileID: 14389156}
-  - 136: {fileID: 13691908}
   - 120: {fileID: 12036362}
-  - 114: {fileID: 11402142}
   - 114: {fileID: 11418614}
   - 114: {fileID: 11405400}
   - 114: {fileID: 11411052}
-  - 114: {fileID: 11426758}
-  - 114: {fileID: 11495612}
+  - 114: {fileID: 11423230}
+  - 114: {fileID: 11495404}
+  - 114: {fileID: 11474206}
   m_Layer: 8
   m_Name: GhostController
   m_TagString: Player
@@ -65,19 +64,6 @@ Transform:
   - {fileID: 452738}
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!114 &11402142
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100838}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ca8d9d9f8036c4056bf5f003e1e1db16, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  plasmaSlider: {fileID: 0}
-  maxPlasma: 100
 --- !u!114 &11405400
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -112,11 +98,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 231ea716950eca44ba881ee8abf44cbd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 4
   walkSpeed: 3
   isActivePlayer: 0
   animator: {fileID: 0}
---- !u!114 &11426758
+  followPlayerGameObject: {fileID: 0}
+--- !u!114 &11423230
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -124,10 +110,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 100838}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9b7ea5eb7311c3f4780f44ce13ce8537, type: 3}
+  m_Script: {fileID: 11500000, guid: 752fe4aa27202ab47a3de8f1c21d5f72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &11495612
+--- !u!114 &11474206
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -138,8 +124,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d62e2f610dac0c242b1117365f66cc7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
-  moveSpeed: 3
+--- !u!114 &11495404
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100838}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab55e77a8951a2542ae0647bd6a3025c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  plasmaSlider: {fileID: 0}
 --- !u!120 &12036362
 LineRenderer:
   m_ObjectHideFlags: 1
@@ -177,19 +173,6 @@ LineRenderer:
       serializedVersion: 2
       rgba: 4290164406
   m_UseWorldSpace: 1
---- !u!136 &13691908
-CapsuleCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100838}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: .319999993
-  m_Height: 1.24000001
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!143 &14389156
 CharacterController:
   m_ObjectHideFlags: 1
@@ -239,7 +222,11 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: plasmaSlider
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 100838}

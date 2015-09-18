@@ -5,14 +5,13 @@ using UnityEngine.UI;
 public class PlasmaController : MonoBehaviour {
 
 	public Slider plasmaSlider;
-	public GhostModel ghostModel;
 
 	private int maxPlasma;
 	private int curPlasma;
 
 	void Start()
 	{
-		this.MaxPlasma = this.ghostModel.Plasma;
+		this.MaxPlasma = this.GetComponentInParent<GhostModel>().Plasma;
 
 		this.plasmaSlider.maxValue = this.maxPlasma;
 		this.CurPlasma = this.MaxPlasma;

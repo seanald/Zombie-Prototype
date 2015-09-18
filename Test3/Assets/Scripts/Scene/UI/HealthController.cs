@@ -5,14 +5,13 @@ using UnityEngine.UI;
 public class HealthController : MonoBehaviour {
 	
 	public Slider healthSlider;
-	public ZombieModel zombieModel;
 
 	private int maxHealth;
 	private int curHealth;
 
 	void Start()
 	{
-		this.MaxHealth = this.zombieModel.Health;
+		this.MaxHealth = this.GetComponentInParent<ZombieModel>().Health;
 		
 		this.healthSlider.maxValue = this.MaxHealth;
 		this.CurHealth = this.MaxHealth;

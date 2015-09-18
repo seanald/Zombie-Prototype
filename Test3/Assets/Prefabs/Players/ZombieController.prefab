@@ -26,12 +26,12 @@ GameObject:
   m_Component:
   - 4: {fileID: 476260}
   - 143: {fileID: 14314016}
-  - 114: {fileID: 11464064}
-  - 114: {fileID: 11492872}
   - 114: {fileID: 11474450}
   - 114: {fileID: 11484704}
   - 114: {fileID: 11419672}
   - 114: {fileID: 11439028}
+  - 114: {fileID: 11435496}
+  - 114: {fileID: 11457380}
   m_Layer: 8
   m_Name: ZombieController
   m_TagString: Player
@@ -92,6 +92,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7adcc9cd7f904c4d9adc9972c0b7a2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &11435496
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 122526}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d62e2f610dac0c242b1117365f66cc7a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &11439028
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -103,7 +114,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac4dbf00bb442374eae852af07c1fbfb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &11464064
+--- !u!114 &11457380
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -111,9 +122,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 122526}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
+  m_Script: {fileID: 11500000, guid: 6f6d0b0ffe3b8b743816c6b8268fc80b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  healthSlider: {fileID: 0}
 --- !u!114 &11474450
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -125,10 +137,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 231ea716950eca44ba881ee8abf44cbd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 4
   walkSpeed: 3
   isActivePlayer: 1
   animator: {fileID: 9594742}
+  followPlayerGameObject: {fileID: 0}
 --- !u!114 &11484704
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -140,19 +152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 295ba68312589d644b84732b27651504, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &11492872
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 122526}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1b7a91e75563b410f887b79a2715c0ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHealth: 4
-  healthSlider: {fileID: 0}
+  health: 5
 --- !u!143 &14314016
 CharacterController:
   m_ObjectHideFlags: 1
@@ -165,7 +165,7 @@ CharacterController:
   serializedVersion: 2
   m_Height: 1.5
   m_Radius: .49000001
-  m_SlopeLimit: 45
+  m_SlopeLimit: 42.5
   m_StepOffset: 0
   m_SkinWidth: 9.99999975e-05
   m_MinMoveDistance: .00100000005
