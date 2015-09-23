@@ -420,7 +420,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 577623356}
   m_LocalRotation: {x: .258819073, y: 0, z: 0, w: .965925813}
-  m_LocalPosition: {x: -20, y: 8, z: -12.4099998}
+  m_LocalPosition: {x: -17.6000004, y: 8, z: -12.4099998}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1109257885}
@@ -440,7 +440,9 @@ MonoBehaviour:
   LockedY: 5
   LockedZ: -7
   player: {fileID: 203193520}
-  dampTime: .150000006
+  dampTime: .5
+  leftBoundaryObject: {fileID: 649768129}
+  rightBoundaryObject: {fileID: 10383076}
 --- !u!1 &624260948
 GameObject:
   m_ObjectHideFlags: 0
