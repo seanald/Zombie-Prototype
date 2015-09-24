@@ -46,20 +46,22 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\Enemy\Controllers\EnemyController.cs" />
-     <Compile Include="Assets\Scripts\Enemy\Movement\EnemyMovement.cs" />
-     <Compile Include="Assets\Scripts\Player\Actions\PlayerSwitch.cs" />
-     <Compile Include="Assets\Scripts\Player\General\GhostModel.cs" />
-     <Compile Include="Assets\Scripts\Player\General\PlayerModel.cs" />
-     <Compile Include="Assets\Scripts\Player\General\ZombieModel.cs" />
-     <Compile Include="Assets\Scripts\Player\Ghost\Attacks\GhostHypnotize.cs" />
-     <Compile Include="Assets\Scripts\Player\Movement\PlayerFollow.cs" />
-     <Compile Include="Assets\Scripts\Player\Movement\PlayerWalking.cs" />
-     <Compile Include="Assets\Scripts\Player\Zombie\Animation\ZombieAnimatorController.cs" />
-     <Compile Include="Assets\Scripts\Player\Zombie\Attacks\ZombieAttack.cs" />
-     <Compile Include="Assets\Scripts\Scene\UI\HealthController.cs" />
-     <Compile Include="Assets\Scripts\Scene\UI\PlasmaController.cs" />
-     <Compile Include="Assets\Scripts\Scene\UI\PlayerCamera.cs" />
+     <Compile Include="Assets\Scripts\Action\Enemy\Common\EnemyMovement.cs" />
+     <Compile Include="Assets\Scripts\Action\Player\Common\PlayerFollow.cs" />
+     <Compile Include="Assets\Scripts\Action\Player\Common\PlayerSwitch.cs" />
+     <Compile Include="Assets\Scripts\Action\Player\Common\PlayerWalking.cs" />
+     <Compile Include="Assets\Scripts\Action\Player\Ghost\GhostHypnotize.cs" />
+     <Compile Include="Assets\Scripts\Action\Player\Ghost\GhostPossess.cs" />
+     <Compile Include="Assets\Scripts\Action\Player\Zombie\ZombieAttack.cs" />
+     <Compile Include="Assets\Scripts\Animator\Player\ZombieAnimatorController.cs" />
+     <Compile Include="Assets\Scripts\Model\Common\Possessible.cs" />
+     <Compile Include="Assets\Scripts\Model\Enemy\EnemyController.cs" />
+     <Compile Include="Assets\Scripts\Model\Player\GhostModel.cs" />
+     <Compile Include="Assets\Scripts\Model\Player\PlayerModel.cs" />
+     <Compile Include="Assets\Scripts\Model\Player\ZombieModel.cs" />
+     <Compile Include="Assets\Scripts\Model\UI\HealthController.cs" />
+     <Compile Include="Assets\Scripts\Model\UI\PlasmaController.cs" />
+     <Compile Include="Assets\Scripts\Model\UI\PlayerCamera.cs" />
      <None Include="Assets\Materials\$Sprites-Bumped Diffuse.shader" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
