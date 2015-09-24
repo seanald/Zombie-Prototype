@@ -3,13 +3,31 @@ using System.Collections;
 
 public class Possessible : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-	
+	private GhostModel player;
+	private bool possessed;
+
+	public void getPossessed()
+	{
+
 	}
-	
-	// Update is called once per frame
-	void Update () {
-	
+
+	public GhostModel Player
+	{
+		get {
+			return player;
+		}
+		set {
+			player = value;
+		}
+	}
+
+	public bool Possessed
+	{
+		get {
+			return possessed;
+		}
+		set {
+			possessed = value;
+		}
 	}
 }

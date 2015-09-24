@@ -1,15 +1,18 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class GhostPossess : MonoBehaviour {
+public class GhostPossess : MonoBehaviour
+{
+	private PlayerModel playerModel;
 
-	// Use this for initialization
-	void Start () {
-	
+	void Update()
+	{
+		
 	}
-	
-	// Update is called once per frame
-	void Update () {
-	
+
+	// Find possessble object in radius of player
+	private void FindPossessible()
+	{
+
 	}
 }
