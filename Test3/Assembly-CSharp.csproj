@@ -46,12 +46,14 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Arkham Interactive\- Test Textures -\Standard Assets\Character Controllers\Sources\Scripts\MouseLook.cs" />
      <Compile Include="Assets\Scripts\Enemy\Controllers\EnemyController.cs" />
      <Compile Include="Assets\Scripts\Enemy\Movement\EnemyMovement.cs" />
      <Compile Include="Assets\Scripts\Player\Actions\PlayerSwitch.cs" />
      <Compile Include="Assets\Scripts\Player\General\GhostModel.cs" />
      <Compile Include="Assets\Scripts\Player\General\PlayerModel.cs" />
      <Compile Include="Assets\Scripts\Player\General\ZombieModel.cs" />
+     <Compile Include="Assets\Scripts\Player\Ghost\Animation\GhostAnimatorController.cs" />
      <Compile Include="Assets\Scripts\Player\Ghost\Attacks\GhostHypnotize.cs" />
      <Compile Include="Assets\Scripts\Player\Movement\PlayerFollow.cs" />
      <Compile Include="Assets\Scripts\Player\Movement\PlayerWalking.cs" />

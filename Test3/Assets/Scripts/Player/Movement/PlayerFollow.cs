@@ -11,7 +11,7 @@ public class PlayerFollow : MonoBehaviour
 
 	void FixedUpdate()
 	{
-		if (!this.playerModel.isActivePlayer && Vector3.Distance(this.playerModel.followPlayerGameObject.transform.position, this.transform.position) > 1.5)
+		if (!this.playerModel.isActivePlayer && Vector3.Distance(this.playerModel.followPlayerGameObject.transform.position, this.transform.position) > 100)
 		{
 			float step = this.playerModel.WalkSpeed * Time.deltaTime;
 			//move towards the player
