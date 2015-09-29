@@ -23,12 +23,12 @@ public class PlayerWalking : MonoBehaviour
 		{
 			if (controller.isGrounded)
 			{
-				moveDirection = new Vector3(moveHorizontal, -20f, moveVertical);
+				moveDirection = new Vector3(moveHorizontal, -8000f, moveVertical);
 				moveDirection *= this.playerModel.WalkSpeed;
 			}
 		}
 
-		moveDirection.y -= 20 * Time.deltaTime;
+		moveDirection.y -=  Mathf.Round(8000 * Time.deltaTime);
 		controller.Move(moveDirection * Time.deltaTime);
 	}
 
