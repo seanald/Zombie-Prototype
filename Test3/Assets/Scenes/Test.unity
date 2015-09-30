@@ -208,7 +208,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 473214, guid: a8e48af10203879478abc72b9dead563, type: 2}
       propertyPath: m_RootOrder
-      value: 3
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 13662150, guid: a8e48af10203879478abc72b9dead563, type: 2}
       propertyPath: m_Radius
@@ -226,10 +226,6 @@ Prefab:
     - {fileID: 11495988, guid: a8e48af10203879478abc72b9dead563, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: a8e48af10203879478abc72b9dead563, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &203193520 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 122526, guid: cd0680be51a520a4695e5251d7cabffd, type: 2}
-  m_PrefabInternal: {fileID: 1517812621}
 --- !u!1 &275374648 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 163486, guid: a8e48af10203879478abc72b9dead563, type: 2}
@@ -419,7 +415,7 @@ Transform:
   m_Children:
   - {fileID: 1109257885}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 3
 --- !u!114 &577623362
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -566,7 +562,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 6
 --- !u!1001 &709827281
 Prefab:
   m_ObjectHideFlags: 0
@@ -613,14 +609,10 @@ Prefab:
     - target: {fileID: 11418614, guid: d1d692c46d4c38944b61596f9b91d608, type: 2}
       propertyPath: followPlayerGameObject
       value: 
-      objectReference: {fileID: 203193520}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d1d692c46d4c38944b61596f9b91d608, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &771671911 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 100838, guid: d1d692c46d4c38944b61596f9b91d608, type: 2}
-  m_PrefabInternal: {fileID: 709827281}
 --- !u!1 &815817592
 GameObject:
   m_ObjectHideFlags: 0
@@ -999,7 +991,7 @@ Prefab:
     - target: {fileID: 11474450, guid: cd0680be51a520a4695e5251d7cabffd, type: 2}
       propertyPath: followPlayerGameObject
       value: 
-      objectReference: {fileID: 771671911}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cd0680be51a520a4695e5251d7cabffd, type: 2}
   m_IsPrefabParent: 0
