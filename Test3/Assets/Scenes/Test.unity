@@ -230,12 +230,6 @@ Prefab:
 GameObject:
   m_PrefabParentObject: {fileID: 122526, guid: cd0680be51a520a4695e5251d7cabffd, type: 2}
   m_PrefabInternal: {fileID: 1517812621}
---- !u!114 &203193524 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 11474450, guid: cd0680be51a520a4695e5251d7cabffd,
-    type: 2}
-  m_PrefabInternal: {fileID: 1517812621}
-  m_Script: {fileID: 11500000, guid: 231ea716950eca44ba881ee8abf44cbd, type: 3}
 --- !u!1 &275374648 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 163486, guid: a8e48af10203879478abc72b9dead563, type: 2}
@@ -437,9 +431,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed0a45725edddac47892041c5a26b301, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LockedY: 5
-  LockedZ: -7
-  player: {fileID: 203193520}
   dampTime: .5
   leftBoundaryObject: {fileID: 649768129}
   rightBoundaryObject: {fileID: 10383076}
@@ -630,12 +621,6 @@ Prefab:
 GameObject:
   m_PrefabParentObject: {fileID: 100838, guid: d1d692c46d4c38944b61596f9b91d608, type: 2}
   m_PrefabInternal: {fileID: 709827281}
---- !u!114 &771671914 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 11418614, guid: d1d692c46d4c38944b61596f9b91d608,
-    type: 2}
-  m_PrefabInternal: {fileID: 709827281}
-  m_Script: {fileID: 11500000, guid: 231ea716950eca44ba881ee8abf44cbd, type: 3}
 --- !u!1 &815817592
 GameObject:
   m_ObjectHideFlags: 0
@@ -838,8 +823,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fac3a32f190ce242aa06f9d9a5cb28a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  zombie: {fileID: 203193524}
-  ghost: {fileID: 771671914}
 --- !u!1 &1109257881
 GameObject:
   m_ObjectHideFlags: 0

@@ -8,6 +8,18 @@ public class PlayerModel : MonoBehaviour {
 	public bool isActivePlayer;
 	public Animator animator;
 	public GameObject followPlayerGameObject;
+
+	void LateUpdate()
+	{
+		if (this.isActivePlayer)
+		{
+			this.gameObject.tag = "ActivePlayer";
+		}
+		else
+		{
+			this.gameObject.tag = "Player";
+		}
+	}
 		
 	public Animator Animator
 	{
