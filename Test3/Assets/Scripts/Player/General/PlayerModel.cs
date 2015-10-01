@@ -4,10 +4,22 @@ using System.Collections;
 // Script for holding the general character controller information
 public class PlayerModel : MonoBehaviour {
 	
-	public float walkSpeed;
+	public int walkSpeed;
 	public bool isActivePlayer;
 	public Animator animator;
 	public GameObject followPlayerGameObject;
+
+	void LateUpdate()
+	{
+		if (this.isActivePlayer)
+		{
+			this.gameObject.tag = "ActivePlayer";
+		}
+		else
+		{
+			this.gameObject.tag = "Player";
+		}
+	}
 		
 	public Animator Animator
 	{
@@ -19,7 +31,7 @@ public class PlayerModel : MonoBehaviour {
 		}
 	}
 
-	public float WalkSpeed
+	public int WalkSpeed
 	{
 		get {
 			return walkSpeed;
@@ -28,7 +40,7 @@ public class PlayerModel : MonoBehaviour {
 			walkSpeed = value;
 		}
 	}
-	
+
 	public bool IsActivePlayer
 	{
 		get {

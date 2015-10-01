@@ -7,7 +7,7 @@ Material:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: SpriteDiffuse
-  m_Shader: {fileID: 4800000, guid: 7291931c1067a9145b2157409f852370, type: 3}
+  m_Shader: {fileID: 4800000, guid: 6839f00bc923eda4eae7efac16dc4459, type: 3}
   m_ShaderKeywords: _ALPHATEST_ON
   m_LightmapFlags: 5
   m_CustomRenderQueue: 3000
@@ -184,12 +184,12 @@ Material:
         second: 0
       data:
         first:
-          name: _InvFade
-        second: 1
-      data:
-        first:
           name: _Cull
         second: 2
+      data:
+        first:
+          name: _InvFade
+        second: 1
     m_Colors:
       data:
         first:

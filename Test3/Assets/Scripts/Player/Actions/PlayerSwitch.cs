@@ -3,9 +3,14 @@ using System.Collections;
 
 public class PlayerSwitch : MonoBehaviour
 {
-	public PlayerModel zombie;
-	public PlayerModel ghost;
+	private PlayerModel zombie;
+	private PlayerModel ghost;
 
+	void Start()
+	{
+		zombie = GameObject.Find("ZombieController").GetComponent<PlayerModel>();
+		ghost = GameObject.Find("GhostController").GetComponent<PlayerModel>();
+	}
 	void FixedUpdate()
 	{
 		if (Input.GetKey(KeyCode.R))
