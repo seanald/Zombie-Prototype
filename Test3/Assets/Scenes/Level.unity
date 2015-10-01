@@ -601,7 +601,7 @@ Prefab:
     - target: {fileID: 21297508, guid: d1d692c46d4c38944b61596f9b91d608, type: 2}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: e06735ac612238f41b0fe98aed9917f2, type: 2}
+      objectReference: {fileID: 2100000, guid: 927d529cf14fe9740b14a4088026abb8, type: 2}
     - target: {fileID: 21297508, guid: d1d692c46d4c38944b61596f9b91d608, type: 2}
       propertyPath: m_CastShadows
       value: 1
@@ -644,7 +644,7 @@ Light:
   m_Type: 2
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 8
-  m_Range: 1646.29004
+  m_Range: 2236.57007
   m_SpotAngle: 30
   m_CookieSize: 10
   m_Shadows:
@@ -719,7 +719,7 @@ Prefab:
     - target: {fileID: 21237462, guid: cd0680be51a520a4695e5251d7cabffd, type: 2}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: e06735ac612238f41b0fe98aed9917f2, type: 2}
+      objectReference: {fileID: 2100000, guid: 927d529cf14fe9740b14a4088026abb8, type: 2}
     - target: {fileID: 21237462, guid: cd0680be51a520a4695e5251d7cabffd, type: 2}
       propertyPath: m_CastShadows
       value: 1

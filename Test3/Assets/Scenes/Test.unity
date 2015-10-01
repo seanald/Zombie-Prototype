@@ -222,6 +222,10 @@ Prefab:
       propertyPath: m_Center.y
       value: .5
       objectReference: {fileID: 0}
+    - target: {fileID: 21242222, guid: a8e48af10203879478abc72b9dead563, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e06735ac612238f41b0fe98aed9917f2, type: 2}
     m_RemovedComponents:
     - {fileID: 11495988, guid: a8e48af10203879478abc72b9dead563, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: a8e48af10203879478abc72b9dead563, type: 2}
@@ -415,7 +419,7 @@ Transform:
   m_Children:
   - {fileID: 1109257885}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
 --- !u!114 &577623362
 MonoBehaviour:
   m_ObjectHideFlags: 0
