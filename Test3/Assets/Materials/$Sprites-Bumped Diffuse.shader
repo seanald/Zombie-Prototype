@@ -1,4 +1,4 @@
-﻿Shader "Sprites/Bumped Diffuse with Shadows"
+Shader "Sprites/Bumped Diffuse with Shadows"
 {
 	Properties
 	{
