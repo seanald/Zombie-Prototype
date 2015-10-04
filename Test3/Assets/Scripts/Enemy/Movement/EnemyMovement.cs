@@ -31,4 +31,12 @@ public class EnemyMovement : MonoBehaviour
 			}
 		}
 	}
+
+	void OnCollisionEnter(Collision collision){
+		print(collision.gameObject.tag);
+		if (collision.gameObject.tag == "GhostBullet")
+		{
+			enemyController.walkSpeed = 0;
+		}
+	}
 }

@@ -4,8 +4,8 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Enemy
   - ActivePlayer
+  - GhostBullet
   layers:
   - Default
   - TransparentFX
@@ -15,7 +15,7 @@ TagManager:
   - UI
   - 
   - 
-  - Character Controller
+  - 
   - 
   - 
   - 

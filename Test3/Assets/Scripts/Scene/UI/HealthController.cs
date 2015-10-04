@@ -26,6 +26,16 @@ public class HealthController : MonoBehaviour {
 		}
 	}
 
+	void OnTriggerEnter(Collider col){
+
+		if (col.gameObject.tag == "Hazard")
+		{
+
+			curHealth--;
+			this.healthSlider.value = curHealth;
+		}
+	}
+
 	public int MaxHealth
 	{
 		get {
