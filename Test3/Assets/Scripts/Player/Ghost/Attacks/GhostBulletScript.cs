@@ -3,8 +3,8 @@ using System.Collections;
 
 public class GhostBulletScript : MonoBehaviour {
 
-	float Speed = .4f;
-	float BulletLifeTime = 10f;
+	float Speed = 25f;
+	float BulletLifeTime = 1f;
 	private float startTime;
 
 	// Use this for initialization

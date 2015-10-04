@@ -56,6 +56,7 @@
      <Compile Include="Assets\Scripts\Player\General\PlayerModel.cs" />
      <Compile Include="Assets\Scripts\Player\General\ZombieModel.cs" />
      <Compile Include="Assets\Scripts\Player\Ghost\Animation\GhostAnimatorController.cs" />
+     <Compile Include="Assets\Scripts\Player\Ghost\Attacks\GhostBulletScript.cs" />
      <Compile Include="Assets\Scripts\Player\Ghost\Attacks\GhostHypnotize.cs" />
      <Compile Include="Assets\Scripts\Player\Movement\PlayerFollow.cs" />
      <Compile Include="Assets\Scripts\Player\Movement\PlayerWalking.cs" />

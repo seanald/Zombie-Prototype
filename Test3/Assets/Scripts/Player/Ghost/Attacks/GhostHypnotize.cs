@@ -14,7 +14,7 @@ public class GhostHypnotize : MonoBehaviour {
 
 	void Update () 
 	{
-		if (Input.GetKeyDown(KeyCode.X) && this.GetComponentInParent<PlasmaController>().CurPlasma > 0)
+		if (Input.GetKeyDown(KeyCode.X) /*&& this.GetComponentInParent<PlasmaController>().CurPlasma > 0*/)
 		{
 			Fire();
 			/*this.mytarget = this.findClosestEnemy();
