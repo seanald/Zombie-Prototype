@@ -45,7 +45,6 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Arkham Interactive\- Test Textures -\Standard Assets\Character Controllers\Sources\Scripts\MouseLook.cs" />
      <Compile Include="Assets\Scripts\Enemy\Controllers\EnemyController.cs" />
      <Compile Include="Assets\Scripts\Enemy\Mikey\Movement\MikeyMovement.cs" />
      <Compile Include="Assets\Scripts\Enemy\Movement\EnemyMovement.cs" />

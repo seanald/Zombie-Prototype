@@ -10,8 +10,6 @@ public class MikeyMovement : MonoBehaviour
 	{
 		this.enemyAnimator = this.gameObject.GetComponentInChildren<Animator>();
 		this.player = GameObject.Find("ZombieController").transform;
-
-		InvokeRepeating("restorePlasma", 0, 0.2f);
 	}
 	// Update is called once per frame
 	void Update () 
@@ -21,10 +19,6 @@ public class MikeyMovement : MonoBehaviour
 			float step = 100 * Time.deltaTime;
 			//move towards the player
 			this.transform.position = Vector3.MoveTowards(transform.position, player.position, step);
-		}
-		else
-		{
-
 		}
 	}
 }
