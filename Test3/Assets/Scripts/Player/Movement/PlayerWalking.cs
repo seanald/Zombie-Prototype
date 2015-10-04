@@ -14,7 +14,7 @@ public class PlayerWalking : MonoBehaviour
 
 	void FixedUpdate()
 	{
-		float moveHorizontal = Input.GetAxis("Horizontal");
+		float moveHorizontal = Input.GetAxisRaw("Horizontal");
 		float moveVertical = Input.GetAxis("Vertical");
 
 		Vector3 moveDirection = Vector3.zero;

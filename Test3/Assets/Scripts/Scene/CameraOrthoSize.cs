@@ -11,6 +11,6 @@ public class CameraOrthoSize : MonoBehaviour
 
 	private void LateUpdate()
 	{
-        this.gameCamera.orthographicSize = (Screen.height / 2) / this.zoom;
+        this.gameCamera.orthographicSize = (540 / 2) / this.zoom;
 	}
 }

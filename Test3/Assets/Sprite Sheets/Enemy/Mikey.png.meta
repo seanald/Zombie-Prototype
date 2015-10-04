@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: be84f2af8d944334089552221693a92b
-timeCreated: 1443798839
+timeCreated: 1443914947
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -102,6 +102,103 @@ TextureImporter:
     21300190: 1002_Mikey_2560x2560_sketch_transparent_95
     21300192: 1002_Mikey_2560x2560_sketch_transparent_96
     21300194: 1002_Mikey_2560x2560_sketch_transparent_97
+    21300196: Mikey_0
+    21300198: Mikey_1
+    21300200: Mikey_2
+    21300202: Mikey_3
+    21300204: Mikey_4
+    21300206: Mikey_5
+    21300208: Mikey_6
+    21300210: Mikey_7
+    21300212: Mikey_8
+    21300214: Mikey_9
+    21300216: Mikey_10
+    21300218: Mikey_11
+    21300220: Mikey_12
+    21300222: Mikey_13
+    21300224: Mikey_14
+    21300226: Mikey_15
+    21300228: Mikey_16
+    21300230: Mikey_17
+    21300232: Mikey_18
+    21300234: Mikey_19
+    21300236: Mikey_20
+    21300238: Mikey_21
+    21300240: Mikey_22
+    21300242: Mikey_23
+    21300244: Mikey_24
+    21300246: Mikey_25
+    21300248: Mikey_26
+    21300250: Mikey_27
+    21300252: Mikey_28
+    21300254: Mikey_29
+    21300256: Mikey_30
+    21300258: Mikey_31
+    21300260: Mikey_32
+    21300262: Mikey_33
+    21300264: Mikey_34
+    21300266: Mikey_35
+    21300268: Mikey_36
+    21300270: Mikey_37
+    21300272: Mikey_38
+    21300274: Mikey_39
+    21300276: Mikey_40
+    21300278: Mikey_41
+    21300280: Mikey_42
+    21300282: Mikey_43
+    21300284: Mikey_44
+    21300286: Mikey_45
+    21300288: Mikey_46
+    21300290: Mikey_47
+    21300292: Mikey_48
+    21300294: Mikey_49
+    21300296: Mikey_50
+    21300298: Mikey_51
+    21300300: Mikey_52
+    21300302: Mikey_53
+    21300304: Mikey_54
+    21300306: Mikey_55
+    21300308: Mikey_56
+    21300310: Mikey_57
+    21300312: Mikey_58
+    21300314: Mikey_59
+    21300316: Mikey_60
+    21300318: Mikey_61
+    21300320: Mikey_62
+    21300322: Mikey_63
+    21300324: Mikey_64
+    21300326: Mikey_65
+    21300328: Mikey_66
+    21300330: Mikey_67
+    21300332: Mikey_68
+    21300334: Mikey_69
+    21300336: Mikey_70
+    21300338: Mikey_71
+    21300340: Mikey_72
+    21300342: Mikey_73
+    21300344: Mikey_74
+    21300346: Mikey_75
+    21300348: Mikey_76
+    21300350: Mikey_77
+    21300352: Mikey_78
+    21300354: Mikey_79
+    21300356: Mikey_80
+    21300358: Mikey_81
+    21300360: Mikey_82
+    21300362: Mikey_83
+    21300364: Mikey_84
+    21300366: Mikey_85
+    21300368: Mikey_86
+    21300370: Mikey_87
+    21300372: Mikey_88
+    21300374: Mikey_89
+    21300376: Mikey_90
+    21300378: Mikey_91
+    21300380: Mikey_92
+    21300382: Mikey_93
+    21300384: Mikey_94
+    21300386: Mikey_95
+    21300388: Mikey_96
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -135,6 +232,7 @@ TextureImporter:
   lightmap: 0
   rGBM: 0
   compressionQuality: 50
+  allowsAlphaSplitting: 0
   spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
@@ -147,7 +245,7 @@ TextureImporter:
   buildTargetSettings: []
   spriteSheet:
     sprites:
-    - name: 1002_Mikey_2560x2560_sketch_transparent_0
+    - name: Mikey_0
       rect:
         serializedVersion: 2
         x: 0
@@ -157,7 +255,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: 1002_Mikey_2560x2560_sketch_transparent_1
+    - name: Mikey_1
       rect:
         serializedVersion: 2
         x: 256
@@ -167,7 +265,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: 1002_Mikey_2560x2560_sketch_transparent_2
+    - name: Mikey_2
       rect:
         serializedVersion: 2
         x: 512
@@ -177,7 +275,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: 1002_Mikey_2560x2560_sketch_transparent_3
+    - name: Mikey_3
       rect:
         serializedVersion: 2
         x: 768
@@ -187,7 +285,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: 1002_Mikey_2560x2560_sketch_transparent_4
+    - name: Mikey_4
       rect:
         serializedVersion: 2
         x: 1024
@@ -197,7 +295,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: 1002_Mikey_2560x2560_sketch_transparent_5
+    - name: Mikey_5
       rect:
         serializedVersion: 2
         x: 1280
@@ -207,7 +305,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: 1002_Mikey_2560x2560_sketch_transparent_6
+    - name: Mikey_6
       rect:
         serializedVersion: 2
         x: 1536
@@ -217,7 +315,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: 1002_Mikey_2560x2560_sketch_transparent_7
+    - name: Mikey_7
       rect:
         serializedVersion: 2
         x: 1792
@@ -227,7 +325,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: 1002_Mikey_2560x2560_sketch_transparent_8
+    - name: Mikey_8
       rect:
         serializedVersion: 2
         x: 2048
@@ -237,7 +335,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: 1002_Mikey_2560x2560_sketch_transparent_9
+    - name: Mikey_9
       rect:
         serializedVersion: 2
         x: 2304
@@ -247,7 +345,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: 1002_Mikey_2560x2560_sketch_transparent_10
+    - name: Mikey_10
       rect:
         serializedVersion: 2
         x: 0
@@ -257,7 +355,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: 1002_Mikey_2560x2560_sketch_transparent_11
+    - name: Mikey_11
       rect:
         serializedVersion: 2
         x: 256
@@ -267,7 +365,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: 1002_Mikey_2560x2560_sketch_transparent_12
+    - name: Mikey_12
       rect:
         serializedVersion: 2
         x: 512
@@ -277,7 +375,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: 1002_Mikey_2560x2560_sketch_transparent_13
+    - name: Mikey_13
       rect:
         serializedVersion: 2
         x: 768
@@ -287,7 +385,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: 1002_Mikey_2560x2560_sketch_transparent_14
+    - name: Mikey_14
       rect:
         serializedVersion: 2
         x: 1024
@@ -297,7 +395,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: 1002_Mikey_2560x2560_sketch_transparent_15
+    - name: Mikey_15
       rect:
         serializedVersion: 2
         x: 1280
@@ -307,7 +405,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: 1002_Mikey_2560x2560_sketch_transparent_16
+    - name: Mikey_16
       rect:
         serializedVersion: 2
         x: 1536
@@ -317,7 +415,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: 1002_Mikey_2560x2560_sketch_transparent_17
+    - name: Mikey_17
       rect:
         serializedVersion: 2
         x: 1792
@@ -327,7 +425,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: 1002_Mikey_2560x2560_sketch_transparent_18
+    - name: Mikey_18
       rect:
         serializedVersion: 2
         x: 0
@@ -337,7 +435,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: 1002_Mikey_2560x2560_sketch_transparent_19
+    - name: Mikey_19
       rect:
         serializedVersion: 2
         x: 256
@@ -347,7 +445,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: 1002_Mikey_2560x2560_sketch_transparent_20
+    - name: Mikey_20
       rect:
         serializedVersion: 2
         x: 512
@@ -357,7 +455,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: 1002_Mikey_2560x2560_sketch_transparent_21
+    - name: Mikey_21
       rect:
         serializedVersion: 2
         x: 768
@@ -367,7 +465,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: 1002_Mikey_2560x2560_sketch_transparent_22
+    - name: Mikey_22
       rect:
         serializedVersion: 2
         x: 1024
@@ -377,7 +475,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: 1002_Mikey_2560x2560_sketch_transparent_23
+    - name: Mikey_23
       rect:
         serializedVersion: 2
         x: 1280
@@ -387,7 +485,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: 1002_Mikey_2560x2560_sketch_transparent_24
+    - name: Mikey_24
       rect:
         serializedVersion: 2
         x: 1536
@@ -397,7 +495,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: 1002_Mikey_2560x2560_sketch_transparent_25
+    - name: Mikey_25
       rect:
         serializedVersion: 2
         x: 1792
@@ -407,7 +505,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: 1002_Mikey_2560x2560_sketch_transparent_26
+    - name: Mikey_26
       rect:
         serializedVersion: 2
         x: 2048
@@ -417,7 +515,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: 1002_Mikey_2560x2560_sketch_transparent_27
+    - name: Mikey_27
       rect:
         serializedVersion: 2
         x: 2304
@@ -427,7 +525,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: 1002_Mikey_2560x2560_sketch_transparent_28
+    - name: Mikey_28
       rect:
         serializedVersion: 2
         x: 0
@@ -437,7 +535,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: 1002_Mikey_2560x2560_sketch_transparent_29
+    - name: Mikey_29
       rect:
         serializedVersion: 2
         x: 256
@@ -447,7 +545,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: 1002_Mikey_2560x2560_sketch_transparent_30
+    - name: Mikey_30
       rect:
         serializedVersion: 2
         x: 512
@@ -457,7 +555,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: 1002_Mikey_2560x2560_sketch_transparent_31
+    - name: Mikey_31
       rect:
         serializedVersion: 2
         x: 768
@@ -467,7 +565,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: 1002_Mikey_2560x2560_sketch_transparent_32
+    - name: Mikey_32
       rect:
         serializedVersion: 2
         x: 1024
@@ -477,17 +575,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: 1002_Mikey_2560x2560_sketch_transparent_33
-      rect:
-        serializedVersion: 2
-        x: 1280
-        y: 1536
-        width: 256
-        height: 256
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: 1002_Mikey_2560x2560_sketch_transparent_34
+    - name: Mikey_33
       rect:
         serializedVersion: 2
         x: 1536
@@ -497,7 +585,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: 1002_Mikey_2560x2560_sketch_transparent_35
+    - name: Mikey_34
       rect:
         serializedVersion: 2
         x: 1792
@@ -507,7 +595,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: 1002_Mikey_2560x2560_sketch_transparent_36
+    - name: Mikey_35
       rect:
         serializedVersion: 2
         x: 2048
@@ -517,7 +605,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: 1002_Mikey_2560x2560_sketch_transparent_37
+    - name: Mikey_36
       rect:
         serializedVersion: 2
         x: 2304
@@ -527,7 +615,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: 1002_Mikey_2560x2560_sketch_transparent_38
+    - name: Mikey_37
       rect:
         serializedVersion: 2
         x: 0
@@ -537,7 +625,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: 1002_Mikey_2560x2560_sketch_transparent_39
+    - name: Mikey_38
       rect:
         serializedVersion: 2
         x: 256
@@ -547,7 +635,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: 1002_Mikey_2560x2560_sketch_transparent_40
+    - name: Mikey_39
       rect:
         serializedVersion: 2
         x: 512
@@ -557,7 +645,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: 1002_Mikey_2560x2560_sketch_transparent_41
+    - name: Mikey_40
       rect:
         serializedVersion: 2
         x: 768
@@ -567,7 +655,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: 1002_Mikey_2560x2560_sketch_transparent_42
+    - name: Mikey_41
       rect:
         serializedVersion: 2
         x: 1024
@@ -577,7 +665,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: 1002_Mikey_2560x2560_sketch_transparent_43
+    - name: Mikey_42
       rect:
         serializedVersion: 2
         x: 1280
@@ -587,7 +675,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: 1002_Mikey_2560x2560_sketch_transparent_44
+    - name: Mikey_43
       rect:
         serializedVersion: 2
         x: 1536
@@ -597,7 +685,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: 1002_Mikey_2560x2560_sketch_transparent_45
+    - name: Mikey_44
       rect:
         serializedVersion: 2
         x: 1792
@@ -607,7 +695,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: 1002_Mikey_2560x2560_sketch_transparent_46
+    - name: Mikey_45
       rect:
         serializedVersion: 2
         x: 2048
@@ -617,7 +705,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: 1002_Mikey_2560x2560_sketch_transparent_47
+    - name: Mikey_46
       rect:
         serializedVersion: 2
         x: 2304
@@ -627,7 +715,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: 1002_Mikey_2560x2560_sketch_transparent_48
+    - name: Mikey_47
       rect:
         serializedVersion: 2
         x: 0
@@ -637,7 +725,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: 1002_Mikey_2560x2560_sketch_transparent_49
+    - name: Mikey_48
       rect:
         serializedVersion: 2
         x: 256
@@ -647,7 +735,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: 1002_Mikey_2560x2560_sketch_transparent_50
+    - name: Mikey_49
       rect:
         serializedVersion: 2
         x: 512
@@ -657,7 +745,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: 1002_Mikey_2560x2560_sketch_transparent_51
+    - name: Mikey_50
       rect:
         serializedVersion: 2
         x: 768
@@ -667,7 +755,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: 1002_Mikey_2560x2560_sketch_transparent_52
+    - name: Mikey_51
       rect:
         serializedVersion: 2
         x: 1024
@@ -677,7 +765,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: 1002_Mikey_2560x2560_sketch_transparent_53
+    - name: Mikey_52
       rect:
         serializedVersion: 2
         x: 1280
@@ -687,7 +775,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: 1002_Mikey_2560x2560_sketch_transparent_54
+    - name: Mikey_53
       rect:
         serializedVersion: 2
         x: 1536
@@ -697,7 +785,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: 1002_Mikey_2560x2560_sketch_transparent_55
+    - name: Mikey_54
       rect:
         serializedVersion: 2
         x: 1792
@@ -707,7 +795,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: 1002_Mikey_2560x2560_sketch_transparent_56
+    - name: Mikey_55
       rect:
         serializedVersion: 2
         x: 2048
@@ -717,7 +805,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: 1002_Mikey_2560x2560_sketch_transparent_57
+    - name: Mikey_56
       rect:
         serializedVersion: 2
         x: 2304
@@ -727,7 +815,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: 1002_Mikey_2560x2560_sketch_transparent_58
+    - name: Mikey_57
       rect:
         serializedVersion: 2
         x: 0
@@ -737,7 +825,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: 1002_Mikey_2560x2560_sketch_transparent_59
+    - name: Mikey_58
       rect:
         serializedVersion: 2
         x: 256
@@ -747,7 +835,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: 1002_Mikey_2560x2560_sketch_transparent_60
+    - name: Mikey_59
       rect:
         serializedVersion: 2
         x: 512
@@ -757,7 +845,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: 1002_Mikey_2560x2560_sketch_transparent_61
+    - name: Mikey_60
       rect:
         serializedVersion: 2
         x: 768
@@ -767,7 +855,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: 1002_Mikey_2560x2560_sketch_transparent_62
+    - name: Mikey_61
       rect:
         serializedVersion: 2
         x: 1024
@@ -777,7 +865,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: 1002_Mikey_2560x2560_sketch_transparent_63
+    - name: Mikey_62
       rect:
         serializedVersion: 2
         x: 1280
@@ -787,7 +875,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: 1002_Mikey_2560x2560_sketch_transparent_64
+    - name: Mikey_63
       rect:
         serializedVersion: 2
         x: 1536
@@ -797,7 +885,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: 1002_Mikey_2560x2560_sketch_transparent_65
+    - name: Mikey_64
       rect:
         serializedVersion: 2
         x: 1792
@@ -807,7 +895,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: 1002_Mikey_2560x2560_sketch_transparent_66
+    - name: Mikey_65
       rect:
         serializedVersion: 2
         x: 2048
@@ -817,7 +905,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: 1002_Mikey_2560x2560_sketch_transparent_67
+    - name: Mikey_66
       rect:
         serializedVersion: 2
         x: 2304
@@ -827,7 +915,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: 1002_Mikey_2560x2560_sketch_transparent_68
+    - name: Mikey_67
       rect:
         serializedVersion: 2
         x: 0
@@ -837,7 +925,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: 1002_Mikey_2560x2560_sketch_transparent_69
+    - name: Mikey_68
       rect:
         serializedVersion: 2
         x: 256
@@ -847,7 +935,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: 1002_Mikey_2560x2560_sketch_transparent_70
+    - name: Mikey_69
       rect:
         serializedVersion: 2
         x: 512
@@ -857,7 +945,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: 1002_Mikey_2560x2560_sketch_transparent_71
+    - name: Mikey_70
       rect:
         serializedVersion: 2
         x: 768
@@ -867,7 +955,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: 1002_Mikey_2560x2560_sketch_transparent_72
+    - name: Mikey_71
       rect:
         serializedVersion: 2
         x: 1024
@@ -877,7 +965,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: 1002_Mikey_2560x2560_sketch_transparent_73
+    - name: Mikey_72
       rect:
         serializedVersion: 2
         x: 1280
@@ -887,7 +975,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: 1002_Mikey_2560x2560_sketch_transparent_74
+    - name: Mikey_73
       rect:
         serializedVersion: 2
         x: 1536
@@ -897,7 +985,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: 1002_Mikey_2560x2560_sketch_transparent_75
+    - name: Mikey_74
       rect:
         serializedVersion: 2
         x: 1792
@@ -907,7 +995,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: 1002_Mikey_2560x2560_sketch_transparent_76
+    - name: Mikey_75
       rect:
         serializedVersion: 2
         x: 2048
@@ -917,7 +1005,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: 1002_Mikey_2560x2560_sketch_transparent_77
+    - name: Mikey_76
       rect:
         serializedVersion: 2
         x: 2304
@@ -927,7 +1015,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: 1002_Mikey_2560x2560_sketch_transparent_78
+    - name: Mikey_77
       rect:
         serializedVersion: 2
         x: 0
@@ -937,7 +1025,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: 1002_Mikey_2560x2560_sketch_transparent_79
+    - name: Mikey_78
       rect:
         serializedVersion: 2
         x: 256
@@ -947,7 +1035,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: 1002_Mikey_2560x2560_sketch_transparent_80
+    - name: Mikey_79
       rect:
         serializedVersion: 2
         x: 512
@@ -957,7 +1045,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: 1002_Mikey_2560x2560_sketch_transparent_81
+    - name: Mikey_80
       rect:
         serializedVersion: 2
         x: 768
@@ -967,7 +1055,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: 1002_Mikey_2560x2560_sketch_transparent_82
+    - name: Mikey_81
       rect:
         serializedVersion: 2
         x: 1024
@@ -977,7 +1065,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: 1002_Mikey_2560x2560_sketch_transparent_83
+    - name: Mikey_82
       rect:
         serializedVersion: 2
         x: 1280
@@ -987,7 +1075,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: 1002_Mikey_2560x2560_sketch_transparent_84
+    - name: Mikey_83
       rect:
         serializedVersion: 2
         x: 1536
@@ -997,7 +1085,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: 1002_Mikey_2560x2560_sketch_transparent_85
+    - name: Mikey_84
       rect:
         serializedVersion: 2
         x: 1792
@@ -1007,7 +1095,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: 1002_Mikey_2560x2560_sketch_transparent_86
+    - name: Mikey_85
       rect:
         serializedVersion: 2
         x: 2048
@@ -1017,7 +1105,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: 1002_Mikey_2560x2560_sketch_transparent_87
+    - name: Mikey_86
       rect:
         serializedVersion: 2
         x: 2304
@@ -1027,7 +1115,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: 1002_Mikey_2560x2560_sketch_transparent_88
+    - name: Mikey_87
       rect:
         serializedVersion: 2
         x: 0
@@ -1037,7 +1125,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: 1002_Mikey_2560x2560_sketch_transparent_89
+    - name: Mikey_88
       rect:
         serializedVersion: 2
         x: 256
@@ -1047,7 +1135,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: 1002_Mikey_2560x2560_sketch_transparent_90
+    - name: Mikey_89
       rect:
         serializedVersion: 2
         x: 512
@@ -1057,7 +1145,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: 1002_Mikey_2560x2560_sketch_transparent_91
+    - name: Mikey_90
       rect:
         serializedVersion: 2
         x: 768
@@ -1067,7 +1155,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: 1002_Mikey_2560x2560_sketch_transparent_92
+    - name: Mikey_91
       rect:
         serializedVersion: 2
         x: 1024
@@ -1077,7 +1165,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: 1002_Mikey_2560x2560_sketch_transparent_93
+    - name: Mikey_92
       rect:
         serializedVersion: 2
         x: 1280
@@ -1087,7 +1175,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: 1002_Mikey_2560x2560_sketch_transparent_94
+    - name: Mikey_93
       rect:
         serializedVersion: 2
         x: 1536
@@ -1097,7 +1185,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: 1002_Mikey_2560x2560_sketch_transparent_95
+    - name: Mikey_94
       rect:
         serializedVersion: 2
         x: 1792
@@ -1107,7 +1195,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: 1002_Mikey_2560x2560_sketch_transparent_96
+    - name: Mikey_95
       rect:
         serializedVersion: 2
         x: 2048
@@ -1117,7 +1205,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: 1002_Mikey_2560x2560_sketch_transparent_97
+    - name: Mikey_96
       rect:
         serializedVersion: 2
         x: 2304
