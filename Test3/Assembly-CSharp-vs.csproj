@@ -46,17 +46,28 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Arkham Interactive\- Test Textures -\Standard Assets\Character Controllers\Sources\Scripts\MouseLook.cs" />
+     <Compile Include="Assets\Scripts\Enemy\BaseballWolf\BaseballWolfMovement.cs" />
      <Compile Include="Assets\Scripts\Enemy\Controllers\EnemyController.cs" />
+     <Compile Include="Assets\Scripts\Enemy\FootballWolf\FootballScript.cs" />
+     <Compile Include="Assets\Scripts\Enemy\FootballWolf\FootballWolfMovement.cs" />
+     <Compile Include="Assets\Scripts\Enemy\Mikey\Movement\MikeyMovement.cs" />
      <Compile Include="Assets\Scripts\Enemy\Movement\EnemyMovement.cs" />
      <Compile Include="Assets\Scripts\Environment\Hazard.cs" />
+<<<<<<< HEAD
      <Compile Include="Assets\Scripts\Environment\HazardTurretScript.cs" />
+=======
+     <Compile Include="Assets\Scripts\Environment\HazardTurret.cs" />
+>>>>>>> cf688b337a2ddfa0cda8daa140619680d9fa8747
      <Compile Include="Assets\Scripts\Player\Actions\PlayerSwitch.cs" />
      <Compile Include="Assets\Scripts\Player\General\GhostModel.cs" />
      <Compile Include="Assets\Scripts\Player\General\PlayerModel.cs" />
      <Compile Include="Assets\Scripts\Player\General\ZombieModel.cs" />
      <Compile Include="Assets\Scripts\Player\Ghost\Animation\GhostAnimatorController.cs" />
+<<<<<<< HEAD
      <Compile Include="Assets\Scripts\Player\Ghost\Attacks\GhostBulletScript.cs" />
+=======
+     <Compile Include="Assets\Scripts\Player\Ghost\Attacks\GhostBullet.cs" />
+>>>>>>> cf688b337a2ddfa0cda8daa140619680d9fa8747
      <Compile Include="Assets\Scripts\Player\Ghost\Attacks\GhostHypnotize.cs" />
      <Compile Include="Assets\Scripts\Player\Movement\PlayerFollow.cs" />
      <Compile Include="Assets\Scripts\Player\Movement\PlayerWalking.cs" />

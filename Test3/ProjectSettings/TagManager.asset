@@ -6,6 +6,11 @@ TagManager:
   tags:
   - ActivePlayer
   - GhostBullet
+<<<<<<< HEAD
+=======
+  - Hazard
+  - EnemyBullet
+>>>>>>> cf688b337a2ddfa0cda8daa140619680d9fa8747
   layers:
   - Default
   - TransparentFX

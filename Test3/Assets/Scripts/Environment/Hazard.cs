@@ -20,7 +20,12 @@ public class Hazard : MonoBehaviour {
 		{
 			Destroy(this.gameObject);
 		}
+<<<<<<< HEAD
 	}
 
 
+=======
+		
+	}
+>>>>>>> cf688b337a2ddfa0cda8daa140619680d9fa8747
 }

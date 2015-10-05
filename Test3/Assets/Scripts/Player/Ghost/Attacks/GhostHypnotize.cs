@@ -8,6 +8,7 @@ public class GhostHypnotize : MonoBehaviour {
 	public GameObject Bullet;
 	public Vector3 GBoffset;
 
+<<<<<<< HEAD
 	void Fire() {
 		Instantiate(Bullet, transform.position + GBoffset, transform.rotation);
 	}
@@ -15,6 +16,21 @@ public class GhostHypnotize : MonoBehaviour {
 	void Update () 
 	{
 		if (Input.GetKeyDown(KeyCode.X) /*&& this.GetComponentInParent<PlasmaController>().CurPlasma > 0*/)
+=======
+	void Fire(){
+		Instantiate(Bullet, transform.position + GBoffset, transform.rotation);
+	}
+	
+	void Update () 
+	{
+
+		if(Mathf.Round(Time.time)%7 ==0){
+			if(this.GetComponentInParent<GhostModel>().plasma<5){
+				this.GetComponentInParent<GhostModel>().plasma++;
+			}
+		}
+		if (Input.GetKeyDown(KeyCode.X) && this.GetComponentInParent<GhostModel>().plasma > 0)
+>>>>>>> cf688b337a2ddfa0cda8daa140619680d9fa8747
 		{
 			Fire();
 			/*this.mytarget = this.findClosestEnemy();
@@ -22,7 +38,11 @@ public class GhostHypnotize : MonoBehaviour {
 			LineRenderer lineRenderer = this.GetComponentInChildren<LineRenderer>();
 			lineRenderer.SetPosition(0, this.transform.position);
 			lineRenderer.SetPosition(1, this.mytarget.transform.position);*/
+<<<<<<< HEAD
 			this.GetComponentInParent<PlasmaController>().CurPlasma--;
+=======
+			this.GetComponentInParent<GhostModel>().plasma--;
+>>>>>>> cf688b337a2ddfa0cda8daa140619680d9fa8747
 		}
 	}
 

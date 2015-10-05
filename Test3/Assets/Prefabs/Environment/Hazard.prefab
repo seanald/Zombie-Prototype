@@ -1,17 +1,29 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+<<<<<<< HEAD
 --- !u!1 &151838
+=======
+--- !u!1 &113234
+>>>>>>> cf688b337a2ddfa0cda8daa140619680d9fa8747
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 4
   m_Component:
+<<<<<<< HEAD
   - 4: {fileID: 424752}
   - 33: {fileID: 3346934}
   - 65: {fileID: 6529736}
   - 23: {fileID: 2306494}
   - 114: {fileID: 11476604}
+=======
+  - 4: {fileID: 423590}
+  - 33: {fileID: 3372068}
+  - 65: {fileID: 6546712}
+  - 23: {fileID: 2356558}
+  - 114: {fileID: 11438232}
+>>>>>>> cf688b337a2ddfa0cda8daa140619680d9fa8747
   m_Layer: 0
   m_Name: Hazard
   m_TagString: Hazard
@@ -19,11 +31,16 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< HEAD
 --- !u!4 &424752
+=======
+--- !u!4 &423590
+>>>>>>> cf688b337a2ddfa0cda8daa140619680d9fa8747
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
+<<<<<<< HEAD
   m_GameObject: {fileID: 151838}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -2296, y: 104.599998, z: -317.790527}
@@ -32,11 +49,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!23 &2306494
+=======
+  m_GameObject: {fileID: 113234}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1955.97607, y: 90.3151855, z: -310.160767}
+  m_LocalScale: {x: 151.688477, y: 151.688461, z: 76.4368439}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+--- !u!23 &2356558
+>>>>>>> cf688b337a2ddfa0cda8daa140619680d9fa8747
 MeshRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
+<<<<<<< HEAD
   m_GameObject: {fileID: 151838}
+=======
+  m_GameObject: {fileID: 113234}
+>>>>>>> cf688b337a2ddfa0cda8daa140619680d9fa8747
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -55,34 +86,59 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
+<<<<<<< HEAD
 --- !u!33 &3346934
+=======
+--- !u!33 &3372068
+>>>>>>> cf688b337a2ddfa0cda8daa140619680d9fa8747
 MeshFilter:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
+<<<<<<< HEAD
   m_GameObject: {fileID: 151838}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!65 &6529736
+=======
+  m_GameObject: {fileID: 113234}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!65 &6546712
+>>>>>>> cf688b337a2ddfa0cda8daa140619680d9fa8747
 BoxCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
+<<<<<<< HEAD
   m_GameObject: {fileID: 151838}
+=======
+  m_GameObject: {fileID: 113234}
+>>>>>>> cf688b337a2ddfa0cda8daa140619680d9fa8747
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
 --- !u!114 &11476604
+=======
+--- !u!114 &11438232
+>>>>>>> cf688b337a2ddfa0cda8daa140619680d9fa8747
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
+<<<<<<< HEAD
   m_GameObject: {fileID: 151838}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 79f83bd8f7242c04eae9b0780f62a569, type: 3}
+=======
+  m_GameObject: {fileID: 113234}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31fe5e9adcde7c7418b0e15315665eb8, type: 3}
+>>>>>>> cf688b337a2ddfa0cda8daa140619680d9fa8747
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &100100000
@@ -93,14 +149,21 @@ Prefab:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 0}
+<<<<<<< HEAD
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 0}
+=======
+>>>>>>> cf688b337a2ddfa0cda8daa140619680d9fa8747
       propertyPath: m_TagString
       value: Hazard
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
+<<<<<<< HEAD
   m_RootGameObject: {fileID: 151838}
+=======
+  m_RootGameObject: {fileID: 113234}
+>>>>>>> cf688b337a2ddfa0cda8daa140619680d9fa8747
   m_IsPrefabParent: 1
