@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Enemy
   - ActivePlayer
+  - GhostBullet
+  - Hazard
   layers:
   - Default
   - TransparentFX

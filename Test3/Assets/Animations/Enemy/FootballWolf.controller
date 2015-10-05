@@ -5,13 +5,13 @@ AnimatorController:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Mikey
+  m_Name: FootballWolf
   serializedVersion: 5
   m_AnimatorParameters: []
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
-    m_StateMachine: {fileID: 110741136}
+    m_StateMachine: {fileID: 110792920}
     m_Mask: {fileID: 0}
     m_Motions: []
     m_Behaviours: []
@@ -20,14 +20,14 @@ AnimatorController:
     m_DefaultWeight: 0
     m_IKPass: 0
     m_SyncedLayerAffectsTiming: 0
-    m_Controller: {fileID: 9100000}
---- !u!1102 &110228078
+    m_Controller: {fileID: 0}
+--- !u!1102 &110283468
 AnimatorState:
   serializedVersion: 5
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Mikey_Stand
+  m_Name: FootballWolf_Throw
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
@@ -39,18 +39,18 @@ AnimatorState:
   m_SpeedParameterActive: 0
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 958fc93ad837a4ba5a15e7931fa85bd6, type: 2}
+  m_Motion: {fileID: 7400000, guid: 8dd341fbd14e9f84bb2a1f587aa401cb, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
---- !u!1102 &110240138
+--- !u!1102 &110286214
 AnimatorState:
   serializedVersion: 5
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Mikey_Walk
+  m_Name: FootballWolf_Stand
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
@@ -62,18 +62,18 @@ AnimatorState:
   m_SpeedParameterActive: 0
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: a27e23c21f6364ccf8923dc2ae9e2e07, type: 2}
+  m_Motion: {fileID: 7400000, guid: 346eea9b4db4fe144b281b1084b83fff, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
---- !u!1102 &110248098
+--- !u!1102 &110290650
 AnimatorState:
   serializedVersion: 5
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Mikey_Howl
+  m_Name: FootballWolf_Walk
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
@@ -85,35 +85,12 @@ AnimatorState:
   m_SpeedParameterActive: 0
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 45dc29cebf13f4571bd3e7bf98d9943a, type: 2}
+  m_Motion: {fileID: 7400000, guid: f9bae6d5ae13b1846aaefeeabfe68649, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
---- !u!1102 &110282670
-AnimatorState:
-  serializedVersion: 5
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: Batwolf_Stand
-  m_Speed: 1
-  m_CycleOffset: 0
-  m_Transitions: []
-  m_StateMachineBehaviours: []
-  m_Position: {x: 50, y: 50, z: 0}
-  m_IKOnFeet: 0
-  m_WriteDefaultValues: 1
-  m_Mirror: 0
-  m_SpeedParameterActive: 0
-  m_MirrorParameterActive: 0
-  m_CycleOffsetParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 82bbebe6faf178b4b87e77d267588456, type: 2}
-  m_Tag: 
-  m_SpeedParameter: 
-  m_MirrorParameter: 
-  m_CycleOffsetParameter: 
---- !u!1107 &110741136
+--- !u!1107 &110792920
 AnimatorStateMachine:
   serializedVersion: 5
   m_ObjectHideFlags: 1
@@ -122,27 +99,24 @@ AnimatorStateMachine:
   m_Name: Base Layer
   m_ChildStates:
   - serializedVersion: 1
-    m_State: {fileID: 110228078}
-    m_Position: {x: 324, y: 0, z: 0}
+    m_State: {fileID: 110286214}
+    m_Position: {x: 276, y: -36, z: 0}
   - serializedVersion: 1
-    m_State: {fileID: 110240138}
-    m_Position: {x: 156, y: 84, z: 0}
+    m_State: {fileID: 110283468}
+    m_Position: {x: 264, y: 60, z: 0}
   - serializedVersion: 1
-    m_State: {fileID: 110248098}
-    m_Position: {x: 480, y: 84, z: 0}
-  - serializedVersion: 1
-    m_State: {fileID: 110282670}
-    m_Position: {x: 515, y: 149, z: 0}
+    m_State: {fileID: 110290650}
+    m_Position: {x: 270, y: 130, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []
   m_StateMachineTransitions:
     data:
-      first: {fileID: 110741136}
+      first: {fileID: 110792920}
       second: []
   m_StateMachineBehaviours: []
   m_AnyStatePosition: {x: 50, y: 20, z: 0}
-  m_EntryPosition: {x: 324, y: -24, z: 0}
+  m_EntryPosition: {x: 50, y: 120, z: 0}
   m_ExitPosition: {x: 800, y: 120, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
-  m_DefaultState: {fileID: 110228078}
+  m_DefaultState: {fileID: 110286214}
