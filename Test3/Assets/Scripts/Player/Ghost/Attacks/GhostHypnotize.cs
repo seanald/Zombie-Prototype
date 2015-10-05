@@ -5,21 +5,34 @@ public class GhostHypnotize : MonoBehaviour {
 
 	private GameObject mytarget;
 	private const int maxdistance = 10;
+	public GameObject Bullet;
+	public Vector3 GBoffset;
+
+	void Fire(){
+		Instantiate(Bullet, transform.position + GBoffset, transform.rotation);
+	}
 	
 	void Update () 
 	{
-		if (Input.GetKey(KeyCode.X) && this.GetComponentInParent<PlasmaController>().CurPlasma > 0)
+
+		if(Mathf.Round(Time.time)%7 ==0){
+			if(this.GetComponentInParent<GhostModel>().plasma<5){
+				this.GetComponentInParent<GhostModel>().plasma++;
+			}
+		}
+		if (Input.GetKeyDown(KeyCode.X) && this.GetComponentInParent<GhostModel>().plasma > 0)
 		{
-			this.mytarget = this.findClosestEnemy();
+			Fire();
+			/*this.mytarget = this.findClosestEnemy();
 			this.mytarget.GetComponentInChildren<EnemyController>().WalkSpeed = -3;
 			LineRenderer lineRenderer = this.GetComponentInChildren<LineRenderer>();
 			lineRenderer.SetPosition(0, this.transform.position);
-			lineRenderer.SetPosition(1, this.mytarget.transform.position);
-			this.GetComponentInParent<PlasmaController>().CurPlasma--;
+			lineRenderer.SetPosition(1, this.mytarget.transform.position);*/
+			this.GetComponentInParent<GhostModel>().plasma--;
 		}
 	}
 
-	private GameObject findClosestEnemy()
+	/*private GameObject findClosestEnemy()
 	{
 		GameObject[] enemies;
 		enemies = GameObject.FindGameObjectsWithTag("Enemy");
@@ -38,5 +51,5 @@ public class GhostHypnotize : MonoBehaviour {
 			}
 		}
 		return closest;
-	}
+	}*/
 }
