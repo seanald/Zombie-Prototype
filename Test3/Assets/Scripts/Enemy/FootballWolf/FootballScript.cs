@@ -26,7 +26,7 @@ public class FootballScript : MonoBehaviour {
 	void OnTriggerEnter(Collider collision){
 		if(collision.gameObject.tag == "Player" || collision.gameObject.tag == "ActivePlayer"){
 
-			collision.gameObject.GetComponent<ZombieModel>().health = collision.gameObject.GetComponent<ZombieModel>().health - 50;
+			collision.gameObject.GetComponent<HealthController>().CurHealth = collision.gameObject.GetComponent<HealthController>().CurHealth - 50;
 			Destroy(this.gameObject);
 		}
 

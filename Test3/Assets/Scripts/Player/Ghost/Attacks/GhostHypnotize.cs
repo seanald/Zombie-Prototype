@@ -15,12 +15,12 @@ public class GhostHypnotize : MonoBehaviour {
 	void Update () 
 	{
 
-		if(Mathf.Round(Time.time)%7 ==0){
-			if(this.GetComponentInParent<GhostModel>().plasma<5){
-				this.GetComponentInParent<GhostModel>().plasma++;
+		/*if(Mathf.Round(Time.time)%7 ==0){
+			if(this.GetComponentInParent<PlasmaController>().CurPlasma<5){
+				this.GetComponentInParent<PlasmaController>().CurPlasma++;
 			}
-		}
-		if (Input.GetKeyDown(KeyCode.X) && this.GetComponentInParent<GhostModel>().plasma > 0)
+		}*/
+		if (Input.GetKeyDown(KeyCode.X) && this.GetComponentInParent<PlasmaController>().CurPlasma > 0)
 		{
 			Fire();
 			/*this.mytarget = this.findClosestEnemy();
@@ -28,7 +28,7 @@ public class GhostHypnotize : MonoBehaviour {
 			LineRenderer lineRenderer = this.GetComponentInChildren<LineRenderer>();
 			lineRenderer.SetPosition(0, this.transform.position);
 			lineRenderer.SetPosition(1, this.mytarget.transform.position);*/
-			this.GetComponentInParent<GhostModel>().plasma--;
+			this.GetComponentInParent<PlasmaController>().CurPlasma--;
 		}
 	}
 

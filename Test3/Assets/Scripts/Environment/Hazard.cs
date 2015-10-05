@@ -3,8 +3,8 @@ using System.Collections;
 
 public class Hazard : MonoBehaviour {
 
-	float Speed = 50f;
-	float HazardLifeTime = 5f;
+	float Speed = 10f;
+	float HazardLifeTime = 10f;
 	private float startTime;
 	
 	// Use this for initialization
@@ -19,6 +19,14 @@ public class Hazard : MonoBehaviour {
 		if (Time.time - startTime >= HazardLifeTime)
 		{
 			Destroy(this.gameObject);
+		}
+		
+	}
+	void OnTriggerEnter(Collider collision){
+		if(collision.gameObject.tag == "Player" || collision.gameObject.tag == "ActivePlayer"){
+			
+			collision.gameObject.GetComponent<HealthController>().CurHealth = collision.gameObject.GetComponent<HealthController>().CurHealth - 100;
+
 		}
 		
 	}
