@@ -9,6 +9,8 @@ TagManager:
   - GhostBullet
   - Hazard
   - EnemyBullet
+  - FearObject
+  - EnemyScared
   layers:
   - Default
   - TransparentFX

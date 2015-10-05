@@ -43,7 +43,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 178342}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: .000218074623}
-  m_LocalPosition: {x: -1569, y: 105.724129, z: -184.827606}
+  m_LocalPosition: {x: -1076, y: 105.724129, z: -185}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 442370}
@@ -116,7 +116,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33ad985a51185fd4282e4dc60f8b065d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 10
+  health: 3
   walkSpeed: 0
   animator: {fileID: 0}
 --- !u!114 &11465618
@@ -132,6 +132,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   football: {fileID: 135292, guid: 01257cf27dbc1334bb8e15b2b1b777b6, type: 2}
   footballoffset: {x: -70, y: 0, z: 0}
+  movespeed: 0
 --- !u!212 &21269384
 SpriteRenderer:
   m_ObjectHideFlags: 1
