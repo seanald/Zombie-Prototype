@@ -7,6 +7,10 @@ public class BaseballWolfMovement : MonoBehaviour {
 	private Transform player;
 	private float distance;
 	private float maxdistance = 50f;
+	private bool isStunned = false;
+	private float stunTime;
+	float stunnedTime = 2f;
+
 	
 	void Start()
 	{
@@ -16,39 +20,56 @@ public class BaseballWolfMovement : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
-		if (Vector3.Distance(this.player.position, this.transform.position) > 50 && Vector3.Distance(this.player.position, this.transform.position) < 1000)
-		{
-			float step = 100 * Time.deltaTime;
-			//move towards the player
-			this.transform.position = Vector3.MoveTowards(transform.position, player.position, step);
-
-
-
-				
-			this.enemyAnimator.Play("Batwolf_Walk");
-
+		if(isStunned){
+			this.enemyAnimator.Play("Batwolf_Stunned");
 		}
-		else
-		{
-			if(Vector3.Distance(this.player.position, this.transform.position) < 70){
-				RaycastHit hit;
-				Debug.DrawLine(transform.position, transform.right * 100, Color.green);
-				if (Physics.Raycast(transform.position, transform.right, out hit))
-				{
-					distance = hit.distance;
-					//print(distance);
-					//print(hit.transform.tag);
-					if (distance < maxdistance && hit.transform.tag == "Player")
+		if(!isStunned){
+			if (Vector3.Distance(this.player.position, this.transform.position) > 80 && Vector3.Distance(this.player.position, this.transform.position) < 1000)
+			{
+				float step = 100 * Time.deltaTime;
+				//move towards the player
+				this.transform.position = Vector3.MoveTowards(transform.position, player.position, step);
+
+
+
+					
+				this.enemyAnimator.Play("Batwolf_Walk");
+
+			}
+			else
+			{
+				if(Vector3.Distance(this.player.position, this.transform.position) < 80){
+					RaycastHit hit;
+					//Debug.DrawLine(transform.position, transform.right * 100, Color.green);
+					if (Physics.Raycast(transform.position, transform.right, out hit))
 					{
-						GameObject enemyhit = hit.transform.gameObject;
-						enemyhit.GetComponent<ZombieModel>().Health--;
+						distance = hit.distance;
+						//print(distance);
+						//print(hit.transform.tag);
+						if (distance < maxdistance && (hit.transform.tag == "Player" || hit.transform.tag == "ActivePlayer"))
+						{
+							GameObject enemyhit = hit.transform.gameObject;
+							enemyhit.GetComponent<ZombieModel>().health--;
+						}
 					}
+					this.enemyAnimator.Play("Batwolf_Swing");
 				}
-				this.enemyAnimator.Play("Batwolf_Swing");
+				else{
+					this.enemyAnimator.Play("Batwolf_Stand");
+				}
 			}
-			else{
-				this.enemyAnimator.Play("Batwolf_Stand");
-			}
+		}
+		else if (Time.time - stunTime >= stunnedTime)
+		{
+			isStunned = false;
+		}
+	}
+
+	void OnCollisionEnter(Collision collision){
+		
+		if(collision.gameObject.tag == "GhostBullet"){
+			isStunned = true;
+			stunTime = Time.time;
 		}
 	}
 }

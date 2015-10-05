@@ -8,6 +8,7 @@ TagManager:
   - ActivePlayer
   - GhostBullet
   - Hazard
+  - EnemyBullet
   layers:
   - Default
   - TransparentFX

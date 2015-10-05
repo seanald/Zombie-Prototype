@@ -1,13 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class GhostBullet : MonoBehaviour {
+public class FootballScript : MonoBehaviour {
 
-	float Speed = 25f;
+	float Speed = 15f;
 	float BulletLifeTime = 1f;
 	private float startTime;
-
-
+	
+	
 	// Use this for initialization
 	void Start () {
 		startTime = Time.time;
@@ -16,15 +16,19 @@ public class GhostBullet : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		this.gameObject.transform.position += Speed * this.gameObject.transform.right;
-
+		
 		if (Time.time - startTime >= BulletLifeTime)
 		{
 			Destroy(this.gameObject);
 		}
 	}
+	
+	void OnTriggerEnter(Collider collision){
+		if(collision.gameObject.tag == "Player" || collision.gameObject.tag == "ActivePlayer"){
 
-	void OnCollisionEnter(Collision collision){
+			collision.gameObject.GetComponent<ZombieModel>().health = collision.gameObject.GetComponent<ZombieModel>().health - 50;
+			Destroy(this.gameObject);
+		}
 
-		Destroy(this.gameObject);
 	}
 }
