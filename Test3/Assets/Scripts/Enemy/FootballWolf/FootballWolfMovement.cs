@@ -11,9 +11,11 @@ public class FootballWolfMovement : MonoBehaviour {
 	public GameObject football;
 	public Vector3 footballoffset;
 	private bool thrown = false;
+	public float movespeed;
 	
 	void Start()
 	{
+		movespeed = 100;
 		this.enemyAnimator = this.gameObject.GetComponentInChildren<Animator>();
 		this.player = GameObject.Find("ZombieController").transform;
 	}
@@ -24,9 +26,9 @@ public class FootballWolfMovement : MonoBehaviour {
 			this.enemyAnimator.Play("FootballWolf_Stunned");
 		}
 		if(!isStunned){
-			if (Vector3.Distance(this.player.position, this.transform.position) > 400 && Vector3.Distance(this.player.position, this.transform.position) < 1000)
+			if (Vector3.Distance(this.player.position, this.transform.position) > 400 && Vector3.Distance(this.player.position, this.transform.position) < 600)
 			{
-				float step = 100 * Time.deltaTime;
+				float step = movespeed * Time.deltaTime;
 				//move towards the player
 				this.transform.position = Vector3.MoveTowards(transform.position, player.position, step);
 				this.enemyAnimator.Play("FootballWolf_Walk");

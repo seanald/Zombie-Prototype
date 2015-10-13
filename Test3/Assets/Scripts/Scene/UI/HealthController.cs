@@ -17,13 +17,15 @@ public class HealthController : MonoBehaviour {
 		this.CurHealth = this.MaxHealth;
 	}
 
-	void OnCollisionEnter(Collision collision)
+	void Update()
 	{
-		if(collision.gameObject.tag == "Enemy")
-		{
-			curHealth--;
+
 			this.healthSlider.value = curHealth;
-		}
+			if(curHealth <= 0)
+			{
+			Application.LoadLevel(Application.loadedLevel);
+			}
+
 	}
 
 	public int MaxHealth

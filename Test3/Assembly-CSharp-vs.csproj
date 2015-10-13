@@ -39,17 +39,19 @@
 	<Reference Include="System.Core" />
 	<Reference Include="System.Xml.Linq" />
 	<Reference Include="UnityEngine">
-	  <HintPath>E:/Unity_5/Editor/Data/Managed/UnityEngine.dll</HintPath>
+	  <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
 	</Reference>
 	<Reference Include="UnityEditor">
-	  <HintPath>E:/Unity_5/Editor/Data/Managed/UnityEditor.dll</HintPath>
+	  <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
 	</Reference>
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\Enemy\BaseballWolf\BaseballWolfMovement.cs" />
      <Compile Include="Assets\Scripts\Enemy\Controllers\EnemyController.cs" />
+     <Compile Include="Assets\Scripts\Enemy\EnemySpawner.cs" />
      <Compile Include="Assets\Scripts\Enemy\FootballWolf\FootballScript.cs" />
      <Compile Include="Assets\Scripts\Enemy\FootballWolf\FootballWolfMovement.cs" />
+     <Compile Include="Assets\Scripts\Enemy\General\EnemyModel.cs" />
      <Compile Include="Assets\Scripts\Enemy\Mikey\Movement\MikeyMovement.cs" />
      <Compile Include="Assets\Scripts\Enemy\Movement\EnemyMovement.cs" />
      <Compile Include="Assets\Scripts\Environment\Hazard.cs" />
@@ -61,11 +63,13 @@
      <Compile Include="Assets\Scripts\Player\Ghost\Animation\GhostAnimatorController.cs" />
      <Compile Include="Assets\Scripts\Player\Ghost\Attacks\GhostBullet.cs" />
      <Compile Include="Assets\Scripts\Player\Ghost\Attacks\GhostHypnotize.cs" />
+     <Compile Include="Assets\Scripts\Player\Ghost\Attacks\GhostPossess.cs" />
      <Compile Include="Assets\Scripts\Player\Movement\PlayerFollow.cs" />
      <Compile Include="Assets\Scripts\Player\Movement\PlayerWalking.cs" />
      <Compile Include="Assets\Scripts\Player\Zombie\Animation\ZombieAnimatorController.cs" />
      <Compile Include="Assets\Scripts\Player\Zombie\Attacks\ZombieAttack.cs" />
      <Compile Include="Assets\Scripts\Scene\CameraOrthoSize.cs" />
+     <Compile Include="Assets\Scripts\Scene\FollowCamera.cs" />
      <Compile Include="Assets\Scripts\Scene\LocalPositionSnapper.cs" />
      <Compile Include="Assets\Scripts\Scene\UI\HealthController.cs" />
      <Compile Include="Assets\Scripts\Scene\UI\PlasmaController.cs" />
@@ -73,16 +77,16 @@
      <Compile Include="Assets\Scripts\Scene\WorldScaler.cs" />
      <None Include="Assets\Materials\$Sprites-Bumped Diffuse.shader" />
  <Reference Include="UnityEngine.UI">
- <HintPath>E:/Unity_5/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.Networking">
- <HintPath>E:/Unity_5/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.Analytics">
- <HintPath>E:/Unity_5/Editor/Data/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.iOS.Extensions.Xcode">
- <HintPath>E:/Unity_5/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
+ <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
  </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

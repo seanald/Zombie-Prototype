@@ -9,6 +9,10 @@ TagManager:
   - GhostBullet
   - Hazard
   - EnemyBullet
+  - FearObject
+  - EnemyScared
+  - LeftCameraBounds
+  - RightCameraBounds
   layers:
   - Default
   - TransparentFX
