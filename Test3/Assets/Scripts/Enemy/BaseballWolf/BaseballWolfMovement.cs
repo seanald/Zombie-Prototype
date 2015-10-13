@@ -11,11 +11,15 @@ public class BaseballWolfMovement : MonoBehaviour {
 	private float stunTime;
 	float stunnedTime = 2f;
 	public float movespeed;
+	public float maxdistancescared;
+	public float mindistancescared;
 
 	
 	void Start()
 	{
 		movespeed = 100;
+		maxdistancescared = 500;
+		mindistancescared = 80;
 		this.enemyAnimator = this.gameObject.GetComponentInChildren<Animator>();
 		this.player = GameObject.Find("ZombieController").transform;
 	}
@@ -26,7 +30,7 @@ public class BaseballWolfMovement : MonoBehaviour {
 			this.enemyAnimator.Play("Batwolf_Stunned");
 		}
 		if(!isStunned){
-			if (Vector3.Distance(this.player.position, this.transform.position) > 80 && Vector3.Distance(this.player.position, this.transform.position) < 1000)
+			if (Vector3.Distance(this.player.position, this.transform.position) > mindistancescared && Vector3.Distance(this.player.position, this.transform.position) < maxdistancescared)
 			{
 				float step = movespeed * Time.deltaTime;
 				//move towards the player

@@ -131,6 +131,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movespeed: 0
+  maxdistancescared: 0
+  mindistancescared: 0
 --- !u!212 &21210758
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -30,6 +30,8 @@ GameObject:
   - 114: {fileID: 11439152}
   - 114: {fileID: 11451492}
   - 114: {fileID: 11426184}
+  - 114: {fileID: 11446106}
+  - 114: {fileID: 11457642}
   m_Layer: 8
   m_Name: ZombieController
   m_TagString: Player
@@ -93,7 +95,8 @@ MonoBehaviour:
   walkSpeed: 200
   isActivePlayer: 1
   animator: {fileID: 9593130}
-  followPlayerGameObject: {fileID: 0}
+  followPlayerGameObject: {fileID: 185152, guid: d1d692c46d4c38944b61596f9b91d608,
+    type: 2}
 --- !u!114 &11426184
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -116,7 +119,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 295ba68312589d644b84732b27651504, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 0
+  health: 1000
+--- !u!114 &11446106
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 178440}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a795aa803f6e8648aa18c4179268235, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &11451492
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -128,6 +142,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac4dbf00bb442374eae852af07c1fbfb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &11457642
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 178440}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f6d0b0ffe3b8b743816c6b8268fc80b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthSlider: {fileID: 0}
 --- !u!143 &14305528
 CharacterController:
   m_ObjectHideFlags: 1

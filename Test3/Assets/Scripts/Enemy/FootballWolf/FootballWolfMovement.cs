@@ -26,7 +26,7 @@ public class FootballWolfMovement : MonoBehaviour {
 			this.enemyAnimator.Play("FootballWolf_Stunned");
 		}
 		if(!isStunned){
-			if (Vector3.Distance(this.player.position, this.transform.position) > 400 && Vector3.Distance(this.player.position, this.transform.position) < 1000)
+			if (Vector3.Distance(this.player.position, this.transform.position) > 400 && Vector3.Distance(this.player.position, this.transform.position) < 600)
 			{
 				float step = movespeed * Time.deltaTime;
 				//move towards the player

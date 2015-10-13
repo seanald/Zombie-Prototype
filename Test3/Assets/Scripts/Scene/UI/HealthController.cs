@@ -21,6 +21,10 @@ public class HealthController : MonoBehaviour {
 	{
 
 			this.healthSlider.value = curHealth;
+			if(curHealth <= 0)
+			{
+			Application.LoadLevel(Application.loadedLevel);
+			}
 
 	}
 
