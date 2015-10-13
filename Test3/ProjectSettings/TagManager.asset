@@ -11,6 +11,8 @@ TagManager:
   - EnemyBullet
   - FearObject
   - EnemyScared
+  - LeftCameraBounds
+  - RightCameraBounds
   layers:
   - Default
   - TransparentFX
@@ -21,7 +23,7 @@ TagManager:
   - 
   - 
   - Character Controller
-  - 
+  - Enemy
   - 
   - 
   - 

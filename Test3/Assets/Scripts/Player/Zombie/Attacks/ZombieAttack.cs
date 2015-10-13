@@ -13,7 +13,7 @@ public class ZombieAttack : MonoBehaviour
 	// Use this for initialization
 	void FixedUpdate()
 	{
-
+		
 		if (Input.GetKeyDown(KeyCode.Space))
 		{
 			//Test to see if enemy is in range, if so take it takes damage while kicking.
@@ -22,16 +22,18 @@ public class ZombieAttack : MonoBehaviour
 			if (Physics.Raycast(offset + transform.position, transform.right, out hit))
 			{
 				distance = hit.distance;
-
-				if (distance < maxdistance && hit.transform.tag == "Enemy")
+				print(hit.transform.tag);
+				if (distance < maxdistance && hit.transform.gameObject.GetComponentInChildren<EnemyController>() != null)
 				{
-					GameObject enemyhit = hit.transform.gameObject;
-					enemyhit.GetComponent<EnemyController>().Health--;
-					if(bighit){
+					EnemyController enemyhit = hit.transform.gameObject.GetComponentInChildren<EnemyController>();
+					enemyhit.Health--;
+					if (bighit)
+					{
 						print("bighit");
 						enemyhit.transform.position = enemyhit.transform.position + knockback;
 					}
-					if(enemyhit.GetComponent<EnemyController>().Health <= 0){
+					if (enemyhit.Health <= 0)
+					{
 						Destroy(hit.transform.gameObject);
 					}
 					bighit = !bighit;
@@ -41,8 +43,8 @@ public class ZombieAttack : MonoBehaviour
 					bighit = false;
 				}
 			}
-				
+			
 		}
-
+		
 	}
 }
