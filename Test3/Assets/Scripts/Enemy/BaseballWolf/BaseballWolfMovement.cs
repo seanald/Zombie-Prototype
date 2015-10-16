@@ -22,6 +22,8 @@ public class BaseballWolfMovement : MonoBehaviour
 	private float sqrAttackDistance;
 	private float sqrDangerDistance;
 
+	private float strafeDir = 1.0f;
+
 	private Vector3 destination;
 	private Vector3 moveVec;
 
@@ -43,29 +45,26 @@ public class BaseballWolfMovement : MonoBehaviour
 		if (this.enemy.EnemyState == EnemyState.Stunned)
 		{
 			this.enemyAnimator.Play("Batwolf_Stunned");
+			if (Time.time - stunTime >= stunnedTime)
+			{
+				this.enemy.EnemyState = EnemyState.Attacking;
+			}
 		}
 
 		if (this.enemy.EnemyState == EnemyState.Attacking)
 		{
 			if (Vector3.Distance(this.destination, this.transform.position) < this.dangerDistance && Vector3.Distance(this.destination, this.transform.position) > this.attackDistance)
 			{
-				moveVec = distVec.normalized;
-				moveVec.y = 0.0f;
-
-				enemy.RawMovement(moveVec, true);
-
-				this.enemyAnimator.Play("Batwolf_Walk");
-
+				this.MoveIn();
 			}
 			else
 			{
 				this.Attack();
 			}
 		}
-
-		if (Time.time - stunTime >= stunnedTime)
+		else if (this.enemy.EnemyState == EnemyState.Strafing)
 		{
-			this.enemy.EnemyState = EnemyState.Attacking;
+			Strafe();
 		}
 	}
 
@@ -84,6 +83,27 @@ public class BaseballWolfMovement : MonoBehaviour
 		distVec = (destination - transform.position);
 		sqrDistance = distVec.sqrMagnitude;
 		destination = target.transform.position;
+	}
+
+	void Seek(Vector3 distVec, bool align)
+	{
+		if(this.enemy.GetForce() != Vector3.zero) return;
+
+		destination = this.target.transform.position;
+		moveVec = distVec.normalized;
+		moveVec.y = 0.0f;
+
+		this.enemy.RawMovement(moveVec, align);
+	}
+
+	void MoveIn()
+	{
+		moveVec = distVec.normalized;
+		moveVec.y = 0.0f;
+
+		enemy.RawMovement(moveVec, true);
+
+		this.enemyAnimator.Play("Batwolf_Walk");
 	}
 
 	void Attack()
@@ -109,5 +129,15 @@ public class BaseballWolfMovement : MonoBehaviour
 		{
 			this.enemyAnimator.Play("Batwolf_Stand");
 		}
+	}
+
+	void Strafe()
+	{
+		strafeDir = 1.0f;
+		if(Random.value > 0.1f) strafeDir = -1.0f;
+
+		var perpendicularVec = Vector3.Cross(Vector3.up, this.target.transform.position);
+
+		this.Seek(perpendicularVec * this.strafeDir, false);
 	}
 }

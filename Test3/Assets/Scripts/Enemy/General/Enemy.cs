@@ -4,9 +4,10 @@ using System.Collections;
 public enum EnemyState
 {
 	Attacking,
-	Straffing,
+	Strafing,
 	Stunned,
-	Fleeing
+	Fleeing,
+	Standing
 }
 
 public class Enemy : MonoBehaviour
