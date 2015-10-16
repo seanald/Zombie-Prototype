@@ -10,7 +10,8 @@ public class BaseballWolfMovement : MonoBehaviour
 	public float attackDistance = 80.0f;
 	public float dangerDistance = 500.0f;
 
-	private float movespeed;
+	public float attackRate = 10.0f;
+
 	private float maxdistance = 50f;
 	private float stunTime;
 	float stunnedTime = 2f;
@@ -30,7 +31,6 @@ public class BaseballWolfMovement : MonoBehaviour
 	void Start()
 	{
 		this.enemy = this.gameObject.GetComponentInChildren<Enemy>();
-		this.movespeed = enemy.moveSpeed;
 		this.enemyAnimator = this.gameObject.GetComponentInChildren<Animator>();
 		this.target = GameObject.Find("ZombieController").transform;
 
@@ -133,9 +133,6 @@ public class BaseballWolfMovement : MonoBehaviour
 
 	void Strafe()
 	{
-		strafeDir = 1.0f;
-		if(Random.value > 0.1f) strafeDir = -1.0f;
-
 		var perpendicularVec = Vector3.Cross(Vector3.up, this.target.transform.position);
 
 		this.Seek(perpendicularVec * this.strafeDir, false);
