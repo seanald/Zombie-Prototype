@@ -181,7 +181,7 @@ RectTransform:
   m_RootOrder: 5
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 155, y: -152.460327}
+  m_AnchoredPosition: {x: 155, y: -152.678528}
   m_SizeDelta: {x: 400, y: 100}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &110804774
@@ -645,7 +645,7 @@ RectTransform:
   m_RootOrder: 4
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 155, y: -82.4603271}
+  m_AnchoredPosition: {x: 155, y: -82.6785278}
   m_SizeDelta: {x: 800, y: 50}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &295901127
@@ -2964,18 +2964,17 @@ SpriteRenderer:
 GameObject:
   m_PrefabParentObject: {fileID: 131538, guid: a87583b343634d248bc76c04271636cc, type: 2}
   m_PrefabInternal: {fileID: 1631868839}
---- !u!135 &1699835759
-SphereCollider:
+--- !u!114 &1699835759
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1699835758}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
   m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 157.883148
-  m_Center: {x: 0, y: 0, z: 0}
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dccfd835cb0be194dad586a69a931908, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1720254962
 GameObject:
   m_ObjectHideFlags: 0
