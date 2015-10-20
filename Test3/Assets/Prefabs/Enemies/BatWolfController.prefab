@@ -17,6 +17,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &167428
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 464036}
+  - 135: {fileID: 13508572}
+  m_Layer: 9
+  m_Name: Avoid
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &170712
 GameObject:
   m_ObjectHideFlags: 0
@@ -25,10 +41,10 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 451140}
-  - 65: {fileID: 6581526}
-  - 54: {fileID: 5460854}
   - 114: {fileID: 11485560}
   - 114: {fileID: 11484792}
+  - 143: {fileID: 14341702}
+  - 114: {fileID: 11401834}
   m_Layer: 9
   m_Name: BatWolfController
   m_TagString: Enemy
@@ -55,39 +71,25 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 170712}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: -1.62920685e-07}
-  m_LocalPosition: {x: -1770, y: 126.099998, z: -185}
+  m_LocalPosition: {x: -2072, y: 100, z: -167.899994}
   m_LocalScale: {x: 1, y: 1.16829574, z: 1}
   m_Children:
   - {fileID: 410536}
+  - {fileID: 464036}
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!54 &5460854
-Rigidbody:
+--- !u!4 &464036
+Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 170712}
-  serializedVersion: 2
-  m_Mass: 100
-  m_Drag: 0
-  m_AngularDrag: 0
-  m_UseGravity: 1
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 1
---- !u!65 &6581526
-BoxCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 170712}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 100, y: 128, z: 38.3397903}
-  m_Center: {x: 2.98812893e-06, y: 1.52587891e-05, z: -9.17050171}
+  m_GameObject: {fileID: 167428}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 451140}
+  m_RootOrder: 1
 --- !u!95 &9559634
 Animator:
   serializedVersion: 3
@@ -105,6 +107,22 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &11401834
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 170712}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bb3a5356a2ba1644885a316218a4e25, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 100
+  team: 0
+  drag: 10
+  applyGravity: 1
+  invincibleWhenHit: 0
 --- !u!114 &11484792
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -130,9 +148,38 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86538856091a9de48a22ed7d86f98f72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movespeed: 0
-  maxdistancescared: 0
-  mindistancescared: 0
+  attackDistance: 80
+  dangerDistance: 500
+  attackRate: 10
+--- !u!135 &13508572
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 167428}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 75
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!143 &14341702
+CharacterController:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 170712}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Height: 128
+  m_Radius: 32
+  m_SlopeLimit: 45
+  m_StepOffset: .300000012
+  m_SkinWidth: .0799999982
+  m_MinMoveDistance: .00100000005
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!212 &21210758
 SpriteRenderer:
   m_ObjectHideFlags: 1
