@@ -51,9 +51,11 @@
      <Compile Include="Assets\Scripts\Enemy\EnemySpawner.cs" />
      <Compile Include="Assets\Scripts\Enemy\FootballWolf\FootballScript.cs" />
      <Compile Include="Assets\Scripts\Enemy\FootballWolf\FootballWolfMovement.cs" />
+     <Compile Include="Assets\Scripts\Enemy\General\Enemy.cs" />
      <Compile Include="Assets\Scripts\Enemy\General\EnemyModel.cs" />
      <Compile Include="Assets\Scripts\Enemy\Mikey\Movement\MikeyMovement.cs" />
      <Compile Include="Assets\Scripts\Enemy\Movement\EnemyMovement.cs" />
+     <Compile Include="Assets\Scripts\Environment\FearObject.cs" />
      <Compile Include="Assets\Scripts\Environment\Hazard.cs" />
      <Compile Include="Assets\Scripts\Environment\HazardTurret.cs" />
      <Compile Include="Assets\Scripts\Player\Actions\PlayerSwitch.cs" />

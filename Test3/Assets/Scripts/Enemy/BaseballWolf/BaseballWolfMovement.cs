@@ -1,81 +1,187 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class BaseballWolfMovement : MonoBehaviour {
-
+public class BaseballWolfMovement : MonoBehaviour
+{
 	private Animator enemyAnimator;
-	private Transform player;
-	private float distance;
+	private Enemy enemy;
+	private Transform target;
+	public float attackDistance = 80.0f;
+	public float dangerDistance = 500.0f;
+	public float attackRate = 10.0f;
+	private float attackCooldown = 10.0f;
 	private float maxdistance = 50f;
-	private bool isStunned = false;
 	private float stunTime;
 	float stunnedTime = 2f;
-	public float movespeed;
-	public float maxdistancescared;
-	public float mindistancescared;
+	private Vector3 distVec;
+	private Vector3 avoidVec = Vector3.zero;
+	private float distance;
+	private float sqrDistance;
+	private float sqrAttackDistance;
+	private float sqrDangerDistance;
+	private float strafeDir = 1.0f;
+	private Vector3 destination;
+	private Vector3 moveVec;
+	private bool strafing;
 
-	
 	void Start()
 	{
-		movespeed = 100;
-		maxdistancescared = 500;
-		mindistancescared = 80;
+		this.enemy = this.gameObject.GetComponentInChildren<Enemy>();
 		this.enemyAnimator = this.gameObject.GetComponentInChildren<Animator>();
-		this.player = GameObject.Find("ZombieController").transform;
+		this.target = GameObject.Find("ZombieController").transform;
+
+		this.attackCooldown = this.attackRate;
+
+		sqrAttackDistance = Mathf.Pow(attackDistance, 2);
+		sqrDangerDistance = Mathf.Pow(dangerDistance, 2);
+		InvokeRepeating("UpdateStrafeDir", 2, 2);
 	}
-	// Update is called once per frame
-	void Update () 
+
+	void FixedUpdate()
 	{
-		if(isStunned){
+		UpdateDistance();
+
+		if (this.enemy.EnemyState == EnemyState.Stunned)
+		{
 			this.enemyAnimator.Play("Batwolf_Stunned");
-		}
-		if(!isStunned){
-			if (Vector3.Distance(this.player.position, this.transform.position) > mindistancescared && Vector3.Distance(this.player.position, this.transform.position) < maxdistancescared)
+			if (Time.time - stunTime >= stunnedTime)
 			{
-				float step = movespeed * Time.deltaTime;
-				//move towards the player
-				this.transform.position = Vector3.MoveTowards(transform.position, player.position, step);
+				this.enemy.EnemyState = EnemyState.Attacking;
+			}
+		}
 
-
-
-					
-				this.enemyAnimator.Play("Batwolf_Walk");
-
+		if (this.enemy.EnemyState == EnemyState.Attacking)
+		{
+			if (Vector3.Distance(this.destination, this.transform.position) < this.dangerDistance && Vector3.Distance(this.destination, this.transform.position) > this.attackDistance)
+			{
+				this.MoveIn();
 			}
 			else
 			{
-				if(Vector3.Distance(this.player.position, this.transform.position) < 80){
-					RaycastHit hit;
-					//Debug.DrawLine(transform.position, transform.right * 100, Color.green);
-					if (Physics.Raycast(transform.position, transform.right, out hit))
-					{
-						distance = hit.distance;
-						//print(distance);
-						//print(hit.transform.tag);
-						if (distance < maxdistance && (hit.transform.tag == "Player" || hit.transform.tag == "ActivePlayer"))
-						{
-							GameObject enemyhit = hit.transform.gameObject;
-							enemyhit.GetComponent<HealthController>().CurHealth--;
-						}
-					}
-					this.enemyAnimator.Play("Batwolf_Swing");
-				}
-				else{
-					this.enemyAnimator.Play("Batwolf_Stand");
-				}
+				this.Attack();
 			}
 		}
-		else if (Time.time - stunTime >= stunnedTime)
+
+		if (this.enemy.EnemyState == EnemyState.IsFeared)
 		{
-			isStunned = false;
+
+		}
+		else if (this.enemy.EnemyState == EnemyState.Strafing)
+		{
+			Strafe();
 		}
 	}
 
-	void OnCollisionEnter(Collision collision){
+	void OnCollisionEnter(Collision collision)
+	{
 		
-		if(collision.gameObject.tag == "GhostBullet"){
-			isStunned = true;
+		if (collision.gameObject.tag == "GhostBullet")
+		{
+			this.enemy.EnemyState = EnemyState.Stunned;
 			stunTime = Time.time;
 		}
+	}
+
+	void UpdateDistance()
+	{
+		distVec = (destination - transform.position);
+		sqrDistance = distVec.sqrMagnitude;
+		destination = target.transform.position;
+	}
+
+	void IsFeared()
+	{
+		this.enemy.EnemyState = EnemyState.IsFeared;
+	}
+
+	void Seek(Vector3 distVec, bool align)
+	{
+		if (this.enemy.GetForce() != Vector3.zero)
+			return;
+
+		destination = this.target.transform.position;
+		moveVec = distVec.normalized;
+		moveVec.y = 0.0f;
+
+		this.enemy.RawMovement(moveVec, align);
+	}
+
+	void MoveIn()
+	{
+		moveVec = distVec.normalized;
+		moveVec.y = 0.0f;
+
+		enemy.RawMovement(moveVec, true);
+
+		this.enemyAnimator.Play("Batwolf_Walk");
+	}
+
+	void Attack()
+	{
+		if (Vector3.Distance(this.destination, this.transform.position) < this.attackDistance)
+		{
+			RaycastHit hit;
+			//Debug.DrawLine(transform.position, transform.right * 100, Color.green);
+			if (Physics.Raycast(transform.position, transform.right, out hit))
+			{
+				distance = hit.distance;
+				//print(distance);
+				//print(hit.transform.tag);
+				if (distance < maxdistance && (hit.transform.tag == "Player" || hit.transform.tag == "ActivePlayer"))
+				{
+					GameObject enemyhit = hit.transform.gameObject;
+					enemyhit.GetComponent<HealthController>().CurHealth--;
+					this.enemyAnimator.Play("Batwolf_Swing");
+					StartCoroutine(WaitForAnimation());
+				}
+			}
+
+		}
+	}
+
+	IEnumerator WaitForAnimation()
+	{
+		yield return new WaitForSeconds(1);
+		this.Strafe();
+	}
+
+	IEnumerator WaitForAttack()
+	{
+		this.strafing = true;
+		yield return new WaitForSeconds(this.attackRate);
+		this.enemy.EnemyState = EnemyState.Attacking;
+		this.strafing = false;
+	}
+
+	void Strafe()
+	{
+		Vector3 perpendicularVec;
+		if (this.sqrDistance >= this.sqrDangerDistance)
+		{
+			this.MoveIn();
+		}
+
+		this.enemy.EnemyState = EnemyState.Strafing;
+		if (this.sqrDistance < this.sqrDangerDistance)
+		{
+			perpendicularVec = Vector3.MoveTowards(this.transform.position * -1, this.target.transform.position, this.sqrDangerDistance);
+		}
+		else
+		{
+			perpendicularVec = Vector3.Cross(Vector3.up, this.target.transform.position);
+		}
+
+		this.Seek(perpendicularVec * this.strafeDir, false);
+		this.enemyAnimator.Play("Batwolf_Walk");
+
+		if (!this.strafing)
+		{
+			StartCoroutine(WaitForAttack());
+		}
+	}
+
+	void UpdateStrafeDir()
+	{
+		this.strafeDir *= -1.0f;
 	}
 }

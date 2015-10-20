@@ -17,9 +17,9 @@ public class GhostPossess : MonoBehaviour {
 		if (Input.GetKeyDown(KeyCode.T) && isPossessed)
 		{
 			
-			mytarget.GetComponent<BaseballWolfMovement>().movespeed = -100;
-			mytarget.GetComponent<BaseballWolfMovement>().maxdistancescared = 2000;
-			mytarget.GetComponent<BaseballWolfMovement>().mindistancescared = -1;
+			mytarget.GetComponent<Enemy>().moveSpeed = -100;
+			mytarget.GetComponent<BaseballWolfMovement>().dangerDistance = 2000;
+			mytarget.GetComponent<BaseballWolfMovement>().attackDistance = -1;
 			isPossessed = false;
 			startTime = Time.time;
 			
