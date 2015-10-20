@@ -155,8 +155,21 @@ public class BaseballWolfMovement : MonoBehaviour
 
 	void Strafe()
 	{
+		Vector3 perpendicularVec;
+		if (this.sqrDistance >= this.sqrDangerDistance)
+		{
+			this.MoveIn();
+		}
+
 		this.enemy.EnemyState = EnemyState.Strafing;
-		var perpendicularVec = Vector3.Cross(Vector3.up, this.target.transform.position);
+		if (this.sqrDistance < this.sqrDangerDistance)
+		{
+			perpendicularVec = Vector3.MoveTowards(this.transform.position * -1, this.target.transform.position, this.sqrDangerDistance);
+		}
+		else
+		{
+			perpendicularVec = Vector3.Cross(Vector3.up, this.target.transform.position);
+		}
 
 		this.Seek(perpendicularVec * this.strafeDir, false);
 		this.enemyAnimator.Play("Batwolf_Walk");
