@@ -6,27 +6,23 @@ public class BaseballWolfMovement : MonoBehaviour
 	private Animator enemyAnimator;
 	private Enemy enemy;
 	private Transform target;
-
 	public float attackDistance = 80.0f;
 	public float dangerDistance = 500.0f;
-
 	public float attackRate = 10.0f;
-
+	private float attackCooldown = 10.0f;
 	private float maxdistance = 50f;
 	private float stunTime;
 	float stunnedTime = 2f;
-
 	private Vector3 distVec;
 	private Vector3 avoidVec = Vector3.zero;
 	private float distance;
 	private float sqrDistance;
 	private float sqrAttackDistance;
 	private float sqrDangerDistance;
-
 	private float strafeDir = 1.0f;
-
 	private Vector3 destination;
 	private Vector3 moveVec;
+	private bool strafing;
 
 	void Start()
 	{
@@ -34,8 +30,11 @@ public class BaseballWolfMovement : MonoBehaviour
 		this.enemyAnimator = this.gameObject.GetComponentInChildren<Animator>();
 		this.target = GameObject.Find("ZombieController").transform;
 
+		this.attackCooldown = this.attackRate;
+
 		sqrAttackDistance = Mathf.Pow(attackDistance, 2);
 		sqrDangerDistance = Mathf.Pow(dangerDistance, 2);
+		InvokeRepeating("UpdateStrafeDir", 2, 2);
 	}
 
 	void FixedUpdate()
@@ -62,6 +61,11 @@ public class BaseballWolfMovement : MonoBehaviour
 				this.Attack();
 			}
 		}
+
+		if (this.enemy.EnemyState == EnemyState.IsFeared)
+		{
+
+		}
 		else if (this.enemy.EnemyState == EnemyState.Strafing)
 		{
 			Strafe();
@@ -85,9 +89,15 @@ public class BaseballWolfMovement : MonoBehaviour
 		destination = target.transform.position;
 	}
 
+	void IsFeared()
+	{
+		this.enemy.EnemyState = EnemyState.IsFeared;
+	}
+
 	void Seek(Vector3 distVec, bool align)
 	{
-		if(this.enemy.GetForce() != Vector3.zero) return;
+		if (this.enemy.GetForce() != Vector3.zero)
+			return;
 
 		destination = this.target.transform.position;
 		moveVec = distVec.normalized;
@@ -121,20 +131,44 @@ public class BaseballWolfMovement : MonoBehaviour
 				{
 					GameObject enemyhit = hit.transform.gameObject;
 					enemyhit.GetComponent<HealthController>().CurHealth--;
+					this.enemyAnimator.Play("Batwolf_Swing");
+					StartCoroutine(WaitForAnimation());
 				}
 			}
-			this.enemyAnimator.Play("Batwolf_Swing");
+
 		}
-		else
-		{
-			this.enemyAnimator.Play("Batwolf_Stand");
-		}
+	}
+
+	IEnumerator WaitForAnimation()
+	{
+		yield return new WaitForSeconds(1);
+		this.Strafe();
+	}
+
+	IEnumerator WaitForAttack()
+	{
+		this.strafing = true;
+		yield return new WaitForSeconds(this.attackRate);
+		this.enemy.EnemyState = EnemyState.Attacking;
+		this.strafing = false;
 	}
 
 	void Strafe()
 	{
+		this.enemy.EnemyState = EnemyState.Strafing;
 		var perpendicularVec = Vector3.Cross(Vector3.up, this.target.transform.position);
 
 		this.Seek(perpendicularVec * this.strafeDir, false);
+		this.enemyAnimator.Play("Batwolf_Walk");
+
+		if (!this.strafing)
+		{
+			StartCoroutine(WaitForAttack());
+		}
+	}
+
+	void UpdateStrafeDir()
+	{
+		this.strafeDir *= -1.0f;
 	}
 }

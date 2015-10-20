@@ -7,7 +7,8 @@ public enum EnemyState
 	Strafing,
 	Stunned,
 	Fleeing,
-	Standing
+	Standing,
+	IsFeared
 }
 
 public class Enemy : MonoBehaviour
