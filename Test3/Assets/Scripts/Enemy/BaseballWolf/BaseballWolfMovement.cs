@@ -51,20 +51,11 @@ public class BaseballWolfMovement : MonoBehaviour
 				this.enemy.EnemyState = EnemyState.Attacking;
 			}
 		}
-
-		if (this.enemy.EnemyState == EnemyState.Attacking)
+		else if (this.enemy.EnemyState == EnemyState.Attacking)
 		{
-			if (Vector3.Distance(this.destination, this.transform.position) < this.dangerDistance && Vector3.Distance(this.destination, this.transform.position) > this.attackDistance)
-			{
-				this.MoveIn();
-			}
-			else
-			{
-				this.Attack();
-			}
+			this.Attack();
 		}
-
-		if (this.enemy.EnemyState == EnemyState.IsFeared)
+		else if (this.enemy.EnemyState == EnemyState.Fleeing)
 		{
 
 		}
@@ -76,7 +67,6 @@ public class BaseballWolfMovement : MonoBehaviour
 
 	void OnCollisionEnter(Collision collision)
 	{
-		
 		if (collision.gameObject.tag == "GhostBullet")
 		{
 			this.enemy.EnemyState = EnemyState.Stunned;
@@ -93,30 +83,15 @@ public class BaseballWolfMovement : MonoBehaviour
 		sqrDistance = distVec.sqrMagnitude;
 	}
 
-	void IsFeared()
-	{
-		this.enemy.EnemyState = EnemyState.IsFeared;
-	}
-
 	void Seek(Vector3 distVec, bool align)
 	{
 		if (this.enemy.GetForce() != Vector3.zero)
 			return;
 
-		destination = this.target.transform.position;
 		moveVec = distVec.normalized;
 		moveVec.y = 0.0f;
 
 		this.enemy.RawMovement(moveVec, align);
-	}
-
-	void MoveIn()
-	{
-		moveVec = distVec.normalized;
-		moveVec.y = 0.0f;
-
-		enemy.RawMovement(moveVec, true);
-
 		this.enemyAnimator.Play("Batwolf_Walk");
 	}
 
@@ -124,27 +99,46 @@ public class BaseballWolfMovement : MonoBehaviour
 	{
 		if (this.distance < this.attackDistance)
 		{
+			print(distance);
+
+			//TODO: Align vertically with player on left or right side
+
 			RaycastHit hit;
 			//Debug.DrawLine(transform.position, transform.right * 100, Color.green);
 			if (Physics.Raycast(transform.position, transform.right, out hit))
 			{
-				//print(distance);
-				//print(hit.transform.tag);
+				print(hit.transform.tag);
 				if (hit.transform.tag == "Player" || hit.transform.tag == "ActivePlayer")
 				{
-					GameObject enemyhit = hit.transform.gameObject;
-					enemyhit.GetComponent<HealthController>().CurHealth--;
 					this.enemyAnimator.Play("Batwolf_Swing");
 					StartCoroutine(WaitForAnimation());
+					GameObject enemyhit = hit.transform.gameObject;
+					enemyhit.GetComponent<HealthController>().CurHealth--;
 				}
 			}
 
+			if (Physics.Raycast(transform.position, transform.right * -1, out hit))
+			{
+				print(hit.transform.tag);
+				if (hit.transform.tag == "Player" || hit.transform.tag == "ActivePlayer")
+				{
+					this.enemyAnimator.Play("Batwolf_Swing");
+					StartCoroutine(WaitForAnimation());
+					GameObject enemyhit = hit.transform.gameObject;
+					enemyhit.GetComponent<HealthController>().CurHealth--;
+				}
+			}
+
+		}
+		else
+		{
+			this.Seek(this.distVec, true);
 		}
 	}
 
 	IEnumerator WaitForAnimation()
 	{
-		yield return new WaitForSeconds(1);
+		yield return new WaitForSeconds(this.enemyAnimator.GetCurrentAnimatorStateInfo(0).length);
 		this.Strafe();
 	}
 
@@ -161,13 +155,14 @@ public class BaseballWolfMovement : MonoBehaviour
 		Vector3 perpendicularVec;
 		if (this.sqrDistance >= this.sqrDangerDistance)
 		{
-			this.MoveIn();
+			this.Seek(this.distVec, true);
 		}
 
 		this.enemy.EnemyState = EnemyState.Strafing;
 		if (this.sqrDistance < this.sqrDangerDistance)
 		{
-			perpendicularVec = Vector3.MoveTowards(this.transform.position * -1, this.target.transform.position, this.sqrDangerDistance);
+			this.Seek(this.distVec * -1, true);
+			perpendicularVec = Vector3.Cross(Vector3.up, this.target.transform.position);
 		}
 		else
 		{
