@@ -16,7 +16,7 @@ public class EnemyController : MonoBehaviour
 			health = value;
 		}
 	}
-	
+
 	public Animator Animator
 	{
 		get {
@@ -26,7 +26,7 @@ public class EnemyController : MonoBehaviour
 			animator = value;
 		}
 	}
-	
+
 	public float WalkSpeed
 	{
 		get {

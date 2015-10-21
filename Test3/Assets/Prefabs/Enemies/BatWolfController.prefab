@@ -1,5 +1,21 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &148176
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 426648}
+  - 135: {fileID: 13552740}
+  m_Layer: 9
+  m_Name: Avoid
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &162598
 GameObject:
   m_ObjectHideFlags: 0
@@ -41,10 +57,11 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 451140}
-  - 114: {fileID: 11485560}
-  - 114: {fileID: 11484792}
-  - 143: {fileID: 14341702}
+  - 143: {fileID: 14377516}
   - 114: {fileID: 11401834}
+  - 114: {fileID: 11470936}
+  - 114: {fileID: 11485560}
+  - 114: {fileID: 11494634}
   m_Layer: 9
   m_Name: BatWolfController
   m_TagString: Enemy
@@ -64,17 +81,30 @@ Transform:
   m_Children: []
   m_Father: {fileID: 451140}
   m_RootOrder: 0
+--- !u!4 &426648
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 148176}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 451140}
+  m_RootOrder: 1
 --- !u!4 &451140
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 170712}
-  m_LocalRotation: {x: 0, y: 1, z: 0, w: -1.62920685e-07}
-  m_LocalPosition: {x: -2072, y: 100, z: -167.899994}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1672, y: 80, z: -199}
   m_LocalScale: {x: 1, y: 1.16829574, z: 1}
   m_Children:
   - {fileID: 410536}
+  - {fileID: 426648}
   - {fileID: 464036}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -89,7 +119,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 451140}
-  m_RootOrder: 1
+  m_RootOrder: 2
 --- !u!95 &9559634
 Animator:
   serializedVersion: 3
@@ -123,7 +153,7 @@ MonoBehaviour:
   drag: 10
   applyGravity: 1
   invincibleWhenHit: 0
---- !u!114 &11484792
+--- !u!114 &11470936
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -131,12 +161,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 170712}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 33ad985a51185fd4282e4dc60f8b065d, type: 3}
+  m_Script: {fileID: 11500000, guid: 02b8d64d7346ad641b3d77f7c62211ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 3
-  walkSpeed: 0
-  animator: {fileID: 0}
+  maxHealth: 3
+  armor: 0
+  invincibilityDuration: 1
+  invincibleWhenHit: 0
 --- !u!114 &11485560
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -151,6 +182,17 @@ MonoBehaviour:
   attackDistance: 80
   dangerDistance: 500
   attackRate: 10
+--- !u!114 &11494634
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 170712}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 540125c1393900548bf7d4930555c7f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!135 &13508572
 SphereCollider:
   m_ObjectHideFlags: 1
@@ -163,7 +205,19 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 75
   m_Center: {x: 0, y: 0, z: 0}
---- !u!143 &14341702
+--- !u!135 &13552740
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 148176}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 75
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!143 &14377516
 CharacterController:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}

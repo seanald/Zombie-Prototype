@@ -7,8 +7,7 @@ public enum EnemyState
 	Strafing,
 	Stunned,
 	Fleeing,
-	Standing,
-	IsFeared
+	Standing
 }
 
 public class Enemy : MonoBehaviour
@@ -56,6 +55,10 @@ public class Enemy : MonoBehaviour
 
 		var flags = controller.Move(forcesVec * Time.fixedDeltaTime);
 		grounded = (flags & CollisionFlags.CollidedBelow) != 0;
+
+		Vector3 theScale = transform.localScale;
+
+		// TODO: flip x scale dependent on direction
 	}
 
 	public Vector3 Gravity()

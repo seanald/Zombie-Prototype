@@ -23,16 +23,16 @@ public class ZombieAttack : MonoBehaviour
 			{
 				distance = hit.distance;
 				print(hit.transform.tag);
-				if (distance < maxdistance && hit.transform.gameObject.GetComponentInChildren<EnemyController>() != null)
+				if (distance < maxdistance && hit.transform.gameObject.GetComponentInChildren<Health>() != null)
 				{
-					EnemyController enemyhit = hit.transform.gameObject.GetComponentInChildren<EnemyController>();
-					enemyhit.Health--;
+					Health enemyhit = hit.transform.gameObject.GetComponentInChildren<Health>();
+					enemyhit.CurHealth--;
 					if (bighit)
 					{
 						print("bighit");
 						enemyhit.transform.position = enemyhit.transform.position + knockback;
 					}
-					if (enemyhit.Health <= 0)
+					if (enemyhit.CurHealth <= 0)
 					{
 						Destroy(hit.transform.gameObject);
 					}
