@@ -58,6 +58,9 @@
      <Compile Include="Assets\Scripts\Environment\FearObject.cs" />
      <Compile Include="Assets\Scripts\Environment\Hazard.cs" />
      <Compile Include="Assets\Scripts\Environment\HazardTurret.cs" />
+     <Compile Include="Assets\Scripts\Model\Common\Attack.cs" />
+     <Compile Include="Assets\Scripts\Model\Common\Health.cs" />
+     <Compile Include="Assets\Scripts\Model\Effects\Flicker.cs" />
      <Compile Include="Assets\Scripts\Player\Actions\PlayerSwitch.cs" />
      <Compile Include="Assets\Scripts\Player\General\GhostModel.cs" />
      <Compile Include="Assets\Scripts\Player\General\PlayerModel.cs" />
