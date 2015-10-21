@@ -9,10 +9,11 @@ public class BaseballWolfMovement : MonoBehaviour
 	public float attackDistance = 80.0f;
 	public float dangerDistance = 500.0f;
 	public float attackRate = 10.0f;
+
 	private float attackCooldown = 10.0f;
 	private float maxdistance = 50f;
 	private float stunTime;
-	float stunnedTime = 2f;
+	private float stunnedTime = 2f;
 	private Vector3 distVec;
 	private Vector3 avoidVec = Vector3.zero;
 	private float distance;
@@ -34,6 +35,7 @@ public class BaseballWolfMovement : MonoBehaviour
 
 		sqrAttackDistance = Mathf.Pow(attackDistance, 2);
 		sqrDangerDistance = Mathf.Pow(dangerDistance, 2);
+
 		InvokeRepeating("UpdateStrafeDir", 2, 2);
 	}
 
@@ -84,9 +86,11 @@ public class BaseballWolfMovement : MonoBehaviour
 
 	void UpdateDistance()
 	{
-		distVec = (destination - transform.position);
-		sqrDistance = distVec.sqrMagnitude;
 		destination = target.transform.position;
+		distVec = (destination - transform.position);
+
+		distance = distVec.magnitude;
+		sqrDistance = distVec.sqrMagnitude;
 	}
 
 	void IsFeared()
@@ -118,16 +122,15 @@ public class BaseballWolfMovement : MonoBehaviour
 
 	void Attack()
 	{
-		if (Vector3.Distance(this.destination, this.transform.position) < this.attackDistance)
+		if (this.distance < this.attackDistance)
 		{
 			RaycastHit hit;
 			//Debug.DrawLine(transform.position, transform.right * 100, Color.green);
 			if (Physics.Raycast(transform.position, transform.right, out hit))
 			{
-				distance = hit.distance;
 				//print(distance);
 				//print(hit.transform.tag);
-				if (distance < maxdistance && (hit.transform.tag == "Player" || hit.transform.tag == "ActivePlayer"))
+				if (hit.transform.tag == "Player" || hit.transform.tag == "ActivePlayer")
 				{
 					GameObject enemyhit = hit.transform.gameObject;
 					enemyhit.GetComponent<HealthController>().CurHealth--;
