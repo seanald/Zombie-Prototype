@@ -8,15 +8,14 @@ public class Health : MonoBehaviour
 	public float invincibilityDuration = 1.0f;
 
 	public bool invincibleWhenHit = false;
-	public bool directionalBlock = false;
 
-	private int health = 100;
+	private int curHealth = 100;
 	private bool invincible = false;
 
 	// Use this for initialization
 	void Start()
 	{
-	
+		this.curHealth = this.maxHealth;
 	}
 	
 	// Update is called once per frame
@@ -32,10 +31,20 @@ public class Health : MonoBehaviour
 
 	public void AddHealth(int hp)
 	{
-		health += hp;
-		if (health > maxHealth)
+		curHealth += hp;
+		if (curHealth > maxHealth)
 		{
-			health = maxHealth;
+			curHealth = maxHealth;
+		}
+	}
+
+	public int CurHealth
+	{
+		get {
+			return curHealth;
+		}
+		set {
+			curHealth = value;
 		}
 	}
 }

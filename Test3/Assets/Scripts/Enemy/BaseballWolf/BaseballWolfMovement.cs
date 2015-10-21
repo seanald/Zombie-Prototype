@@ -11,7 +11,6 @@ public class BaseballWolfMovement : MonoBehaviour
 	public float attackRate = 10.0f;
 
 	private float attackCooldown = 10.0f;
-	private float maxdistance = 50f;
 	private float stunTime;
 	private float stunnedTime = 2f;
 	private Vector3 distVec;
