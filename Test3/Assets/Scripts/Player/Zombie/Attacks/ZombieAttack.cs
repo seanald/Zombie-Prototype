@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class ZombieAttack : MonoBehaviour
 {
@@ -9,6 +10,16 @@ public class ZombieAttack : MonoBehaviour
 	public Vector3 offset;
 	private bool bighit = false;
 	public Vector3 knockback;
+
+	Dictionary<string, Transform> dict = new Dictionary<string, Transform>();
+
+	void Start()
+	{
+		foreach(Transform t in transform)
+		{
+			dict.Add(t.name, t);
+		}
+	}
 	
 	// Use this for initialization
 	void FixedUpdate()
@@ -16,8 +27,12 @@ public class ZombieAttack : MonoBehaviour
 		
 		if (Input.GetKeyDown(KeyCode.Space))
 		{
-			//Test to see if enemy is in range, if so take it takes damage while kicking.
-			RaycastHit hit;
+			Transform hitbox = this.transform.FindChild("Hitboxes");
+			Transform punch = hitbox.FindChild("Punch");
+			punch.gameObject.SetActive(true);
+
+			RaycastHit
+			hit;
 			Debug.DrawLine(offset + transform.position, transform.right * 100, Color.green);
 			if (Physics.Raycast(offset + transform.position, transform.right, out hit))
 			{
@@ -43,7 +58,7 @@ public class ZombieAttack : MonoBehaviour
 					bighit = false;
 				}
 			}
-			
+			punch.gameObject.SetActive(false);
 		}
 		
 	}

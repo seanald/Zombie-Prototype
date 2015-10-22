@@ -26,14 +26,12 @@ GameObject:
   m_Component:
   - 4: {fileID: 415652}
   - 143: {fileID: 14334832}
-  - 114: {fileID: 11433514}
-  - 114: {fileID: 11430850}
-  - 114: {fileID: 11461550}
+  - 114: {fileID: 11472192}
+  - 114: {fileID: 11466094}
   - 114: {fileID: 11421572}
   - 114: {fileID: 11428964}
   - 114: {fileID: 11474880}
-  - 114: {fileID: 11499092}
-  - 114: {fileID: 11435146}
+  - 114: {fileID: 11409982}
   m_Layer: 8
   m_Name: GhostController
   m_TagString: Player
@@ -83,56 +81,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &11421572
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 185152}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d62e2f610dac0c242b1117365f66cc7a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &11428964
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 185152}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f2f02c9156ed9c14fa25d7cbe9c043a1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &11430850
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 185152}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ac4dbf00bb442374eae852af07c1fbfb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &11433514
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 185152}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 231ea716950eca44ba881ee8abf44cbd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  walkSpeed: 200
-  isActivePlayer: 0
-  animator: {fileID: 9543518}
-  followPlayerGameObject: {fileID: 178440, guid: cd0680be51a520a4695e5251d7cabffd,
-    type: 2}
---- !u!114 &11435146
+--- !u!114 &11409982
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -144,7 +93,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mytarget: {fileID: 0}
---- !u!114 &11461550
+--- !u!114 &11421572
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -152,10 +101,54 @@ MonoBehaviour:
   m_GameObject: {fileID: 185152}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e4cde0cedf5b6d04bb977acb5dcd7ce1, type: 3}
+  m_Script: {fileID: 11500000, guid: d62e2f610dac0c242b1117365f66cc7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  plasma: 5
+  target: {fileID: 0}
+  offset: {x: 0, y: 0, z: 0}
+  followDamping: 2
+--- !u!114 &11428964
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 185152}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2f02c9156ed9c14fa25d7cbe9c043a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &11466094
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 185152}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0141bc8936561c6498083cf65fc1281d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxPlasma: 100
+  plasmaBar: {fileID: 0}
+--- !u!114 &11472192
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 185152}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fced46c774f1ff4caa83127cca5d084, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isActivePlayer: 0
+  moveSpeed: 200
+  drag: 10
+  applyGravity: 1
+  invincibleWhenHit: 0
+  animator: {fileID: 0}
+  followPlayerGameObject: {fileID: 0}
 --- !u!114 &11474880
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -169,18 +162,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Bullet: {fileID: 179828, guid: 5f68e5991146b624f89c4b41d5f49766, type: 2}
   GBoffset: {x: 70, y: 0, z: 0}
---- !u!114 &11499092
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 185152}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ab55e77a8951a2542ae0647bd6a3025c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  plasmaSlider: {fileID: 0}
 --- !u!143 &14334832
 CharacterController:
   m_ObjectHideFlags: 1

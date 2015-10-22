@@ -3,12 +3,10 @@ using System.Collections;
 
 public class Attack : MonoBehaviour {
 
-	public GameObject bullet;
 	public GameObject owner;
 	public int damage = 0;
 	public float knockback = 0.0f;
 	public GameObject victim;  // this is only not null if the event actually hit something
-	public bool ranged = false;
 
 	public Attack(GameObject owner, int damage, float knockback)
 	{
@@ -28,4 +26,7 @@ public class Attack : MonoBehaviour {
 
 		return total;
 	}
+
+	// Collision check with enemy
+	// Health.DoDamage(this)
 }

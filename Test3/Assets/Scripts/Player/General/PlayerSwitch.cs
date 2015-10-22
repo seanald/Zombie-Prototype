@@ -3,8 +3,8 @@ using System.Collections;
 
 public class PlayerSwitch : MonoBehaviour
 {
-	private PlayerModel zombie;
-	private PlayerModel ghost;
+	private Player zombie;
+	private Player ghost;
 
 	public GameObject zombie_On; //zombie on text
 	public GameObject zombie_Off; // zombie off text
@@ -18,28 +18,28 @@ public class PlayerSwitch : MonoBehaviour
 		ghost_On.SetActive (false);
 		ghost_Off.SetActive (true);
 
-		zombie = GameObject.Find("ZombieController").GetComponent<PlayerModel>();
-		ghost = GameObject.Find("GhostController").GetComponent<PlayerModel>();
+		zombie = GameObject.Find("ZombieController").GetComponent<Player>();
+		ghost = GameObject.Find("GhostController").GetComponent<Player>();
 	}
 
 	void FixedUpdate()
 	{
 		if (Input.GetKeyDown(KeyCode.R))
 		{
-			if(this.zombie.IsActivePlayer)
+			if(this.zombie.isActivePlayer)
 			{
-				zombie.IsActivePlayer = false;
-				ghost.IsActivePlayer = true;
+				zombie.isActivePlayer = false;
+				ghost.isActivePlayer = true;
 
 				zombie_On.SetActive (false);
 				zombie_Off.SetActive (true);
 	            ghost_On.SetActive (true);
 	            ghost_Off.SetActive (false);
 			}
-			else if (this.ghost.IsActivePlayer)
+			else if (this.ghost.isActivePlayer)
 			{
-				this.ghost.IsActivePlayer = false;
-				this.zombie.IsActivePlayer = true;
+				this.ghost.isActivePlayer = false;
+				this.zombie.isActivePlayer = true;
 
 				zombie_On.SetActive(true);
 				zombie_Off.SetActive (false);

@@ -17,6 +17,38 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &143502
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 467600}
+  - 65: {fileID: 6504652}
+  - 114: {fileID: 11489764}
+  m_Layer: 8
+  m_Name: Punch
+  m_TagString: Attack
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!1 &167074
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 473584}
+  m_Layer: 8
+  m_Name: Hitboxes
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &178440
 GameObject:
   m_ObjectHideFlags: 0
@@ -26,12 +58,10 @@ GameObject:
   m_Component:
   - 4: {fileID: 431642}
   - 143: {fileID: 14305528}
-  - 114: {fileID: 11405178}
-  - 114: {fileID: 11439152}
-  - 114: {fileID: 11451492}
+  - 114: {fileID: 11435678}
+  - 114: {fileID: 11447200}
   - 114: {fileID: 11426184}
-  - 114: {fileID: 11446106}
-  - 114: {fileID: 11457642}
+  - 114: {fileID: 11498388}
   m_Layer: 8
   m_Name: ZombieController
   m_TagString: Player
@@ -58,12 +88,50 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 178440}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2182, y: 99, z: -102}
+  m_LocalPosition: {x: -2181.30005, y: 99, z: -102}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 408650}
+  - {fileID: 473584}
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!4 &467600
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 143502}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 60, y: .5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 473584}
+  m_RootOrder: 0
+--- !u!4 &473584
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 167074}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 467600}
+  m_Father: {fileID: 431642}
+  m_RootOrder: 1
+--- !u!65 &6504652
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 143502}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 60, y: 30, z: 30}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!95 &9593130
 Animator:
   serializedVersion: 3
@@ -81,22 +149,6 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &11405178
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 178440}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 231ea716950eca44ba881ee8abf44cbd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  walkSpeed: 200
-  isActivePlayer: 1
-  animator: {fileID: 9593130}
-  followPlayerGameObject: {fileID: 185152, guid: d1d692c46d4c38944b61596f9b91d608,
-    type: 2}
 --- !u!114 &11426184
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -108,7 +160,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7adcc9cd7f904c4d9adc9972c0b7a2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &11439152
+--- !u!114 &11435678
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -116,11 +168,48 @@ MonoBehaviour:
   m_GameObject: {fileID: 178440}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 295ba68312589d644b84732b27651504, type: 3}
+  m_Script: {fileID: 11500000, guid: 8fced46c774f1ff4caa83127cca5d084, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 1000
---- !u!114 &11446106
+  isActivePlayer: 1
+  moveSpeed: 200
+  drag: 10
+  applyGravity: 1
+  invincibleWhenHit: 0
+  animator: {fileID: 9593130}
+  followPlayerGameObject: {fileID: 0}
+--- !u!114 &11447200
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 178440}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02b8d64d7346ad641b3d77f7c62211ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 1000
+  armor: 0
+  invincibilityDuration: 1
+  invincibleWhenHit: 0
+  healthBar: {fileID: 0}
+--- !u!114 &11489764
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 143502}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b0f43d19d4c7ed4d862461e24c9f161, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  owner: {fileID: 0}
+  damage: 10
+  knockback: 0
+  victim: {fileID: 0}
+--- !u!114 &11498388
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -131,29 +220,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a795aa803f6e8648aa18c4179268235, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &11451492
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 178440}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ac4dbf00bb442374eae852af07c1fbfb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &11457642
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 178440}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6f6d0b0ffe3b8b743816c6b8268fc80b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  healthSlider: {fileID: 0}
+  offset: {x: 0, y: 0, z: 0}
+  knockback: {x: 0, y: 0, z: 0}
 --- !u!143 &14305528
 CharacterController:
   m_ObjectHideFlags: 1
