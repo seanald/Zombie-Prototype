@@ -13,6 +13,7 @@ TagManager:
   - EnemyScared
   - LeftCameraBounds
   - RightCameraBounds
+  - Attack
   layers:
   - Default
   - TransparentFX

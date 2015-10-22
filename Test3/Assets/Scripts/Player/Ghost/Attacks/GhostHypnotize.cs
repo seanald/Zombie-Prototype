@@ -20,7 +20,7 @@ public class GhostHypnotize : MonoBehaviour {
 				this.GetComponentInParent<PlasmaController>().CurPlasma++;
 			}
 		}*/
-		if (Input.GetKeyDown(KeyCode.X) && this.GetComponentInParent<PlasmaController>().CurPlasma > 0)
+		if (Input.GetKeyDown(KeyCode.X) && this.GetComponentInParent<Plasma>().CurPlasma > 0)
 		{
 			Fire();
 			/*this.mytarget = this.findClosestEnemy();
@@ -28,7 +28,7 @@ public class GhostHypnotize : MonoBehaviour {
 			LineRenderer lineRenderer = this.GetComponentInChildren<LineRenderer>();
 			lineRenderer.SetPosition(0, this.transform.position);
 			lineRenderer.SetPosition(1, this.mytarget.transform.position);*/
-			this.GetComponentInParent<PlasmaController>().CurPlasma--;
+			this.GetComponentInParent<Plasma>().CurPlasma--;
 		}
 	}
 

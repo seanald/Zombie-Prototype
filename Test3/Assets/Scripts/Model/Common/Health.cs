@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class Health : MonoBehaviour
 {
@@ -12,16 +13,24 @@ public class Health : MonoBehaviour
 	private int curHealth = 100;
 	private bool invincible = false;
 
-	// Use this for initialization
+	public Slider healthBar;
+
 	void Start()
 	{
 		this.curHealth = this.maxHealth;
 	}
 	
-	// Update is called once per frame
 	void Update()
 	{
-	
+		if (this.healthBar != null)
+		{
+			this.healthBar.maxValue = this.maxHealth;
+			this.healthBar.value = this.curHealth;
+			if (curHealth <= 0)
+			{
+				Application.LoadLevel(Application.loadedLevel);
+			}
+		}
 	}
 
 	public void OnDamage(Attack attack)

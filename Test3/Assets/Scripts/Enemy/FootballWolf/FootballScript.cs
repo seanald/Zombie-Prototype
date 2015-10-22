@@ -31,7 +31,7 @@ public class FootballScript : MonoBehaviour
 		if (collision.gameObject.tag == "Player" || collision.gameObject.tag == "ActivePlayer")
 		{
 
-			collision.gameObject.GetComponent<HealthController>().CurHealth = collision.gameObject.GetComponent<HealthController>().CurHealth - 50;
+			collision.gameObject.GetComponent<Health>().CurHealth = collision.gameObject.GetComponent<Health>().CurHealth - 50;
 			Destroy(this.gameObject);
 		}
 

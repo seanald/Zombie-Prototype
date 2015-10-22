@@ -5,9 +5,14 @@ using System.Collections;
 public class CameraOrthoSize : MonoBehaviour
 {
     [SerializeField]
-    private Camera gameCamera = Camera.main;
+    private Camera gameCamera;
     [SerializeField]
     private int zoom = 1;
+
+	void Start()
+	{
+		gameCamera = Camera.main;
+	}
 
 	private void LateUpdate()
 	{

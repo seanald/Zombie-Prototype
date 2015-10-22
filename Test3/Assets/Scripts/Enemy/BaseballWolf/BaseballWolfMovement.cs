@@ -112,22 +112,9 @@ public class BaseballWolfMovement : MonoBehaviour
 					this.enemyAnimator.Play("Batwolf_Swing");
 					StartCoroutine(WaitForAnimation());
 					GameObject enemyhit = hit.transform.gameObject;
-					enemyhit.GetComponent<HealthController>().CurHealth--;
+					enemyhit.GetComponent<Health>().CurHealth--;
 				}
 			}
-
-			if (Physics.Raycast(transform.position, transform.right * -1, out hit))
-			{
-				print(hit.transform.tag);
-				if (hit.transform.tag == "Player" || hit.transform.tag == "ActivePlayer")
-				{
-					this.enemyAnimator.Play("Batwolf_Swing");
-					StartCoroutine(WaitForAnimation());
-					GameObject enemyhit = hit.transform.gameObject;
-					enemyhit.GetComponent<HealthController>().CurHealth--;
-				}
-			}
-
 		}
 		else
 		{

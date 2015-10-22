@@ -25,7 +25,7 @@ public class Hazard : MonoBehaviour {
 	void OnTriggerEnter(Collider collision){
 		if(collision.gameObject.tag == "Player" || collision.gameObject.tag == "ActivePlayer"){
 			
-			collision.gameObject.GetComponent<HealthController>().CurHealth = collision.gameObject.GetComponent<HealthController>().CurHealth - 100;
+			collision.gameObject.GetComponent<Health>().CurHealth = collision.gameObject.GetComponent<Health>().CurHealth - 100;
 
 		}
 		

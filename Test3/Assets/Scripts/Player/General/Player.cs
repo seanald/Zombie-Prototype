@@ -1,23 +1,18 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public enum EnemyState
+public class Player : MonoBehaviour
 {
-	Attacking,
-	Strafing,
-	Stunned,
-	Fleeing,
-	Standing
-}
 
-public class Enemy : MonoBehaviour
-{
+	public bool isActivePlayer;
 	public float moveSpeed = 100.0f;
-	public int team = 0;
 
 	public float drag = 10.0f;
 	public bool applyGravity = true;
 	public bool invincibleWhenHit = false;
+
+	public Animator animator;
+	public GameObject followPlayerGameObject;
 
 	private Vector3 moveVec;
 	private Vector3 forward;
@@ -29,17 +24,24 @@ public class Enemy : MonoBehaviour
 	}
 
 	private bool grounded = false;
-	private bool invincible = false;
-
 	private CharacterController controller;
-
-	private EnemyState enemyState;
 
 	void Start()
 	{
 		velocity = Vector3.zero;
 		controller = (CharacterController)GetComponent(typeof(CharacterController));
-		this.enemyState = EnemyState.Attacking;
+	}
+
+	void LateUpdate()
+	{
+		if (this.isActivePlayer)
+		{
+			this.gameObject.tag = "ActivePlayer";
+		}
+		else
+		{
+			this.gameObject.tag = "Player";
+		}
 	}
 
 	void FixedUpdate()
@@ -85,23 +87,23 @@ public class Enemy : MonoBehaviour
 
 	public Vector3 Forces()
 	{
-		Vector3 vec = Vector3.zero;
+		float moveHorizontal = Input.GetAxisRaw("Horizontal");
+		float moveVertical = Input.GetAxis("Vertical");
 
-		if (velocity != Vector3.zero)
+		Vector3 moveDirection = Vector3.zero;
+
+		if (this.isActivePlayer)
 		{
-			vec = velocity;
-
-			if (velocity.magnitude > 0.01f)
+			if (controller.isGrounded)
 			{
-				velocity -= (velocity * drag * Time.fixedDeltaTime);
-			}
-			else
-			{
-				velocity = Vector3.zero;
+				moveDirection = new Vector3(moveHorizontal, 0, moveVertical);
+				moveDirection *= this.moveSpeed;
 			}
 		}
 
-		return vec;
+		moveDirection.y -= Mathf.Round(8000 * Time.deltaTime);
+
+		return moveDirection;
 	}
 
 	public void AddForce(Vector3 force)
@@ -181,13 +183,4 @@ public class Enemy : MonoBehaviour
 		this.moveVec = vec;
 	}
 
-	public EnemyState EnemyState
-	{
-		get {
-			return enemyState;
-		}
-		set {
-			enemyState = value;
-		}
-	}
 }
