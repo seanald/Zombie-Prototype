@@ -31,8 +31,7 @@ public class ZombieAttack : MonoBehaviour
 			Transform punch = hitbox.FindChild("Punch");
 			punch.gameObject.SetActive(true);
 
-			RaycastHit
-			hit;
+			RaycastHit hit;
 			Debug.DrawLine(offset + transform.position, transform.right * 100, Color.green);
 			if (Physics.Raycast(offset + transform.position, transform.right, out hit))
 			{
