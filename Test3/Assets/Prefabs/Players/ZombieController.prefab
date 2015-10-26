@@ -27,28 +27,14 @@ GameObject:
   - 4: {fileID: 467600}
   - 65: {fileID: 6504652}
   - 114: {fileID: 11489764}
-  m_Layer: 8
+  - 54: {fileID: 5472520}
+  m_Layer: 0
   m_Name: Punch
   m_TagString: Attack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
---- !u!1 &167074
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 473584}
-  m_Layer: 8
-  m_Name: Hitboxes
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
 --- !u!1 &178440
 GameObject:
   m_ObjectHideFlags: 0
@@ -78,7 +64,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 467600}
   m_Father: {fileID: 431642}
   m_RootOrder: 0
 --- !u!4 &431642
@@ -92,7 +79,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 408650}
-  - {fileID: 473584}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!4 &467600
@@ -102,24 +88,26 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 143502}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 60, y: .5, z: 0}
+  m_LocalPosition: {x: 60, y: .500007629, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 473584}
+  m_Father: {fileID: 408650}
   m_RootOrder: 0
---- !u!4 &473584
-Transform:
+--- !u!54 &5472520
+Rigidbody:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 167074}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 467600}
-  m_Father: {fileID: 431642}
-  m_RootOrder: 1
+  m_GameObject: {fileID: 143502}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!65 &6504652
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -145,7 +133,7 @@ Animator:
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
+  m_LinearVelocityBlending: 1
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
@@ -176,7 +164,6 @@ MonoBehaviour:
   drag: 10
   applyGravity: 1
   invincibleWhenHit: 0
-  animator: {fileID: 9593130}
   followPlayerGameObject: {fileID: 0}
 --- !u!114 &11447200
 MonoBehaviour:

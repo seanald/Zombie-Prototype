@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Attack : MonoBehaviour {
+public class Attack : MonoBehaviour
+{
 
 	public GameObject owner;
 	public int damage = 0;
@@ -19,14 +20,21 @@ public class Attack : MonoBehaviour {
 	{
 		int total = 0;
 
-		if(damage > 0) 
+		if (damage > 0)
 		{
-			total = Mathf.Max(1, damage - Mathf.Max(0, armor) );
+			total = Mathf.Max(1, damage - Mathf.Max(0, armor));
 		}
 
 		return total;
 	}
 
+	void OnTriggerEnter(Collider other)
+	{
+		if(other.gameObject.GetComponent<Health>())
+		{
+			other.gameObject.GetComponent<Health>().OnDamage(this);
+		}
+	}
 	// Collision check with enemy
 	// Health.DoDamage(this)
 }

@@ -35,7 +35,11 @@ public class Health : MonoBehaviour
 
 	public void OnDamage(Attack attack)
 	{
-		//Do attack stuffs
+		CurHealth -= attack.damage;
+		if (CurHealth <= 0)
+		{
+			Destroy(this.gameObject);
+		}
 	}
 
 	public void AddHealth(int hp)
