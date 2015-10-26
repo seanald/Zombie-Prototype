@@ -16,6 +16,11 @@ public class Attack : MonoBehaviour
 		this.knockback = knockback;
 	}
 
+	void Start()
+	{
+		owner = this.gameObject;
+	}
+
 	static public int CalculateDamage(int damage, int armor)
 	{
 		int total = 0;
@@ -30,9 +35,13 @@ public class Attack : MonoBehaviour
 
 	void OnTriggerEnter(Collider other)
 	{
-		if(other.gameObject.GetComponent<Health>())
+		if ((this.gameObject.tag.Equals("Player") && other.GetComponentInParent<Player>() == null)
+		    || (this.gameObject.tag.Equals("Enemy") && other.GetComponentInParent<Enemy>() == null))
 		{
-			other.gameObject.GetComponent<Health>().OnDamage(this);
+			if (other.gameObject.GetComponent<Health>())
+			{
+				other.gameObject.GetComponent<Health>().OnDamage(this);
+			}
 		}
 	}
 	// Collision check with enemy
