@@ -9,7 +9,6 @@ public class BaseballWolfMovement : MonoBehaviour
 	public float attackDistance = 80.0f;
 	public float dangerDistance = 500.0f;
 	public float attackRate = 10.0f;
-
 	private float attackCooldown = 10.0f;
 	private float stunTime;
 	private float stunnedTime = 2f;
@@ -102,19 +101,8 @@ public class BaseballWolfMovement : MonoBehaviour
 
 			//TODO: Align vertically with player on left or right side
 
-			RaycastHit hit;
-			Debug.DrawLine(transform.position, transform.right * 100, Color.green);
-			if (Physics.Raycast(transform.position, transform.right, out hit))
-			{
-				print(hit.transform.tag);
-				if (hit.transform.tag == "Player" || hit.transform.tag == "ActivePlayer")
-				{
-					this.enemyAnimator.Play("Batwolf_Swing");
-					StartCoroutine(WaitForAnimation());
-					GameObject enemyhit = hit.transform.gameObject;
-					enemyhit.GetComponent<Health>().CurHealth--;
-				}
-			}
+			this.enemyAnimator.Play("Batwolf_Swing");
+			StartCoroutine(WaitForAnimation());
 		}
 		else
 		{

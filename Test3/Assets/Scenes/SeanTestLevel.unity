@@ -1018,13 +1018,13 @@ GameObject:
   - 4: {fileID: 1164693960}
   - 65: {fileID: 1164693961}
   - 114: {fileID: 1164693962}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: BatSwing
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1164693960
 Transform:
   m_ObjectHideFlags: 0
@@ -1033,7 +1033,7 @@ Transform:
   m_GameObject: {fileID: 1164693959}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -25.3999996, y: 0, z: 0}
-  m_LocalScale: {x: 50, y: 50, z: 50}
+  m_LocalScale: {x: 120, y: 50, z: 50}
   m_Children: []
   m_Father: {fileID: 1486086826}
   m_RootOrder: 0
@@ -1044,7 +1044,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1164693959}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -1061,7 +1061,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   owner: {fileID: 0}
-  damage: 10
+  damage: 100
   knockback: 0
   victim: {fileID: 0}
 --- !u!1001 &1287804788
