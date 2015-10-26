@@ -1,6 +1,14 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+public enum PlayerState
+{
+	standing,
+	moving,
+	attacking,
+	stunned
+}
+
 public class Player : MonoBehaviour
 {
 
@@ -25,10 +33,13 @@ public class Player : MonoBehaviour
 	private bool grounded = false;
 	private CharacterController controller;
 
+	private PlayerState playerState;
+
 	void Start()
 	{
 		velocity = Vector3.zero;
 		controller = (CharacterController)GetComponent(typeof(CharacterController));
+		playerState = PlayerState.standing;
 	}
 
 	void LateUpdate()
@@ -45,30 +56,38 @@ public class Player : MonoBehaviour
 
 	void FixedUpdate()
 	{
-		Vector3 forcesVec = Vector3.zero;
-		forcesVec += this.Gravity();
-		forcesVec += this.Forces();
-
-		if (forcesVec == Vector3.zero)
+		if (this.playerState != PlayerState.attacking)
 		{
-			forcesVec = Vector3.up * 0.0001f;
+			Vector3 forcesVec = Vector3.zero;
+			forcesVec += this.Gravity();
+			forcesVec += this.Forces();
+
+			if (forcesVec == Vector3.zero)
+			{
+				this.playerState = PlayerState.standing;
+				forcesVec = Vector3.up * 0.0001f;
+			}
+			else
+			{
+				this.playerState = PlayerState.moving;
+			}
+
+			var flags = controller.Move(forcesVec * Time.fixedDeltaTime);
+			grounded = (flags & CollisionFlags.CollidedBelow) != 0;
+
+			Vector3 scale = transform.localScale;
+
+			if (this.moveVec.x > 0 || forcesVec.x > 0)
+			{
+				scale.x = 1;
+			}
+			else if (this.moveVec.x < 0 || forcesVec.x < 0)
+			{
+				scale.x = -1;
+			}
+
+			this.transform.localScale = scale;
 		}
-
-		var flags = controller.Move(forcesVec * Time.fixedDeltaTime);
-		grounded = (flags & CollisionFlags.CollidedBelow) != 0;
-
-		Vector3 scale = transform.localScale;
-
-		if (this.moveVec.x > 0 || forcesVec.x > 0)
-		{
-			scale.x = 1;
-		}
-		else if (this.moveVec.x < 0 || forcesVec.x < 0)
-		{
-			scale.x = -1;
-		}
-
-		this.transform.localScale = scale;
 	}
 
 	public Vector3 Gravity()
@@ -179,4 +198,13 @@ public class Player : MonoBehaviour
 		this.moveVec = vec;
 	}
 
+	public PlayerState PlayerState
+	{
+		get {
+			return playerState;
+		}
+		set {
+			playerState = value;
+		}
+	}
 }

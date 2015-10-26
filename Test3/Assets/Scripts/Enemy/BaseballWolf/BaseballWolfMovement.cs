@@ -103,7 +103,7 @@ public class BaseballWolfMovement : MonoBehaviour
 			//TODO: Align vertically with player on left or right side
 
 			RaycastHit hit;
-			//Debug.DrawLine(transform.position, transform.right * 100, Color.green);
+			Debug.DrawLine(transform.position, transform.right * 100, Color.green);
 			if (Physics.Raycast(transform.position, transform.right, out hit))
 			{
 				print(hit.transform.tag);

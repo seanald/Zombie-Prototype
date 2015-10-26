@@ -66,7 +66,6 @@
      <Compile Include="Assets\Scripts\Player\Ghost\Attacks\GhostHypnotize.cs" />
      <Compile Include="Assets\Scripts\Player\Ghost\Attacks\GhostPossess.cs" />
      <Compile Include="Assets\Scripts\Player\Zombie\Animation\ZombieAnimatorController.cs" />
-     <Compile Include="Assets\Scripts\Player\Zombie\Attacks\ZombieAttack.cs" />
      <Compile Include="Assets\Scripts\Scene\CameraOrthoSize.cs" />
      <Compile Include="Assets\Scripts\Scene\FollowCamera.cs" />
      <Compile Include="Assets\Scripts\Scene\LocalPositionSnapper.cs" />

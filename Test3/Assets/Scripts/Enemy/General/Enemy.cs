@@ -57,17 +57,14 @@ public class Enemy : MonoBehaviour
 		grounded = (flags & CollisionFlags.CollidedBelow) != 0;
 
 		Vector3 scale = transform.localScale;
-		Transform hitboxes = this.transform.FindChild("Hitboxes");
 
 		if (this.moveVec.x > 0 || forcesVec.x > 0)
 		{
 			scale.x = 1;
-			hitboxes.eulerAngles.Set(0,0,0);
 		}
 		else if (this.moveVec.x < 0 || forcesVec.x < 0)
 		{
 			scale.x = -1;
-			hitboxes.eulerAngles.Set(0,180,0);
 		}
 
 		this.transform.localScale = scale;

@@ -30,9 +30,9 @@ public class Attack : MonoBehaviour
 
 	void OnTriggerEnter(Collider other)
 	{
-		if(other.GetComponent<Enemy>())
+		if(other.gameObject.GetComponent<Health>())
 		{
-		Destroy(other.gameObject);
+			other.gameObject.GetComponent<Health>().OnDamage(this);
 		}
 	}
 	// Collision check with enemy
