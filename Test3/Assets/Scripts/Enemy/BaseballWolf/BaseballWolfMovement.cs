@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class BaseballWolfMovement : MonoBehaviour
 {
@@ -23,6 +24,8 @@ public class BaseballWolfMovement : MonoBehaviour
 	private Vector3 moveVec;
 	private bool strafing;
 
+	private List<Enemy> enemyList;
+
 	void Start()
 	{
 		this.enemy = this.gameObject.GetComponentInChildren<Enemy>();
@@ -40,6 +43,10 @@ public class BaseballWolfMovement : MonoBehaviour
 	void FixedUpdate()
 	{
 		UpdateDistance();
+
+		Enemy[] enemies = GameObject.FindObjectsOfType(typeof(Enemy)) as Enemy[];
+		this.enemyList = new List<Enemy>(enemies);
+		this.enemyList.Remove(this.enemy);
 
 		if (this.enemy.EnemyState == EnemyState.Stunned)
 		{
@@ -81,7 +88,7 @@ public class BaseballWolfMovement : MonoBehaviour
 		sqrDistance = distVec.sqrMagnitude;
 	}
 
-	void Seek(Vector3 distVec, bool align)
+	public void Seek(Vector3 distVec, bool align)
 	{
 		if (this.enemy.GetForce() != Vector3.zero)
 			return;
@@ -120,7 +127,10 @@ public class BaseballWolfMovement : MonoBehaviour
 	{
 		this.strafing = true;
 		yield return new WaitForSeconds(this.attackRate);
-		this.enemy.EnemyState = EnemyState.Attacking;
+		if (!this.checkForOtherAttackers())
+		{
+			this.enemy.EnemyState = EnemyState.Attacking;
+		}
 		this.strafing = false;
 	}
 
@@ -150,6 +160,18 @@ public class BaseballWolfMovement : MonoBehaviour
 		{
 			StartCoroutine(WaitForAttack());
 		}
+	}
+
+	private bool checkForOtherAttackers()
+	{
+		foreach(Enemy e in this.enemyList)
+		{
+			if(e.EnemyState == EnemyState.Attacking)
+			{
+				return true;
+			}
+		}
+		return false;
 	}
 
 	void UpdateStrafeDir()
