@@ -23,8 +23,11 @@ public class BaseballWolfMovement : MonoBehaviour
 	private Vector3 destination;
 	private Vector3 moveVec;
 	private bool strafing;
+	private bool stunned;
 
 	private List<Enemy> enemyList;
+
+	public NavMeshAgent agent;
 
 	void Start()
 	{
@@ -36,6 +39,8 @@ public class BaseballWolfMovement : MonoBehaviour
 
 		sqrAttackDistance = Mathf.Pow(attackDistance, 2);
 		sqrDangerDistance = Mathf.Pow(dangerDistance, 2);
+
+		this.stunTime = this.stunnedTime;
 
 		InvokeRepeating("UpdateStrafeDir", 2, 2);
 	}
@@ -51,9 +56,9 @@ public class BaseballWolfMovement : MonoBehaviour
 		if (this.enemy.EnemyState == EnemyState.Stunned)
 		{
 			this.enemyAnimator.Play("Batwolf_Stunned");
-			if (Time.time - stunTime >= stunnedTime)
+			if (!this.stunned)
 			{
-				this.enemy.EnemyState = EnemyState.Attacking;
+				StartCoroutine(this.WaitForStun());
 			}
 		}
 		else if (this.enemy.EnemyState == EnemyState.Attacking)
@@ -113,7 +118,7 @@ public class BaseballWolfMovement : MonoBehaviour
 		}
 		else
 		{
-			this.Seek(this.distVec, true);
+			this.Seek(distVec, true);
 		}
 	}
 
@@ -134,26 +139,42 @@ public class BaseballWolfMovement : MonoBehaviour
 		this.strafing = false;
 	}
 
+	IEnumerator WaitForStun()
+	{
+		this.stunned = true;
+		yield return new WaitForSeconds(this.stunnedTime);
+		this.enemy.EnemyState = EnemyState.Attacking;
+		this.stunned = false;
+	}
+
+
 	void Strafe()
 	{
 		Vector3 perpendicularVec;
-		if (this.sqrDistance >= this.sqrDangerDistance)
+		if (this.distance >= this.dangerDistance + 50)
 		{
 			this.Seek(this.distVec, true);
 		}
 
 		this.enemy.EnemyState = EnemyState.Strafing;
-		if (this.sqrDistance < this.sqrDangerDistance)
+		if (this.distance < this.dangerDistance - 50)
 		{
 			this.Seek(this.distVec * -1, true);
-			perpendicularVec = Vector3.Cross(Vector3.up, this.target.transform.position);
 		}
-		else
+		else if (distVec.x > 0)
 		{
-			perpendicularVec = Vector3.Cross(Vector3.up, this.target.transform.position);
+			Vector3 scale = transform.localScale;
+			scale.x = 1;
+			this.transform.localScale = scale;
+		}
+		else if (distVec.x < 0)
+		{
+			Vector3 scale = transform.localScale;
+			scale.x = -1;
+			this.transform.localScale = scale;
 		}
 
-		this.Seek(perpendicularVec * this.strafeDir, false);
+		//this.Seek(perpendicularVec * this.strafeDir, false);
 		this.enemyAnimator.Play("Batwolf_Walk");
 
 		if (!this.strafing)

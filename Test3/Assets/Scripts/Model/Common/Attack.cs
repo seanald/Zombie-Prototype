@@ -7,6 +7,7 @@ public class Attack : MonoBehaviour
 	public GameObject owner;
 	public int damage = 0;
 	public float knockback = 0.0f;
+	public bool stun;
 	public GameObject victim;  // this is only not null if the event actually hit something
 
 	public Attack(GameObject owner, int damage, float knockback)
@@ -42,8 +43,11 @@ public class Attack : MonoBehaviour
 			{
 				other.gameObject.GetComponent<Health>().OnDamage(this);
 			}
+
+			if (this.stun && other.GetComponentInParent<Enemy>() != null)
+			{
+				other.GetComponentInParent<Enemy>().EnemyState = EnemyState.Stunned;
+			}
 		}
 	}
-	// Collision check with enemy
-	// Health.DoDamage(this)
 }
