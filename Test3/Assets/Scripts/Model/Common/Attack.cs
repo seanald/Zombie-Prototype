@@ -7,6 +7,7 @@ public class Attack : MonoBehaviour
 	public GameObject owner;
 	public int damage = 0;
 	public float knockback = 0.0f;
+	public bool stun;
 	public GameObject victim;  // this is only not null if the event actually hit something
 
 	public Attack(GameObject owner, int damage, float knockback)
@@ -14,6 +15,11 @@ public class Attack : MonoBehaviour
 		this.owner = owner;
 		this.damage = damage;
 		this.knockback = knockback;
+	}
+
+	void Start()
+	{
+		owner = this.gameObject;
 	}
 
 	static public int CalculateDamage(int damage, int armor)
@@ -30,11 +36,18 @@ public class Attack : MonoBehaviour
 
 	void OnTriggerEnter(Collider other)
 	{
-		if(other.gameObject.GetComponent<Health>())
+		if ((this.gameObject.tag.Equals("Player") && other.GetComponentInParent<Player>() == null)
+		    || (this.gameObject.tag.Equals("Enemy") && other.GetComponentInParent<Enemy>() == null))
 		{
-			other.gameObject.GetComponent<Health>().OnDamage(this);
+			if (other.gameObject.GetComponent<Health>())
+			{
+				other.gameObject.GetComponent<Health>().OnDamage(this);
+			}
+
+			if (this.stun && other.GetComponentInParent<Enemy>() != null)
+			{
+				other.GetComponentInParent<Enemy>().EnemyState = EnemyState.Stunned;
+			}
 		}
 	}
-	// Collision check with enemy
-	// Health.DoDamage(this)
 }

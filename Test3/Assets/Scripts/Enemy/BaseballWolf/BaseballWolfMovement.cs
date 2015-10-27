@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class BaseballWolfMovement : MonoBehaviour
 {
@@ -9,7 +10,6 @@ public class BaseballWolfMovement : MonoBehaviour
 	public float attackDistance = 80.0f;
 	public float dangerDistance = 500.0f;
 	public float attackRate = 10.0f;
-
 	private float attackCooldown = 10.0f;
 	private float stunTime;
 	private float stunnedTime = 2f;
@@ -23,6 +23,11 @@ public class BaseballWolfMovement : MonoBehaviour
 	private Vector3 destination;
 	private Vector3 moveVec;
 	private bool strafing;
+	private bool stunned;
+
+	private List<Enemy> enemyList;
+
+	public NavMeshAgent agent;
 
 	void Start()
 	{
@@ -35,6 +40,8 @@ public class BaseballWolfMovement : MonoBehaviour
 		sqrAttackDistance = Mathf.Pow(attackDistance, 2);
 		sqrDangerDistance = Mathf.Pow(dangerDistance, 2);
 
+		this.stunTime = this.stunnedTime;
+
 		InvokeRepeating("UpdateStrafeDir", 2, 2);
 	}
 
@@ -42,12 +49,17 @@ public class BaseballWolfMovement : MonoBehaviour
 	{
 		UpdateDistance();
 
+		Enemy[] enemies = GameObject.FindObjectsOfType(typeof(Enemy)) as Enemy[];
+		this.enemyList = new List<Enemy>(enemies);
+		this.enemyList.Remove(this.enemy);
+
 		if (this.enemy.EnemyState == EnemyState.Stunned)
 		{
-			this.enemyAnimator.Play("Batwolf_Stunned");
-			if (Time.time - stunTime >= stunnedTime)
+			if (!this.stunned)
 			{
-				this.enemy.EnemyState = EnemyState.Attacking;
+				this.enemyAnimator.Play("Batwolf_Stunned");
+				this.stunned = true;
+				StartCoroutine(this.WaitForStun());
 			}
 		}
 		else if (this.enemy.EnemyState == EnemyState.Attacking)
@@ -82,7 +94,7 @@ public class BaseballWolfMovement : MonoBehaviour
 		sqrDistance = distVec.sqrMagnitude;
 	}
 
-	void Seek(Vector3 distVec, bool align)
+	public void Seek(Vector3 distVec, bool align)
 	{
 		if (this.enemy.GetForce() != Vector3.zero)
 			return;
@@ -102,23 +114,12 @@ public class BaseballWolfMovement : MonoBehaviour
 
 			//TODO: Align vertically with player on left or right side
 
-			RaycastHit hit;
-			Debug.DrawLine(transform.position, transform.right * 100, Color.green);
-			if (Physics.Raycast(transform.position, transform.right, out hit))
-			{
-				print(hit.transform.tag);
-				if (hit.transform.tag == "Player" || hit.transform.tag == "ActivePlayer")
-				{
-					this.enemyAnimator.Play("Batwolf_Swing");
-					StartCoroutine(WaitForAnimation());
-					GameObject enemyhit = hit.transform.gameObject;
-					enemyhit.GetComponent<Health>().CurHealth--;
-				}
-			}
+			this.enemyAnimator.Play("Batwolf_Swing");
+			StartCoroutine(WaitForAnimation());
 		}
 		else
 		{
-			this.Seek(this.distVec, true);
+			this.Seek(distVec, true);
 		}
 	}
 
@@ -132,36 +133,67 @@ public class BaseballWolfMovement : MonoBehaviour
 	{
 		this.strafing = true;
 		yield return new WaitForSeconds(this.attackRate);
-		this.enemy.EnemyState = EnemyState.Attacking;
+		if (!this.checkForOtherAttackers())
+		{
+			this.enemy.EnemyState = EnemyState.Attacking;
+		}
 		this.strafing = false;
 	}
+
+	IEnumerator WaitForStun()
+	{
+		this.GetComponentInChildren<Flicker>().Flash();
+		yield return new WaitForSeconds(this.stunnedTime);
+		this.enemy.EnemyState = EnemyState.Attacking;
+		this.stunned = false;
+	}
+
 
 	void Strafe()
 	{
 		Vector3 perpendicularVec;
-		if (this.sqrDistance >= this.sqrDangerDistance)
+		if (this.distance >= this.dangerDistance + 50)
 		{
 			this.Seek(this.distVec, true);
 		}
 
 		this.enemy.EnemyState = EnemyState.Strafing;
-		if (this.sqrDistance < this.sqrDangerDistance)
+		if (this.distance < this.dangerDistance - 50)
 		{
 			this.Seek(this.distVec * -1, true);
-			perpendicularVec = Vector3.Cross(Vector3.up, this.target.transform.position);
 		}
-		else
+		else if (distVec.x > 0)
 		{
-			perpendicularVec = Vector3.Cross(Vector3.up, this.target.transform.position);
+			Vector3 scale = transform.localScale;
+			scale.x = 1;
+			this.transform.localScale = scale;
+		}
+		else if (distVec.x < 0)
+		{
+			Vector3 scale = transform.localScale;
+			scale.x = -1;
+			this.transform.localScale = scale;
 		}
 
-		this.Seek(perpendicularVec * this.strafeDir, false);
+		//this.Seek(perpendicularVec * this.strafeDir, false);
 		this.enemyAnimator.Play("Batwolf_Walk");
 
 		if (!this.strafing)
 		{
 			StartCoroutine(WaitForAttack());
 		}
+	}
+
+	private bool checkForOtherAttackers()
+	{
+		foreach(Enemy e in this.enemyList)
+		{
+			if(e.EnemyState == EnemyState.Attacking)
+			{
+				return true;
+			}
+		}
+		return false;
 	}
 
 	void UpdateStrafeDir()
