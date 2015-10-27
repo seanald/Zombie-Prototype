@@ -55,9 +55,10 @@ public class BaseballWolfMovement : MonoBehaviour
 
 		if (this.enemy.EnemyState == EnemyState.Stunned)
 		{
-			this.enemyAnimator.Play("Batwolf_Stunned");
 			if (!this.stunned)
 			{
+				this.enemyAnimator.Play("Batwolf_Stunned");
+				this.stunned = true;
 				StartCoroutine(this.WaitForStun());
 			}
 		}
@@ -141,7 +142,7 @@ public class BaseballWolfMovement : MonoBehaviour
 
 	IEnumerator WaitForStun()
 	{
-		this.stunned = true;
+		this.GetComponentInChildren<Flicker>().Flash();
 		yield return new WaitForSeconds(this.stunnedTime);
 		this.enemy.EnemyState = EnemyState.Attacking;
 		this.stunned = false;

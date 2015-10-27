@@ -64,6 +64,7 @@ GameObject:
   - 114: {fileID: 11470936}
   - 114: {fileID: 11485560}
   - 114: {fileID: 11494634}
+  - 114: {fileID: 11470558}
   m_Layer: 9
   m_Name: BatWolfController
   m_TagString: Enemy
@@ -181,6 +182,7 @@ MonoBehaviour:
   owner: {fileID: 0}
   damage: 100
   knockback: 0
+  stun: 0
   victim: {fileID: 0}
 --- !u!114 &11466080
 MonoBehaviour:
@@ -191,6 +193,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0edd0759aa76c4879b4e100f65a8517d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &11470558
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 170712}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f31ce6ecfac583478d2ff5ea6a3e708, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &11470936
@@ -223,6 +236,7 @@ MonoBehaviour:
   attackDistance: 80
   dangerDistance: 300
   attackRate: 5
+  agent: {fileID: 0}
 --- !u!114 &11494634
 MonoBehaviour:
   m_ObjectHideFlags: 1
