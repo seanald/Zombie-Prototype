@@ -30,7 +30,7 @@ GameObject:
   - 54: {fileID: 5472520}
   m_Layer: 0
   m_Name: Punch
-  m_TagString: Attack
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -47,7 +47,6 @@ GameObject:
   - 114: {fileID: 11435678}
   - 114: {fileID: 11447200}
   - 114: {fileID: 11426184}
-  - 114: {fileID: 11498388}
   m_Layer: 8
   m_Name: ZombieController
   m_TagString: Player
@@ -195,20 +194,8 @@ MonoBehaviour:
   owner: {fileID: 0}
   damage: 10
   knockback: 0
+  stun: 1
   victim: {fileID: 0}
---- !u!114 &11498388
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 178440}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0a795aa803f6e8648aa18c4179268235, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  offset: {x: 0, y: 0, z: 0}
-  knockback: {x: 0, y: 0, z: 0}
 --- !u!143 &14305528
 CharacterController:
   m_ObjectHideFlags: 1
@@ -220,7 +207,7 @@ CharacterController:
   m_Enabled: 1
   serializedVersion: 2
   m_Height: 128
-  m_Radius: 32
+  m_Radius: 15
   m_SlopeLimit: 45
   m_StepOffset: .300000012
   m_SkinWidth: .0799999982
