@@ -3,19 +3,19 @@ using System.Collections;
 
 public class FearPossess : MonoBehaviour
 {
-
 	Possessable possessable;
 
 	void Start()
 	{
 		this.possessable = this.GetComponent<Possessable>();
 	}
-	
+
 	void Update()
 	{
 		if (possessable.Possessed)
 		{
 			//recieve button input from player to cause possess effect
+			//play animation
 			this.CauseFear();
 		}
 	}
