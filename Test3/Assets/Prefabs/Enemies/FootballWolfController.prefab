@@ -25,10 +25,10 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 425972}
-  - 65: {fileID: 6505400}
-  - 54: {fileID: 5469214}
+  - 114: {fileID: 11473476}
+  - 114: {fileID: 11460472}
+  - 114: {fileID: 11450670}
   - 114: {fileID: 11465618}
-  - 114: {fileID: 11458438}
   m_Layer: 9
   m_Name: FootballWolfController
   m_TagString: Enemy
@@ -42,8 +42,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 178342}
-  m_LocalRotation: {x: 0, y: 1, z: 0, w: .000218074623}
-  m_LocalPosition: {x: -1076, y: 105.724129, z: -185}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2116.99829, y: 109.864754, z: -514.749451}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 442370}
@@ -61,33 +61,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 425972}
   m_RootOrder: 0
---- !u!54 &5469214
-Rigidbody:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 178342}
-  serializedVersion: 2
-  m_Mass: 100
-  m_Drag: 0
-  m_AngularDrag: .0500000007
-  m_UseGravity: 1
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 1
---- !u!65 &6505400
-BoxCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 178342}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 100, y: 128, z: 39.8015633}
-  m_Center: {x: .00263979333, y: 7.62939453e-06, z: -9.90077496}
 --- !u!95 &9577476
 Animator:
   serializedVersion: 3
@@ -105,7 +78,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &11458438
+--- !u!114 &11450670
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -113,12 +86,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 178342}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 33ad985a51185fd4282e4dc60f8b065d, type: 3}
+  m_Script: {fileID: 11500000, guid: 9f31ce6ecfac583478d2ff5ea6a3e708, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 3
-  walkSpeed: 0
-  animator: {fileID: 0}
+--- !u!114 &11460472
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 178342}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02b8d64d7346ad641b3d77f7c62211ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 100
+  armor: 0
+  invincibilityDuration: 1
+  invincibleWhenHit: 0
+  healthBar: {fileID: 0}
 --- !u!114 &11465618
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -131,8 +117,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   football: {fileID: 135292, guid: 01257cf27dbc1334bb8e15b2b1b777b6, type: 2}
-  footballoffset: {x: -70, y: 0, z: 0}
-  movespeed: 0
+  attackDistance: 80
+  dangerDistance: 500
+  attackRate: 10
+--- !u!114 &11473476
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 178342}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bb3a5356a2ba1644885a316218a4e25, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 100
+  team: 0
+  drag: 10
+  applyGravity: 1
+  invincibleWhenHit: 0
 --- !u!212 &21269384
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -184,6 +187,14 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_ReceiveShadows
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []

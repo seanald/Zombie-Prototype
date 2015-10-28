@@ -23,5 +23,6 @@ public class FearPossess : MonoBehaviour
 	public void CauseFear()
 	{
 		//get enemies in radius and set them to fleeing
+		//Send enemies away and have them despawn after x seconds
 	}
 }
