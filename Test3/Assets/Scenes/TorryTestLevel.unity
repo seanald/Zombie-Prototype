@@ -818,6 +818,26 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6570348, guid: 4b038e03d7f5553488f9e2e0bd385a1a, type: 2}
+      propertyPath: m_Size.x
+      value: 1.65470505
+      objectReference: {fileID: 0}
+    - target: {fileID: 6570348, guid: 4b038e03d7f5553488f9e2e0bd385a1a, type: 2}
+      propertyPath: m_Center.x
+      value: .0118627585
+      objectReference: {fileID: 0}
+    - target: {fileID: 6570348, guid: 4b038e03d7f5553488f9e2e0bd385a1a, type: 2}
+      propertyPath: m_Size.z
+      value: 1.02112067
+      objectReference: {fileID: 0}
+    - target: {fileID: 6570348, guid: 4b038e03d7f5553488f9e2e0bd385a1a, type: 2}
+      propertyPath: m_Center.z
+      value: -.0590771586
+      objectReference: {fileID: 0}
+    - target: {fileID: 6570348, guid: 4b038e03d7f5553488f9e2e0bd385a1a, type: 2}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4b038e03d7f5553488f9e2e0bd385a1a, type: 2}
   m_IsPrefabParent: 0
@@ -1410,6 +1430,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f74fb32c26d069f4d887ca9eb673cee4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ghost: {fileID: 754734857}
 --- !u!4 &1720254963 stripped
 Transform:
   m_PrefabParentObject: {fileID: 411922, guid: d842fffeebe781249aa59573b76a3b6e, type: 2}
