@@ -10,10 +10,11 @@ public class FearObject : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		Collider[] hitColliders = Physics.OverlapSphere(this.transform.position, 400f);
+		Collider[] hitColliders = Physics.OverlapSphere(this.transform.position, 200f);
 		int i = 0;
 		while (i<hitColliders.Length){
-			if(hitColliders[i].tag == "Enemy"){
+			if(hitColliders[i].tag == "EnemyScared")
+			{
 				hitColliders[i].SendMessage("IsFeared");
 			}
 			i++;

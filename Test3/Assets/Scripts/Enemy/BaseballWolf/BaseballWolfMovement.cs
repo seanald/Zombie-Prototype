@@ -68,12 +68,17 @@ public class BaseballWolfMovement : MonoBehaviour
 		}
 		else if (this.enemy.EnemyState == EnemyState.Fleeing)
 		{
-
+			this.Seek(distVec, true);
 		}
 		else if (this.enemy.EnemyState == EnemyState.Strafing)
 		{
 			Strafe();
 		}
+	}
+
+	void IsFeared()
+	{
+		this.enemy.EnemyState = EnemyState.Fleeing;
 	}
 
 	void OnCollisionEnter(Collision collision)
@@ -87,7 +92,14 @@ public class BaseballWolfMovement : MonoBehaviour
 
 	void UpdateDistance()
 	{
-		destination = target.transform.position;
+		if(this.enemy.EnemyState == EnemyState.Fleeing)
+		{
+			destination = target.transform.position * -1;
+		}
+		else
+		{
+			destination = target.transform.position;
+		}
 		distVec = (destination - transform.position);
 
 		distance = distVec.magnitude;
