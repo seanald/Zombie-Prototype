@@ -27,8 +27,6 @@ public class BaseballWolfMovement : MonoBehaviour
 
 	private List<Enemy> enemyList;
 
-	public NavMeshAgent agent;
-
 	void Start()
 	{
 		this.enemy = this.gameObject.GetComponentInChildren<Enemy>();
@@ -41,8 +39,6 @@ public class BaseballWolfMovement : MonoBehaviour
 		sqrDangerDistance = Mathf.Pow(dangerDistance, 2);
 
 		this.stunTime = this.stunnedTime;
-
-		InvokeRepeating("UpdateStrafeDir", 2, 2);
 	}
 
 	void FixedUpdate()
@@ -127,8 +123,6 @@ public class BaseballWolfMovement : MonoBehaviour
 	{
 		if (this.distance < this.attackDistance)
 		{
-			print(distance);
-
 			//TODO: Align vertically with player on left or right side
 
 			this.enemyAnimator.Play("Batwolf_Swing");
@@ -211,10 +205,5 @@ public class BaseballWolfMovement : MonoBehaviour
 			}
 		}
 		return false;
-	}
-
-	void UpdateStrafeDir()
-	{
-		this.strafeDir *= -1.0f;
 	}
 }

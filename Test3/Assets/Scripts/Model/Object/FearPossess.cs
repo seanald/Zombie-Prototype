@@ -6,6 +6,7 @@ public class FearPossess : MonoBehaviour
 	Possessable possessable;
 	private bool isActive;
 	private GameObject ghost;
+	public GameObject alert;
 
 	void Start()
 	{
@@ -18,12 +19,14 @@ public class FearPossess : MonoBehaviour
 		//if (possessable.Possessed)
 		//{
 			//recieve button input from player to cause possess effect
-			if(Input.GetKeyDown(KeyCode.P))
+		if(ghost.transform.position.magnitude - this.transform.position.magnitude < 20)
 			{
-				if(ghost.transform.position.magnitude - this.transform.position.magnitude < 20){
+				//+Instantiate(alert, this.transform.position, this.transform.rotation);	
+				if(Input.GetKeyDown(KeyCode.P)){
 					//play animation
-					print("p");
+					Instantiate(alert, this.transform.position, this.transform.rotation);
 					this.CauseFear();
+					isActive=true;
 				}
 			}
 

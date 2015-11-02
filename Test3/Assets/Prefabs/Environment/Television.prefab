@@ -10,6 +10,8 @@ GameObject:
   - 4: {fileID: 444932}
   - 65: {fileID: 6570348}
   - 212: {fileID: 21220528}
+  - 114: {fileID: 11496032}
+  - 114: {fileID: 11406238}
   m_Layer: 0
   m_Name: Television
   m_TagString: FearObject
@@ -24,8 +26,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 147210}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1774.94031, y: 55, z: -220}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -1926, y: 47.2999992, z: -198.620712}
+  m_LocalScale: {x: 1, y: .930038273, z: .689655244}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -36,11 +38,34 @@ BoxCollider:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 147210}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 100, y: 100, z: 40}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1.65470505, y: 100, z: 1.02112067}
+  m_Center: {x: .0118627585, y: 0, z: -.0590771586}
+--- !u!114 &11406238
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 147210}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 342b647e586e0b442aac6c88ac9310fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &11496032
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 147210}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45585afd9699a8d49b046fd62875e611, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  alert: {fileID: 151236, guid: 1a8cf391f120e164fa112736412a8b88, type: 2}
 --- !u!212 &21220528
 SpriteRenderer:
   m_ObjectHideFlags: 1
