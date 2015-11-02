@@ -189,9 +189,4 @@ public class BaseballWolfMovement : MonoBehaviour
 		}
 		return false;
 	}
-
-	void UpdateStrafeDir()
-	{
-		this.strafeDir *= -1.0f;
-	}
 }
