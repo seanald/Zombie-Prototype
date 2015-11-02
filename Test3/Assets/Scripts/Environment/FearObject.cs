@@ -3,10 +3,11 @@ using System.Collections;
 
 public class FearObject : MonoBehaviour {
 	private bool isActive;
-	public GameObject ghost;
+	private GameObject ghost;
 	// Use this for initialization
 	void Start () {
 		isActive = false;
+		ghost = GameObject.Find("GhostController");
 	}
 	
 	// Update is called once per frame

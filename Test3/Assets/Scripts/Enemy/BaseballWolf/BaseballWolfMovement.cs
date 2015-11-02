@@ -81,6 +81,11 @@ public class BaseballWolfMovement : MonoBehaviour
 		this.enemy.EnemyState = EnemyState.Fleeing;
 	}
 
+	void TakeDamage()
+	{
+		this.GetComponent<Health>().CurHealth -= 50;
+	}
+
 	void OnCollisionEnter(Collision collision)
 	{
 		if (collision.gameObject.tag == "GhostBullet")
