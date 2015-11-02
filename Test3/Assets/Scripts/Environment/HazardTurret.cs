@@ -4,7 +4,9 @@ using System.Collections;
 public class HazardTurret : MonoBehaviour {
 
 	public GameObject levelHazard;
+	public GameObject hzalert;
 	public Vector3 HZoffset;
+	public Vector3 alertoffset;
 
 	// Use this for initialization
 	void Start () {
@@ -22,6 +24,7 @@ public class HazardTurret : MonoBehaviour {
 		if (collision.gameObject.tag == "Player")
 		{
 			Instantiate(levelHazard, collision.transform.position - HZoffset, transform.rotation);
+			Instantiate(hzalert, collision.transform.position - alertoffset, collision.transform.rotation);
 			Destroy(this.gameObject);
 		}
 	}
