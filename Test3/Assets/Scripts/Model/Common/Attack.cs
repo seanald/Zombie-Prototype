@@ -36,9 +36,12 @@ public class Attack : MonoBehaviour
 
 	void OnTriggerEnter(Collider other)
 	{
+		print("test");
 		if ((this.gameObject.tag.Equals("Player") && other.GetComponentInParent<Player>() == null)
+		    || (this.gameObject.tag.Equals("ActivePlayer") && other.GetComponentInParent<Player>() == null)
 		    || (this.gameObject.tag.Equals("Enemy") && other.GetComponentInParent<Enemy>() == null))
 		{
+			print("test");
 			if (other.gameObject.GetComponent<Health>())
 			{
 				other.gameObject.GetComponent<Health>().OnDamage(this);

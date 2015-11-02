@@ -25,15 +25,4 @@ public class FootballScript : MonoBehaviour
 			Destroy(this.gameObject);
 		}
 	}
-	
-	void OnTriggerEnter(Collider collision)
-	{
-		if (collision.gameObject.tag == "Player" || collision.gameObject.tag == "ActivePlayer")
-		{
-
-			collision.gameObject.GetComponent<Health>().CurHealth = collision.gameObject.GetComponent<Health>().CurHealth - 50;
-			Destroy(this.gameObject);
-		}
-
-	}
 }
