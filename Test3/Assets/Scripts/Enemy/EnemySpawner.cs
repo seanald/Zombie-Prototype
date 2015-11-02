@@ -21,38 +21,36 @@ public class EnemySpawner : MonoBehaviour
 	{
 		this.spawnNumberArray = this.spawnQueueArray.GetRange(0, this.spawnNumber);
 		this.spawnQueueArray.RemoveRange(0, this.spawnNumber);
-		this.Spawn();
-
-		tempLeft = Instantiate(leftBound, this.transform.position + leftoffset, this.transform.rotation);
-		tempRight = Instantiate(rightBound, this.transform.position + rightoffest, this.transform.rotation);
-
 	}
 	
 	// Update is called once per frame
 	void Update()
 	{
-		enemiesInScene = GameObject.FindGameObjectsWithTag("Enemy");
-		if (enemiesInScene.Length > 0)
+		if (this.isActive)
 		{
-			print(enemiesInScene.Length);
-		}
-
-		if (enemiesInScene.Length == 0)
-		{
-			this.spawnNumberArray.Clear();
-			if (this.spawnNumber > this.spawnQueueArray.Count)
+			enemiesInScene = GameObject.FindGameObjectsWithTag("Enemy");
+			if (enemiesInScene.Length > 0)
 			{
-				this.spawnNumber = this.spawnQueueArray.Count;
+				print(enemiesInScene.Length);
 			}
-			this.spawnNumberArray = this.spawnQueueArray.GetRange(0, this.spawnNumber);
-			this.spawnQueueArray.RemoveRange(0, this.spawnNumber);
-			this.Spawn();
-		}
-		if(enemiesInScene.Length == 0 && this.spawnNumber == 0)
-		{
-			Destroy(tempRight);
-			Destroy(tempLeft);
-			Destroy(this.gameObject);
+
+			if (enemiesInScene.Length == 0)
+			{
+				this.spawnNumberArray.Clear();
+				if (this.spawnNumber > this.spawnQueueArray.Count)
+				{
+					this.spawnNumber = this.spawnQueueArray.Count;
+				}
+				this.spawnNumberArray = this.spawnQueueArray.GetRange(0, this.spawnNumber);
+				this.spawnQueueArray.RemoveRange(0, this.spawnNumber);
+				this.Spawn();
+			}
+			if (enemiesInScene.Length == 0 && this.spawnNumber == 0)
+			{
+				Destroy(tempRight);
+				Destroy(tempLeft);
+				Destroy(this.gameObject);
+			}
 		}
 	}
 
@@ -60,7 +58,18 @@ public class EnemySpawner : MonoBehaviour
 	{
 		foreach(GameObject enemy in this.spawnNumberArray)
 		{
-			Instantiate(enemy, this.transform.position + rightoffest, this.transform.rotation);
+			GameObject newEnemy = Instantiate(enemy, this.transform.position + rightoffest, this.transform.rotation) as GameObject;
 		}
+	}
+
+	void OnTriggerEnter(Collider c)
+	{
+		if (!this.isActive)
+		{
+			this.isActive = true;
+			tempLeft = Instantiate(leftBound, this.transform.position + leftoffset, this.transform.rotation);
+			tempRight = Instantiate(rightBound, this.transform.position + rightoffest, this.transform.rotation);
+		}
+
 	}
 }

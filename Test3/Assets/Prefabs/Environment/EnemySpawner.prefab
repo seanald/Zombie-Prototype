@@ -9,6 +9,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 473578}
   - 65: {fileID: 6579440}
+  - 114: {fileID: 11428978}
   m_Layer: 0
   m_Name: EnemySpawner
   m_TagString: Untagged
@@ -35,18 +36,65 @@ BoxCollider:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 125166}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &11428978
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 125166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a67e0285433297468339c5310f13c22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnQueueArray:
+  - {fileID: 170712, guid: fd308fa4dd47aed4988e63390ca5e776, type: 2}
+  - {fileID: 178342, guid: 5c1e415d856c5ea49a36a57c322a96fa, type: 2}
+  spawnNumber: 1
+  leftBound: {fileID: 117458, guid: ed95fcf03425a6e439bdc69927203eea, type: 2}
+  rightBound: {fileID: 178184, guid: a77f838dfe942c9449b0b578630aa6e7, type: 2}
+  tempLeft: {fileID: 0}
+  tempRight: {fileID: 0}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: spawnQueueArray.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: leftBound
+      value: 
+      objectReference: {fileID: 117458, guid: ed95fcf03425a6e439bdc69927203eea, type: 2}
+    - target: {fileID: 0}
+      propertyPath: rightBound
+      value: 
+      objectReference: {fileID: 178184, guid: a77f838dfe942c9449b0b578630aa6e7, type: 2}
+    - target: {fileID: 0}
+      propertyPath: spawnQueueArray.Array.data[0]
+      value: 
+      objectReference: {fileID: 170712, guid: fd308fa4dd47aed4988e63390ca5e776, type: 2}
+    - target: {fileID: 0}
+      propertyPath: spawnQueueArray.Array.data[1]
+      value: 
+      objectReference: {fileID: 178342, guid: 5c1e415d856c5ea49a36a57c322a96fa, type: 2}
+    - target: {fileID: 0}
+      propertyPath: spawnNumber
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 125166}
