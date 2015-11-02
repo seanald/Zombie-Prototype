@@ -59,7 +59,9 @@
      <Compile Include="Assets\Scripts\Model\Common\Attack.cs" />
      <Compile Include="Assets\Scripts\Model\Common\Health.cs" />
      <Compile Include="Assets\Scripts\Model\Common\Plasma.cs" />
+     <Compile Include="Assets\Scripts\Model\Effects\AlertFlicker.cs" />
      <Compile Include="Assets\Scripts\Model\Effects\Flicker.cs" />
+     <Compile Include="Assets\Scripts\Model\Object\DamagePossess.cs" />
      <Compile Include="Assets\Scripts\Model\Object\FearPossess.cs" />
      <Compile Include="Assets\Scripts\Model\Object\Possessable.cs" />
      <Compile Include="Assets\Scripts\Player\General\Player.cs" />

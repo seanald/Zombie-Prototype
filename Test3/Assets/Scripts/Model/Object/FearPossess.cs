@@ -4,74 +4,59 @@ using System.Collections.Generic;
 
 public class FearPossess : MonoBehaviour
 {
+<<<<<<< HEAD
+	Possessable possessable;
+	private bool isActive;
+	private GameObject ghost;
+	public GameObject alert;
+=======
 	private Possessable possessable;
 	private bool playerInBounds;
 	private List<GameObject> enemyList;
 
+>>>>>>> eedf7919af15adbf79bf7521836ecdf6e28fd8a2
 
 	void Start()
 	{
 		this.possessable = this.GetComponent<Possessable>();
+<<<<<<< HEAD
+		ghost = GameObject.Find("GhostController");
+=======
 		this.enemyList = new List<GameObject>();
+>>>>>>> eedf7919af15adbf79bf7521836ecdf6e28fd8a2
 	}
 
 	void Update()
 	{
-		if (possessable.Possessed)
-		{
+		//if (possessable.Possessed)
+		//{
 			//recieve button input from player to cause possess effect
-			//play animation
-			this.CauseFear();
-		}
+		if(ghost.transform.position.magnitude - this.transform.position.magnitude < 20)
+			{
+				//+Instantiate(alert, this.transform.position, this.transform.rotation);	
+				if(Input.GetKeyDown(KeyCode.P)){
+					//play animation
+					Instantiate(alert, this.transform.position, this.transform.rotation);
+					this.CauseFear();
+					isActive=true;
+				}
+			}
+
+		//}
 	}
 
 	public void CauseFear()
 	{
 		//get enemies in radius and set them to fleeing
-		//Send enemies away and have them despawn after x seconds
-	}
-
-	void OnTriggerEnter(Collider c)
-	{
-		if (c.GetComponentInParent<GhostPossess>() != null)
+		Collider[] hitColliders = Physics.OverlapSphere(this.transform.position, 200f);
+		int i = 0;
+		while(i<hitColliders.Length)
 		{
-			this.playerInBounds = true;
-			c.GetComponentInParent<GhostPossess>().mytarget = this;
-		}
-
-		if (c.GetComponentInParent<Enemy>() != null)
-		{
-			this.enemyList.Add(c.gameObject);
-		}
-	}
-
-	void OnTriggerExit(Collider c)
-	{
-		if (c.GetComponentInParent<GhostPossess>() != null)
-		{
-			this.playerInBounds = false;
-			c.GetComponentInParent<GhostPossess>().mytarget = null;
-		}
-
-		if (c.GetComponentInParent<Enemy>() != null)
-		{
-			this.enemyList.Remove(c.gameObject);
-		}
-	}
-
-	void OnTriggerStay(Collider c)
-	{
-		if (c.GetComponentInParent<GhostPossess>() != null)
-		{
-			this.playerInBounds = true;
-			c.GetComponentInParent<GhostPossess>().mytarget = this;
-		}
-	}
-
-	public Possessable Possessable
-	{
-		get {
-			return possessable;
+			if (hitColliders[i].tag == "EnemyScared")
+			{
+				hitColliders[i].SendMessage("IsFeared");
+			}
+			i++;
 		}
 	}
 }

@@ -31,6 +31,10 @@ public class Health : MonoBehaviour
 				Application.LoadLevel(Application.loadedLevel);
 			}
 		}
+		if (CurHealth <= 0)
+		{
+			Destroy(this.gameObject);
+		}
 	}
 
 	public void OnDamage(Attack attack)
