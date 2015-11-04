@@ -4,26 +4,18 @@ using System.Collections.Generic;
 
 public class FearPossess : MonoBehaviour
 {
-<<<<<<< HEAD
 	Possessable possessable;
 	private bool isActive;
 	private GameObject ghost;
 	public GameObject alert;
-=======
-	private Possessable possessable;
 	private bool playerInBounds;
 	private List<GameObject> enemyList;
-
->>>>>>> eedf7919af15adbf79bf7521836ecdf6e28fd8a2
 
 	void Start()
 	{
 		this.possessable = this.GetComponent<Possessable>();
-<<<<<<< HEAD
 		ghost = GameObject.Find("GhostController");
-=======
 		this.enemyList = new List<GameObject>();
->>>>>>> eedf7919af15adbf79bf7521836ecdf6e28fd8a2
 	}
 
 	void Update()
@@ -57,6 +49,16 @@ public class FearPossess : MonoBehaviour
 				hitColliders[i].SendMessage("IsFeared");
 			}
 			i++;
+		}
+	}
+
+	public Possessable Possessable
+	{
+		get {
+			return possessable;
+		}
+		set {
+			possessable = value;
 		}
 	}
 }
