@@ -86,7 +86,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelHazard: {fileID: 113234, guid: ba29d096fefb3b047b84864732e14e45, type: 2}
-  HZoffset: {x: 1800, y: 0, z: 0}
+  hzalert: {fileID: 199834, guid: 36d727caae4f181438df6337b479fd73, type: 2}
+  HZoffset: {x: 1800, y: 50, z: 0}
+  alertoffset: {x: 0, y: 85, z: 0}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
@@ -102,6 +104,18 @@ Prefab:
       propertyPath: levelHazard
       value: 
       objectReference: {fileID: 113234, guid: ba29d096fefb3b047b84864732e14e45, type: 2}
+    - target: {fileID: 0}
+      propertyPath: hzalert
+      value: 
+      objectReference: {fileID: 199834, guid: 36d727caae4f181438df6337b479fd73, type: 2}
+    - target: {fileID: 0}
+      propertyPath: alertoffset.y
+      value: 85
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: HZoffset.y
+      value: 50
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 130502}

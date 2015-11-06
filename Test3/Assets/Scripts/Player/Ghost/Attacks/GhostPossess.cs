@@ -13,7 +13,7 @@ public class GhostPossess : MonoBehaviour
 		print(mytarget);
 		if (Input.GetKeyDown(KeyCode.T) && mytarget != null)
 		{
-			mytarget.Possessable.Possessed = true;
+			//mytarget.Possessable.Possessed = true;
 			if(this.gameObject.activeSelf)
 			{
 				this.gameObject.SetActive(false);
