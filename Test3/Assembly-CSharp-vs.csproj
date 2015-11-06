@@ -57,6 +57,7 @@
      <Compile Include="Assets\Scripts\Environment\Hazard.cs" />
      <Compile Include="Assets\Scripts\Environment\HazardTurret.cs" />
      <Compile Include="Assets\Scripts\Model\Common\Attack.cs" />
+     <Compile Include="Assets\Scripts\Model\Common\GameOverManager.cs" />
      <Compile Include="Assets\Scripts\Model\Common\Health.cs" />
      <Compile Include="Assets\Scripts\Model\Common\Plasma.cs" />
      <Compile Include="Assets\Scripts\Model\Effects\AlertFlicker.cs" />

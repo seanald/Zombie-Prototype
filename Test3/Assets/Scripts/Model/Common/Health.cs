@@ -26,12 +26,8 @@ public class Health : MonoBehaviour
 		{
 			this.healthBar.maxValue = this.maxHealth;
 			this.healthBar.value = this.curHealth;
-			if (curHealth <= 0)
-			{
-				Application.LoadLevel(Application.loadedLevel);
-			}
 		}
-		if (CurHealth <= 0)
+		else if (CurHealth <= 0)
 		{
 			Destroy(this.gameObject);
 		}
@@ -40,10 +36,6 @@ public class Health : MonoBehaviour
 	public void OnDamage(Attack attack)
 	{
 		CurHealth -= attack.damage;
-		if (CurHealth <= 0)
-		{
-			Destroy(this.gameObject);
-		}
 	}
 
 	public void AddHealth(int hp)
@@ -63,5 +55,10 @@ public class Health : MonoBehaviour
 		set {
 			curHealth = value;
 		}
+	}
+
+	public void ResetHealth()
+	{
+		this.curHealth = this.maxHealth;
 	}
 }
