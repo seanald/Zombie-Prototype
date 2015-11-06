@@ -67,10 +67,6 @@ public class Player : MonoBehaviour
 				this.playerState = PlayerState.standing;
 				forcesVec = Vector3.up * 0.0001f;
 			}
-			else
-			{
-				this.playerState = PlayerState.moving;
-			}
 
 			var flags = controller.Move(forcesVec * Time.fixedDeltaTime);
 			grounded = (flags & CollisionFlags.CollidedBelow) != 0;
@@ -84,6 +80,15 @@ public class Player : MonoBehaviour
 			else if (this.moveVec.x < 0 || forcesVec.x < 0)
 			{
 				scale.x = -1;
+			}
+
+			if (this.moveVec.z == 0 && forcesVec.z == 0 && this.moveVec.x == 0 && forcesVec.x == 0)
+			{
+				this.playerState = PlayerState.standing;
+			}
+			else
+			{
+				this.playerState = PlayerState.moving;
 			}
 
 			this.transform.localScale = scale;
