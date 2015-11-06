@@ -4,26 +4,21 @@ using System.Collections.Generic;
 
 public class FearPossess : MonoBehaviour
 {
-<<<<<<< HEAD
+
 	Possessable possessable;
 	private bool isActive;
 	private GameObject ghost;
 	public GameObject alert;
-=======
-	private Possessable possessable;
+	//private Possessable possessable;
 	private bool playerInBounds;
 	private List<GameObject> enemyList;
 
->>>>>>> eedf7919af15adbf79bf7521836ecdf6e28fd8a2
 
 	void Start()
 	{
-		this.possessable = this.GetComponent<Possessable>();
-<<<<<<< HEAD
+		//this.possessable = this.GetComponent<Possessable>();
 		ghost = GameObject.Find("GhostController");
-=======
 		this.enemyList = new List<GameObject>();
->>>>>>> eedf7919af15adbf79bf7521836ecdf6e28fd8a2
 	}
 
 	void Update()
@@ -31,16 +26,18 @@ public class FearPossess : MonoBehaviour
 		//if (possessable.Possessed)
 		//{
 			//recieve button input from player to cause possess effect
-		if(ghost.transform.position.magnitude - this.transform.position.magnitude < 20)
-			{
-				//+Instantiate(alert, this.transform.position, this.transform.rotation);	
-				if(Input.GetKeyDown(KeyCode.P)){
-					//play animation
-					Instantiate(alert, this.transform.position, this.transform.rotation);
-					this.CauseFear();
-					isActive=true;
+		if(!isActive){
+			if(ghost.transform.position.magnitude - this.transform.position.magnitude < 20  && ghost.transform.position.magnitude - this.transform.position.magnitude > -20)
+				{
+					//+Instantiate(alert, this.transform.position, this.transform.rotation);	
+					if(Input.GetKeyDown(KeyCode.P)){
+						//play animation
+						Instantiate(alert, this.transform.position, this.transform.rotation);
+						this.CauseFear();
+						isActive=true;
+					}
 				}
-			}
+		}
 
 		//}
 	}

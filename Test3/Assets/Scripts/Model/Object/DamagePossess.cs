@@ -6,6 +6,7 @@ public class DamagePossess : MonoBehaviour {
 	Possessable possessable;
 	private bool isActive;
 	private GameObject ghost;
+	public GameObject alert;
 	
 	void Start()
 	{
@@ -18,12 +19,16 @@ public class DamagePossess : MonoBehaviour {
 		//if (possessable.Possessed)
 		//{
 		//recieve button input from player to cause possess effect
-		if(Input.GetKeyDown(KeyCode.P))
-		{
-			if(ghost.transform.position.magnitude - this.transform.position.magnitude < 20){
-				//play animation
-				print("p");
-				this.CauseDamage();
+		if(!isActive){
+			if(ghost.transform.position.magnitude - this.transform.position.magnitude < 20  && ghost.transform.position.magnitude - this.transform.position.magnitude > -20)
+			{
+				//+Instantiate(alert, this.transform.position, this.transform.rotation);	
+				if(Input.GetKeyDown(KeyCode.P)){
+					//play animation
+					Instantiate(alert, this.transform.position, this.transform.rotation);
+					this.CauseDamage();
+					isActive=true;
+				}
 			}
 		}
 		
