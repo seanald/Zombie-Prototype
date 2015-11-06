@@ -27,7 +27,7 @@ public class ZombieAnimatorController : MonoBehaviour
 		{
 			this.zombieAnimator.SetBool("walking", true);
 		}
-		else
+		else if (this.player.PlayerState == PlayerState.standing)
 		{
 			this.zombieAnimator.SetBool("walking", false);
 		}
