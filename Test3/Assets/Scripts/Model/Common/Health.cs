@@ -19,7 +19,7 @@ public class Health : MonoBehaviour
 	{
 		this.curHealth = this.maxHealth;
 	}
-	
+
 	void Update()
 	{
 		if (this.healthBar != null)
@@ -29,7 +29,15 @@ public class Health : MonoBehaviour
 		}
 		else if (CurHealth <= 0)
 		{
-			Destroy(this.gameObject);
+			if (this.gameObject.GetComponentInChildren<Animator>() != null)
+			{
+				this.gameObject.GetComponentInChildren<Animator>().Play("death");
+				this.KillOnAnimationEnd();
+			}
+			else
+			{
+				Destroy(this.gameObject);
+			}
 		}
 	}
 
@@ -61,4 +69,11 @@ public class Health : MonoBehaviour
 	{
 		this.curHealth = this.maxHealth;
 	}
+
+	private IEnumerator KillOnAnimationEnd()
+	{
+		yield return new WaitForSeconds(0.5f);
+		Destroy(this.gameObject);
+	}
+
 }

@@ -54,4 +54,14 @@ public class ZombieAnimatorController : MonoBehaviour
 		}
 		this.player.PlayerState = PlayerState.standing;
 	}
+
+	public int ComboNumber
+	{
+		get {
+			return comboNumber;
+		}
+		set {
+			comboNumber = value;
+		}
+	}
 }
