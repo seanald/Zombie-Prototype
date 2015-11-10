@@ -7,7 +7,8 @@ public enum EnemyState
 	Strafing,
 	Stunned,
 	Fleeing,
-	Standing
+	Standing,
+	Dying
 }
 
 public class Enemy : MonoBehaviour
@@ -151,11 +152,6 @@ public class Enemy : MonoBehaviour
 		moveSpeed = 1.0f;
 		RawMovement(move);
 		moveSpeed = originalSpeed;
-	}
-
-	public void OnKill()
-	{
-		Destroy(gameObject);
 	}
 
 	public Vector3 GetGridPos(Vector3 pos)

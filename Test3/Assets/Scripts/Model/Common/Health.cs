@@ -27,23 +27,25 @@ public class Health : MonoBehaviour
 			this.healthBar.maxValue = this.maxHealth;
 			this.healthBar.value = this.curHealth;
 		}
-		else if (CurHealth <= 0)
+	}
+
+	public void OnDamage(Attack attack)
+	{
+		CurHealth -= attack.damage;
+
+		if (CurHealth <= 0)
 		{
 			if (this.gameObject.GetComponentInChildren<Animator>() != null)
 			{
+				this.gameObject.GetComponentInChildren<Enemy>().EnemyState = EnemyState.Dying;
 				this.gameObject.GetComponentInChildren<Animator>().Play("death");
-				this.KillOnAnimationEnd();
+				this.StartCoroutine(this.KillOnAnimationEnd());
 			}
 			else
 			{
 				Destroy(this.gameObject);
 			}
 		}
-	}
-
-	public void OnDamage(Attack attack)
-	{
-		CurHealth -= attack.damage;
 	}
 
 	public void AddHealth(int hp)
@@ -72,7 +74,7 @@ public class Health : MonoBehaviour
 
 	private IEnumerator KillOnAnimationEnd()
 	{
-		yield return new WaitForSeconds(0.5f);
+		yield return new WaitForSeconds(1f);
 		Destroy(this.gameObject);
 	}
 
