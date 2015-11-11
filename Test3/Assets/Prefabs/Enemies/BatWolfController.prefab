@@ -60,7 +60,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 451140}
   - 143: {fileID: 14377516}
-  - 114: {fileID: 11401834}
   - 114: {fileID: 11470936}
   - 114: {fileID: 11485560}
   - 114: {fileID: 11494634}
@@ -152,22 +151,6 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &11401834
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 170712}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6bb3a5356a2ba1644885a316218a4e25, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 100
-  team: 0
-  drag: 10
-  applyGravity: 1
-  invincibleWhenHit: 0
 --- !u!114 &11415274
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -217,7 +200,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02b8d64d7346ad641b3d77f7c62211ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
+  maxHealth: 30
   armor: 0
   invincibilityDuration: 1
   invincibleWhenHit: 0
@@ -233,6 +216,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86538856091a9de48a22ed7d86f98f72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  moveSpeed: 100
+  drag: 10
+  team: 0
+  velocity: {x: 0, y: 0, z: 0}
   attackDistance: 80
   dangerDistance: 300
   attackRate: 5

@@ -16,7 +16,7 @@ public class Avoid : MonoBehaviour
 		    || (this.gameObject.tag.Equals("Enemy") && other.GetComponentInParent<Enemy>() == null) || (this.gameObject.tag.Equals("EnemyScared") && other.GetComponentInParent<Enemy>() == null))
 		{
 			Vector3 distVec = (other.transform.position - transform.position);
-			this.batwolf.Seek(distVec * -1, true);
+			this.batwolf.Seek(distVec * -1);
 			print("working");
 		}
 	}
@@ -27,7 +27,7 @@ public class Avoid : MonoBehaviour
 		    || (this.gameObject.tag.Equals("Enemy") && other.GetComponentInParent<Enemy>() == null) || (this.gameObject.tag.Equals("EnemyScared") && other.GetComponentInParent<Enemy>() == null))
 		{
 			Vector3 distVec = (other.transform.position - transform.position);
-			this.batwolf.Seek(distVec * -1, true);
+			this.batwolf.Seek(distVec * -1);
 			print("working");
 		}
 	}

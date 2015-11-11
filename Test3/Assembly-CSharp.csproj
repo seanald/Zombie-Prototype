@@ -57,6 +57,7 @@
      <Compile Include="Assets\Scripts\Environment\Hazard.cs" />
      <Compile Include="Assets\Scripts\Environment\HazardTurret.cs" />
      <Compile Include="Assets\Scripts\Model\Common\Attack.cs" />
+     <Compile Include="Assets\Scripts\Model\Common\Character.cs" />
      <Compile Include="Assets\Scripts\Model\Common\GameOverManager.cs" />
      <Compile Include="Assets\Scripts\Model\Common\Health.cs" />
      <Compile Include="Assets\Scripts\Model\Common\Plasma.cs" />
@@ -72,7 +73,7 @@
      <Compile Include="Assets\Scripts\Player\Ghost\Attacks\GhostBullet.cs" />
      <Compile Include="Assets\Scripts\Player\Ghost\Attacks\GhostHypnotize.cs" />
      <Compile Include="Assets\Scripts\Player\Ghost\Attacks\GhostPossess.cs" />
-     <Compile Include="Assets\Scripts\Player\Zombie\Animation\ZombieAnimatorController.cs" />
+     <Compile Include="Assets\Scripts\Player\Zombie\Animation\Zombie.cs" />
      <Compile Include="Assets\Scripts\Scene\CameraOrthoSize.cs" />
      <Compile Include="Assets\Scripts\Scene\FollowCamera.cs" />
      <Compile Include="Assets\Scripts\Scene\LocalPositionSnapper.cs" />

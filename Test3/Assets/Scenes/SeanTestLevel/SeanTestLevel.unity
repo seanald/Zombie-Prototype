@@ -168,6 +168,22 @@ MeshFilter:
 GameObject:
   m_PrefabParentObject: {fileID: 178440, guid: cd0680be51a520a4695e5251d7cabffd, type: 2}
   m_PrefabInternal: {fileID: 372178044}
+--- !u!114 &253596743
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 253596742}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90d0cbf6bbe3a1a4ca7c9383e44feefb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 200
+  drag: 10
+  team: 0
+  velocity: {x: 0, y: 0, z: 0}
+  isActivePlayer: 1
 --- !u!1001 &372178044
 Prefab:
   m_ObjectHideFlags: 0
@@ -215,7 +231,9 @@ Prefab:
       propertyPath: healthBar
       value: 
       objectReference: {fileID: 441979932}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 11435678, guid: cd0680be51a520a4695e5251d7cabffd, type: 2}
+    - {fileID: 11426184, guid: cd0680be51a520a4695e5251d7cabffd, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: cd0680be51a520a4695e5251d7cabffd, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &405666995 stripped
@@ -388,10 +406,6 @@ Prefab:
     - target: {fileID: 451140, guid: fd308fa4dd47aed4988e63390ca5e776, type: 2}
       propertyPath: m_RootOrder
       value: 13
-      objectReference: {fileID: 0}
-    - target: {fileID: 11470936, guid: fd308fa4dd47aed4988e63390ca5e776, type: 2}
-      propertyPath: maxHealth
-      value: 30
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fd308fa4dd47aed4988e63390ca5e776, type: 2}
