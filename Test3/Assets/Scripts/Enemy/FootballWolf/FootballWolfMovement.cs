@@ -122,6 +122,7 @@ public class FootballWolfMovement : Enemy
 		if (this.distance < this.attackDistance)
 		{
 			//TODO: Align vertically with player on left or right side
+			this.alwaysFacePlayer();
 			this.enemyAnimator.Play("FootballWolf_Throw");
 			Instantiate(football, throwPoint.position, throwPoint.localRotation);
 			this.state = CharacterState.Standing;
