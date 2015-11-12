@@ -161,10 +161,11 @@ MonoBehaviour:
   drag: 10
   team: 0
   velocity: {x: 0, y: 0, z: 0}
-  football: {fileID: 135292, guid: 01257cf27dbc1334bb8e15b2b1b777b6, type: 2}
+  stunnedTime: 1
   attackDistance: 350
   dangerDistance: 400
   attackRate: 3
+  football: {fileID: 135292, guid: 01257cf27dbc1334bb8e15b2b1b777b6, type: 2}
   throwPoint: {fileID: 452964}
 --- !u!143 &14369386
 CharacterController:

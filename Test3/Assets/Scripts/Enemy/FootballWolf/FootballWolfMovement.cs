@@ -6,33 +6,13 @@ public class FootballWolfMovement : Enemy
 {
 	public GameObject football;
 
-	private Animator enemyAnimator;
-	private Transform target;
-	public float attackDistance = 80.0f;
-	public float dangerDistance = 500.0f;
-	public float attackRate = 10.0f;
-	private float attackCooldown = 10.0f;
-	private float stunTime;
-	private float stunnedTime = 2f;
-	private Vector3 distVec;
-	private Vector3 avoidVec = Vector3.zero;
-	private float distance;
-	private float sqrDistance;
-	private float sqrAttackDistance;
-	private float sqrDangerDistance;
-	private Vector3 destination;
-	private bool stunned;
-	private bool strafing;
-
 	public Transform throwPoint;
-
-	private List<Enemy> enemyList;
-
 	private float curLocalScale;
 
 	new void Start()
 	{
 		base.Start();
+		this.state = CharacterState.Attacking;
 		this.enemyAnimator = this.gameObject.GetComponentInChildren<Animator>();
 		this.target = GameObject.Find("ZombieController").transform;
 
@@ -60,8 +40,6 @@ public class FootballWolfMovement : Enemy
 			if (!this.stunned)
 			{
 				this.enemyAnimator.Play("FootballWolf_Stunned");
-				this.stunned = true;
-				StartCoroutine(this.WaitForStun());
 			}
 		}
 		else if (this.state == CharacterState.Attacking)
@@ -73,6 +51,10 @@ public class FootballWolfMovement : Enemy
 
 		}
 		else if (this.state == CharacterState.Standing)
+		{
+			this.Strafe();
+		}
+		else if (this.state == CharacterState.Moving)
 		{
 			this.Strafe();
 		}
@@ -143,7 +125,7 @@ public class FootballWolfMovement : Enemy
 			this.enemyAnimator.Play("FootballWolf_Throw");
 			Instantiate(football, throwPoint.position, throwPoint.localRotation);
 			this.state = CharacterState.Standing;
-			this.WaitForAnimation();
+			StartCoroutine(WaitForAnimation());
 		}
 		else
 		{

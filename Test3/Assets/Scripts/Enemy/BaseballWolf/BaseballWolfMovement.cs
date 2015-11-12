@@ -4,24 +4,6 @@ using System.Collections.Generic;
 
 public class BaseballWolfMovement : Enemy
 {
-	private Animator enemyAnimator;
-	private Transform target;
-	public float attackDistance = 80.0f;
-	public float dangerDistance = 500.0f;
-	public float attackRate = 5.0f;
-	private float attackCooldown = 10.0f;
-	private float stunTime;
-	private Vector3 distVec;
-	private Vector3 avoidVec = Vector3.zero;
-	private float distance;
-	private float sqrDistance;
-	private float sqrAttackDistance;
-	private float sqrDangerDistance;
-	private Vector3 destination;
-	private bool strafing;
-
-	private List<Enemy> enemyList;
-
 	void Start()
 	{
 		base.Start();
