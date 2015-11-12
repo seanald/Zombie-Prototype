@@ -1,190 +1,35 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
-public enum EnemyState
+public class Enemy : Character
 {
-	Attacking,
-	Strafing,
-	Stunned,
-	Fleeing,
-	Standing
-}
+	protected Animator enemyAnimator;
+	protected Transform target;
+	public float attackDistance = 80.0f;
+	public float dangerDistance = 500.0f;
+	public float attackRate = 5.0f;
+	protected float attackCooldown = 10.0f;
+	protected float stunTime;
+	protected Vector3 distVec;
+	protected Vector3 avoidVec = Vector3.zero;
+	protected float distance;
+	protected float sqrDistance;
+	protected float sqrAttackDistance;
+	protected float sqrDangerDistance;
+	protected Vector3 destination;
 
-public class Enemy : MonoBehaviour
-{
-	public float moveSpeed = 100.0f;
-	public int team = 0;
+	protected List<Enemy> enemyList;
 
-	public float drag = 10.0f;
-	public bool applyGravity = true;
-	public bool invincibleWhenHit = false;
+	protected bool strafing;
 
-	private Vector3 moveVec;
-	private Vector3 forward;
-
-	public Vector3 velocity
+	protected void Start()
 	{
-		get;
-		set;
+		base.Start();
 	}
 
-	private bool grounded = false;
-	private bool invincible = false;
-
-	private CharacterController controller;
-
-	private EnemyState enemyState;
-
-	void Start()
+	protected void FixedUpdate()
 	{
-		velocity = Vector3.zero;
-		controller = (CharacterController)GetComponent(typeof(CharacterController));
-		this.enemyState = EnemyState.Attacking;
-	}
-
-	void FixedUpdate()
-	{
-		Vector3 forcesVec = Vector3.zero;
-		forcesVec += this.Gravity();
-		forcesVec += this.Forces();
-
-		if (forcesVec == Vector3.zero)
-		{
-			forcesVec = Vector3.up * 0.0001f;
-		}
-
-		var flags = controller.Move(forcesVec * Time.fixedDeltaTime);
-		grounded = (flags & CollisionFlags.CollidedBelow) != 0;
-
-		Vector3 scale = transform.localScale;
-
-		if (this.moveVec.x > 0 || forcesVec.x > 0)
-		{
-			scale.x = 1;
-		}
-		else if (this.moveVec.x < 0 || forcesVec.x < 0)
-		{
-			scale.x = -1;
-		}
-
-		this.transform.localScale = scale;
-	}
-
-	public Vector3 Gravity()
-	{
-		Vector3 grav = Vector3.zero;
-		if (applyGravity && !grounded)
-		{
-			grav = new Vector3(0.0f, -100.0f, 0.0f);
-		}
-		return grav;
-	}
-
-	public Vector3 Forces()
-	{
-		Vector3 vec = Vector3.zero;
-
-		if (velocity != Vector3.zero)
-		{
-			vec = velocity;
-
-			if (velocity.magnitude > 0.01f)
-			{
-				velocity -= (velocity * drag * Time.fixedDeltaTime);
-			}
-			else
-			{
-				velocity = Vector3.zero;
-			}
-		}
-
-		return vec;
-	}
-
-	public void AddForce(Vector3 force)
-	{
-		velocity += force;
-	}
-
-	public Vector3 GetForce()
-	{
-		return velocity;
-	}
-
-	public void Movement(float xaxis, float yaxis)
-	{
-		if (xaxis == 0 && yaxis == 0)
-		{
-			return;
-		}
-
-		moveVec = transform.forward * moveSpeed * yaxis;
-
-		transform.position += moveVec;
-	}
-
-	public void RawMovement(Vector3 move)
-	{
-		RawMovement(move, true, false);
-	}
-
-	public void RawMovement(Vector3 move, bool align)
-	{
-		RawMovement(move, align, false);
-	}
-
-	public void RawMovement(Vector3 move, bool align, bool forceLook)
-	{
-		moveVec = move * moveSpeed;
-		if (align && move.magnitude > 0.15 && (transform.forward != move))
-		{
-			Vector3 lookVec = move;
-		}
-
-		var flags = controller.Move(moveVec * Time.fixedDeltaTime);
-		grounded = (flags & CollisionFlags.CollidedBelow) != 0;
-	}
-
-	public void RawMotion(Vector3 move)
-	{
-		var originalSpeed = moveSpeed;
-		moveSpeed = 1.0f;
-		RawMovement(move);
-		moveSpeed = originalSpeed;
-	}
-
-	public void OnKill()
-	{
-		Destroy(gameObject);
-	}
-
-	public Vector3 GetGridPos(Vector3 pos)
-	{
-		Vector3 snappedPos = pos;
-		snappedPos.x = Mathf.Round(snappedPos.x);
-		snappedPos.z = Mathf.Round(snappedPos.z);
-
-		return snappedPos;
-	}
-
-	public Vector3 GetForwardGridPos()
-	{
-		forward = transform.TransformDirection(Vector3.forward);
-		return GetGridPos(transform.position + forward);
-	}
-
-	public void SetMoveVec(Vector3 vec)
-	{
-		this.moveVec = vec;
-	}
-
-	public EnemyState EnemyState
-	{
-		get {
-			return enemyState;
-		}
-		set {
-			enemyState = value;
-		}
+		base.FixedUpdate();
 	}
 }

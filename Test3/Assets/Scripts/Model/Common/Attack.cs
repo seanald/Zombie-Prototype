@@ -46,11 +46,6 @@ public class Attack : MonoBehaviour
 			{
 				other.gameObject.GetComponent<Health>().OnDamage(this);
 			}
-
-			if (this.stun && other.GetComponentInParent<Enemy>() != null)
-			{
-				other.GetComponentInParent<Enemy>().EnemyState = EnemyState.Stunned;
-			}
 		}
 	}
 }

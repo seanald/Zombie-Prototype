@@ -2,34 +2,12 @@
 using System.Collections;
 using System.Collections.Generic;
 
-public class BaseballWolfMovement : MonoBehaviour
+public class BaseballWolfMovement : Enemy
 {
-	private Animator enemyAnimator;
-	private Enemy enemy;
-	private Transform target;
-	public float attackDistance = 80.0f;
-	public float dangerDistance = 500.0f;
-	public float attackRate = 10.0f;
-	private float attackCooldown = 10.0f;
-	private float stunTime;
-	private float stunnedTime = 2f;
-	private Vector3 distVec;
-	private Vector3 avoidVec = Vector3.zero;
-	private float distance;
-	private float sqrDistance;
-	private float sqrAttackDistance;
-	private float sqrDangerDistance;
-	private float strafeDir = 1.0f;
-	private Vector3 destination;
-	private Vector3 moveVec;
-	private bool strafing;
-	private bool stunned;
-
-	private List<Enemy> enemyList;
-
 	void Start()
 	{
-		this.enemy = this.gameObject.GetComponentInChildren<Enemy>();
+		base.Start();
+		this.state = CharacterState.Attacking;
 		this.enemyAnimator = this.gameObject.GetComponentInChildren<Animator>();
 		this.target = GameObject.Find("ZombieController").transform;
 
@@ -43,30 +21,30 @@ public class BaseballWolfMovement : MonoBehaviour
 
 	void FixedUpdate()
 	{
+		base.FixedUpdate();
 		UpdateDistance();
 
 		Enemy[] enemies = GameObject.FindObjectsOfType(typeof(Enemy)) as Enemy[];
 		this.enemyList = new List<Enemy>(enemies);
-		this.enemyList.Remove(this.enemy);
+		this.enemyList.Remove((Enemy)this);
 
-		if (this.enemy.EnemyState == EnemyState.Stunned)
+		if (this.state == CharacterState.Stunned)
 		{
-			if (!this.stunned)
-			{
-				this.enemyAnimator.Play("Batwolf_Stunned");
-				this.stunned = true;
-				StartCoroutine(this.WaitForStun());
-			}
+			this.enemyAnimator.Play("Batwolf_Stunned");
 		}
-		else if (this.enemy.EnemyState == EnemyState.Attacking)
+		else if (this.state == CharacterState.Attacking)
 		{
 			this.Attack();
 		}
-		else if (this.enemy.EnemyState == EnemyState.Fleeing)
+		else if (this.state == CharacterState.Fleeing)
 		{
-			this.Seek(distVec, true);
+			this.Seek(distVec);
 		}
-		else if (this.enemy.EnemyState == EnemyState.Strafing)
+		else if (this.state == CharacterState.Standing)
+		{
+			Strafe();
+		}
+		else if (this.state == CharacterState.Moving)
 		{
 			Strafe();
 		}
@@ -74,7 +52,7 @@ public class BaseballWolfMovement : MonoBehaviour
 
 	void IsFeared()
 	{
-		this.enemy.EnemyState = EnemyState.Fleeing;
+		this.state = CharacterState.Fleeing;
 	}
 
 	void TakeDamage()
@@ -86,14 +64,14 @@ public class BaseballWolfMovement : MonoBehaviour
 	{
 		if (collision.gameObject.tag == "GhostBullet")
 		{
-			this.enemy.EnemyState = EnemyState.Stunned;
+			this.state = CharacterState.Stunned;
 			stunTime = Time.time;
 		}
 	}
 
 	void UpdateDistance()
 	{
-		if(this.enemy.EnemyState == EnemyState.Fleeing)
+		if (this.state == CharacterState.Fleeing)
 		{
 			destination = target.transform.position * -1;
 		}
@@ -107,15 +85,15 @@ public class BaseballWolfMovement : MonoBehaviour
 		sqrDistance = distVec.sqrMagnitude;
 	}
 
-	public void Seek(Vector3 distVec, bool align)
+	public void Seek(Vector3 distVec)
 	{
-		if (this.enemy.GetForce() != Vector3.zero)
+		if (this.velocity != Vector3.zero)
 			return;
 
-		moveVec = distVec.normalized;
-		moveVec.y = 0.0f;
+		Vector3 movement = distVec.normalized;
+		movement.y = 0.0f;
 
-		this.enemy.RawMovement(moveVec, align);
+		this.RawMovement(movement);
 		this.enemyAnimator.Play("Batwolf_Walk");
 	}
 
@@ -130,7 +108,7 @@ public class BaseballWolfMovement : MonoBehaviour
 		}
 		else
 		{
-			this.Seek(distVec, true);
+			this.Seek(distVec);
 		}
 	}
 
@@ -146,32 +124,22 @@ public class BaseballWolfMovement : MonoBehaviour
 		yield return new WaitForSeconds(this.attackRate);
 		if (!this.checkForOtherAttackers())
 		{
-			this.enemy.EnemyState = EnemyState.Attacking;
+			this.state = CharacterState.Attacking;
 		}
 		this.strafing = false;
 	}
 
-	IEnumerator WaitForStun()
-	{
-		this.GetComponentInChildren<Flicker>().Flash();
-		yield return new WaitForSeconds(this.stunnedTime);
-		this.enemy.EnemyState = EnemyState.Attacking;
-		this.stunned = false;
-	}
-
-
 	void Strafe()
 	{
-		Vector3 perpendicularVec;
+		this.state = CharacterState.Standing;
 		if (this.distance >= this.dangerDistance + 50)
 		{
-			this.Seek(this.distVec, true);
+			this.Seek(this.distVec);
 		}
 
-		this.enemy.EnemyState = EnemyState.Strafing;
 		if (this.distance < this.dangerDistance - 50)
 		{
-			this.Seek(this.distVec * -1, true);
+			this.Seek(this.distVec * -1);
 		}
 		else if (distVec.x > 0)
 		{
@@ -199,7 +167,7 @@ public class BaseballWolfMovement : MonoBehaviour
 	{
 		foreach(Enemy e in this.enemyList)
 		{
-			if(e.EnemyState == EnemyState.Attacking)
+			if (e.State == CharacterState.Attacking)
 			{
 				return true;
 			}

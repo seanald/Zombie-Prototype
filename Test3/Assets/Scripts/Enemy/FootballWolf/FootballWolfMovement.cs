@@ -2,39 +2,17 @@
 using System.Collections;
 using System.Collections.Generic;
 
-public class FootballWolfMovement : MonoBehaviour
+public class FootballWolfMovement : Enemy
 {
 	public GameObject football;
 
-	private Animator enemyAnimator;
-	private Enemy enemy;
-	private Transform target;
-	public float attackDistance = 80.0f;
-	public float dangerDistance = 500.0f;
-	public float attackRate = 10.0f;
-	private float attackCooldown = 10.0f;
-	private float stunTime;
-	private float stunnedTime = 2f;
-	private Vector3 distVec;
-	private Vector3 avoidVec = Vector3.zero;
-	private float distance;
-	private float sqrDistance;
-	private float sqrAttackDistance;
-	private float sqrDangerDistance;
-	private Vector3 destination;
-	private Vector3 moveVec;
-	private bool stunned;
-	private bool strafing;
-
 	public Transform throwPoint;
-
-	private List<Enemy> enemyList;
-
 	private float curLocalScale;
 
-	void Start()
+	new void Start()
 	{
-		this.enemy = this.gameObject.GetComponentInChildren<Enemy>();
+		base.Start();
+		this.state = CharacterState.Attacking;
 		this.enemyAnimator = this.gameObject.GetComponentInChildren<Animator>();
 		this.target = GameObject.Find("ZombieController").transform;
 
@@ -45,44 +23,46 @@ public class FootballWolfMovement : MonoBehaviour
 
 		this.stunTime = this.stunnedTime;
 
-		this.curLocalScale = this.enemy.transform.localScale.x;
+		this.curLocalScale = this.transform.localScale.x;
 	}
 
-	void FixedUpdate()
+	new void FixedUpdate()
 	{
+		base.FixedUpdate();
 		UpdateDistance();
 
 		Enemy[] enemies = GameObject.FindObjectsOfType(typeof(Enemy)) as Enemy[];
 		this.enemyList = new List<Enemy>(enemies);
-		this.enemyList.Remove(this.enemy);
+		this.enemyList.Remove((Enemy)this);
 
-		if (this.enemy.EnemyState == EnemyState.Stunned)
+		if (this.state == CharacterState.Stunned)
 		{
 			if (!this.stunned)
 			{
 				this.enemyAnimator.Play("FootballWolf_Stunned");
-				this.stunned = true;
-				StartCoroutine(this.WaitForStun());
 			}
 		}
-		else if (this.enemy.EnemyState == EnemyState.Attacking)
+		else if (this.state == CharacterState.Attacking)
 		{
 			this.Attack();
 		}
-		else if (this.enemy.EnemyState == EnemyState.Fleeing)
+		else if (this.state == CharacterState.Fleeing)
 		{
 
 		}
-		else if (this.enemy.EnemyState == EnemyState.Strafing)
+		else if (this.state == CharacterState.Standing)
+		{
+			this.Strafe();
+		}
+		else if (this.state == CharacterState.Moving)
 		{
 			this.Strafe();
 		}
 
-
-		if (this.enemy.transform.localScale.x != curLocalScale)
+		if (this.transform.localScale.x != curLocalScale)
 		{
 			throwPoint.RotateAround (throwPoint.position, throwPoint.up, 180f);
-			this.curLocalScale = this.enemy.transform.localScale.x;
+			this.curLocalScale = this.transform.localScale.x;
 		}
 
 		this.alwaysFacePlayer();
@@ -101,7 +81,7 @@ public class FootballWolfMovement : MonoBehaviour
 	{
 		this.GetComponentInChildren<Flicker>().Flash();
 		yield return new WaitForSeconds(this.stunnedTime);
-		this.enemy.EnemyState = EnemyState.Attacking;
+		this.state = CharacterState.Attacking;
 		this.stunned = false;
 	}
 
@@ -111,7 +91,7 @@ public class FootballWolfMovement : MonoBehaviour
 		yield return new WaitForSeconds(this.attackRate);
 		if (!this.checkForOtherAttackers())
 		{
-			this.enemy.EnemyState = EnemyState.Attacking;
+			this.state = CharacterState.Attacking;
 		}
 		this.strafing = false;
 	}
@@ -124,7 +104,7 @@ public class FootballWolfMovement : MonoBehaviour
 
 	public void Seek(Vector3 distVec, bool align)
 	{
-		if (this.enemy.GetForce() != Vector3.zero)
+		if (this.velocity != Vector3.zero)
 		{
 			this.enemyAnimator.Play("FootballWolf_Stand");
 			return;
@@ -133,7 +113,7 @@ public class FootballWolfMovement : MonoBehaviour
 		moveVec = distVec.normalized;
 		moveVec.y = 0.0f;
 
-		this.enemy.RawMovement(moveVec, align);
+		this.RawMovement(moveVec);
 		this.enemyAnimator.Play("FootballWolf_Walk");
 	}
 
@@ -142,10 +122,11 @@ public class FootballWolfMovement : MonoBehaviour
 		if (this.distance < this.attackDistance)
 		{
 			//TODO: Align vertically with player on left or right side
+			this.alwaysFacePlayer();
 			this.enemyAnimator.Play("FootballWolf_Throw");
 			Instantiate(football, throwPoint.position, throwPoint.localRotation);
-			this.enemy.EnemyState = EnemyState.Strafing;
-			this.WaitForAnimation();
+			this.state = CharacterState.Standing;
+			StartCoroutine(WaitForAnimation());
 		}
 		else
 		{
@@ -155,13 +136,12 @@ public class FootballWolfMovement : MonoBehaviour
 
 	void Strafe()
 	{
-		Vector3 perpendicularVec;
 		if (this.distance >= this.dangerDistance + 50)
 		{
 			this.Seek(this.distVec, true);
 		}
 
-		this.enemy.EnemyState = EnemyState.Strafing;
+		this.state = CharacterState.Standing;
 		if (this.distance < this.dangerDistance - 50)
 		{
 			this.Seek(this.distVec * -1, true);
