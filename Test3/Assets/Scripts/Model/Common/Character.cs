@@ -63,7 +63,7 @@ public class Character : MonoBehaviour
 
 		this.transform.localScale = scale;
 
-		if (this.state != CharacterState.Attacking && this.state != CharacterState.Stunned)
+		if (this.state != CharacterState.Attacking && this.state != CharacterState.Stunned && this.state != CharacterState.Dying)
 		{
 			var flags = controller.Move(forcesVec * Time.fixedDeltaTime);
 			grounded = (flags & CollisionFlags.CollidedBelow) != 0;
