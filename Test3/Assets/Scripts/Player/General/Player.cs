@@ -20,6 +20,19 @@ public class Player : Character
 		{
 			this.gameObject.tag = "Player";
 		}
+
+		Vector3 scale = transform.localScale;
+
+		if (this.moveVec.x > 0 || forcesVec.x > 0)
+		{
+			scale.x = 1;
+		}
+		else if (this.moveVec.x < 0 || forcesVec.x < 0)
+		{
+			scale.x = -1;
+		}
+
+		this.transform.localScale = scale;
 	}
 
 	public override Vector3 Forces()

@@ -31,5 +31,22 @@ public class Enemy : Character
 	protected void FixedUpdate()
 	{
 		base.FixedUpdate();
+		this.alwaysFacePlayer();
+	}
+
+	private void alwaysFacePlayer()
+	{
+		if (distVec.x > 0)
+		{
+			Vector3 scale = transform.localScale;
+			scale.x = 1;
+			this.transform.localScale = scale;
+		}
+		else if (distVec.x < 0)
+		{
+			Vector3 scale = transform.localScale;
+			scale.x = -1;
+			this.transform.localScale = scale;
+		}
 	}
 }

@@ -64,8 +64,6 @@ public class FootballWolfMovement : Enemy
 			throwPoint.RotateAround (throwPoint.position, throwPoint.up, 180f);
 			this.curLocalScale = this.transform.localScale.x;
 		}
-
-		this.alwaysFacePlayer();
 	}
 
 	void UpdateDistance()
@@ -122,7 +120,6 @@ public class FootballWolfMovement : Enemy
 		if (this.distance < this.attackDistance)
 		{
 			//TODO: Align vertically with player on left or right side
-			this.alwaysFacePlayer();
 			this.enemyAnimator.Play("FootballWolf_Throw");
 			Instantiate(football, throwPoint.position, throwPoint.localRotation);
 			this.state = CharacterState.Standing;
@@ -176,21 +173,4 @@ public class FootballWolfMovement : Enemy
 //		}
 		return false;
 	}
-
-	private void alwaysFacePlayer()
-	{
-		if (distVec.x > 0)
-		{
-			Vector3 scale = transform.localScale;
-			scale.x = 1;
-			this.transform.localScale = scale;
-		}
-		else if (distVec.x < 0)
-		{
-			Vector3 scale = transform.localScale;
-			scale.x = -1;
-			this.transform.localScale = scale;
-		}
-	}
-
 }

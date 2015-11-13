@@ -20,6 +20,7 @@ public class Character : MonoBehaviour
 	protected CharacterState state;
 	protected Vector3 moveVec;
 	protected Vector3 forward;
+	protected Vector3 forcesVec;
 
 	public float moveSpeed = 100.0f;
 	public float drag = 10.0f;
@@ -39,8 +40,7 @@ public class Character : MonoBehaviour
 
 	protected void FixedUpdate()
 	{
-		
-		Vector3 forcesVec = Vector3.zero;
+		this.forcesVec = Vector3.zero;
 		forcesVec += this.Gravity();
 		forcesVec += this.Forces();
 
@@ -51,15 +51,6 @@ public class Character : MonoBehaviour
 		}
 
 		Vector3 scale = transform.localScale;
-
-		if (this.moveVec.x > 0 || forcesVec.x > 0)
-		{
-			scale.x = 1;
-		}
-		else if (this.moveVec.x < 0 || forcesVec.x < 0)
-		{
-			scale.x = -1;
-		}
 
 		this.transform.localScale = scale;
 
