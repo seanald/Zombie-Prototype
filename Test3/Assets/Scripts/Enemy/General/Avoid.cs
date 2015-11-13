@@ -3,11 +3,11 @@ using System.Collections;
 
 public class Avoid : MonoBehaviour
 {
-	BaseballWolfMovement batwolf;
+	BaseballWolf batwolf;
 	// Use this for initialization
 	void Start()
 	{
-		this.batwolf = this.GetComponentInParent<BaseballWolfMovement>();
+		this.batwolf = this.GetComponentInParent<BaseballWolf>();
 	}
 
 	void OnTriggerEnter(Collider other)
