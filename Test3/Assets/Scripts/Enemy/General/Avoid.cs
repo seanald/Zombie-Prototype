@@ -3,11 +3,11 @@ using System.Collections;
 
 public class Avoid : MonoBehaviour
 {
-	BaseballWolf batwolf;
+	Enemy enemy;
 	// Use this for initialization
 	void Start()
 	{
-		this.batwolf = this.GetComponentInParent<BaseballWolf>();
+		this.enemy = this.GetComponentInParent<Enemy>();
 	}
 
 	void OnTriggerEnter(Collider other)
@@ -16,7 +16,6 @@ public class Avoid : MonoBehaviour
 		    || (this.gameObject.tag.Equals("Enemy") && other.GetComponentInParent<Enemy>() == null) || (this.gameObject.tag.Equals("EnemyScared") && other.GetComponentInParent<Enemy>() == null))
 		{
 			Vector3 distVec = (other.transform.position - transform.position);
-			this.batwolf.Seek(distVec * -1);
 			print("working");
 		}
 	}
@@ -27,7 +26,6 @@ public class Avoid : MonoBehaviour
 		    || (this.gameObject.tag.Equals("Enemy") && other.GetComponentInParent<Enemy>() == null) || (this.gameObject.tag.Equals("EnemyScared") && other.GetComponentInParent<Enemy>() == null))
 		{
 			Vector3 distVec = (other.transform.position - transform.position);
-			this.batwolf.Seek(distVec * -1);
 			print("working");
 		}
 	}

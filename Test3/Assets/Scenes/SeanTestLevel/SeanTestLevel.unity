@@ -408,7 +408,8 @@ Prefab:
       propertyPath: m_RootOrder
       value: 13
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 11485560, guid: fd308fa4dd47aed4988e63390ca5e776, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: fd308fa4dd47aed4988e63390ca5e776, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &496811111
@@ -484,6 +485,35 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 496811111}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &526762309 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 178342, guid: 5c1e415d856c5ea49a36a57c322a96fa, type: 2}
+  m_PrefabInternal: {fileID: 594883397}
+--- !u!114 &526762310
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 526762309}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8324ba90b3f438b4380b908683451e37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 100
+  drag: 10
+  team: 0
+  velocity: {x: 0, y: 0, z: 0}
+  stunnedTime: 1
+  attackDistance: 350
+  dangerDistance: 400
+  attackRate: 5
+  football: {fileID: 135292, guid: 01257cf27dbc1334bb8e15b2b1b777b6, type: 2}
+  throwPoint: {fileID: 529811787}
+--- !u!4 &529811787 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 452964, guid: 5c1e415d856c5ea49a36a57c322a96fa, type: 2}
+  m_PrefabInternal: {fileID: 594883397}
 --- !u!20 &580885246 stripped
 Camera:
   m_PrefabParentObject: {fileID: 2038018, guid: 428454bd498a2ee40a197a8373cabe0a,
@@ -528,7 +558,8 @@ Prefab:
       propertyPath: m_RootOrder
       value: 14
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 11465618, guid: 5c1e415d856c5ea49a36a57c322a96fa, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 5c1e415d856c5ea49a36a57c322a96fa, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &613572813
@@ -895,8 +926,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1168850840}
-  m_LocalRotation: {x: 0, y: -.608761489, z: 0, w: .793353319}
-  m_LocalPosition: {x: -2329, y: 229, z: -110}
+  m_LocalRotation: {x: 0, y: -.632564962, z: 0, w: .774507344}
+  m_LocalPosition: {x: -2329, y: 229.000015, z: -110}
   m_LocalScale: {x: 1043.46509, y: 794.39856, z: 1}
   m_Children: []
   m_Father: {fileID: 624416724}
@@ -1038,6 +1069,29 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 428454bd498a2ee40a197a8373cabe0a, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1221001087 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 170712, guid: fd308fa4dd47aed4988e63390ca5e776, type: 2}
+  m_PrefabInternal: {fileID: 462558969}
+--- !u!114 &1221001088
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1221001087}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a95e1f6b42bd1b6439e82f5ef03f31cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 75
+  drag: 10
+  team: 0
+  velocity: {x: 0, y: 0, z: 0}
+  stunnedTime: 1
+  attackDistance: 80
+  dangerDistance: 500
+  attackRate: 5
 --- !u!1001 &1287804788
 Prefab:
   m_ObjectHideFlags: 0
@@ -1123,27 +1177,27 @@ Prefab:
       objectReference: {fileID: 580885246}
     - target: {fileID: 22479446, guid: e3cca2460351a854b82ab0e69f4ebcd5, type: 2}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22479446, guid: e3cca2460351a854b82ab0e69f4ebcd5, type: 2}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22405420, guid: e3cca2460351a854b82ab0e69f4ebcd5, type: 2}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22405420, guid: e3cca2460351a854b82ab0e69f4ebcd5, type: 2}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22426530, guid: e3cca2460351a854b82ab0e69f4ebcd5, type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -53.5
+      value: -52.5
       objectReference: {fileID: 0}
     - target: {fileID: 22453060, guid: e3cca2460351a854b82ab0e69f4ebcd5, type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -23.5
+      value: -22.5
       objectReference: {fileID: 0}
     - target: {fileID: 22454582, guid: e3cca2460351a854b82ab0e69f4ebcd5, type: 2}
       propertyPath: m_AnchoredPosition.x

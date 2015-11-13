@@ -9,55 +9,15 @@ public class FootballWolf : Enemy
 	public Transform throwPoint;
 	private float curLocalScale;
 
-	new void Start()
+	void Start()
 	{
 		base.Start();
-		this.state = CharacterState.Attacking;
-		this.enemyAnimator = this.gameObject.GetComponentInChildren<Animator>();
-		this.target = GameObject.Find("ZombieController").transform;
-
-		this.attackCooldown = this.attackRate;
-
-		sqrAttackDistance = Mathf.Pow(attackDistance, 2);
-		sqrDangerDistance = Mathf.Pow(dangerDistance, 2);
-
-		this.stunTime = this.stunnedTime;
-
 		this.curLocalScale = this.transform.localScale.x;
 	}
 
-	new void FixedUpdate()
+	void FixedUpdate()
 	{
 		base.FixedUpdate();
-		UpdateDistance();
-
-		Enemy[] enemies = GameObject.FindObjectsOfType(typeof(Enemy)) as Enemy[];
-		this.enemyList = new List<Enemy>(enemies);
-		this.enemyList.Remove((Enemy)this);
-
-		if (this.state == CharacterState.Stunned)
-		{
-			if (!this.stunned)
-			{
-				this.enemyAnimator.Play("FootballWolf_Stunned");
-			}
-		}
-		else if (this.state == CharacterState.Attacking)
-		{
-			this.Attack();
-		}
-		else if (this.state == CharacterState.Fleeing)
-		{
-
-		}
-		else if (this.state == CharacterState.Standing)
-		{
-			this.Strafe();
-		}
-		else if (this.state == CharacterState.Moving)
-		{
-			this.Strafe();
-		}
 
 		if (this.transform.localScale.x != curLocalScale)
 		{
@@ -66,21 +26,46 @@ public class FootballWolf : Enemy
 		}
 	}
 
-	void UpdateDistance()
+	override protected void Attack()
 	{
-		destination = target.transform.position;
-		distVec = (destination - transform.position);
-
-		distance = distVec.magnitude;
-		sqrDistance = distVec.sqrMagnitude;
+		if (this.distance < this.attackDistance)
+		{
+			this.enemyAnimator.Play("FootballWolf_Throw");
+			Instantiate(football, throwPoint.position, throwPoint.localRotation);
+			this.state = CharacterState.Moving;
+			StartCoroutine(WaitForAnimation());
+		}
+		else
+		{
+			this.Seek(distVec);
+			this.enemyAnimator.Play("FootballWolf_Walk");
+		}
 	}
 
-	IEnumerator WaitForStun()
+
+	override protected void Move()
 	{
-		this.GetComponentInChildren<Flicker>().Flash();
-		yield return new WaitForSeconds(this.stunnedTime);
-		this.state = CharacterState.Attacking;
-		this.stunned = false;
+		if (this.distance >= this.dangerDistance + 50)
+		{
+			this.Seek(this.distVec);
+		}
+
+		if (this.distance < this.dangerDistance - 50)
+		{
+			this.Seek(this.distVec * -1);
+		}
+
+		this.enemyAnimator.Play("FootballWolf_Walk");
+
+		if (!this.strafing)
+		{
+			StartCoroutine(WaitForAttack());
+		}
+	}
+
+	override protected void Stunned()
+	{
+		this.enemyAnimator.Play("FootballWolf_Stunned");
 	}
 
 	IEnumerator WaitForAttack()
@@ -96,81 +81,7 @@ public class FootballWolf : Enemy
 
 	IEnumerator WaitForAnimation()
 	{
-		yield return new WaitForSeconds(this.enemyAnimator.GetCurrentAnimatorStateInfo(0).length);
-		this.Strafe();
-	}
-
-	public void Seek(Vector3 distVec, bool align)
-	{
-		if (this.velocity != Vector3.zero)
-		{
-			this.enemyAnimator.Play("FootballWolf_Stand");
-			return;
-		}
-
-		moveVec = distVec.normalized;
-		moveVec.y = 0.0f;
-
-		this.RawMovement(moveVec);
-		this.enemyAnimator.Play("FootballWolf_Walk");
-	}
-
-	void Attack()
-	{
-		if (this.distance < this.attackDistance)
-		{
-			//TODO: Align vertically with player on left or right side
-			this.enemyAnimator.Play("FootballWolf_Throw");
-			Instantiate(football, throwPoint.position, throwPoint.localRotation);
-			this.state = CharacterState.Standing;
-			StartCoroutine(WaitForAnimation());
-		}
-		else
-		{
-			this.Seek(distVec, true);
-		}
-	}
-
-	void Strafe()
-	{
-		if (this.distance >= this.dangerDistance + 50)
-		{
-			this.Seek(this.distVec, true);
-		}
-
-		this.state = CharacterState.Standing;
-		if (this.distance < this.dangerDistance - 50)
-		{
-			this.Seek(this.distVec * -1, true);
-		}
-		else if (distVec.x > 0)
-		{
-			Vector3 scale = transform.localScale;
-			scale.x = 1;
-			this.transform.localScale = scale;
-		}
-		else if (distVec.x < 0)
-		{
-			Vector3 scale = transform.localScale;
-			scale.x = -1;
-			this.transform.localScale = scale;
-		}
-
-		if (!this.strafing)
-		{
-			StartCoroutine(WaitForAttack());
-		}
-	}
-
-	private bool checkForOtherAttackers()
-	{
-//		foreach(Enemy e in this.enemyList)
-//		{
-//			if(e.EnemyState == EnemyState.Attacking)
-//			{
-//				return true;
-//			}
-//		}
-		return false;
+		yield return new WaitForSeconds(1f);
+		this.Move();
 	}
 }
