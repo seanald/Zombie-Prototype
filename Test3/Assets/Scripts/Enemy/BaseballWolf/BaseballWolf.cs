@@ -51,7 +51,7 @@ public class BaseballWolf : Enemy
 
 	IEnumerator WaitForAnimation()
 	{
-		yield return new WaitForSeconds(1f);
+		yield return new WaitForSeconds(1.0f);
 		this.Move();
 	}
 

@@ -52,7 +52,7 @@
      <Compile Include="Assets\Scripts\Enemy\FootballWolf\FootballWolf.cs" />
      <Compile Include="Assets\Scripts\Enemy\General\Avoid.cs" />
      <Compile Include="Assets\Scripts\Enemy\General\Enemy.cs" />
-     <Compile Include="Assets\Scripts\Enemy\Mikey\Movement\MikeyMovement.cs" />
+     <Compile Include="Assets\Scripts\Enemy\Mikey\Movement\Mikey.cs" />
      <Compile Include="Assets\Scripts\Environment\FearObject.cs" />
      <Compile Include="Assets\Scripts\Environment\Hazard.cs" />
      <Compile Include="Assets\Scripts\Environment\HazardTurret.cs" />
