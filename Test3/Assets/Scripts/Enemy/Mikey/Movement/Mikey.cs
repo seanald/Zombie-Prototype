@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Mikey : Enemy 
+public class Mikey : Enemy
 {
 	void IsFeared()
 	{
@@ -10,24 +10,27 @@ public class Mikey : Enemy
 
 	override protected void Attack()
 	{
-		int random = 0;
+		int random = Random.Range(1, 4);
+
 		if (this.distance < this.attackDistance)
 		{
-			random = Random.Range(1, 4);
-			if (random == 1)
+			if (!this.attacking)
 			{
-				this.StandardAttack();
-				StartCoroutine(WaitForAnimation());
-			}
-			if (random == 2)
-			{
-				this.SholderAttack();
-				StartCoroutine(WaitForAnimation());
-			}
-			if (random == 3)
-			{
-				this.HowlAttack();
-				StartCoroutine(WaitForAnimation());
+				if (random == 1)
+				{
+					this.StandardAttack();
+					StartCoroutine(WaitForAnimation());
+				}
+				if (random == 2)
+				{
+					this.SholderAttack();
+					StartCoroutine(WaitForAnimation());
+				}
+				if (random == 3)
+				{
+					this.HowlAttack();
+					StartCoroutine(WaitForAnimation());
+				}
 			}
 		}
 		else
@@ -40,16 +43,19 @@ public class Mikey : Enemy
 	private void StandardAttack()
 	{
 		this.enemyAnimator.Play("Attack");
+		this.attacking = true;
 	}
 
 	private void SholderAttack()
 	{
 		this.enemyAnimator.Play("Sholder");
+		this.attacking = true;
 	}
 
 	private void HowlAttack()
 	{
 		this.enemyAnimator.Play("Howl");
+		this.attacking = true;
 	}
 
 	override protected void Move()
@@ -81,6 +87,7 @@ public class Mikey : Enemy
 	IEnumerator WaitForAnimation()
 	{
 		yield return new WaitForSeconds(1.0f);
+		this.attacking = false;
 		this.Move();
 	}
 

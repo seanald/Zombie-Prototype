@@ -22,6 +22,7 @@ public class Enemy : Character
 	protected List<Enemy> enemyList;
 
 	protected bool strafing;
+	protected bool attacking;
 
 	virtual protected void Attack()
 	{
