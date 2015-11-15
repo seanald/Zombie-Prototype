@@ -9,14 +9,23 @@ public class Attack : MonoBehaviour
 	public float knockback = 0.0f;
 	public bool stun;
 	public GameObject victim;  // this is only not null if the event actually hit something
+    AudioSource weakAttack;
+    GameObject player;
+
 
 	public Attack(GameObject owner, int damage, float knockback)
 	{
 		this.owner = owner;
 		this.damage = damage;
 		this.knockback = knockback;
+        
 	}
 
+    void Awake()
+    {
+        player = GameObject.FindGameObjectWithTag("Player");
+        weakAttack = player.GetComponent<AudioSource>();
+    }
 	void Start()
 	{
 		owner = this.gameObject;
@@ -44,6 +53,7 @@ public class Attack : MonoBehaviour
 			print("test");
 			if (other.gameObject.GetComponent<Health>())
 			{
+                weakAttack.Play(); 
 				other.gameObject.GetComponent<Health>().OnDamage(this);
 			}
 		}

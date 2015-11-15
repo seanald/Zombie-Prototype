@@ -4,6 +4,12 @@ using System.Collections.Generic;
 
 public class BaseballWolfMovement : Enemy
 {
+    AudioSource swingAttack; 
+
+    void Awake()
+    {
+        swingAttack = GetComponent<AudioSource>(); 
+    }
 	void Start()
 	{
 		base.Start();
@@ -104,7 +110,8 @@ public class BaseballWolfMovement : Enemy
 			//TODO: Align vertically with player on left or right side
 
 			this.enemyAnimator.Play("Batwolf_Swing");
-			StartCoroutine(WaitForAnimation());
+            swingAttack.Play();
+            StartCoroutine(WaitForAnimation());
 		}
 		else
 		{
@@ -115,7 +122,7 @@ public class BaseballWolfMovement : Enemy
 	IEnumerator WaitForAnimation()
 	{
 		yield return new WaitForSeconds(this.enemyAnimator.GetCurrentAnimatorStateInfo(0).length);
-		this.Strafe();
+        this.Strafe();
 	}
 
 	IEnumerator WaitForAttack()
