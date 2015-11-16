@@ -2,16 +2,18 @@
 using System.Collections;
 
 public class DamagePossess : MonoBehaviour {
-
+	
 	Possessable possessable;
 	private bool isActive;
 	private GameObject ghost;
 	public GameObject alert;
+	private bool alreadyActivated;
 	
 	void Start()
 	{
 		this.possessable = this.GetComponent<Possessable>();
 		ghost = GameObject.Find("GhostController");
+		alreadyActivated = false;
 	}
 	
 	void Update()
@@ -19,15 +21,15 @@ public class DamagePossess : MonoBehaviour {
 		//if (possessable.Possessed)
 		//{
 		//recieve button input from player to cause possess effect
-		if(!isActive){
-			if(ghost.transform.position.magnitude - this.transform.position.magnitude < 20  && ghost.transform.position.magnitude - this.transform.position.magnitude > -20)
+		if(!alreadyActivated){
+			if(isActive)
 			{
 				//+Instantiate(alert, this.transform.position, this.transform.rotation);	
-				if(Input.GetKeyDown(KeyCode.P)){
+				if(Input.GetKeyDown(KeyCode.P) || Input.GetKeyDown(KeyCode.JoystickButton2)){
 					//play animation
-					Instantiate(alert, this.transform.position, this.transform.rotation);
+					//Instantiate(alert, this.transform.position, this.transform.rotation);
 					this.CauseDamage();
-					isActive=true;
+					alreadyActivated=true;
 				}
 			}
 		}
@@ -49,4 +51,29 @@ public class DamagePossess : MonoBehaviour {
 			i++;
 		}
 	}
+	
+	void OnTriggerEnter(Collider col)
+	{
+		
+		GameObject ghost = GameObject.Find("GhostController");
+		
+		if (col.gameObject == ghost)
+		{
+			isActive = true;
+			if(!alreadyActivated){
+				Instantiate(alert, this.transform.position, this.transform.rotation);
+			}
+		}
+	}
+	
+	void OnTriggerExit(Collider col)
+	{
+		GameObject ghost = GameObject.Find("GhostController");
+		if (col.gameObject == ghost)
+		{
+			isActive = false;
+		}
+	}
 }
+
+
