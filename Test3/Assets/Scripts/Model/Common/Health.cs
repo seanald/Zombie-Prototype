@@ -42,6 +42,7 @@ public class Health : MonoBehaviour
 				character.State = CharacterState.Dying;
 				this.gameObject.GetComponentInChildren<Animator>().Play("death");
 				this.StartCoroutine(this.KillOnAnimationEnd());
+                
 			}
 			else
 			{

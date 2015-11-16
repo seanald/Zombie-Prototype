@@ -6,6 +6,12 @@ public class Hazard : MonoBehaviour {
 	float Speed = 10f;
 	float HazardLifeTime = 10f;
 	private float startTime;
+    AudioSource strongAttack;
+
+    void Awake()
+    {
+        strongAttack = GetComponent<AudioSource>();
+    }
 	
 	// Use this for initialization
 	void Start () {
@@ -24,7 +30,7 @@ public class Hazard : MonoBehaviour {
 	}
 	void OnTriggerEnter(Collider collision){
 		if(collision.gameObject.tag == "Player" || collision.gameObject.tag == "ActivePlayer"){
-			
+            strongAttack.Play();
 			collision.gameObject.GetComponent<Health>().CurHealth = collision.gameObject.GetComponent<Health>().CurHealth - 100;
 
 		}
