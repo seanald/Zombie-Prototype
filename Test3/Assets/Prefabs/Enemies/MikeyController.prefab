@@ -10,6 +10,8 @@ GameObject:
   - 4: {fileID: 452950}
   - 212: {fileID: 21271000}
   - 95: {fileID: 9525582}
+  - 114: {fileID: 11420198}
+  - 114: {fileID: 11427104}
   m_Layer: 0
   m_Name: Mikey
   m_TagString: Untagged
@@ -25,9 +27,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 411922}
-  - 65: {fileID: 6559588}
-  - 54: {fileID: 5427694}
-  - 114: {fileID: 11482610}
+  - 143: {fileID: 14373034}
   m_Layer: 0
   m_Name: MikeyController
   m_TagString: Untagged
@@ -42,7 +42,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 120134}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: .000218074623}
-  m_LocalPosition: {x: 2714.30005, y: 93.1999969, z: -154}
+  m_LocalPosition: {x: -1051, y: 93.1999969, z: -155}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 452950}
@@ -55,38 +55,11 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 108576}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -36.0999985}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: .724137843, z: .689655244}
   m_Children: []
   m_Father: {fileID: 411922}
   m_RootOrder: 0
---- !u!54 &5427694
-Rigidbody:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 120134}
-  serializedVersion: 2
-  m_Mass: 100
-  m_Drag: 0
-  m_AngularDrag: .0500000007
-  m_UseGravity: 1
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 1
---- !u!65 &6559588
-BoxCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 120134}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 100, y: 128, z: 20}
-  m_Center: {x: 0, y: -36, z: -10}
 --- !u!95 &9525582
 Animator:
   serializedVersion: 3
@@ -104,17 +77,50 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &11482610
+--- !u!114 &11420198
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 120134}
+  m_GameObject: {fileID: 108576}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f7a975f63fbdb4ce08c94c283a172d52, type: 3}
+  m_Script: {fileID: 11500000, guid: 02b8d64d7346ad641b3d77f7c62211ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHealth: 100
+  armor: 0
+  invincibilityDuration: 1
+  invincibleWhenHit: 0
+  healthBar: {fileID: 0}
+--- !u!114 &11427104
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 108576}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 540125c1393900548bf7d4930555c7f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!143 &14373034
+CharacterController:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 120134}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Height: 125
+  m_Radius: 25
+  m_SlopeLimit: 45
+  m_StepOffset: .300000012
+  m_SkinWidth: .0799999982
+  m_MinMoveDistance: .00100000005
+  m_Center: {x: 0, y: -30, z: 0}
 --- !u!212 &21271000
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -125,7 +131,7 @@ SpriteRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 2100000, guid: b3bfd84fcd0d8f743ae2b343efe700a7, type: 2}
+  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -139,7 +145,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300196, guid: be84f2af8d944334089552221693a92b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: cc66dfa4fb7ca0a40b14b1cb8523a39f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &100100000
 Prefab:
