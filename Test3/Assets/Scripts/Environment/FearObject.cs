@@ -12,7 +12,7 @@ public class FearObject : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if(Input.GetKeyDown(KeyCode.P))
+		if(Input.GetKeyDown(KeyCode.P) || Input.GetKeyDown(KeyCode.JoystickButton2))
 		{
 			if(ghost.transform.position.magnitude - this.transform.position.magnitude < 20){
 				isActive = true;
