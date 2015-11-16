@@ -22,14 +22,125 @@ public class Enemy : Character
 	protected List<Enemy> enemyList;
 
 	protected bool strafing;
+	protected bool attacking;
 
-	protected void Start()
+	virtual protected void Attack()
 	{
-		base.Start();
 	}
 
-	protected void FixedUpdate()
+	virtual protected void Move()
+	{
+	}
+
+	virtual protected void Stunned()
+	{
+	}
+
+	virtual protected void Standing()
+	{
+	}
+
+	new protected void Start()
+	{
+		base.Start();
+		this.state = CharacterState.Attacking;
+		this.enemyAnimator = this.gameObject.GetComponentInChildren<Animator>();
+		this.target = GameObject.Find("ZombieController").transform;
+
+		this.attackCooldown = this.attackRate;
+
+		sqrAttackDistance = Mathf.Pow(attackDistance, 2);
+		sqrDangerDistance = Mathf.Pow(dangerDistance, 2);
+
+		this.stunTime = this.stunnedTime;
+	}
+
+	new protected void FixedUpdate()
 	{
 		base.FixedUpdate();
+		this.alwaysFacePlayer();
+		UpdateDistance();
+
+		Enemy[] enemies = GameObject.FindObjectsOfType(typeof(Enemy)) as Enemy[];
+		this.enemyList = new List<Enemy>(enemies);
+		this.enemyList.Remove((Enemy)this);
+
+		if (this.state == CharacterState.Stunned)
+		{
+			this.Stunned();
+		}
+		else if (this.state == CharacterState.Attacking)
+		{
+			this.Attack();
+		}
+		else if (this.state == CharacterState.Fleeing)
+		{
+			this.Seek(distVec);
+		}
+		else if (this.state == CharacterState.Standing)
+		{
+			this.Standing();
+		}
+		else if (this.state == CharacterState.Moving)
+		{
+			this.Move();
+		}
+	}
+
+	protected void Seek(Vector3 distVec)
+	{
+		if (this.velocity != Vector3.zero)
+			return;
+
+		Vector3 movement = distVec.normalized;
+		movement.y = 0.0f;
+
+		this.RawMovement(movement);
+	}
+
+	protected bool checkForOtherAttackers()
+	{
+		foreach(Enemy e in this.enemyList)
+		{
+			if (e.State == CharacterState.Attacking)
+			{
+				return true;
+			}
+		}
+		return false;
+	}
+
+	private void UpdateDistance()
+	{
+		destination = target.transform.position;
+		distVec = (destination - transform.position);
+
+		distance = distVec.magnitude;
+		sqrDistance = distVec.sqrMagnitude;
+	}
+
+	private void alwaysFacePlayer()
+	{
+		if (distVec.x > 0)
+		{
+			Vector3 scale = transform.localScale;
+			scale.x = 1;
+			this.transform.localScale = scale;
+		}
+		else if (distVec.x < 0)
+		{
+			Vector3 scale = transform.localScale;
+			scale.x = -1;
+			this.transform.localScale = scale;
+		}
+	}
+
+	private void OnCollisionEnter(Collision collision)
+	{
+		if (collision.gameObject.tag == "GhostBullet")
+		{
+			this.state = CharacterState.Stunned;
+			stunTime = Time.time;
+		}
 	}
 }
