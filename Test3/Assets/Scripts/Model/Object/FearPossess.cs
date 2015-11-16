@@ -4,44 +4,45 @@ using System.Collections.Generic;
 
 public class FearPossess : MonoBehaviour
 {
-
+	
 	Possessable possessable;
 	private bool isActive;
+	private bool alreadyActivated;
 	private GameObject ghost;
 	public GameObject alert;
 	//private Possessable possessable;
 	private bool playerInBounds;
 	private List<GameObject> enemyList;
-
-
+	
+	
 	void Start()
 	{
 		//this.possessable = this.GetComponent<Possessable>();
 		ghost = GameObject.Find("GhostController");
 		this.enemyList = new List<GameObject>();
 	}
-
+	
 	void Update()
 	{
 		//if (possessable.Possessed)
 		//{
-			//recieve button input from player to cause possess effect
-		if(!isActive){
-			if(ghost.transform.position.magnitude - this.transform.position.magnitude < 20  && ghost.transform.position.magnitude - this.transform.position.magnitude > -20)
-				{
-					//+Instantiate(alert, this.transform.position, this.transform.rotation);	
-					if(Input.GetKeyDown(KeyCode.P)){
-						//play animation
-						Instantiate(alert, this.transform.position, this.transform.rotation);
-						this.CauseFear();
-						isActive=true;
-					}
+		//recieve button input from player to cause possess effect
+		if(!alreadyActivated){
+			if(isActive)
+			{
+				//+Instantiate(alert, this.transform.position, this.transform.rotation);	
+				if(Input.GetKeyDown(KeyCode.P) || Input.GetKeyDown(KeyCode.JoystickButton2)){
+					//play animation
+					Instantiate(alert, this.transform.position, this.transform.rotation);
+					this.CauseFear();
+					alreadyActivated=true;
 				}
+			}
 		}
-
+		
 		//}
 	}
-
+	
 	public void CauseFear()
 	{
 		//get enemies in radius and set them to fleeing
@@ -56,4 +57,24 @@ public class FearPossess : MonoBehaviour
 			i++;
 		}
 	}
+	
+	void OnTriggerEnter(Collider col)
+	{
+		GameObject ghost = GameObject.Find("GhostController");
+		if (col.gameObject == ghost)
+		{
+			isActive=true;
+		}
+	}
+	
+	void OnTriggerExit(Collider col)
+	{
+		GameObject ghost = GameObject.Find("GhostController");
+		if (col.gameObject == ghost)
+		{
+			isActive=false;
+		}
+	}
 }
+
+

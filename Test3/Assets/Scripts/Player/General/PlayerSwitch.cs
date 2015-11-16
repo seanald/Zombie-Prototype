@@ -24,7 +24,7 @@ public class PlayerSwitch : MonoBehaviour
 
 	void FixedUpdate()
 	{
-		if (Input.GetKeyDown(KeyCode.R))
+		if (Input.GetKeyDown(KeyCode.R) || Input.GetKeyDown(KeyCode.JoystickButton5))
 		{
 			if(this.zombie.isActivePlayer)
 			{
