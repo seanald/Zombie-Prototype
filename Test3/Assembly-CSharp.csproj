@@ -77,6 +77,7 @@
      <Compile Include="Assets\Scripts\Scene\FollowCamera.cs" />
      <Compile Include="Assets\Scripts\Scene\LocalPositionSnapper.cs" />
      <Compile Include="Assets\Scripts\Scene\PauseMenu.cs" />
+     <Compile Include="Assets\Scripts\Scene\ScoreManager.cs" />
      <Compile Include="Assets\Scripts\Scene\UI\PlayerCamera.cs" />
      <Compile Include="Assets\Scripts\Scene\WorldScaler.cs" />
      <None Include="Assets\Materials\$Sprites-Bumped Diffuse.shader" />

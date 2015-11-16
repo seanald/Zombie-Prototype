@@ -5,6 +5,9 @@ using System.Collections.Generic;
 public class BaseballWolfMovement : Enemy
 {
     AudioSource swingAttack; 
+    private bool isRunning = false;
+    public float startingTime = 2;
+    private float countingTime;
 
     void Awake()
     {
@@ -12,6 +15,8 @@ public class BaseballWolfMovement : Enemy
     }
 	void Start()
 	{
+        countingTime = startingTime;
+
 		base.Start();
 		this.state = CharacterState.Attacking;
 		this.enemyAnimator = this.gameObject.GetComponentInChildren<Animator>();
@@ -29,6 +34,8 @@ public class BaseballWolfMovement : Enemy
 	{
 		base.FixedUpdate();
 		UpdateDistance();
+
+        countingTime -= Time.deltaTime;
 
 		Enemy[] enemies = GameObject.FindObjectsOfType(typeof(Enemy)) as Enemy[];
 		this.enemyList = new List<Enemy>(enemies);
@@ -108,9 +115,14 @@ public class BaseballWolfMovement : Enemy
 		if (this.distance < this.attackDistance)
 		{
 			//TODO: Align vertically with player on left or right side
-
+            if(countingTime <= 0)
+            {
+                swingAttack.Play();
+                countingTime = startingTime;
+            }
 			this.enemyAnimator.Play("Batwolf_Swing");
-            swingAttack.Play();
+            
+
             StartCoroutine(WaitForAnimation());
 		}
 		else
