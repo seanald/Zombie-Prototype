@@ -24,8 +24,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 125166}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1770, y: 65, z: -268.249969}
-  m_LocalScale: {x: 106.594299, y: 106.594215, z: 501.356659}
+  m_LocalPosition: {x: -685.31189, y: 61, z: -250}
+  m_LocalScale: {x: 5.89822626, y: 106.594215, z: 501.356659}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -55,11 +55,18 @@ MonoBehaviour:
   spawnQueueArray:
   - {fileID: 170712, guid: fd308fa4dd47aed4988e63390ca5e776, type: 2}
   - {fileID: 178342, guid: 5c1e415d856c5ea49a36a57c322a96fa, type: 2}
-  spawnNumber: 1
+  - {fileID: 178342, guid: 5c1e415d856c5ea49a36a57c322a96fa, type: 2}
+  - {fileID: 178342, guid: 5c1e415d856c5ea49a36a57c322a96fa, type: 2}
+  spawnNumber: 2
   leftBound: {fileID: 117458, guid: ed95fcf03425a6e439bdc69927203eea, type: 2}
   rightBound: {fileID: 178184, guid: a77f838dfe942c9449b0b578630aa6e7, type: 2}
   tempLeft: {fileID: 0}
   tempRight: {fileID: 0}
+  side:
+  - right
+  - left
+  - right
+  - left
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

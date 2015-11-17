@@ -15,6 +15,8 @@ public class EnemySpawner : MonoBehaviour
 	public Object tempLeft;
 	public Object tempRight;
 	private bool isActive;
+	public List<string> side;
+
 
 	// Use this for initialization
 	void Start()
@@ -43,6 +45,7 @@ public class EnemySpawner : MonoBehaviour
 				}
 				this.spawnNumberArray = this.spawnQueueArray.GetRange(0, this.spawnNumber);
 				this.spawnQueueArray.RemoveRange(0, this.spawnNumber);
+				this.side.RemoveRange(0, this.spawnNumber);
 				this.Spawn();
 			}
 			if (enemiesInScene.Length == 0 && this.spawnNumber == 0)
@@ -56,19 +59,30 @@ public class EnemySpawner : MonoBehaviour
 
 	public void Spawn()
 	{
+		int i = 0;
 		foreach(GameObject enemy in this.spawnNumberArray)
 		{
-			GameObject newEnemy = Instantiate(enemy, this.transform.position + rightoffest, this.transform.rotation) as GameObject;
+			if(side[i]=="right"){
+				GameObject newEnemy = Instantiate(enemy, this.transform.position + rightoffest, this.transform.rotation) as GameObject;
+			}
+			if(side[i]=="left"){
+				GameObject newEnemy = Instantiate(enemy, this.transform.position - rightoffest, this.transform.rotation) as GameObject;
+			}
+			i++;
 		}
 	}
 
 	void OnTriggerEnter(Collider c)
 	{
-		if (!this.isActive)
+		if(c.gameObject.tag == "Player")
 		{
-			this.isActive = true;
-			tempLeft = Instantiate(leftBound, this.transform.position + leftoffset, this.transform.rotation);
-			tempRight = Instantiate(rightBound, this.transform.position + rightoffest, this.transform.rotation);
+			if (!this.isActive)
+			{
+				this.isActive = true;
+				tempLeft = Instantiate(leftBound, this.transform.position + leftoffset, this.transform.rotation);
+				tempRight = Instantiate(rightBound, this.transform.position + rightoffest, this.transform.rotation);
+				this.Spawn();
+			}
 		}
 
 	}
