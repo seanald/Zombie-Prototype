@@ -1,94 +1,63 @@
 fileFormatVersion: 2
-guid: 8bef08d777f2a96498e4a0a7996fec08
-timeCreated: 1443795567
+guid: db6b31cd80ac5024d94795cd6d7eab64
+timeCreated: 1447864486
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: Ghost_Right_0
-    21300002: Ghost_Right_1
-    21300004: Ghost_Right_2
-    21300006: Ghost_Right_3
-    21300008: Ghost_Right_4
-    21300010: Ghost_Right_5
-    21300012: Ghost_Right_6
-    21300014: Ghost_Right_7
-    21300016: Ghost_Right_8
-    21300018: Ghost_Right_9
-    21300020: Ghost_Right_10
-    21300022: Ghost_Right_11
-    21300024: Ghost_Right_12
-    21300026: Ghost_Right_13
-    21300028: Ghost_Right_14
-    21300030: Ghost_Right_15
-    21300032: Ghost_Right_16
-    21300034: Ghost_Right_17
-    21300036: Ghost_Right_18
-    21300038: Ghost_Right_19
-    21300040: Ghost_Right_20
-    21300042: Ghost_Right_21
-    21300044: Ghost_Right_22
-    21300046: Ghost_Right_23
-    21300048: Ghost_Right_24
-    21300050: Ghost_Right_25
-    21300052: Ghost_Right_26
-    21300054: Ghost_Right_27
-    21300056: Ghost_Right_28
-    21300058: Ghost_Right_29
-    21300060: Ghost_Right_30
-    21300062: Ghost_Right_31
-    21300064: Ghost_Right_32
-    21300066: Ghost_Right_33
-    21300068: Ghost_Right_34
-    21300070: Ghost_Right_35
-    21300072: Ghost_Right_36
-    21300074: Ghost_Right_37
-    21300076: Ghost_Right_38
-    21300078: Ghost_Right_39
-    21300080: Ghost_Right_40
-    21300082: Ghost_Right_41
-    21300084: Ghost_Right_42
-    21300086: Ghost_Right_43
-    21300088: Ghost_Right_44
-    21300090: Ghost_Right_45
-    21300092: Ghost_Right_46
-    21300094: Ghost_Right_47
-    21300096: Ghost_Right_48
-    21300098: Ghost_Right_49
-    21300100: Ghost_Right_50
-    21300102: Ghost_Right_51
-    21300104: Ghost_Right_52
-    21300106: Ghost_Right_53
-    21300108: Ghost_Right_54
-    21300110: Ghost_Right_55
-    21300112: Ghost_Right_56
-    21300114: Ghost_Right_57
-    21300116: Ghost_Right_58
-    21300118: Ghost_Right_59
-    21300120: Ghost_Right_60
-    21300122: Ghost_Right_61
-    21300124: Ghost_Right_62
-    21300126: Ghost_Right_63
-    21300128: Ghost_Right_64
-    21300130: Ghost_Right_65
-    21300132: Ghost_Right_66
-    21300134: Ghost_Right_67
-    21300136: Ghost_Right_68
-    21300138: Ghost_Right_69
-    21300140: Ghost_Right_70
-    21300142: Ghost_Right_71
-    21300144: Ghost_Right_72
-    21300146: Ghost_Right_73
-    21300148: Ghost_Right_74
-    21300150: Ghost_Right_75
-    21300152: Ghost_Right_76
-    21300154: Ghost_Right_77
-    21300156: Ghost_Right_78
-    21300158: Ghost_Right_79
-    21300160: Ghost_Right_80
-    21300162: Ghost_Right_81
-    21300164: Ghost_Right_82
-    21300166: Ghost_Right_83
-    21300168: Ghost_Right_84
+    21300000: Ghost_Sprite_0
+    21300002: Ghost_Sprite_1
+    21300004: Ghost_Sprite_2
+    21300006: Ghost_Sprite_3
+    21300008: Ghost_Sprite_4
+    21300010: Ghost_Sprite_5
+    21300012: Ghost_Sprite_6
+    21300014: Ghost_Sprite_7
+    21300016: Ghost_Sprite_8
+    21300018: Ghost_Sprite_9
+    21300020: Ghost_Sprite_10
+    21300022: Ghost_Sprite_11
+    21300024: Ghost_Sprite_12
+    21300026: Ghost_Sprite_13
+    21300028: Ghost_Sprite_14
+    21300030: Ghost_Sprite_15
+    21300032: Ghost_Sprite_16
+    21300034: Ghost_Sprite_17
+    21300036: Ghost_Sprite_18
+    21300038: Ghost_Sprite_19
+    21300040: Ghost_Sprite_20
+    21300042: Ghost_Sprite_21
+    21300044: Ghost_Sprite_22
+    21300046: Ghost_Sprite_23
+    21300048: Ghost_Sprite_24
+    21300050: Ghost_Sprite_25
+    21300052: Ghost_Sprite_26
+    21300054: Ghost_Sprite_27
+    21300056: Ghost_Sprite_28
+    21300058: Ghost_Sprite_29
+    21300060: Ghost_Sprite_30
+    21300062: Ghost_Sprite_31
+    21300064: Ghost_Sprite_32
+    21300066: Ghost_Sprite_33
+    21300068: Ghost_Sprite_34
+    21300070: Ghost_Sprite_35
+    21300072: Ghost_Sprite_36
+    21300074: Ghost_Sprite_37
+    21300076: Ghost_Sprite_38
+    21300078: Ghost_Sprite_39
+    21300080: Ghost_Sprite_40
+    21300082: Ghost_Sprite_41
+    21300084: Ghost_Sprite_42
+    21300086: Ghost_Sprite_43
+    21300088: Ghost_Sprite_44
+    21300090: Ghost_Sprite_45
+    21300092: Ghost_Sprite_46
+    21300094: Ghost_Sprite_47
+    21300096: Ghost_Sprite_48
+    21300098: Ghost_Sprite_49
+    21300100: Ghost_Sprite_50
+    21300102: Ghost_Sprite_51
+    21300104: Ghost_Sprite_52
+    21300106: Ghost_Sprite_53
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -111,7 +80,7 @@ TextureImporter:
   cubemapConvolutionSteps: 8
   cubemapConvolutionExponent: 1.5
   seamlessCubemap: 0
-  textureFormat: 4
+  textureFormat: -2
   maxTextureSize: 2048
   textureSettings:
     filterMode: 0
@@ -130,11 +99,11 @@ TextureImporter:
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spritePixelsToUnits: 1
   alphaIsTransparency: 1
-  textureType: 5
+  textureType: 8
   buildTargetSettings: []
   spriteSheet:
     sprites:
-    - name: Ghost_Right_0
+    - name: Ghost_Sprite_0
       rect:
         serializedVersion: 2
         x: 0
@@ -144,7 +113,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Ghost_Right_1
+    - name: Ghost_Sprite_1
       rect:
         serializedVersion: 2
         x: 128
@@ -154,7 +123,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Ghost_Right_2
+    - name: Ghost_Sprite_2
       rect:
         serializedVersion: 2
         x: 256
@@ -164,7 +133,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Ghost_Right_3
+    - name: Ghost_Sprite_3
       rect:
         serializedVersion: 2
         x: 384
@@ -174,7 +143,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Ghost_Right_4
+    - name: Ghost_Sprite_4
       rect:
         serializedVersion: 2
         x: 0
@@ -184,7 +153,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Ghost_Right_5
+    - name: Ghost_Sprite_5
       rect:
         serializedVersion: 2
         x: 128
@@ -194,7 +163,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Ghost_Right_6
+    - name: Ghost_Sprite_6
       rect:
         serializedVersion: 2
         x: 256
@@ -204,7 +173,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Ghost_Right_7
+    - name: Ghost_Sprite_7
       rect:
         serializedVersion: 2
         x: 384
@@ -214,27 +183,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Ghost_Right_8
-      rect:
-        serializedVersion: 2
-        x: 512
-        y: 1024
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Ghost_Right_9
-      rect:
-        serializedVersion: 2
-        x: 640
-        y: 1024
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Ghost_Right_10
+    - name: Ghost_Sprite_8
       rect:
         serializedVersion: 2
         x: 0
@@ -244,7 +193,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Ghost_Right_11
+    - name: Ghost_Sprite_9
       rect:
         serializedVersion: 2
         x: 128
@@ -254,7 +203,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Ghost_Right_12
+    - name: Ghost_Sprite_10
       rect:
         serializedVersion: 2
         x: 256
@@ -264,7 +213,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Ghost_Right_13
+    - name: Ghost_Sprite_11
       rect:
         serializedVersion: 2
         x: 384
@@ -274,67 +223,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Ghost_Right_14
-      rect:
-        serializedVersion: 2
-        x: 512
-        y: 896
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Ghost_Right_15
-      rect:
-        serializedVersion: 2
-        x: 640
-        y: 896
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Ghost_Right_16
-      rect:
-        serializedVersion: 2
-        x: 768
-        y: 896
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Ghost_Right_17
-      rect:
-        serializedVersion: 2
-        x: 896
-        y: 896
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Ghost_Right_18
-      rect:
-        serializedVersion: 2
-        x: 1024
-        y: 896
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Ghost_Right_19
-      rect:
-        serializedVersion: 2
-        x: 1152
-        y: 896
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Ghost_Right_20
+    - name: Ghost_Sprite_12
       rect:
         serializedVersion: 2
         x: 0
@@ -344,7 +233,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Ghost_Right_21
+    - name: Ghost_Sprite_13
       rect:
         serializedVersion: 2
         x: 128
@@ -354,7 +243,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Ghost_Right_22
+    - name: Ghost_Sprite_14
       rect:
         serializedVersion: 2
         x: 256
@@ -364,7 +253,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Ghost_Right_23
+    - name: Ghost_Sprite_15
       rect:
         serializedVersion: 2
         x: 384
@@ -374,17 +263,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Ghost_Right_24
-      rect:
-        serializedVersion: 2
-        x: 512
-        y: 768
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Ghost_Right_25
+    - name: Ghost_Sprite_16
       rect:
         serializedVersion: 2
         x: 0
@@ -394,7 +273,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Ghost_Right_26
+    - name: Ghost_Sprite_17
       rect:
         serializedVersion: 2
         x: 128
@@ -404,7 +283,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Ghost_Right_27
+    - name: Ghost_Sprite_18
       rect:
         serializedVersion: 2
         x: 256
@@ -414,7 +293,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Ghost_Right_28
+    - name: Ghost_Sprite_19
       rect:
         serializedVersion: 2
         x: 384
@@ -424,7 +303,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Ghost_Right_29
+    - name: Ghost_Sprite_20
       rect:
         serializedVersion: 2
         x: 512
@@ -434,57 +313,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Ghost_Right_30
-      rect:
-        serializedVersion: 2
-        x: 640
-        y: 640
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Ghost_Right_31
-      rect:
-        serializedVersion: 2
-        x: 768
-        y: 640
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Ghost_Right_32
-      rect:
-        serializedVersion: 2
-        x: 896
-        y: 640
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Ghost_Right_33
-      rect:
-        serializedVersion: 2
-        x: 1024
-        y: 640
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Ghost_Right_34
-      rect:
-        serializedVersion: 2
-        x: 1152
-        y: 640
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Ghost_Right_35
+    - name: Ghost_Sprite_21
       rect:
         serializedVersion: 2
         x: 0
@@ -494,7 +323,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Ghost_Right_36
+    - name: Ghost_Sprite_22
       rect:
         serializedVersion: 2
         x: 128
@@ -504,7 +333,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Ghost_Right_37
+    - name: Ghost_Sprite_23
       rect:
         serializedVersion: 2
         x: 256
@@ -514,7 +343,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Ghost_Right_38
+    - name: Ghost_Sprite_24
       rect:
         serializedVersion: 2
         x: 384
@@ -524,67 +353,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Ghost_Right_39
-      rect:
-        serializedVersion: 2
-        x: 512
-        y: 512
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Ghost_Right_40
-      rect:
-        serializedVersion: 2
-        x: 640
-        y: 512
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Ghost_Right_41
-      rect:
-        serializedVersion: 2
-        x: 768
-        y: 512
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Ghost_Right_42
-      rect:
-        serializedVersion: 2
-        x: 896
-        y: 512
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Ghost_Right_43
-      rect:
-        serializedVersion: 2
-        x: 1024
-        y: 512
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Ghost_Right_44
-      rect:
-        serializedVersion: 2
-        x: 1152
-        y: 512
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Ghost_Right_45
+    - name: Ghost_Sprite_25
       rect:
         serializedVersion: 2
         x: 0
@@ -594,7 +363,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Ghost_Right_46
+    - name: Ghost_Sprite_26
       rect:
         serializedVersion: 2
         x: 128
@@ -604,7 +373,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Ghost_Right_47
+    - name: Ghost_Sprite_27
       rect:
         serializedVersion: 2
         x: 256
@@ -614,7 +383,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Ghost_Right_48
+    - name: Ghost_Sprite_28
       rect:
         serializedVersion: 2
         x: 384
@@ -624,7 +393,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Ghost_Right_49
+    - name: Ghost_Sprite_29
       rect:
         serializedVersion: 2
         x: 512
@@ -634,7 +403,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Ghost_Right_50
+    - name: Ghost_Sprite_30
       rect:
         serializedVersion: 2
         x: 640
@@ -644,7 +413,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Ghost_Right_51
+    - name: Ghost_Sprite_31
       rect:
         serializedVersion: 2
         x: 768
@@ -654,7 +423,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Ghost_Right_52
+    - name: Ghost_Sprite_32
       rect:
         serializedVersion: 2
         x: 896
@@ -664,7 +433,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Ghost_Right_53
+    - name: Ghost_Sprite_33
       rect:
         serializedVersion: 2
         x: 1024
@@ -674,7 +443,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Ghost_Right_54
+    - name: Ghost_Sprite_34
       rect:
         serializedVersion: 2
         x: 1152
@@ -684,7 +453,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Ghost_Right_55
+    - name: Ghost_Sprite_35
       rect:
         serializedVersion: 2
         x: 0
@@ -694,7 +463,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Ghost_Right_56
+    - name: Ghost_Sprite_36
       rect:
         serializedVersion: 2
         x: 128
@@ -704,7 +473,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Ghost_Right_57
+    - name: Ghost_Sprite_37
       rect:
         serializedVersion: 2
         x: 256
@@ -714,7 +483,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Ghost_Right_58
+    - name: Ghost_Sprite_38
       rect:
         serializedVersion: 2
         x: 384
@@ -724,7 +493,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Ghost_Right_59
+    - name: Ghost_Sprite_39
       rect:
         serializedVersion: 2
         x: 512
@@ -734,7 +503,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Ghost_Right_60
+    - name: Ghost_Sprite_40
       rect:
         serializedVersion: 2
         x: 640
@@ -744,7 +513,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Ghost_Right_61
+    - name: Ghost_Sprite_41
       rect:
         serializedVersion: 2
         x: 768
@@ -754,7 +523,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Ghost_Right_62
+    - name: Ghost_Sprite_42
       rect:
         serializedVersion: 2
         x: 896
@@ -764,7 +533,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Ghost_Right_63
+    - name: Ghost_Sprite_43
       rect:
         serializedVersion: 2
         x: 1024
@@ -774,7 +543,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Ghost_Right_64
+    - name: Ghost_Sprite_44
       rect:
         serializedVersion: 2
         x: 1152
@@ -784,7 +553,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Ghost_Right_65
+    - name: Ghost_Sprite_45
       rect:
         serializedVersion: 2
         x: 0
@@ -794,7 +563,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Ghost_Right_66
+    - name: Ghost_Sprite_46
       rect:
         serializedVersion: 2
         x: 128
@@ -804,7 +573,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Ghost_Right_67
+    - name: Ghost_Sprite_47
       rect:
         serializedVersion: 2
         x: 256
@@ -814,7 +583,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Ghost_Right_68
+    - name: Ghost_Sprite_48
       rect:
         serializedVersion: 2
         x: 384
@@ -824,7 +593,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Ghost_Right_69
+    - name: Ghost_Sprite_49
       rect:
         serializedVersion: 2
         x: 512
@@ -834,57 +603,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Ghost_Right_70
-      rect:
-        serializedVersion: 2
-        x: 640
-        y: 128
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Ghost_Right_71
-      rect:
-        serializedVersion: 2
-        x: 768
-        y: 128
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Ghost_Right_72
-      rect:
-        serializedVersion: 2
-        x: 896
-        y: 128
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Ghost_Right_73
-      rect:
-        serializedVersion: 2
-        x: 1024
-        y: 128
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Ghost_Right_74
-      rect:
-        serializedVersion: 2
-        x: 1152
-        y: 128
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Ghost_Right_75
+    - name: Ghost_Sprite_50
       rect:
         serializedVersion: 2
         x: 0
@@ -894,7 +613,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Ghost_Right_76
+    - name: Ghost_Sprite_51
       rect:
         serializedVersion: 2
         x: 128
@@ -904,7 +623,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Ghost_Right_77
+    - name: Ghost_Sprite_52
       rect:
         serializedVersion: 2
         x: 256
@@ -914,70 +633,10 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Ghost_Right_78
+    - name: Ghost_Sprite_53
       rect:
         serializedVersion: 2
         x: 384
-        y: 0
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Ghost_Right_79
-      rect:
-        serializedVersion: 2
-        x: 512
-        y: 0
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Ghost_Right_80
-      rect:
-        serializedVersion: 2
-        x: 640
-        y: 0
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Ghost_Right_81
-      rect:
-        serializedVersion: 2
-        x: 768
-        y: 0
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Ghost_Right_82
-      rect:
-        serializedVersion: 2
-        x: 896
-        y: 0
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Ghost_Right_83
-      rect:
-        serializedVersion: 2
-        x: 1024
-        y: 0
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Ghost_Right_84
-      rect:
-        serializedVersion: 2
-        x: 1152
         y: 0
         width: 128
         height: 128

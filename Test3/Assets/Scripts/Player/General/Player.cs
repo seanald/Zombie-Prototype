@@ -23,11 +23,11 @@ public class Player : Character
 
 		Vector3 scale = transform.localScale;
 
-		if (this.moveVec.x > 0 || forcesVec.x > 0)
+		if (forcesVec.x > 0 || this.moveVec.x > 0)
 		{
 			scale.x = 1;
 		}
-		else if (this.moveVec.x < 0 || forcesVec.x < 0)
+		else if (forcesVec.x < 0 || this.moveVec.x < 0)
 		{
 			scale.x = -1;
 		}
