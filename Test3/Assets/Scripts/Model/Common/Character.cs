@@ -41,6 +41,7 @@ public class Character : MonoBehaviour
 	protected void FixedUpdate()
 	{
 		this.forcesVec = Vector3.zero;
+		this.moveVec = Vector3.zero;
 		forcesVec += this.Gravity();
 		forcesVec += this.Forces();
 
