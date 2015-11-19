@@ -1,0 +1,452 @@
+fileFormatVersion: 2
+guid: 9cabeb29269bd0f4e8acaa4d7da623fa
+timeCreated: 1447842332
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: 1116_bossvampire_0
+    21300002: 1116_bossvampire_1
+    21300004: 1116_bossvampire_2
+    21300006: 1116_bossvampire_3
+    21300008: 1116_bossvampire_4
+    21300010: 1116_bossvampire_5
+    21300012: 1116_bossvampire_6
+    21300014: 1116_bossvampire_7
+    21300016: 1116_bossvampire_8
+    21300018: 1116_bossvampire_9
+    21300020: 1116_bossvampire_10
+    21300022: 1116_bossvampire_11
+    21300024: 1116_bossvampire_12
+    21300026: 1116_bossvampire_13
+    21300028: 1116_bossvampire_14
+    21300030: 1116_bossvampire_15
+    21300032: 1116_bossvampire_16
+    21300034: 1116_bossvampire_17
+    21300036: 1116_bossvampire_18
+    21300038: 1116_bossvampire_19
+    21300040: 1116_bossvampire_20
+    21300042: 1116_bossvampire_21
+    21300044: 1116_bossvampire_22
+    21300046: 1116_bossvampire_23
+    21300048: 1116_bossvampire_24
+    21300050: 1116_bossvampire_25
+    21300052: 1116_bossvampire_26
+    21300054: 1116_bossvampire_27
+    21300056: 1116_bossvampire_28
+    21300058: 1116_bossvampire_29
+    21300060: 1116_bossvampire_30
+    21300062: 1116_bossvampire_31
+    21300064: 1116_bossvampire_32
+    21300066: 1116_bossvampire_33
+    21300068: 1116_bossvampire_34
+    21300070: 1116_bossvampire_35
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: 0
+    aniso: -1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 1
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: 1116_bossvampire_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2304
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 1116_bossvampire_1
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 2304
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 1116_bossvampire_2
+      rect:
+        serializedVersion: 2
+        x: 516
+        y: 2304
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 1116_bossvampire_3
+      rect:
+        serializedVersion: 2
+        x: 773
+        y: 2304
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 1116_bossvampire_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2049
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 1116_bossvampire_5
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 2048
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 1116_bossvampire_6
+      rect:
+        serializedVersion: 2
+        x: 515
+        y: 2049
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 1116_bossvampire_7
+      rect:
+        serializedVersion: 2
+        x: 771
+        y: 2048
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 1116_bossvampire_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1788
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 1116_bossvampire_9
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 1787
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 1116_bossvampire_10
+      rect:
+        serializedVersion: 2
+        x: 516
+        y: 1787
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 1116_bossvampire_11
+      rect:
+        serializedVersion: 2
+        x: 773
+        y: 1787
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 1116_bossvampire_12
+      rect:
+        serializedVersion: 2
+        x: 1030
+        y: 1788
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 1116_bossvampire_13
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1532
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 1116_bossvampire_14
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 1531
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 1116_bossvampire_15
+      rect:
+        serializedVersion: 2
+        x: 515
+        y: 1531
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 1116_bossvampire_16
+      rect:
+        serializedVersion: 2
+        x: 774
+        y: 1530
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 1116_bossvampire_17
+      rect:
+        serializedVersion: 2
+        x: 1030
+        y: 1530
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 1116_bossvampire_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1275
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 1116_bossvampire_19
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 1276
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 1116_bossvampire_20
+      rect:
+        serializedVersion: 2
+        x: 514
+        y: 1276
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 1116_bossvampire_21
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1020
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 1116_bossvampire_22
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 1020
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 1116_bossvampire_23
+      rect:
+        serializedVersion: 2
+        x: 514
+        y: 1021
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 1116_bossvampire_24
+      rect:
+        serializedVersion: 2
+        x: 771
+        y: 1020
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 1116_bossvampire_25
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 765
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 1116_bossvampire_26
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 765
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 1116_bossvampire_27
+      rect:
+        serializedVersion: 2
+        x: 514
+        y: 765
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 1116_bossvampire_28
+      rect:
+        serializedVersion: 2
+        x: 771
+        y: 765
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 1116_bossvampire_29
+      rect:
+        serializedVersion: 2
+        x: 1028
+        y: 765
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 1116_bossvampire_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 253
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 1116_bossvampire_31
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 1116_bossvampire_32
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 1116_bossvampire_33
+      rect:
+        serializedVersion: 2
+        x: 513
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 1116_bossvampire_34
+      rect:
+        serializedVersion: 2
+        x: 770
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 1116_bossvampire_35
+      rect:
+        serializedVersion: 2
+        x: 1026
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
