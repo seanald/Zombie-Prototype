@@ -45,11 +45,22 @@ public class Zombie : Player
 		}
 		else if (this.comboNumber == 3)
 		{
-			this.zombieAnimator.Play("Zombie_Punch");
+			this.Dash();
 			yield return new WaitForSeconds(1.4f);
 			this.comboNumber = 0;
 		}
 		this.state = CharacterState.Standing;
+	}
+
+	private void Dash()
+	{
+		this.zombieAnimator.Play("Zombie_Dash");
+		this.controller.Move(Vector3.MoveTowards(this.gameObject.transform.position,transform.position+(transform.right*2), 100));
+	}
+
+	private void Chomp()
+	{
+
 	}
 
 	public int ComboNumber
