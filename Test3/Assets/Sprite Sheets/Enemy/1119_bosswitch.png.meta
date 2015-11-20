@@ -1,0 +1,518 @@
+fileFormatVersion: 2
+guid: fb0ac4925f8eb984bb00d4d64948df76
+timeCreated: 1447844351
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: 1119_bosswitch_0
+    21300002: 1119_bosswitch_1
+    21300004: 1119_bosswitch_2
+    21300006: 1119_bosswitch_3
+    21300008: 1119_bosswitch_4
+    21300010: 1119_bosswitch_5
+    21300012: 1119_bosswitch_6
+    21300014: 1119_bosswitch_7
+    21300016: 1119_bosswitch_8
+    21300018: 1119_bosswitch_9
+    21300020: 1119_bosswitch_10
+    21300022: 1119_bosswitch_11
+    21300024: 1119_bosswitch_12
+    21300026: 1119_bosswitch_13
+    21300028: 1119_bosswitch_14
+    21300030: 1119_bosswitch_15
+    21300032: 1119_bosswitch_16
+    21300034: 1119_bosswitch_17
+    21300036: 1119_bosswitch_18
+    21300038: 1119_bosswitch_19
+    21300040: 1119_bosswitch_20
+    21300042: 1119_bosswitch_21
+    21300044: 1119_bosswitch_22
+    21300046: 1119_bosswitch_23
+    21300048: 1119_bosswitch_24
+    21300050: 1119_bosswitch_25
+    21300052: 1119_bosswitch_26
+    21300054: 1119_bosswitch_27
+    21300056: 1119_bosswitch_28
+    21300058: 1119_bosswitch_29
+    21300060: 1119_bosswitch_30
+    21300062: 1119_bosswitch_31
+    21300064: 1119_bosswitch_32
+    21300066: 1119_bosswitch_33
+    21300068: 1119_bosswitch_34
+    21300070: 1119_bosswitch_35
+    21300072: 1119_bosswitch_36
+    21300074: 1119_bosswitch_37
+    21300076: 1119_bosswitch_38
+    21300078: 1119_bosswitch_39
+    21300080: 1119_bosswitch_40
+    21300082: 1119_bosswitch_41
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 1
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: 1119_bosswitch_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2304
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 1119_bosswitch_1
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 2304
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 1119_bosswitch_2
+      rect:
+        serializedVersion: 2
+        x: 514
+        y: 2304
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 1119_bosswitch_3
+      rect:
+        serializedVersion: 2
+        x: 771
+        y: 2304
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 1119_bosswitch_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2049
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 1119_bosswitch_5
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 2049
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 1119_bosswitch_6
+      rect:
+        serializedVersion: 2
+        x: 515
+        y: 2047
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 1119_bosswitch_7
+      rect:
+        serializedVersion: 2
+        x: 772
+        y: 2049
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 1119_bosswitch_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1791
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 1119_bosswitch_9
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 1791
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 1119_bosswitch_10
+      rect:
+        serializedVersion: 2
+        x: 513
+        y: 1791
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 1119_bosswitch_11
+      rect:
+        serializedVersion: 2
+        x: 771
+        y: 1791
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 1119_bosswitch_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1535
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 1119_bosswitch_13
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 1534
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 1119_bosswitch_14
+      rect:
+        serializedVersion: 2
+        x: 515
+        y: 1536
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 1119_bosswitch_15
+      rect:
+        serializedVersion: 2
+        x: 772
+        y: 1536
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 1119_bosswitch_16
+      rect:
+        serializedVersion: 2
+        x: 1029
+        y: 1536
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 1119_bosswitch_17
+      rect:
+        serializedVersion: 2
+        x: 1286
+        y: 1536
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 1119_bosswitch_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1280
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 1119_bosswitch_19
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 1279
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 1119_bosswitch_20
+      rect:
+        serializedVersion: 2
+        x: 513
+        y: 1280
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 1119_bosswitch_21
+      rect:
+        serializedVersion: 2
+        x: 769
+        y: 1279
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 1119_bosswitch_22
+      rect:
+        serializedVersion: 2
+        x: 1026
+        y: 1280
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 1119_bosswitch_23
+      rect:
+        serializedVersion: 2
+        x: 1283
+        y: 1277
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 1119_bosswitch_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 767
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 1119_bosswitch_25
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 766
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 1119_bosswitch_26
+      rect:
+        serializedVersion: 2
+        x: 513
+        y: 768
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 1119_bosswitch_27
+      rect:
+        serializedVersion: 2
+        x: 769
+        y: 768
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 1119_bosswitch_28
+      rect:
+        serializedVersion: 2
+        x: 1025
+        y: 767
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 1119_bosswitch_29
+      rect:
+        serializedVersion: 2
+        x: 1282
+        y: 769
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 1119_bosswitch_30
+      rect:
+        serializedVersion: 2
+        x: 1538
+        y: 770
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 1119_bosswitch_31
+      rect:
+        serializedVersion: 2
+        x: 1794
+        y: 769
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 1119_bosswitch_32
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 510
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 1119_bosswitch_33
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 510
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 1119_bosswitch_34
+      rect:
+        serializedVersion: 2
+        x: 513
+        y: 510
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 1119_bosswitch_35
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 510
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 1119_bosswitch_36
+      rect:
+        serializedVersion: 2
+        x: 1025
+        y: 510
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 1119_bosswitch_37
+      rect:
+        serializedVersion: 2
+        x: 1282
+        y: 510
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 1119_bosswitch_38
+      rect:
+        serializedVersion: 2
+        x: 1538
+        y: 510
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 1119_bosswitch_39
+      rect:
+        serializedVersion: 2
+        x: 1795
+        y: 510
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 1119_bosswitch_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 255
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 1119_bosswitch_41
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
