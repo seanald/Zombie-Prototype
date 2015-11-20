@@ -203,17 +203,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 7
       objectReference: {fileID: 0}
-    - target: {fileID: 11435678, guid: cd0680be51a520a4695e5251d7cabffd, type: 2}
-      propertyPath: followPlayerGameObject
-      value: 
-      objectReference: {fileID: 754734857}
     - target: {fileID: 11447200, guid: cd0680be51a520a4695e5251d7cabffd, type: 2}
       propertyPath: healthBar
       value: 
       objectReference: {fileID: 441979932}
-    m_RemovedComponents:
-    - {fileID: 11435678, guid: cd0680be51a520a4695e5251d7cabffd, type: 2}
-    - {fileID: 11426184, guid: cd0680be51a520a4695e5251d7cabffd, type: 2}
+    m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cd0680be51a520a4695e5251d7cabffd, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &405666995 stripped
