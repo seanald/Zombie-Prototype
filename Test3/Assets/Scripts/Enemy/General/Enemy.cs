@@ -38,6 +38,7 @@ public class Enemy : Character
 
 	virtual protected void Standing()
 	{
+		this.state = CharacterState.Moving;
 	}
 
 	new protected void Start()
@@ -79,7 +80,7 @@ public class Enemy : Character
 		}
 		else if (this.state == CharacterState.Standing)
 		{
-			this.Standing();
+			this.Move();
 		}
 		else if (this.state == CharacterState.Moving)
 		{

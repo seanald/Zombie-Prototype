@@ -65,8 +65,7 @@ public class Mikey : Enemy
 		{
 			this.Seek(this.distVec);
 		}
-
-		if (this.distance < this.dangerDistance - 50)
+		else if (this.distance < this.dangerDistance - 50)
 		{
 			this.Seek(this.distVec * -1);
 		}

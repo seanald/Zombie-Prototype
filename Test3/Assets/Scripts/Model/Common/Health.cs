@@ -37,6 +37,10 @@ public class Health : MonoBehaviour
 		this.character.State = CharacterState.Stunned;
         if (CurHealth <= 0)
 		{
+			if (this.GetComponentInChildren<Flicker>() != null)
+			{
+				this.GetComponentInChildren<Flicker>().Flash();
+			}
             ScoreManager.AddPoints(10);
             if (this.gameObject.GetComponentInChildren<Animator>() != null)
 			{
