@@ -20,10 +20,14 @@ public class Zombie : Player
 			this.state = CharacterState.Attacking;
 			StartCoroutine(this.Punch());
 		}
-        else if (Input.GetKeyDown(KeyCode.Keypad1))
+        else if (Input.GetKeyDown(KeyCode.Keypad1) || Input.GetKeyDown(KeyCode.Z))
         {
-            this.Dash();
+			StartCoroutine(this.Dash());
         }
+		else if (Input.GetKeyDown(KeyCode.C))
+		{
+				StartCoroutine(this.Chomp());
+		}
 		else if (this.state == CharacterState.Moving)
 		{
 			this.zombieAnimator.SetBool("walking", true);
@@ -56,15 +60,20 @@ public class Zombie : Player
 		this.state = CharacterState.Standing;
 	}
 
-	private void Dash()
+	private IEnumerator Dash()
 	{
+		this.state = CharacterState.Attacking;
 		this.zombieAnimator.Play("Zombie_Dash");
-		this.controller.Move(Vector3.MoveTowards(this.gameObject.transform.position,transform.position+(transform.right*2), 100));
+		yield return new WaitForSeconds(0.8f);
+		this.state = CharacterState.Standing;
 	}
 
-	private void Chomp()
+	private IEnumerator Chomp()
 	{
-
+		this.state = CharacterState.Attacking;
+		this.zombieAnimator.Play("Zombie_Chomp");
+		yield return new WaitForSeconds(0.8f);
+		this.state = CharacterState.Standing;
 	}
 
 	public int ComboNumber
