@@ -12,15 +12,6 @@ public class Attack : MonoBehaviour
     AudioSource weakAttack;
     GameObject player;
 
-
-	public Attack(GameObject owner, int damage, float knockback)
-	{
-		this.owner = owner;
-		this.damage = damage;
-		this.knockback = knockback;
-        
-	}
-
     void Awake()
     {
         player = GameObject.FindGameObjectWithTag("Player");
@@ -43,14 +34,12 @@ public class Attack : MonoBehaviour
 		return total;
 	}
 
-	void OnTriggerEnter(Collider other)
+	protected virtual void OnTriggerEnter(Collider other)
 	{
-		print("test");
 		if ((this.gameObject.tag.Equals("Player") && other.GetComponentInParent<Player>() == null)
 		    || (this.gameObject.tag.Equals("ActivePlayer") && other.GetComponentInParent<Player>() == null)
 		    || (this.gameObject.tag.Equals("Enemy") && other.GetComponentInParent<Enemy>() == null))
 		{
-			print("test");
 			if (other.gameObject.GetComponent<Health>())
 			{
                 weakAttack.Play(); 
