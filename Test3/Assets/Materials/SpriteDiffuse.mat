@@ -10,7 +10,7 @@ Material:
   m_Shader: {fileID: 4800000, guid: 6839f00bc923eda4eae7efac16dc4459, type: 3}
   m_ShaderKeywords: _ALPHATEST_ON
   m_LightmapFlags: 5
-  m_CustomRenderQueue: 2977
+  m_CustomRenderQueue: 3000
   stringTagMap:
     RenderType: TransparentCutOut
   m_SavedProperties:

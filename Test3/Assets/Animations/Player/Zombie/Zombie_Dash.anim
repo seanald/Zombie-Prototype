@@ -5,7 +5,7 @@ AnimationClip:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Zombie_Punch_2
+  m_Name: Zombie_Dash
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -23,12 +23,12 @@ AnimationClip:
         inSlope: Infinity
         outSlope: Infinity
         tangentMode: 31
-      - time: .333333343
+      - time: .25
         value: 1
         inSlope: Infinity
         outSlope: Infinity
         tangentMode: 31
-      - time: .833333313
+      - time: .75
         value: 0
         inSlope: Infinity
         outSlope: Infinity
@@ -36,17 +36,21 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
     attribute: m_IsActive
-    path: Punch
+    path: Dash
     classID: 1
     script: {fileID: 0}
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: 21300116, guid: 2b97abc3592896b48b384e09c4e060dd, type: 3}
+      value: {fileID: 21300134, guid: 2b97abc3592896b48b384e09c4e060dd, type: 3}
+    - time: .0833333358
+      value: {fileID: 21300136, guid: 2b97abc3592896b48b384e09c4e060dd, type: 3}
     - time: .166666672
-      value: {fileID: 21300120, guid: 2b97abc3592896b48b384e09c4e060dd, type: 3}
-    - time: .333333343
-      value: {fileID: 21300118, guid: 2b97abc3592896b48b384e09c4e060dd, type: 3}
+      value: {fileID: 21300138, guid: 2b97abc3592896b48b384e09c4e060dd, type: 3}
+    - time: .25
+      value: {fileID: 21300140, guid: 2b97abc3592896b48b384e09c4e060dd, type: 3}
+    - time: .666666687
+      value: {fileID: 21300142, guid: 2b97abc3592896b48b384e09c4e060dd, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -58,7 +62,7 @@ AnimationClip:
     m_Extent: {x: 0, y: 0, z: 0}
   m_ClipBindingConstant:
     genericBindings:
-    - path: 3978321756
+    - path: 995914302
       attribute: 2086281974
       script: {fileID: 0}
       classID: 1
@@ -71,13 +75,15 @@ AnimationClip:
       customType: 23
       isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: 21300116, guid: 2b97abc3592896b48b384e09c4e060dd, type: 3}
-    - {fileID: 21300120, guid: 2b97abc3592896b48b384e09c4e060dd, type: 3}
-    - {fileID: 21300118, guid: 2b97abc3592896b48b384e09c4e060dd, type: 3}
+    - {fileID: 21300134, guid: 2b97abc3592896b48b384e09c4e060dd, type: 3}
+    - {fileID: 21300136, guid: 2b97abc3592896b48b384e09c4e060dd, type: 3}
+    - {fileID: 21300138, guid: 2b97abc3592896b48b384e09c4e060dd, type: 3}
+    - {fileID: 21300140, guid: 2b97abc3592896b48b384e09c4e060dd, type: 3}
+    - {fileID: 21300142, guid: 2b97abc3592896b48b384e09c4e060dd, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_StartTime: 0
-    m_StopTime: .833333313
+    m_StopTime: .75
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -100,12 +106,12 @@ AnimationClip:
         inSlope: Infinity
         outSlope: Infinity
         tangentMode: 31
-      - time: .333333343
+      - time: .25
         value: 1
         inSlope: Infinity
         outSlope: Infinity
         tangentMode: 31
-      - time: .833333313
+      - time: .75
         value: 0
         inSlope: Infinity
         outSlope: Infinity
@@ -113,7 +119,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
     attribute: m_IsActive
-    path: Punch
+    path: Dash
     classID: 1
     script: {fileID: 0}
   m_EulerEditorCurves: []

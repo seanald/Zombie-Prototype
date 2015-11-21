@@ -55,6 +55,23 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &180264
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 427972}
+  - 65: {fileID: 6532660}
+  - 114: {fileID: 11497902}
+  m_Layer: 8
+  m_Name: Dash
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
 --- !u!4 &408650
 Transform:
   m_ObjectHideFlags: 1
@@ -66,8 +83,21 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 467600}
+  - {fileID: 427972}
   m_Father: {fileID: 431642}
   m_RootOrder: 0
+--- !u!4 &427972
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 180264}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 408650}
+  m_RootOrder: 1
 --- !u!4 &431642
 Transform:
   m_ObjectHideFlags: 1
@@ -120,6 +150,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 60, y: 30, z: 30}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!65 &6532660
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 180264}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 100, y: 50, z: 50}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!82 &8261044
 AudioSource:
   m_ObjectHideFlags: 1
@@ -135,7 +177,6 @@ AudioSource:
   m_Pitch: 1
   Loop: 0
   Mute: 0
-  Spatialize: 0
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
@@ -205,7 +246,6 @@ AudioSource:
   m_Pitch: 1
   Loop: 0
   Mute: 0
-  Spatialize: 0
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
@@ -326,6 +366,22 @@ MonoBehaviour:
   knockback: 0
   stun: 1
   victim: {fileID: 0}
+--- !u!114 &11497902
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 180264}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b0f43d19d4c7ed4d862461e24c9f161, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  owner: {fileID: 0}
+  damage: 0
+  knockback: 0
+  stun: 0
+  victim: {fileID: 0}
 --- !u!143 &14305528
 CharacterController:
   m_ObjectHideFlags: 1
@@ -367,7 +423,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: a1eb7282705d4564db6fcddc8a30528c, type: 3}
+  m_Sprite: {fileID: 21300072, guid: 2b97abc3592896b48b384e09c4e060dd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &100100000
 Prefab:
@@ -379,7 +435,7 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: a1eb7282705d4564db6fcddc8a30528c,
+      objectReference: {fileID: 21300072, guid: 2b97abc3592896b48b384e09c4e060dd,
         type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

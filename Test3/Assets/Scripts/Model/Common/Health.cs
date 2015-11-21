@@ -35,9 +35,10 @@ public class Health : MonoBehaviour
 	{
 		CurHealth -= attack.damage;
 		this.character.State = CharacterState.Stunned;
-		if (CurHealth <= 0)
+        if (CurHealth <= 0)
 		{
-			if (this.gameObject.GetComponentInChildren<Animator>() != null)
+            ScoreManager.AddPoints(10);
+            if (this.gameObject.GetComponentInChildren<Animator>() != null)
 			{
 				character.State = CharacterState.Dying;
 				this.gameObject.GetComponentInChildren<Animator>().Play("death");
