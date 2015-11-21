@@ -5,6 +5,7 @@ public class Zombie : Player
 {
 	private Animator zombieAnimator;
 	private int comboNumber;
+	private Vector3 dashDestination;
 
 	 void Start()
 	{
@@ -24,6 +25,10 @@ public class Zombie : Player
         {
             this.Dash();
         }
+		else if (Input.GetKeyDown(KeyCode.C))
+		{
+			this.Chomp();
+		}
 		else if (this.state == CharacterState.Moving)
 		{
 			this.zombieAnimator.SetBool("walking", true);
@@ -59,12 +64,12 @@ public class Zombie : Player
 	private void Dash()
 	{
 		this.zombieAnimator.Play("Zombie_Dash");
-		this.controller.Move(Vector3.MoveTowards(this.gameObject.transform.position,transform.position+(transform.right*2), 100));
+		this.dashDestination = transform.position + (transform.right * 2);
 	}
 
 	private void Chomp()
 	{
-
+		this.zombieAnimator.Play("Zombie_Chomp");
 	}
 
 	public int ComboNumber
