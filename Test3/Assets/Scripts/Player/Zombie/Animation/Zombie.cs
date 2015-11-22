@@ -81,7 +81,7 @@ public class Zombie : Player
 	{
 		this.state = CharacterState.Attacking;
 		this.zombieAnimator.Play("Zombie_Chomp");
-		yield return new WaitForSeconds(0.8f);
+		yield return new WaitForSeconds(2f);
 		this.state = CharacterState.Standing;
 	}
 
