@@ -10,7 +10,7 @@ GameObject:
   - 4: {fileID: 422168}
   - 212: {fileID: 21254858}
   - 95: {fileID: 9554530}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: BossVampire
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29,9 +29,9 @@ GameObject:
   - 114: {fileID: 11420444}
   - 114: {fileID: 11473492}
   - 114: {fileID: 11487378}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: BossVampireController
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -121,7 +121,7 @@ MonoBehaviour:
   team: 0
   velocity: {x: 0, y: 0, z: 0}
   stunnedTime: 1
-  attackDistance: 80
+  attackDistance: 200
   dangerDistance: 500
   attackRate: 5
 --- !u!143 &14334660
