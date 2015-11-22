@@ -944,77 +944,13 @@ Prefab:
       propertyPath: m_RootOrder
       value: 13
       objectReference: {fileID: 0}
-    - target: {fileID: 21271000, guid: d842fffeebe781249aa59573b76a3b6e, type: 2}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: b3bfd84fcd0d8f743ae2b343efe700a7, type: 2}
-    - target: {fileID: 108576, guid: d842fffeebe781249aa59573b76a3b6e, type: 2}
-      propertyPath: m_Layer
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 120134, guid: d842fffeebe781249aa59573b76a3b6e, type: 2}
-      propertyPath: m_Layer
-      value: 9
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 11420198, guid: d842fffeebe781249aa59573b76a3b6e, type: 2}
-    - {fileID: 11427104, guid: d842fffeebe781249aa59573b76a3b6e, type: 2}
+    m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d842fffeebe781249aa59573b76a3b6e, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &1021639396 stripped
 Transform:
   m_PrefabParentObject: {fileID: 411922, guid: d842fffeebe781249aa59573b76a3b6e, type: 2}
   m_PrefabInternal: {fileID: 1021639395}
---- !u!1 &1021639397 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 120134, guid: d842fffeebe781249aa59573b76a3b6e, type: 2}
-  m_PrefabInternal: {fileID: 1021639395}
---- !u!114 &1021639398
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1021639397}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0cfb38281ab5d1640a75ca7e7d2a24c1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 100
-  drag: 10
-  team: 0
-  velocity: {x: 0, y: 0, z: 0}
-  stunnedTime: 1
-  attackDistance: 80
-  dangerDistance: 500
-  attackRate: 5
---- !u!114 &1021639399
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1021639397}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 02b8d64d7346ad641b3d77f7c62211ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHealth: 100
-  armor: 0
-  invincibilityDuration: 1
-  invincibleWhenHit: 0
-  healthBar: {fileID: 0}
---- !u!114 &1021639400
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1021639397}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 540125c1393900548bf7d4930555c7f3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1168850840
 GameObject:
   m_ObjectHideFlags: 0
