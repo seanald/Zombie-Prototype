@@ -4,6 +4,11 @@ using System.Collections.Generic;
 
 public class WitchBoss : Enemy
 {
+	private int random = 0;
+	private bool teleporting;
+
+	private List<GameObject> teleportSpots;
+
     void IsFeared()
     {
         this.state = CharacterState.Fleeing;
@@ -11,7 +16,10 @@ public class WitchBoss : Enemy
 
     override protected void Attack()
     {
-        int random = Random.Range(1, 4);
+		if (random == 0)
+		{
+			random = Random.Range(1, 4);
+		}
 
         if (this.distance < this.attackDistance)
         {
@@ -27,17 +35,21 @@ public class WitchBoss : Enemy
                     this.SpellAttack();
                     StartCoroutine(WaitForAnimation());
                 }
-                if (random == 3)
+                if (this.teleporting)
                 {
+					this.gameObject.GetComponentInChildren<Renderer>().enabled = true;
                     this.TeleportIn();
                     StartCoroutine(WaitForAnimation());
                 }
-                if (random == 4)
+                if (random == 3)
                 {
-                    this.TeleportOut();
-                    StartCoroutine(WaitForAnimation());
+					StartCoroutine(TeleportOut());
                 }
             }
+			else
+			{
+				this.random = 0;
+			}
         }
         else
         {
@@ -61,13 +73,17 @@ public class WitchBoss : Enemy
     private void TeleportIn()
     {
         this.enemyAnimator.Play("Boss_Witch_Teleport_In");
+		this.gameObject.SetActive(true);
         this.attacking = true;
+		this.teleporting = false;
     }
 
-    private void TeleportOut()
+	IEnumerator TeleportOut()
     {
         this.enemyAnimator.Play("Boss_Witch_Teleport_Out");
-        this.attacking = true;
+		this.teleporting = true;
+		yield return new WaitForSeconds(1.0f);
+		this.gameObject.GetComponentInChildren<Renderer>().enabled = false;
     }
 
     override protected void Move()
