@@ -30,10 +30,13 @@ public class FootballWolf : Enemy
 	{
 		if (this.distance < this.attackDistance)
 		{
+			if(!this.attacking)
+			{
 			this.enemyAnimator.Play("FootballWolf_Throw");
 			Instantiate(football, throwPoint.position, throwPoint.localRotation);
-			this.state = CharacterState.Moving;
+			this.attacking = true;
 			StartCoroutine(WaitForAnimation());
+			}
 		}
 		else
 		{
@@ -81,7 +84,8 @@ public class FootballWolf : Enemy
 
 	IEnumerator WaitForAnimation()
 	{
-		yield return new WaitForSeconds(1f);
+		yield return new WaitForSeconds(1.0f);
+		this.attacking = false;
 		this.Move();
 	}
 }
