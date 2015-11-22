@@ -5,6 +5,8 @@ using System.Collections.Generic;
 public class EnemySpawner : MonoBehaviour
 {	
 	private GameObject[] enemiesInScene;
+    //public Transform[] spawnPointsLeft; //chris added
+    //public Transform[] spawnPointsRight; // chris added
 	private List<GameObject> spawnNumberArray;
 	public List<GameObject> spawnQueueArray;
 	public int spawnNumber;
@@ -17,6 +19,8 @@ public class EnemySpawner : MonoBehaviour
 	private bool isActive;
 	public List<string> side;
 
+    //int spawnPointIndex = Random.Range (0, spawnPointsLeft.Length);
+    //int spawnPointIndexRight = Random.Range(0, spawnPointsRight.Length); 
 
 	// Use this for initialization
 	void Start()
