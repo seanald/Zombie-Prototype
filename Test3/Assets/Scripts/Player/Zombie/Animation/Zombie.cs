@@ -4,13 +4,16 @@ using System.Collections;
 public class Zombie : Player
 {
 	private Animator zombieAnimator;
-	private int comboNumber;
+	private int comboNumber = 0;
+	private float comboMaxTime = 1.0f;
+	private float comboSpanTime = 0.25f;
+	private float comboMidPoint = 0.5f;
+	private float comboTimeout = 0.0f;
 
-	 void Start()
+	void Start()
 	{
 		base.Start();
 		this.zombieAnimator = this.GetComponentInChildren<Animator>();
-		this.comboNumber = 0;
 	}
 
 	void Update()
@@ -20,13 +23,13 @@ public class Zombie : Player
 			this.state = CharacterState.Attacking;
 			StartCoroutine(this.Punch());
 		}
-        else if (Input.GetKeyDown(KeyCode.Keypad1) || Input.GetKeyDown(KeyCode.Z))
-        {
+		else if (Input.GetKeyDown(KeyCode.Z))
+		{
 			StartCoroutine(this.Dash());
-        }
+		}
 		else if (Input.GetKeyDown(KeyCode.C))
 		{
-				StartCoroutine(this.Chomp());
+			StartCoroutine(this.Chomp());
 		}
 		else if (this.state == CharacterState.Moving)
 		{
@@ -36,11 +39,17 @@ public class Zombie : Player
 		{
 			this.zombieAnimator.SetBool("walking", false);
 		}
+
+		if (comboTimeout > 0)
+		{
+			DecreaseTime();
+		}
 	}
 
 	IEnumerator Punch()
 	{
-		this.comboNumber++;
+		this.ComboTime();
+		this.state = CharacterState.Attacking;
 		if (this.comboNumber == 1)
 		{
 			this.zombieAnimator.Play("Zombie_Punch");
@@ -84,5 +93,27 @@ public class Zombie : Player
 		set {
 			comboNumber = value;
 		}
+	}
+
+	private void ComboTime()
+	{
+		if (comboNumber < 3 && 
+			comboTimeout > 0 && 
+			comboTimeout > comboMidPoint - comboSpanTime &&
+			comboTimeout < comboMidPoint + comboSpanTime ||
+			comboNumber == 0)
+		{
+			comboNumber++;
+		}
+		else
+		{
+			comboNumber = 0;
+		}
+		comboTimeout = comboMaxTime;
+	}
+
+	private void DecreaseTime()
+	{
+		comboTimeout -= 1 * Time.deltaTime;
 	}
 }
