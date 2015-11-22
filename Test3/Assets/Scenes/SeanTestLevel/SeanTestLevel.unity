@@ -198,7 +198,7 @@ MeshFilter:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 191697167}
+  m_GameObject: {fileID: 0}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &253596742 stripped
 GameObject:
@@ -531,7 +531,7 @@ MeshFilter:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 496811111}
+  m_GameObject: {fileID: 0}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!20 &580885246 stripped
 Camera:
@@ -633,26 +633,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e3245b2b55bd7442994012a9d4515b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &749969947 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 160754, guid: d842fffeebe781249aa59573b76a3b6e, type: 2}
-  m_PrefabInternal: {fileID: 1021639395}
---- !u!114 &749969950
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 749969947}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b0f43d19d4c7ed4d862461e24c9f161, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  owner: {fileID: 0}
-  damage: 200
-  knockback: 0
-  stun: 0
-  victim: {fileID: 0}
 --- !u!1 &754734857 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 185152, guid: d1d692c46d4c38944b61596f9b91d608, type: 2}
@@ -1058,37 +1038,7 @@ Prefab:
       propertyPath: m_RootOrder
       value: 13
       objectReference: {fileID: 0}
-    - target: {fileID: 167288, guid: d842fffeebe781249aa59573b76a3b6e, type: 2}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6527514, guid: d842fffeebe781249aa59573b76a3b6e, type: 2}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6525678, guid: d842fffeebe781249aa59573b76a3b6e, type: 2}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6527514, guid: d842fffeebe781249aa59573b76a3b6e, type: 2}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 11487504, guid: d842fffeebe781249aa59573b76a3b6e, type: 2}
-      propertyPath: spawnEnemy
-      value: 
-      objectReference: {fileID: 170712, guid: fd308fa4dd47aed4988e63390ca5e776, type: 2}
-    - target: {fileID: 11487504, guid: d842fffeebe781249aa59573b76a3b6e, type: 2}
-      propertyPath: dangerDistance
-      value: 250
-      objectReference: {fileID: 0}
-    - target: {fileID: 11487504, guid: d842fffeebe781249aa59573b76a3b6e, type: 2}
-      propertyPath: attackDistance
-      value: 120
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 6525678, guid: d842fffeebe781249aa59573b76a3b6e, type: 2}
-    - {fileID: 6527514, guid: d842fffeebe781249aa59573b76a3b6e, type: 2}
+    m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d842fffeebe781249aa59573b76a3b6e, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &1021639396 stripped
@@ -1542,26 +1492,6 @@ Transform:
 GameObject:
   m_PrefabParentObject: {fileID: 157110, guid: e3cca2460351a854b82ab0e69f4ebcd5, type: 2}
   m_PrefabInternal: {fileID: 1287804788}
---- !u!1 &1700680672 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 199582, guid: d842fffeebe781249aa59573b76a3b6e, type: 2}
-  m_PrefabInternal: {fileID: 1021639395}
---- !u!114 &1700680675
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1700680672}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b0f43d19d4c7ed4d862461e24c9f161, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  owner: {fileID: 0}
-  damage: 100
-  knockback: 0
-  stun: 0
-  victim: {fileID: 0}
 --- !u!1 &1784351750 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 107218, guid: cd0680be51a520a4695e5251d7cabffd, type: 2}
