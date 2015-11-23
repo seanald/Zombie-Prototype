@@ -141,7 +141,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02b8d64d7346ad641b3d77f7c62211ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
+  maxHealth: 40
   armor: 0
   invincibilityDuration: 1
   invincibleWhenHit: 0
@@ -163,7 +163,7 @@ MonoBehaviour:
   velocity: {x: 0, y: 0, z: 0}
   stunnedTime: 1
   attackDistance: 350
-  dangerDistance: 400
+  dangerDistance: 300
   attackRate: 5
   bullet: {fileID: 135292, guid: 01257cf27dbc1334bb8e15b2b1b777b6, type: 2}
   throwPoint: {fileID: 477072}
@@ -216,7 +216,15 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: dangerDistance
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: maxHealth
+      value: 40
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 141290}
