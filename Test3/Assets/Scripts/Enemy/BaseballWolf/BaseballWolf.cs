@@ -6,7 +6,14 @@ public class BaseballWolf : Enemy
 {
 	void IsFeared()
 	{
+		this.target = GameObject.Find("Right").transform;
 		this.state = CharacterState.Fleeing;
+		StartCoroutine(WaitForDeath());
+	}
+
+	void TakeDamage()
+	{
+		this.health.CurHealth -= 20;
 	}
 
 	override protected void Attack()
@@ -64,5 +71,11 @@ public class BaseballWolf : Enemy
 			this.state = CharacterState.Attacking;
 		}
 		this.strafing = false;
+	}
+
+	IEnumerator WaitForDeath()
+	{
+		yield return new WaitForSeconds(30f);
+		Destroy(this.gameObject);
 	}
 }
