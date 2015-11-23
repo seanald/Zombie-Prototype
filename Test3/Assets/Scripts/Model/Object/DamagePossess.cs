@@ -25,7 +25,7 @@ public class DamagePossess : MonoBehaviour {
 			if(isActive)
 			{
 
-				if(Input.GetKeyDown(KeyCode.P) || Input.GetKeyDown(KeyCode.JoystickButton2)){
+				if(Input.GetKeyDown(KeyCode.P) || Input.GetKeyDown(KeyCode.JoystickButton2) && GameObject.Find("GhostController").tag == "ActivePlayer"){
 					//play animation
 					Instantiate(alert, this.transform.position, this.transform.rotation);
 					this.CauseDamage();
