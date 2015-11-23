@@ -63,17 +63,26 @@ public class EnemySpawner : MonoBehaviour
 
 	public void Spawn()
 	{
+		StartCoroutine(WaitForSpawn());
+	}
+
+	IEnumerator WaitForSpawn()
+	{
 		int i = 0;
 		foreach(GameObject enemy in this.spawnNumberArray)
 		{
 			if(side[i]=="right"){
 				GameObject newEnemy = Instantiate(enemy, this.transform.position + rightoffest, this.transform.rotation) as GameObject;
+				
 			}
 			if(side[i]=="left"){
 				GameObject newEnemy = Instantiate(enemy, this.transform.position - rightoffest, this.transform.rotation) as GameObject;
 			}
 			i++;
+			yield return new WaitForSeconds(2f);
 		}
+
+		
 	}
 
 	void OnTriggerEnter(Collider c)

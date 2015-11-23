@@ -26,7 +26,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 179828}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2066.75317, y: 6.88461751e-06, z: -194.547607}
+  m_LocalPosition: {x: -2046.30579, y: 93.5, z: -229.399994}
   m_LocalScale: {x: 1.274032, y: 1.27403247, z: 1.27403247}
   m_Children: []
   m_Father: {fileID: 0}
@@ -93,7 +93,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300072, guid: 2385ab9e7f7fb4bc589bacf9c7a80da7, type: 3}
+  m_Sprite: {fileID: 21300072, guid: db6b31cd80ac5024d94795cd6d7eab64, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &100100000
 Prefab:
@@ -109,7 +109,7 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300072, guid: 2385ab9e7f7fb4bc589bacf9c7a80da7,
+      objectReference: {fileID: 21300072, guid: db6b31cd80ac5024d94795cd6d7eab64,
         type: 3}
     - target: {fileID: 0}
       propertyPath: m_CollisionDetection
