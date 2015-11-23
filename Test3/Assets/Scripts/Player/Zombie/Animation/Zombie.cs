@@ -18,16 +18,16 @@ public class Zombie : Player
 
 	void Update()
 	{
-		if (Input.GetKeyDown(KeyCode.Space))
+		if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.JoystickButton0) && GameObject.Find("ZombieController").tag == "ActivePlayer")
 		{
 			this.state = CharacterState.Attacking;
 			StartCoroutine(this.Punch());
 		}
-		else if (Input.GetKeyDown(KeyCode.Z))
+		else if (Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(KeyCode.JoystickButton2) && GameObject.Find("ZombieController").tag == "ActivePlayer")
 		{
 			StartCoroutine(this.Dash());
 		}
-		else if (Input.GetKeyDown(KeyCode.C))
+		else if (Input.GetKeyDown(KeyCode.C) || Input.GetKeyDown(KeyCode.JoystickButton1) && GameObject.Find("ZombieController").tag == "ActivePlayer")
 		{
 			StartCoroutine(this.Chomp());
 		}
