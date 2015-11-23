@@ -10,7 +10,7 @@ public class GhostPossess : MonoBehaviour
 	// Update is called once per frame
 	void Update()
 	{
-		print(mytarget);
+		//print(mytarget);
 		if ((Input.GetKeyDown(KeyCode.T) || Input.GetKeyDown(KeyCode.JoystickButton2))&& mytarget != null)
 		{
 			//mytarget.Possessable.Possessed = true;
