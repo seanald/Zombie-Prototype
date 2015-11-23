@@ -24,10 +24,10 @@ public class DamagePossess : MonoBehaviour {
 		if(!alreadyActivated){
 			if(isActive)
 			{
-				//+Instantiate(alert, this.transform.position, this.transform.rotation);	
+
 				if(Input.GetKeyDown(KeyCode.P) || Input.GetKeyDown(KeyCode.JoystickButton2)){
 					//play animation
-					//Instantiate(alert, this.transform.position, this.transform.rotation);
+					Instantiate(alert, this.transform.position, this.transform.rotation);
 					this.CauseDamage();
 					alreadyActivated=true;
 				}
@@ -60,9 +60,7 @@ public class DamagePossess : MonoBehaviour {
 		if (col.gameObject == ghost)
 		{
 			isActive = true;
-			if(!alreadyActivated){
-				Instantiate(alert, this.transform.position, this.transform.rotation);
-			}
+
 		}
 	}
 	

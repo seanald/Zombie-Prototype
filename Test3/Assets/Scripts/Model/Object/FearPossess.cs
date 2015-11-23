@@ -50,7 +50,7 @@ public class FearPossess : MonoBehaviour
 		int i = 0;
 		while(i<hitColliders.Length)
 		{
-			if (hitColliders[i].tag == "EnemyScared")
+			if (hitColliders[i].tag == "Enemy")
 			{
 				hitColliders[i].SendMessage("IsFeared");
 			}

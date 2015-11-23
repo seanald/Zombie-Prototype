@@ -58,6 +58,7 @@ public class Enemy : Character
 
 	new protected void FixedUpdate()
 	{
+		print(this.health.CurHealth);
 		base.FixedUpdate();
 		this.alwaysFacePlayer();
 		UpdateDistance();
@@ -70,13 +71,13 @@ public class Enemy : Character
 		{
 			this.Stunned();
 		}
-		else if (this.state == CharacterState.Attacking)
-		{
-			this.Attack();
-		}
 		else if (this.state == CharacterState.Fleeing)
 		{
 			this.Seek(distVec);
+		}
+		else if (this.state == CharacterState.Attacking)
+		{
+			this.Attack();
 		}
 		else if (this.state == CharacterState.Standing)
 		{
