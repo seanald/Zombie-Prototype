@@ -22,19 +22,20 @@ public class dialogue_beforeGenPat : MonoBehaviour {
 	{
         if (timeLeft <= 0.0f)
         {
-            Application.LoadLevel("MenuScene");
+            Application.LoadLevel("ForestLevel");
         }
         else if (counter == 10)
         {
             text.text = "Are you out of bad one-liners yet?";
             counter++;
         }
-        else if (counter == 27)
+        else if (counter >= 27)
         {
             Time.timeScale = 1;
             textBox.transform.localPosition = new Vector3(textBox.transform.localPosition.x + 12000.0f, textBox.transform.localPosition.y, textBox.transform.localPosition.z);
             print("countdownstarted");
             timeLeft -= Time.deltaTime;
+			print(timeLeft);
         }
         if (Input.GetKeyDown(KeyCode.Return))
 		{

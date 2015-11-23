@@ -46,6 +46,7 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\KillOnContact.cs" />
      <Compile Include="Assets\Scripts\Dialogue-Scripts\GenPat\dialogue_beforeGenPat.cs" />
      <Compile Include="Assets\Scripts\Dialogue-Scripts\GenPat\genpatDead.cs" />
      <Compile Include="Assets\Scripts\Dialogue-Scripts\GenPat\names_GenPat.cs" />
