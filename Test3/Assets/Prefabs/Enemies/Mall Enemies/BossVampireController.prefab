@@ -44,6 +44,7 @@ GameObject:
   - 114: {fileID: 11420444}
   - 114: {fileID: 11473492}
   - 114: {fileID: 11487378}
+  - 114: {fileID: 11499906}
   m_Layer: 9
   m_Name: BossVampireController
   m_TagString: Enemy
@@ -89,7 +90,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 170822}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1246, y: 168, z: -270}
+  m_LocalPosition: {x: -1359, y: 168, z: -332}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 422168}
@@ -212,6 +213,19 @@ MonoBehaviour:
   attackRate: 5
   bat: {fileID: 125618, guid: 72becf4b4e35b45f9b269826799f7258, type: 2}
   throwPoint: {fileID: 487006}
+--- !u!114 &11499906
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 170822}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a97c37277ff2d348a22077ff1b12161, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textBox: {fileID: 0}
+  once: 0
 --- !u!143 &14334660
 CharacterController:
   m_ObjectHideFlags: 1

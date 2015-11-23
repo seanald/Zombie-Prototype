@@ -24,7 +24,7 @@ public class dialogue_beforeMatilda : MonoBehaviour {
         {
             Application.LoadLevel("MenuScene");
         }
-        else if (counter == 27)
+        else if (counter >= 27)
         {
             Time.timeScale = 1;
             textBox.transform.localPosition = new Vector3(textBox.transform.localPosition.x + 12000.0f, textBox.transform.localPosition.y, textBox.transform.localPosition.z);

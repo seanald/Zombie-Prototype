@@ -22,7 +22,7 @@ public class dialogue_beforeVlad : MonoBehaviour {
     {
         if (timeLeft <= 0.0f)
         {
-            Application.LoadLevel("MenuScene");
+            Application.LoadLevel("TownLevel");
         }
         else if (counter == 8)
         {
