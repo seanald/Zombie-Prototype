@@ -107,6 +107,7 @@ public class ZombieBoss : Enemy
 	{
 		yield return new WaitForSeconds(1.0f);
 		this.attacking = false;
+		this.strafing = false;
 		this.Move();
 	}
 	
