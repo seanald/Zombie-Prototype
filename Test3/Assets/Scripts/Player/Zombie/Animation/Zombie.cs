@@ -4,13 +4,16 @@ using System.Collections;
 public class Zombie : Player
 {
 	private Animator zombieAnimator;
-	private int comboNumber;
+	private int comboNumber = 0;
+	private float comboMaxTime = 1.0f;
+	private float comboSpanTime = 0.25f;
+	private float comboMidPoint = 0.5f;
+	private float comboTimeout = 0.0f;
 
-	 void Start()
+	void Start()
 	{
 		base.Start();
 		this.zombieAnimator = this.GetComponentInChildren<Animator>();
-		this.comboNumber = 0;
 	}
 
 	void Update()
@@ -20,10 +23,14 @@ public class Zombie : Player
 			this.state = CharacterState.Attacking;
 			StartCoroutine(this.Punch());
 		}
-        else if (Input.GetKeyDown(KeyCode.Keypad1))
-        {
-            this.Dash();
-        }
+		else if (Input.GetKeyDown(KeyCode.Z))
+		{
+			StartCoroutine(this.Dash());
+		}
+		else if (Input.GetKeyDown(KeyCode.C))
+		{
+			StartCoroutine(this.Chomp());
+		}
 		else if (this.state == CharacterState.Moving)
 		{
 			this.zombieAnimator.SetBool("walking", true);
@@ -32,11 +39,17 @@ public class Zombie : Player
 		{
 			this.zombieAnimator.SetBool("walking", false);
 		}
+
+		if (comboTimeout > 0)
+		{
+			DecreaseTime();
+		}
 	}
 
 	IEnumerator Punch()
 	{
-		this.comboNumber++;
+		this.ComboTime();
+		this.state = CharacterState.Attacking;
 		if (this.comboNumber == 1)
 		{
 			this.zombieAnimator.Play("Zombie_Punch");
@@ -56,15 +69,20 @@ public class Zombie : Player
 		this.state = CharacterState.Standing;
 	}
 
-	private void Dash()
+	private IEnumerator Dash()
 	{
+		this.state = CharacterState.Attacking;
 		this.zombieAnimator.Play("Zombie_Dash");
-		this.controller.Move(Vector3.MoveTowards(this.gameObject.transform.position,transform.position+(transform.right*2), 100));
+		yield return new WaitForSeconds(0.8f);
+		this.state = CharacterState.Standing;
 	}
 
-	private void Chomp()
+	private IEnumerator Chomp()
 	{
-
+		this.state = CharacterState.Attacking;
+		this.zombieAnimator.Play("Zombie_Chomp");
+		yield return new WaitForSeconds(2f);
+		this.state = CharacterState.Standing;
 	}
 
 	public int ComboNumber
@@ -75,5 +93,27 @@ public class Zombie : Player
 		set {
 			comboNumber = value;
 		}
+	}
+
+	private void ComboTime()
+	{
+		if (comboNumber < 3 && 
+			comboTimeout > 0 && 
+			comboTimeout > comboMidPoint - comboSpanTime &&
+			comboTimeout < comboMidPoint + comboSpanTime ||
+			comboNumber == 0)
+		{
+			comboNumber++;
+		}
+		else
+		{
+			comboNumber = 0;
+		}
+		comboTimeout = comboMaxTime;
+	}
+
+	private void DecreaseTime()
+	{
+		comboTimeout -= 1 * Time.deltaTime;
 	}
 }

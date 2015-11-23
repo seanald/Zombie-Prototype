@@ -129,10 +129,6 @@ public class Character : MonoBehaviour
 
 	IEnumerator WaitForStun()
 	{
-		if (this.GetComponentInChildren<Flicker>() != null)
-		{
-			this.GetComponentInChildren<Flicker>().Flash();
-		}
 		yield return new WaitForSeconds(this.stunnedTime);
 		this.state = CharacterState.Standing;
 		this.stunned = false;

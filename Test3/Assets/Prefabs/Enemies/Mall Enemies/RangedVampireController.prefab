@@ -145,13 +145,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12c69b81d5a370243a82320606bb35c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 100
+  moveSpeed: 50
   drag: 10
   team: 0
   velocity: {x: 0, y: 0, z: 0}
   stunnedTime: 1
-  attackDistance: 350
-  dangerDistance: 500
+  attackDistance: 300
+  dangerDistance: 400
   attackRate: 5
   can: {fileID: 128990, guid: d3ec765ed71222949906b8aa54401c3c, type: 2}
   throwPoint: {fileID: 449772}
@@ -208,6 +208,18 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: maxHealth
       value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: moveSpeed
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: attackDistance
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: dangerDistance
+      value: 400
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
