@@ -150,8 +150,8 @@ MonoBehaviour:
   team: 0
   velocity: {x: 0, y: 0, z: 0}
   stunnedTime: 1
-  attackDistance: 300
-  dangerDistance: 400
+  attackDistance: 200
+  dangerDistance: 150
   attackRate: 5
   can: {fileID: 128990, guid: d3ec765ed71222949906b8aa54401c3c, type: 2}
   throwPoint: {fileID: 449772}
@@ -215,11 +215,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: attackDistance
-      value: 300
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: dangerDistance
-      value: 400
+      value: 150
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
