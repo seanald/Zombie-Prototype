@@ -9,9 +9,11 @@ GameObject:
   m_Component:
   - 4: {fileID: 406478}
   - 65: {fileID: 6525488}
-  m_Layer: 8
+  - 114: {fileID: 11411840}
+  - 114: {fileID: 11458164}
+  m_Layer: 0
   m_Name: Chomp
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -81,9 +83,10 @@ GameObject:
   - 4: {fileID: 427972}
   - 65: {fileID: 6532660}
   - 114: {fileID: 11497902}
-  m_Layer: 8
+  - 82: {fileID: 8248366}
+  m_Layer: 0
   m_Name: Dash
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -95,7 +98,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 107218}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 21.3999996, y: 0, z: 0}
+  m_LocalPosition: {x: 40, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 408650}
@@ -189,7 +192,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 30, y: 100, z: 30}
+  m_Size: {x: 50, y: 100, z: 50}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!65 &6532660
 BoxCollider:
@@ -203,6 +206,76 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 100, y: 50, z: 50}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!82 &8248366
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 180264}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: d8aa374cec56b4b11b272ff300fa3ff3, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: .449999988
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!82 &8261044
 AudioSource:
   m_ObjectHideFlags: 1
@@ -377,6 +450,22 @@ MonoBehaviour:
   velocity: {x: 0, y: 0, z: 0}
   stunnedTime: 1
   isActivePlayer: 1
+--- !u!114 &11411840
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 107218}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ecb6c35bde094488b8d1f6cab533751e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  owner: {fileID: 0}
+  damage: 10
+  knockback: 0
+  stun: 1
+  victim: {fileID: 0}
 --- !u!114 &11447200
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -393,6 +482,22 @@ MonoBehaviour:
   invincibilityDuration: 1
   invincibleWhenHit: 0
   healthBar: {fileID: 0}
+--- !u!114 &11458164
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 107218}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b0f43d19d4c7ed4d862461e24c9f161, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  owner: {fileID: 0}
+  damage: 20
+  knockback: 0
+  stun: 0
+  victim: {fileID: 0}
 --- !u!114 &11489764
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -421,9 +526,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   owner: {fileID: 0}
-  damage: 0
+  damage: 20
   knockback: 0
-  stun: 0
+  stun: 1
   victim: {fileID: 0}
 --- !u!143 &14305528
 CharacterController:
@@ -460,7 +565,9 @@ SpriteRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_MinimumChartSize: 4
   m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
