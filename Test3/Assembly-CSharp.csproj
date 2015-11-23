@@ -52,10 +52,12 @@
      <Compile Include="Assets\Scripts\Enemy\FootballWolf\FootballWolf.cs" />
      <Compile Include="Assets\Scripts\Enemy\General\Avoid.cs" />
      <Compile Include="Assets\Scripts\Enemy\General\Enemy.cs" />
+     <Compile Include="Assets\Scripts\Enemy\GunDevil\BulletScript.cs" />
      <Compile Include="Assets\Scripts\Enemy\GunDevil\GunDevil.cs" />
      <Compile Include="Assets\Scripts\Enemy\Mikey\Movement\Mikey.cs" />
      <Compile Include="Assets\Scripts\Enemy\VampireBoss\VampireBoss.cs" />
      <Compile Include="Assets\Scripts\Enemy\VampireMelee\VampireMelee.cs" />
+     <Compile Include="Assets\Scripts\Enemy\VampireRanged\VampireRanged.cs" />
      <Compile Include="Assets\Scripts\Enemy\WitchBoss\WitchBoss.cs" />
      <Compile Include="Assets\Scripts\Enemy\Zombie_Female\ZombieFemale.cs" />
      <Compile Include="Assets\Scripts\Environment\FearObject.cs" />
@@ -88,11 +90,17 @@
      <Compile Include="Assets\Scripts\Scene\UI\PlayerCamera.cs" />
      <Compile Include="Assets\Scripts\Scene\WorldScaler.cs" />
      <None Include="Assets\Materials\$Sprites-Bumped Diffuse.shader" />
+ <Reference Include="UnityEngine.Advertisements">
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Advertisements/UnityEngine.Advertisements.dll</HintPath>
+ </Reference>
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.Networking">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.Analytics">
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
  </Reference>
  <Reference Include="Mono.Cecil">
  <HintPath>C:/Program Files/Unity/Editor/Data/Managed/Mono.Cecil.dll</HintPath>
