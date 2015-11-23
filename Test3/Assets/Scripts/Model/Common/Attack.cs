@@ -3,7 +3,6 @@ using System.Collections;
 
 public class Attack : MonoBehaviour
 {
-
 	public GameObject owner;
 	public int damage = 0;
 	public float knockback = 0.0f;
@@ -14,8 +13,7 @@ public class Attack : MonoBehaviour
 
 	void Awake()
 	{
-		player = GameObject.FindGameObjectWithTag("Player");
-		weakAttack = player.GetComponent<AudioSource>();
+		weakAttack = this.transform.GetComponentInParent<AudioSource>();
 	}
 
 	void Start()

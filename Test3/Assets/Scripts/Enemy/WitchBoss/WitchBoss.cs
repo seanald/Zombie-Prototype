@@ -55,8 +55,15 @@ public class WitchBoss : Enemy
 		}
 		else if (this.teleporting)
 		{
-			StartCoroutine(TeleportIn());
-			this.random = 0;
+			if (this.distance < this.attackDistance)
+			{
+				StartCoroutine(TeleportIn());
+				this.random = 0;
+			}
+			else
+			{
+				base.Seek(distVec);
+			}
 		}
 		else
 		{
