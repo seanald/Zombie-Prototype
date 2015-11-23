@@ -22,37 +22,46 @@ public class Mikey : Enemy
 		{
 			random = Random.Range(1, 4);
 		}
-		
-		if (this.distance < this.attackDistance)
+
+		if (!this.attacking)
 		{
-			if (!this.attacking)
+			if (random == 1)
 			{
-				if (random == 1 && this.distance < this.attackDistance)
+				if (this.distance < this.attackDistance)
 				{
 					this.StandardAttack();
 					StartCoroutine(WaitForAnimation());
 				}
-				if (random == 2 && this.distance < 300)
+				else
+				{
+					base.Seek(distVec);
+					this.enemyAnimator.Play("Walk");
+				}
+			}
+			else if (random == 2)
+			{
+				if (this.distance < this.attackDistance)
 				{
 					this.SholderAttack();
 					StartCoroutine(WaitForAnimation());
 				}
-				if (random == 3 && this.newEnemy == null)
+				else
 				{
-					this.HowlAttack();
-					StartCoroutine(WaitForAnimation());
+					base.Seek(distVec);
+					this.enemyAnimator.Play("Walk");
 				}
 			}
-			else
+			else if (random == 3 && this.newEnemy == null)
 			{
-				random = 0;
+				this.HowlAttack();
+				StartCoroutine(WaitForAnimation());
 			}
 		}
-		else if (!this.attacking)
+		else
 		{
-			base.Seek(distVec);
-			this.enemyAnimator.Play("Walk");
+			random = 0;
 		}
+
 	}
 	
 	private void StandardAttack()
