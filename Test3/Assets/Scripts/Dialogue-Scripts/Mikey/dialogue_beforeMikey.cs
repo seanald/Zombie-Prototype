@@ -22,7 +22,7 @@ public class dialogue_beforeMikey : MonoBehaviour {
 	{
         if (timeLeft <= 0.0f)
         {
-            Application.LoadLevel("MenuScene");
+            Application.LoadLevel("MallLevel");
         }
         else if (counter == 10)
         {

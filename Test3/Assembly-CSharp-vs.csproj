@@ -39,14 +39,30 @@
 	<Reference Include="System.Core" />
 	<Reference Include="System.Xml.Linq" />
 	<Reference Include="UnityEngine">
-	  <HintPath>E:/Unity_5/Editor/Data/Managed/UnityEngine.dll</HintPath>
+	  <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
 	</Reference>
 	<Reference Include="UnityEditor">
-	  <HintPath>E:/Unity_5/Editor/Data/Managed/UnityEditor.dll</HintPath>
+	  <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\Dialogue-Scripts\GenPat\dialogue_beforeGenPat.cs" />
+     <Compile Include="Assets\Scripts\Dialogue-Scripts\GenPat\genpatDead.cs" />
+     <Compile Include="Assets\Scripts\Dialogue-Scripts\GenPat\names_GenPat.cs" />
+     <Compile Include="Assets\Scripts\Dialogue-Scripts\Matilda\dialogue_beforeMatilda.cs" />
+     <Compile Include="Assets\Scripts\Dialogue-Scripts\Matilda\matildaDead.cs" />
+     <Compile Include="Assets\Scripts\Dialogue-Scripts\Matilda\names_Matilda.cs" />
+     <Compile Include="Assets\Scripts\Dialogue-Scripts\Mikey\dialogue_beforeMikey.cs" />
+     <Compile Include="Assets\Scripts\Dialogue-Scripts\Mikey\mikeyDead.cs" />
+     <Compile Include="Assets\Scripts\Dialogue-Scripts\Mikey\names_Mikey.cs" />
+     <Compile Include="Assets\Scripts\Dialogue-Scripts\Vlad\dialogue_beforeVlad.cs" />
+     <Compile Include="Assets\Scripts\Dialogue-Scripts\Vlad\names_Vlad.cs" />
+     <Compile Include="Assets\Scripts\Dialogue-Scripts\Vlad\vladDead.cs" />
+     <Compile Include="Assets\Scripts\Dialogue-Scripts\ZombieKing\dialogue_beforeZombieKing.cs" />
+     <Compile Include="Assets\Scripts\Dialogue-Scripts\ZombieKing\names_ZombieKing.cs" />
+     <Compile Include="Assets\Scripts\Dialogue-Scripts\ZombieKing\zKingDead.cs" />
      <Compile Include="Assets\Scripts\Enemy\BaseballWolf\BaseballWolf.cs" />
+     <Compile Include="Assets\Scripts\Enemy\DevilBoss\Devil.cs" />
      <Compile Include="Assets\Scripts\Enemy\DevilKnife\DevilKnife.cs" />
      <Compile Include="Assets\Scripts\Enemy\EnemySpawner.cs" />
      <Compile Include="Assets\Scripts\Enemy\FootballWolf\FootballScript.cs" />
@@ -61,6 +77,7 @@
      <Compile Include="Assets\Scripts\Enemy\VampireMelee\VampireMelee.cs" />
      <Compile Include="Assets\Scripts\Enemy\VampireRanged\VampireRanged.cs" />
      <Compile Include="Assets\Scripts\Enemy\WitchBoss\WitchBoss.cs" />
+     <Compile Include="Assets\Scripts\Enemy\ZombieBoss\ZombieBoss.cs" />
      <Compile Include="Assets\Scripts\Enemy\Zombie_Female\ZombieFemale.cs" />
      <Compile Include="Assets\Scripts\Environment\FearObject.cs" />
      <Compile Include="Assets\Scripts\Environment\Hazard.cs" />
@@ -95,16 +112,16 @@
      <Compile Include="Assets\Scripts\Scene\WorldScaler.cs" />
      <None Include="Assets\Materials\$Sprites-Bumped Diffuse.shader" />
  <Reference Include="UnityEngine.UI">
- <HintPath>E:/Unity_5/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.Networking">
- <HintPath>E:/Unity_5/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.Analytics">
- <HintPath>E:/Unity_5/Editor/Data/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.iOS.Extensions.Xcode">
- <HintPath>E:/Unity_5/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
+ <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
  </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
