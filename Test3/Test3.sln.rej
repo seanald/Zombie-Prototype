@@ -1,0 +1,10 @@
+diff a/Test3/Test3.sln b/Test3/Test3.sln	(rejected hunks)
+@@ -17,7 +17,7 @@
+ 	GlobalSection(SolutionProperties) = preSolution
+ 		HideSolutionNode = FALSE
+ 	EndGlobalSection
+-																																																																																																																																																																																																																																																																																											GlobalSection(MonoDevelopProperties) = preSolution
++																																																																																																																																																																																																																																																																																														GlobalSection(MonoDevelopProperties) = preSolution
+ =======
+ 																																																																																																																																																																																																																																		GlobalSection(MonoDevelopProperties) = preSolution
+ >>>>>>> a8ea0ec54a6a41c2f2657f84be840ebeba3d7b01
