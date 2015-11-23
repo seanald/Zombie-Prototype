@@ -4,6 +4,7 @@ using System.Collections;
 public class Player : Character
 {
 	public bool isActivePlayer;
+	public bool right;
 
 	protected void Start()
 	{
@@ -26,10 +27,12 @@ public class Player : Character
 		if (forcesVec.x > 0 || this.moveVec.x > 0)
 		{
 			scale.x = 1;
+			right = true;
 		}
 		else if (forcesVec.x < 0 || this.moveVec.x < 0)
 		{
 			scale.x = -1;
+			right = false;
 		}
 
 		this.transform.localScale = scale;

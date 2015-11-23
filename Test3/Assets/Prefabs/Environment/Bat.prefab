@@ -10,6 +10,8 @@ GameObject:
   - 4: {fileID: 466828}
   - 65: {fileID: 6516582}
   - 212: {fileID: 21276636}
+  - 114: {fileID: 11437518}
+  - 114: {fileID: 11498616}
   m_Layer: 0
   m_Name: Bat
   m_TagString: Untagged
@@ -24,8 +26,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 129748}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2000.0896, y: -124.571968, z: -514.749512}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -1640, y: 42.0724068, z: -230.344849}
+  m_LocalScale: {x: 1, y: .724137843, z: .689655244}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -41,6 +43,29 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 96.3399963, y: 57.5, z: 54.4799995}
   m_Center: {x: 40, y: -25, z: 0}
+--- !u!114 &11437518
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 129748}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab43fb29a30a6364798a6efb8e5c8572, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  alert: {fileID: 151236, guid: 1a8cf391f120e164fa112736412a8b88, type: 2}
+--- !u!114 &11498616
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 129748}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 342b647e586e0b442aac6c88ac9310fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &21276636
 SpriteRenderer:
   m_ObjectHideFlags: 1

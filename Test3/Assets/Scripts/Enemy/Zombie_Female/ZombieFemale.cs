@@ -3,10 +3,23 @@ using System.Collections;
 using System.Collections.Generic;
 
 public class ZombieFemale : Enemy {
-    void IsFeared()
-    {
-        this.state = CharacterState.Fleeing;
-    }
+	void IsFeared()
+	{
+		this.target = GameObject.Find("Right").transform;
+		this.state = CharacterState.Fleeing;
+		StartCoroutine(WaitForDeath());
+	}
+	
+	IEnumerator WaitForDeath()
+	{
+		yield return new WaitForSeconds(30f);
+		Destroy(this.gameObject);
+	}
+
+	void TakeDamage()
+	{
+		this.health.CurHealth -= 20;
+	}
 
     override protected void Attack()
     {
