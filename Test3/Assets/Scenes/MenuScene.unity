@@ -192,6 +192,10 @@ Prefab:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11403184, guid: 64fcacd86cb5f81409df8dcbb9fb3c4f, type: 2}
+      propertyPath: startLevel
+      value: CemetaryLevel
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 64fcacd86cb5f81409df8dcbb9fb3c4f, type: 2}
   m_IsPrefabParent: 0

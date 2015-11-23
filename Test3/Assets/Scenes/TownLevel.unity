@@ -377,25 +377,9 @@ Prefab:
       propertyPath: m_RootOrder
       value: 28
       objectReference: {fileID: 0}
-    - target: {fileID: 6532040, guid: 70835100ff152be4ba5425e9cacb2e20, type: 2}
-      propertyPath: m_Size.z
-      value: 62.2999992
-      objectReference: {fileID: 0}
-    - target: {fileID: 472184, guid: 70835100ff152be4ba5425e9cacb2e20, type: 2}
-      propertyPath: m_LocalScale.y
-      value: .724137843
-      objectReference: {fileID: 0}
-    - target: {fileID: 472184, guid: 70835100ff152be4ba5425e9cacb2e20, type: 2}
-      propertyPath: m_LocalScale.z
-      value: .689655244
-      objectReference: {fileID: 0}
     - target: {fileID: 189232, guid: 70835100ff152be4ba5425e9cacb2e20, type: 2}
       propertyPath: m_Name
       value: Barricadesmall (4)
-      objectReference: {fileID: 0}
-    - target: {fileID: 189232, guid: 70835100ff152be4ba5425e9cacb2e20, type: 2}
-      propertyPath: m_Layer
-      value: 11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 70835100ff152be4ba5425e9cacb2e20, type: 2}
@@ -1311,6 +1295,10 @@ Prefab:
     - target: {fileID: 498640, guid: c201ea4a1139dc04eb4c5f488b18e3c4, type: 2}
       propertyPath: m_RootOrder
       value: 39
+      objectReference: {fileID: 0}
+    - target: {fileID: 11409538, guid: c201ea4a1139dc04eb4c5f488b18e3c4, type: 2}
+      propertyPath: levelSelect
+      value: TownBossLevel
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c201ea4a1139dc04eb4c5f488b18e3c4, type: 2}

@@ -1771,6 +1771,10 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: .689655244
       objectReference: {fileID: 0}
+    - target: {fileID: 11409538, guid: c201ea4a1139dc04eb4c5f488b18e3c4, type: 2}
+      propertyPath: levelSelect
+      value: ForestBossLevel
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c201ea4a1139dc04eb4c5f488b18e3c4, type: 2}
   m_IsPrefabParent: 0
@@ -2308,26 +2312,10 @@ GameObject:
 Transform:
   m_PrefabParentObject: {fileID: 431642, guid: cd0680be51a520a4695e5251d7cabffd, type: 2}
   m_PrefabInternal: {fileID: 2123737706}
---- !u!1 &2028421528 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 196272, guid: c201ea4a1139dc04eb4c5f488b18e3c4, type: 2}
-  m_PrefabInternal: {fileID: 1602637013}
 --- !u!4 &2028421530 stripped
 Transform:
   m_PrefabParentObject: {fileID: 498640, guid: c201ea4a1139dc04eb4c5f488b18e3c4, type: 2}
   m_PrefabInternal: {fileID: 1602637013}
---- !u!114 &2028421531
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2028421528}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 19247a7762b7bf4499a5444a031d1558, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  levelSelect: 
 --- !u!1 &2029833356
 GameObject:
   m_ObjectHideFlags: 0
