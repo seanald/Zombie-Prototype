@@ -77,7 +77,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 131726}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1856, y: 124, z: -387}
+  m_LocalPosition: {x: -1634, y: 273, z: -515}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 440616}
@@ -115,7 +115,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 181360}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 12.7822266, y: 8, z: 217}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 440052}
@@ -162,7 +162,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   owner: {fileID: 0}
-  damage: 100
+  damage: 20
   knockback: 0
   stun: 0
   victim: {fileID: 0}
@@ -210,7 +210,7 @@ MonoBehaviour:
   velocity: {x: 0, y: 0, z: 0}
   stunnedTime: 1
   attackDistance: 80
-  dangerDistance: 500
+  dangerDistance: 150
   attackRate: 5
 --- !u!114 &11499394
 MonoBehaviour:
@@ -288,6 +288,10 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: maxHealth
       value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: moveSpeed
+      value: 100
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
