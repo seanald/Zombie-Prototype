@@ -7,6 +7,7 @@ public class Hazard : MonoBehaviour {
 	float HazardLifeTime = 10f;
 	private float startTime;
     AudioSource strongAttack;
+	public string traveldirection;
 
     void Awake()
     {
@@ -20,8 +21,12 @@ public class Hazard : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		this.gameObject.transform.position += Speed * this.gameObject.transform.right;
-		
+		if(traveldirection == "left"){
+			this.gameObject.transform.position += Speed * this.gameObject.transform.right;
+		}
+		if(traveldirection == "right"){
+			this.gameObject.transform.position += Speed * this.gameObject.transform.right * -1;
+		}
 		if (Time.time - startTime >= HazardLifeTime)
 		{
 			Destroy(this.gameObject);
@@ -30,7 +35,7 @@ public class Hazard : MonoBehaviour {
 	}
 	void OnTriggerEnter(Collider collision){
 		if(collision.gameObject.tag == "Player" || collision.gameObject.tag == "ActivePlayer"){
-            strongAttack.Play();
+            
 			collision.gameObject.GetComponent<Health>().CurHealth = collision.gameObject.GetComponent<Health>().CurHealth - 100;
 
 		}

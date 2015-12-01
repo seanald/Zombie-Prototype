@@ -7,6 +7,7 @@ public class HazardTurret : MonoBehaviour {
 	public GameObject hzalert;
 	public Vector3 HZoffset;
 	public Vector3 alertoffset;
+	public string direction;
 
 	// Use this for initialization
 	void Start () {
@@ -23,9 +24,18 @@ public class HazardTurret : MonoBehaviour {
 
 		if (collision.gameObject.tag == "Player")
 		{
-			Instantiate(levelHazard, collision.transform.position - HZoffset, transform.rotation);
-			Instantiate(hzalert, collision.transform.position - alertoffset, collision.transform.rotation);
-			Destroy(this.gameObject);
+			if(direction == "right"){
+				Instantiate(levelHazard, collision.transform.position - HZoffset, transform.rotation);
+				levelHazard.GetComponent<Hazard>().traveldirection = "right";
+				Instantiate(hzalert, collision.transform.position - alertoffset, collision.transform.rotation);
+				Destroy(this.gameObject);
+			}
+			if(direction == "left"){
+				Instantiate(levelHazard, collision.transform.position + HZoffset, transform.rotation);
+				levelHazard.GetComponent<Hazard>().traveldirection = "left";
+				Instantiate(hzalert, collision.transform.position - alertoffset, collision.transform.rotation);
+				Destroy(this.gameObject);
+			}
 		}
 	}
 }

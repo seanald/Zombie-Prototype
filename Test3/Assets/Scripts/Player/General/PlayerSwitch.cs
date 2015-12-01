@@ -22,7 +22,7 @@ public class PlayerSwitch : MonoBehaviour
 		ghost = GameObject.Find("GhostController").GetComponent<Player>();
 	}
 
-	void FixedUpdate()
+	void Update()
 	{
 		if (Input.GetKeyDown(KeyCode.R) || Input.GetKeyDown(KeyCode.JoystickButton5))
 		{

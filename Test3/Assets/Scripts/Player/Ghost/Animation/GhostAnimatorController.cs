@@ -18,7 +18,7 @@ public class GhostAnimatorController : MonoBehaviour
 		{
 			StartCoroutine(this.Fire());
 		}
-		else if (Input.GetKeyDown(KeyCode.P))
+		else if (Input.GetKeyDown(KeyCode.P) && this.GetComponentInChildren<Plasma>().CurPlasma >= 20)
 		{
 			StartCoroutine(this.Haunt());
 		}
