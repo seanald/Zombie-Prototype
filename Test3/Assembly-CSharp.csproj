@@ -79,6 +79,7 @@
      <Compile Include="Assets\Scripts\Enemy\WitchBoss\WitchBoss.cs" />
      <Compile Include="Assets\Scripts\Enemy\ZombieBoss\ZombieBoss.cs" />
      <Compile Include="Assets\Scripts\Enemy\Zombie_Female\ZombieFemale.cs" />
+     <Compile Include="Assets\Scripts\Environment\DestroyerScript.cs" />
      <Compile Include="Assets\Scripts\Environment\FearObject.cs" />
      <Compile Include="Assets\Scripts\Environment\Hazard.cs" />
      <Compile Include="Assets\Scripts\Environment\HazardTurret.cs" />
