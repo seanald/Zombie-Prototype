@@ -8,17 +8,23 @@ public class Attack : MonoBehaviour
 	public float knockback = 0.0f;
 	public bool stun;
 	public GameObject victim;  // this is only not null if the event actually hit something
+	public GameObject particleSystem; //particle system
+	//AudioSource swingAttack;
 	AudioSource weakAttack;
 	GameObject player;
 
 	void Awake()
 	{
-		weakAttack = this.transform.GetComponentInParent<AudioSource>();
+
+
 	}
 
 	void Start()
 	{
 		owner = this.gameObject;
+		AudioSource[] allmyAudioSources = GetComponentsInParent<AudioSource>();
+		//swingAttack = allmyAudioSources[0];
+		weakAttack = allmyAudioSources[0];
 	}
 
 	static public int CalculateDamage(int damage, int armor)
@@ -43,6 +49,7 @@ public class Attack : MonoBehaviour
 			{
 				if (weakAttack != null)
 				{
+					Instantiate(particleSystem, transform.position, Quaternion.identity);
 					weakAttack.Play();
 				}
 				other.gameObject.GetComponent<Health>().OnDamage(this);

@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
 
@@ -13,7 +13,7 @@ public class ScoreManager : MonoBehaviour {
 
         text = GetComponent<Text>();
 
-        score = 5;
+        score = 0;
 	}
 	
 	// Update is called once per frame

@@ -101,7 +101,9 @@
      <Compile Include="Assets\Scripts\Player\Ghost\Attacks\GhostPossess.cs" />
      <Compile Include="Assets\Scripts\Player\Zombie\Animation\Zombie.cs" />
      <Compile Include="Assets\Scripts\Player\Zombie\Chomp.cs" />
+     <Compile Include="Assets\Scripts\Scene\ButtonNavigationScript.cs" />
      <Compile Include="Assets\Scripts\Scene\CameraOrthoSize.cs" />
+     <Compile Include="Assets\Scripts\Scene\DestroyFinishedParticle.cs" />
      <Compile Include="Assets\Scripts\Scene\FollowCamera.cs" />
      <Compile Include="Assets\Scripts\Scene\LevelTransition.cs" />
      <Compile Include="Assets\Scripts\Scene\LocalPositionSnapper.cs" />
@@ -111,17 +113,11 @@
      <Compile Include="Assets\Scripts\Scene\UI\PlayerCamera.cs" />
      <Compile Include="Assets\Scripts\Scene\WorldScaler.cs" />
      <None Include="Assets\Materials\$Sprites-Bumped Diffuse.shader" />
- <Reference Include="UnityEngine.Advertisements">
- <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Advertisements/UnityEngine.Advertisements.dll</HintPath>
- </Reference>
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.Networking">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.Analytics">
- <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
  </Reference>
  <Reference Include="Mono.Cecil">
  <HintPath>C:/Program Files/Unity/Editor/Data/Managed/Mono.Cecil.dll</HintPath>
