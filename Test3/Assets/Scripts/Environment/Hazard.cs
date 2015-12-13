@@ -7,6 +7,7 @@ public class Hazard : MonoBehaviour {
 	float HazardLifeTime = 10f;
 	private float startTime;
     AudioSource strongAttack;
+	public GameObject particles;
 
     void Awake()
     {
@@ -31,6 +32,7 @@ public class Hazard : MonoBehaviour {
 	void OnTriggerEnter(Collider collision){
 		if(collision.gameObject.tag == "Player" || collision.gameObject.tag == "ActivePlayer"){
             strongAttack.Play();
+			Instantiate(particles, transform.position, Quaternion.identity);
 			collision.gameObject.GetComponent<Health>().CurHealth = collision.gameObject.GetComponent<Health>().CurHealth - 100;
 
 		}

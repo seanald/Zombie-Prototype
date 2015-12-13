@@ -180,7 +180,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 11
 --- !u!65 &47714295
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -385,9 +385,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 1
-  m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_MinimumChartSize: 4
   m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
@@ -780,9 +778,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 1
-  m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_MinimumChartSize: 4
   m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
@@ -923,7 +919,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 10
 --- !u!1001 &586051012
 Prefab:
   m_ObjectHideFlags: 0
@@ -1149,7 +1145,7 @@ Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 1209854055}
     m_Modifications:
     - target: {fileID: 421314, guid: b3985843d2d7eb94a987a3c3856af270, type: 2}
       propertyPath: m_LocalPosition.x
@@ -1157,11 +1153,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 421314, guid: b3985843d2d7eb94a987a3c3856af270, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 102.400002
+      value: 74.1517181
       objectReference: {fileID: 0}
     - target: {fileID: 421314, guid: b3985843d2d7eb94a987a3c3856af270, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -421.200012
+      value: -290.482788
       objectReference: {fileID: 0}
     - target: {fileID: 421314, guid: b3985843d2d7eb94a987a3c3856af270, type: 2}
       propertyPath: m_LocalRotation.x
@@ -1181,7 +1177,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 421314, guid: b3985843d2d7eb94a987a3c3856af270, type: 2}
       propertyPath: m_RootOrder
-      value: 10
+      value: 33
       objectReference: {fileID: 0}
     - target: {fileID: 156384, guid: b3985843d2d7eb94a987a3c3856af270, type: 2}
       propertyPath: m_Name
@@ -1191,9 +1187,21 @@ Prefab:
       propertyPath: m_Size.z
       value: 150
       objectReference: {fileID: 0}
+    - target: {fileID: 421314, guid: b3985843d2d7eb94a987a3c3856af270, type: 2}
+      propertyPath: m_LocalScale.y
+      value: .724137843
+      objectReference: {fileID: 0}
+    - target: {fileID: 421314, guid: b3985843d2d7eb94a987a3c3856af270, type: 2}
+      propertyPath: m_LocalScale.z
+      value: .689655244
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b3985843d2d7eb94a987a3c3856af270, type: 2}
   m_IsPrefabParent: 0
+--- !u!4 &689393980 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 421314, guid: b3985843d2d7eb94a987a3c3856af270, type: 2}
+  m_PrefabInternal: {fileID: 689393979}
 --- !u!1001 &700762055
 Prefab:
   m_ObjectHideFlags: 0
@@ -1414,9 +1422,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 1
-  m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_MinimumChartSize: 4
   m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
@@ -1703,6 +1709,48 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 471d4a4c556e78741948bb46264c28bc, type: 2}
   m_IsPrefabParent: 0
+--- !u!1001 &925023267
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 480482, guid: 947b8b06ec6e2db47b2dd2ce85609fe1, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -1167.46533
+      objectReference: {fileID: 0}
+    - target: {fileID: 480482, guid: 947b8b06ec6e2db47b2dd2ce85609fe1, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -804
+      objectReference: {fileID: 0}
+    - target: {fileID: 480482, guid: 947b8b06ec6e2db47b2dd2ce85609fe1, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -164.924805
+      objectReference: {fileID: 0}
+    - target: {fileID: 480482, guid: 947b8b06ec6e2db47b2dd2ce85609fe1, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 480482, guid: 947b8b06ec6e2db47b2dd2ce85609fe1, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 480482, guid: 947b8b06ec6e2db47b2dd2ce85609fe1, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 480482, guid: 947b8b06ec6e2db47b2dd2ce85609fe1, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 480482, guid: 947b8b06ec6e2db47b2dd2ce85609fe1, type: 2}
+      propertyPath: m_RootOrder
+      value: 12
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 947b8b06ec6e2db47b2dd2ce85609fe1, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1001 &957155512
 Prefab:
   m_ObjectHideFlags: 0
@@ -1831,9 +1879,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 1
-  m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_MinimumChartSize: 4
   m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
@@ -1968,9 +2014,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 1
-  m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_MinimumChartSize: 4
   m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
@@ -2054,6 +2098,7 @@ Transform:
   - {fileID: 623532825}
   - {fileID: 670766599}
   - {fileID: 700762056}
+  - {fileID: 689393980}
   m_Father: {fileID: 0}
   m_RootOrder: 9
 --- !u!114 &1209854056
@@ -2319,6 +2364,10 @@ Prefab:
     - target: {fileID: 11428978, guid: 471d4a4c556e78741948bb46264c28bc, type: 2}
       propertyPath: spawnNumber
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 125166, guid: 471d4a4c556e78741948bb46264c28bc, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 471d4a4c556e78741948bb46264c28bc, type: 2}
@@ -2650,6 +2699,10 @@ Prefab:
       propertyPath: side.Array.data[0]
       value: left
       objectReference: {fileID: 0}
+    - target: {fileID: 125166, guid: 471d4a4c556e78741948bb46264c28bc, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 471d4a4c556e78741948bb46264c28bc, type: 2}
   m_IsPrefabParent: 0
@@ -2689,9 +2742,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 1
-  m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_MinimumChartSize: 4
   m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
@@ -2776,9 +2827,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 1
-  m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_MinimumChartSize: 4
   m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
@@ -2964,31 +3013,111 @@ Prefab:
       objectReference: {fileID: 519315688}
     - target: {fileID: 22405420, guid: e3cca2460351a854b82ab0e69f4ebcd5, type: 2}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22405420, guid: e3cca2460351a854b82ab0e69f4ebcd5, type: 2}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22479446, guid: e3cca2460351a854b82ab0e69f4ebcd5, type: 2}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22479446, guid: e3cca2460351a854b82ab0e69f4ebcd5, type: 2}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22452018, guid: e3cca2460351a854b82ab0e69f4ebcd5, type: 2}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22452018, guid: e3cca2460351a854b82ab0e69f4ebcd5, type: 2}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 165668, guid: e3cca2460351a854b82ab0e69f4ebcd5, type: 2}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22452018, guid: e3cca2460351a854b82ab0e69f4ebcd5, type: 2}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 22452018, guid: e3cca2460351a854b82ab0e69f4ebcd5, type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 22490402, guid: e3cca2460351a854b82ab0e69f4ebcd5, type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: -30.9999981
+      objectReference: {fileID: 0}
+    - target: {fileID: 22490402, guid: e3cca2460351a854b82ab0e69f4ebcd5, type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: -81.2438965
+      objectReference: {fileID: 0}
+    - target: {fileID: 22478700, guid: e3cca2460351a854b82ab0e69f4ebcd5, type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 121.000008
+      objectReference: {fileID: 0}
+    - target: {fileID: 22478700, guid: e3cca2460351a854b82ab0e69f4ebcd5, type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: -77.2438965
+      objectReference: {fileID: 0}
+    - target: {fileID: 22466344, guid: e3cca2460351a854b82ab0e69f4ebcd5, type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: -104.000008
+      objectReference: {fileID: 0}
+    - target: {fileID: 22466344, guid: e3cca2460351a854b82ab0e69f4ebcd5, type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: -81.2438965
+      objectReference: {fileID: 0}
+    - target: {fileID: 22453060, guid: e3cca2460351a854b82ab0e69f4ebcd5, type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: -383.999969
+      objectReference: {fileID: 0}
+    - target: {fileID: 22453060, guid: e3cca2460351a854b82ab0e69f4ebcd5, type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: -82.2438965
+      objectReference: {fileID: 0}
+    - target: {fileID: 22452542, guid: e3cca2460351a854b82ab0e69f4ebcd5, type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: -151
+      objectReference: {fileID: 0}
+    - target: {fileID: 22452542, guid: e3cca2460351a854b82ab0e69f4ebcd5, type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: -81.2438965
+      objectReference: {fileID: 0}
+    - target: {fileID: 22430982, guid: e3cca2460351a854b82ab0e69f4ebcd5, type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: -55
+      objectReference: {fileID: 0}
+    - target: {fileID: 22430982, guid: e3cca2460351a854b82ab0e69f4ebcd5, type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: -81.2438965
+      objectReference: {fileID: 0}
+    - target: {fileID: 22426530, guid: e3cca2460351a854b82ab0e69f4ebcd5, type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: -382.999969
+      objectReference: {fileID: 0}
+    - target: {fileID: 22426530, guid: e3cca2460351a854b82ab0e69f4ebcd5, type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: -112.243896
+      objectReference: {fileID: 0}
+    - target: {fileID: 22410730, guid: e3cca2460351a854b82ab0e69f4ebcd5, type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: -127.000008
+      objectReference: {fileID: 0}
+    - target: {fileID: 22410730, guid: e3cca2460351a854b82ab0e69f4ebcd5, type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: -81.2438965
+      objectReference: {fileID: 0}
+    - target: {fileID: 22400646, guid: e3cca2460351a854b82ab0e69f4ebcd5, type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: -78.0000076
+      objectReference: {fileID: 0}
+    - target: {fileID: 22400646, guid: e3cca2460351a854b82ab0e69f4ebcd5, type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: -81.2438965
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e3cca2460351a854b82ab0e69f4ebcd5, type: 2}
@@ -3288,6 +3417,18 @@ Prefab:
       propertyPath: near clip plane
       value: -3.20000005
       objectReference: {fileID: 0}
+    - target: {fileID: 8268628, guid: 428454bd498a2ee40a197a8373cabe0a, type: 2}
+      propertyPath: m_Volume
+      value: .5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8268628, guid: 428454bd498a2ee40a197a8373cabe0a, type: 2}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: a921489b40bcf0f4abd2ed1fcbf4e051, type: 3}
+    - target: {fileID: 8268628, guid: 428454bd498a2ee40a197a8373cabe0a, type: 2}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 428454bd498a2ee40a197a8373cabe0a, type: 2}
   m_IsPrefabParent: 0
@@ -3430,6 +3571,10 @@ Prefab:
       propertyPath: spawnQueueArray.Array.data[8]
       value: 
       objectReference: {fileID: 170532, guid: 7b79c58939a539940ad36622ab7b4671, type: 2}
+    - target: {fileID: 125166, guid: 471d4a4c556e78741948bb46264c28bc, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 471d4a4c556e78741948bb46264c28bc, type: 2}
   m_IsPrefabParent: 0

@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: c47b90a7dffd00547b1cf03ce9c5aded
-timeCreated: 1447842791
+timeCreated: 1449968180
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -20,6 +20,8 @@ TextureImporter:
     21300026: 1116 vamp_13
     21300028: 1116 vamp_14
     21300030: 1116 vamp_15
+    21300032: 1116 vamp_16
+    21300034: 1116 vamp_17
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -164,9 +166,29 @@ TextureImporter:
         width: 128
         height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: 1116 vamp_10
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 640
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 1116 vamp_11
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 640
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 1116 vamp_12
       rect:
         serializedVersion: 2
         x: 0
@@ -174,9 +196,9 @@ TextureImporter:
         width: 128
         height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: 1116 vamp_11
+    - name: 1116 vamp_13
       rect:
         serializedVersion: 2
         x: 0
@@ -184,9 +206,9 @@ TextureImporter:
         width: 128
         height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: 1116 vamp_12
+    - name: 1116 vamp_14
       rect:
         serializedVersion: 2
         x: 128
@@ -194,9 +216,9 @@ TextureImporter:
         width: 128
         height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: 1116 vamp_13
+    - name: 1116 vamp_15
       rect:
         serializedVersion: 2
         x: 256
@@ -204,9 +226,9 @@ TextureImporter:
         width: 128
         height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: 1116 vamp_14
+    - name: 1116 vamp_16
       rect:
         serializedVersion: 2
         x: 384
@@ -214,9 +236,9 @@ TextureImporter:
         width: 128
         height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: 1116 vamp_15
+    - name: 1116 vamp_17
       rect:
         serializedVersion: 2
         x: 512
@@ -224,7 +246,7 @@ TextureImporter:
         width: 128
         height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 

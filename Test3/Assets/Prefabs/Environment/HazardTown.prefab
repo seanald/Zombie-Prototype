@@ -140,6 +140,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31fe5e9adcde7c7418b0e15315665eb8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  particles: {fileID: 149890, guid: ed6404d4d52d97b428478b1eac001061, type: 2}
 --- !u!212 &21220976
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -177,6 +178,10 @@ Prefab:
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: particles
+      value: 
+      objectReference: {fileID: 149890, guid: ed6404d4d52d97b428478b1eac001061, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 191324}

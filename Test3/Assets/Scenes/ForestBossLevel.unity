@@ -276,9 +276,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 1
-  m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_MinimumChartSize: 4
   m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
@@ -336,7 +334,7 @@ RectTransform:
   m_RootOrder: 11
   m_AnchorMin: {x: .5, y: 1}
   m_AnchorMax: {x: .5, y: 1}
-  m_AnchoredPosition: {x: -104.000023, y: -82.355957}
+  m_AnchoredPosition: {x: -104.000008, y: -82.2438965}
   m_SizeDelta: {x: 24, y: 24}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &216982086
@@ -434,9 +432,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 1
-  m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_MinimumChartSize: 4
   m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
@@ -614,6 +610,48 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 348262526}
+--- !u!1001 &366495258
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 480482, guid: 947b8b06ec6e2db47b2dd2ce85609fe1, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -1167.46533
+      objectReference: {fileID: 0}
+    - target: {fileID: 480482, guid: 947b8b06ec6e2db47b2dd2ce85609fe1, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -804
+      objectReference: {fileID: 0}
+    - target: {fileID: 480482, guid: 947b8b06ec6e2db47b2dd2ce85609fe1, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -164.924805
+      objectReference: {fileID: 0}
+    - target: {fileID: 480482, guid: 947b8b06ec6e2db47b2dd2ce85609fe1, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 480482, guid: 947b8b06ec6e2db47b2dd2ce85609fe1, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 480482, guid: 947b8b06ec6e2db47b2dd2ce85609fe1, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 480482, guid: 947b8b06ec6e2db47b2dd2ce85609fe1, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 480482, guid: 947b8b06ec6e2db47b2dd2ce85609fe1, type: 2}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 947b8b06ec6e2db47b2dd2ce85609fe1, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &387786257
 GameObject:
   m_ObjectHideFlags: 0
@@ -648,7 +686,7 @@ RectTransform:
   m_RootOrder: 5
   m_AnchorMin: {x: .5, y: 1}
   m_AnchorMax: {x: .5, y: 1}
-  m_AnchoredPosition: {x: -384.000031, y: -83.355957}
+  m_AnchoredPosition: {x: -383.999969, y: -83.2438965}
   m_SizeDelta: {x: 768, y: 64}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &387786259
@@ -824,6 +862,18 @@ Prefab:
     - target: {fileID: 2038018, guid: 428454bd498a2ee40a197a8373cabe0a, type: 2}
       propertyPath: near clip plane
       value: -3.20000005
+      objectReference: {fileID: 0}
+    - target: {fileID: 8268628, guid: 428454bd498a2ee40a197a8373cabe0a, type: 2}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: ade0af409b3357f4a9145ba6ebbd930c, type: 3}
+    - target: {fileID: 8268628, guid: 428454bd498a2ee40a197a8373cabe0a, type: 2}
+      propertyPath: m_Volume
+      value: .5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8268628, guid: 428454bd498a2ee40a197a8373cabe0a, type: 2}
+      propertyPath: Loop
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 428454bd498a2ee40a197a8373cabe0a, type: 2}
@@ -1004,7 +1054,7 @@ RectTransform:
   m_RootOrder: 12
   m_AnchorMin: {x: .5, y: 1}
   m_AnchorMax: {x: .5, y: 1}
-  m_AnchoredPosition: {x: -78.0000229, y: -82.355957}
+  m_AnchoredPosition: {x: -78.0000076, y: -82.2438965}
   m_SizeDelta: {x: 24, y: 24}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &599507987
@@ -1207,7 +1257,7 @@ RectTransform:
   m_RootOrder: 6
   m_AnchorMin: {x: .5, y: 1}
   m_AnchorMax: {x: .5, y: 1}
-  m_AnchoredPosition: {x: -383.000031, y: -113.355957}
+  m_AnchoredPosition: {x: -382.999969, y: -113.243896}
   m_SizeDelta: {x: 256, y: 64}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &687317920
@@ -1491,9 +1541,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 1
-  m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_MinimumChartSize: 4
   m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
@@ -1698,7 +1746,7 @@ RectTransform:
   m_RootOrder: 9
   m_AnchorMin: {x: .5, y: 1}
   m_AnchorMax: {x: .5, y: 1}
-  m_AnchoredPosition: {x: -151.000031, y: -82.355957}
+  m_AnchoredPosition: {x: -151, y: -82.2438965}
   m_SizeDelta: {x: 24, y: 24}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &1147014387
@@ -1852,7 +1900,7 @@ RectTransform:
   m_RootOrder: 15
   m_AnchorMin: {x: .5, y: 1}
   m_AnchorMax: {x: .5, y: 1}
-  m_AnchoredPosition: {x: 120.999962, y: -78.355957}
+  m_AnchoredPosition: {x: 121.000008, y: -78.2438965}
   m_SizeDelta: {x: 256, y: 64}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &1176441732
@@ -2144,7 +2192,7 @@ RectTransform:
   m_RootOrder: 10
   m_AnchorMin: {x: .5, y: 1}
   m_AnchorMax: {x: .5, y: 1}
-  m_AnchoredPosition: {x: -127.000023, y: -82.355957}
+  m_AnchoredPosition: {x: -127.000008, y: -82.2438965}
   m_SizeDelta: {x: 24, y: 24}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &1435598451
@@ -2348,7 +2396,7 @@ RectTransform:
   m_RootOrder: 14
   m_AnchorMin: {x: .5, y: 1}
   m_AnchorMax: {x: .5, y: 1}
-  m_AnchoredPosition: {x: -31.0000324, y: -82.355957}
+  m_AnchoredPosition: {x: -30.9999981, y: -82.2438965}
   m_SizeDelta: {x: 24, y: 24}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &1572034817
@@ -3004,9 +3052,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 1
-  m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_MinimumChartSize: 4
   m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
@@ -3238,7 +3284,7 @@ RectTransform:
   m_RootOrder: 13
   m_AnchorMin: {x: .5, y: 1}
   m_AnchorMax: {x: .5, y: 1}
-  m_AnchoredPosition: {x: -55.0000305, y: -82.355957}
+  m_AnchoredPosition: {x: -55, y: -82.2438965}
   m_SizeDelta: {x: 24, y: 24}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &1996554247
@@ -3426,9 +3472,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 1
-  m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_MinimumChartSize: 4
   m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
