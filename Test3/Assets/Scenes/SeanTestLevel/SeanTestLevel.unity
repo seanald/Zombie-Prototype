@@ -94,7 +94,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 485778, guid: 390c4e6f733a7f642adc99aafa4b27e1, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -1246
+      value: -1380
       objectReference: {fileID: 0}
     - target: {fileID: 485778, guid: 390c4e6f733a7f642adc99aafa4b27e1, type: 2}
       propertyPath: m_LocalPosition.y
@@ -124,6 +124,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 13
       objectReference: {fileID: 0}
+    - target: {fileID: 21254858, guid: 390c4e6f733a7f642adc99aafa4b27e1, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b3bfd84fcd0d8f743ae2b343efe700a7, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 390c4e6f733a7f642adc99aafa4b27e1, type: 2}
   m_IsPrefabParent: 0
@@ -165,10 +169,6 @@ Prefab:
     - target: {fileID: 473168, guid: e1f9842456264479a8d421c8c2fee35d, type: 2}
       propertyPath: m_RootOrder
       value: 14
-      objectReference: {fileID: 0}
-    - target: {fileID: 11414960, guid: e1f9842456264479a8d421c8c2fee35d, type: 2}
-      propertyPath: attackDistance
-      value: 120
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e1f9842456264479a8d421c8c2fee35d, type: 2}
@@ -252,6 +252,12 @@ MeshFilter:
 GameObject:
   m_PrefabParentObject: {fileID: 178440, guid: cd0680be51a520a4695e5251d7cabffd, type: 2}
   m_PrefabInternal: {fileID: 372178044}
+--- !u!114 &253596745 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 11447200, guid: cd0680be51a520a4695e5251d7cabffd,
+    type: 2}
+  m_PrefabInternal: {fileID: 372178044}
+  m_Script: {fileID: 11500000, guid: 02b8d64d7346ad641b3d77f7c62211ad, type: 3}
 --- !u!1001 &372178044
 Prefab:
   m_ObjectHideFlags: 0
@@ -505,11 +511,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 496811111}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
---- !u!20 &580885246 stripped
-Camera:
-  m_PrefabParentObject: {fileID: 2038018, guid: 428454bd498a2ee40a197a8373cabe0a,
-    type: 2}
-  m_PrefabInternal: {fileID: 1204487351}
 --- !u!1 &613572813
 GameObject:
   m_ObjectHideFlags: 0
@@ -1106,33 +1107,25 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 22332320, guid: e3cca2460351a854b82ab0e69f4ebcd5, type: 2}
-      propertyPath: m_Camera
+    - target: {fileID: 11415980, guid: e3cca2460351a854b82ab0e69f4ebcd5, type: 2}
+      propertyPath: playerHealth
       value: 
-      objectReference: {fileID: 580885246}
+      objectReference: {fileID: 253596745}
     - target: {fileID: 22452018, guid: e3cca2460351a854b82ab0e69f4ebcd5, type: 2}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 22452018, guid: e3cca2460351a854b82ab0e69f4ebcd5, type: 2}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 22405420, guid: e3cca2460351a854b82ab0e69f4ebcd5, type: 2}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 22405420, guid: e3cca2460351a854b82ab0e69f4ebcd5, type: 2}
       propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 22479446, guid: e3cca2460351a854b82ab0e69f4ebcd5, type: 2}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 22479446, guid: e3cca2460351a854b82ab0e69f4ebcd5, type: 2}
-      propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e3cca2460351a854b82ab0e69f4ebcd5, type: 2}

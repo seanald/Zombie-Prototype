@@ -5,7 +5,7 @@ using System.Collections.Generic;
 public class Devil : Enemy
 {
 	private int random = 0;
-
+	
 	void IsFeared()
 	{
 		this.state = CharacterState.Fleeing;
@@ -22,34 +22,34 @@ public class Devil : Enemy
 		{
 			if (random == 1)
 			{
-				if (this.distance < this.attackDistance)
+				if (this.distance <= this.attackDistance+200)
 				{
 					this.Throw();
-					StartCoroutine(WaitForAnimation());
+					StartCoroutine(WaitForAnimation(3.0f));
 				}
 				else
 				{
-					base.Seek(distVec);
+					base.Seek(this.distVec);
 					this.enemyAnimator.Play("Walk");
 				}
 			}
 			else if (random == 2)
 			{
-				if (this.distance < this.attackDistance + 100)
+				if (this.distance <= this.attackDistance + 100)
 				{
 					this.Spell();
 					StartCoroutine(WaitForAnimation());
 				}
 				else
 				{
-					base.Seek(distVec);
+					base.Seek(this.distVec);
 					this.enemyAnimator.Play("Walk");
 				}
 			}
 			else if (random == 3)
 			{
 				this.Rocket();
-				StartCoroutine(WaitForAnimation());
+				StartCoroutine(WaitForAnimation(3.0f));
 			}
 		}
 		else
@@ -90,11 +90,11 @@ public class Devil : Enemy
 		}
 
 		this.enemyAnimator.Play("Walk");
-		
+
 		
 		if (!this.strafing)
 		{
-			StartCoroutine(WaitForAttack());
+			StartCoroutine(this.WaitForAttack());
 		}
 	}
 	
@@ -103,6 +103,13 @@ public class Devil : Enemy
 		
 	}
 	
+	IEnumerator WaitForAnimation(float seconds)
+	{
+		yield return new WaitForSeconds(seconds);
+		this.attacking = false;
+		this.Move();
+	}
+
 	IEnumerator WaitForAnimation()
 	{
 		yield return new WaitForSeconds(1.0f);

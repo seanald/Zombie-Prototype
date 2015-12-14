@@ -45,12 +45,6 @@ public class Character : MonoBehaviour
 		forcesVec += this.Gravity();
 		forcesVec += this.Forces();
 
-		if (forcesVec == Vector3.zero)
-		{
-			this.state = CharacterState.Standing;
-			forcesVec = Vector3.up * 0.0001f;
-		}
-
 		Vector3 scale = transform.localScale;
 
 		this.transform.localScale = scale;
