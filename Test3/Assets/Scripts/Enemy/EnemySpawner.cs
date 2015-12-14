@@ -87,7 +87,7 @@ public class EnemySpawner : MonoBehaviour
 
 	void OnTriggerEnter(Collider c)
 	{
-		if(c.gameObject.tag == "Player")
+		if(c.gameObject.tag == "Player" || c.gameObject.tag == "ActivePlayer")
 		{
 			if (!this.isActive)
 			{
