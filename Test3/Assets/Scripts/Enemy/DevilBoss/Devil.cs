@@ -22,10 +22,10 @@ public class Devil : Enemy
 		{
 			if (random == 1)
 			{
-				if (this.distance <= this.attackDistance)
+				if (this.distance <= this.attackDistance+200)
 				{
 					this.Throw();
-					StartCoroutine(WaitForAnimation());
+					StartCoroutine(WaitForAnimation(3.0f));
 				}
 				else
 				{
@@ -49,7 +49,7 @@ public class Devil : Enemy
 			else if (random == 3)
 			{
 				this.Rocket();
-				StartCoroutine(WaitForAnimation());
+				StartCoroutine(WaitForAnimation(3.0f));
 			}
 		}
 		else
@@ -103,6 +103,13 @@ public class Devil : Enemy
 		
 	}
 	
+	IEnumerator WaitForAnimation(float seconds)
+	{
+		yield return new WaitForSeconds(seconds);
+		this.attacking = false;
+		this.Move();
+	}
+
 	IEnumerator WaitForAnimation()
 	{
 		yield return new WaitForSeconds(1.0f);
