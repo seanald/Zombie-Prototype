@@ -137,12 +137,11 @@ public class Enemy : Character
 		}
 	}
 
-	private void OnCollisionEnter(Collision collision)
+	void IsStunned()
 	{
-		if (collision.gameObject.tag == "GhostBullet")
-		{
+
 			this.state = CharacterState.Stunned;
 			stunTime = Time.time;
-		}
+		
 	}
 }

@@ -5,8 +5,8 @@ using UnityEngine.UI;
 public class Plasma : MonoBehaviour
 {
 
-	public int maxPlasma = 100;
-	private int curPlasma = 100;
+	public float maxPlasma = 100f;
+	private float curPlasma = 100f;
 
 	public Slider plasmaBar;
 
@@ -24,17 +24,29 @@ public class Plasma : MonoBehaviour
 		}
 	}
 
-
-	public void AddPlasma(int hp)
+	void FixedUpdate()
 	{
-		curPlasma += hp;
+		if(this.curPlasma >= 1)
+		{
+			AddPlasma();
+		}
+		else
+		{
+			StartCoroutine(WaitForPlasma());
+		}
+	}
+
+
+	public void AddPlasma()
+	{
+		curPlasma += .05f;
 		if (curPlasma > maxPlasma)
 		{
 			curPlasma = maxPlasma;
 		}
 	}
 
-	public int CurPlasma
+	public float CurPlasma
 	{
 		get {
 			return curPlasma;
@@ -42,5 +54,11 @@ public class Plasma : MonoBehaviour
 		set {
 			curPlasma = value;
 		}
+	}
+
+	IEnumerator WaitForPlasma()
+	{
+		yield return new WaitForSeconds(5f);
+		this.curPlasma = 1;
 	}
 }

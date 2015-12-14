@@ -65,6 +65,7 @@
      <Compile Include="Assets\Scripts\Enemy\DevilBoss\Devil.cs" />
      <Compile Include="Assets\Scripts\Enemy\DevilKnife\DevilKnife.cs" />
      <Compile Include="Assets\Scripts\Enemy\EnemySpawner.cs" />
+     <Compile Include="Assets\Scripts\Enemy\EnemySpawnerNOWALLS.cs" />
      <Compile Include="Assets\Scripts\Enemy\FootballWolf\FootballScript.cs" />
      <Compile Include="Assets\Scripts\Enemy\FootballWolf\FootballWolf.cs" />
      <Compile Include="Assets\Scripts\Enemy\General\Avoid.cs" />
@@ -98,6 +99,7 @@
      <Compile Include="Assets\Scripts\Player\General\PlayerSwitch.cs" />
      <Compile Include="Assets\Scripts\Player\Ghost\Animation\GhostAnimatorController.cs" />
      <Compile Include="Assets\Scripts\Player\Ghost\Attacks\GhostBullet.cs" />
+     <Compile Include="Assets\Scripts\Player\Ghost\Attacks\GhostHaunt.cs" />
      <Compile Include="Assets\Scripts\Player\Ghost\Attacks\GhostHypnotize.cs" />
      <Compile Include="Assets\Scripts\Player\Ghost\Attacks\GhostPossess.cs" />
      <Compile Include="Assets\Scripts\Player\Zombie\Animation\Zombie.cs" />

@@ -31,11 +31,12 @@ public class FearPossess : MonoBehaviour
 			if(isActive)
 			{
 				//+Instantiate(alert, this.transform.position, this.transform.rotation);	
-				if(Input.GetKeyDown(KeyCode.P) || Input.GetKeyDown(KeyCode.JoystickButton2) && GameObject.Find("GhostController").tag == "ActivePlayer"){
+				if((Input.GetKeyDown(KeyCode.P) || Input.GetKeyDown(KeyCode.JoystickButton2)) && GameObject.Find("GhostController").GetComponentInParent<Plasma>().CurPlasma >= 20){
 					//play animation
 					Instantiate(alert, this.transform.position, this.transform.rotation);
 					this.CauseFear();
 					alreadyActivated=true;
+					GameObject.Find("GhostController").GetComponentInParent<Plasma>().CurPlasma -= 20;
 				}
 			}
 		}
