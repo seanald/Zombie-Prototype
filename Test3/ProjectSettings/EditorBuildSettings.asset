@@ -4,4 +4,26 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/MenuScene.unity
+  - enabled: 1
+    path: Assets/Scenes/CemetaryLevel.unity
+  - enabled: 1
+    path: Assets/Scenes/CemetaryBossLevel.unity
+  - enabled: 1
+    path: Assets/Scenes/SchoolLevel.unity
+  - enabled: 1
+    path: Assets/Scenes/SchoolBossLevel.unity
+  - enabled: 1
+    path: Assets/Scenes/MallLevel.unity
+  - enabled: 1
+    path: Assets/Scenes/MallBossLevel.unity
+  - enabled: 1
+    path: Assets/Scenes/TownLevel.unity
+  - enabled: 1
+    path: Assets/Scenes/TownBossLevel.unity
+  - enabled: 1
+    path: Assets/Scenes/ForestLevel.unity
+  - enabled: 1
+    path: Assets/Scenes/ForestBossLevel.unity

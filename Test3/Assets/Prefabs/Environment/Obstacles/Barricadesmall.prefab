@@ -10,7 +10,6 @@ GameObject:
   - 4: {fileID: 472184}
   - 212: {fileID: 21208688}
   - 65: {fileID: 6532040}
-  - 114: {fileID: 11417832}
   m_Layer: 11
   m_Name: Barricadesmall
   m_TagString: Untagged
@@ -25,7 +24,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 189232}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1257, y: 72.7034378, z: -219.100006}
+  m_LocalPosition: {x: -46, y: 72.7034378, z: -110.699997}
   m_LocalScale: {x: 1, y: .724137843, z: .689655244}
   m_Children: []
   m_Father: {fileID: 0}
@@ -42,22 +41,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 60, y: 200, z: 62.2999992}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &11417832
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 189232}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 02b8d64d7346ad641b3d77f7c62211ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHealth: 100
-  armor: 0
-  invincibilityDuration: 1
-  invincibleWhenHit: 0
-  healthBar: {fileID: 0}
 --- !u!212 &21208688
 SpriteRenderer:
   m_ObjectHideFlags: 1

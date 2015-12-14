@@ -450,6 +450,7 @@ MonoBehaviour:
   velocity: {x: 0, y: 0, z: 0}
   stunnedTime: 1
   isActivePlayer: 1
+  right: 0
 --- !u!114 &11411840
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -466,6 +467,7 @@ MonoBehaviour:
   knockback: 0
   stun: 1
   victim: {fileID: 0}
+  particleSystem: {fileID: 167658, guid: f005d38e68667e84590e451636f7a8e4, type: 2}
 --- !u!114 &11447200
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -498,6 +500,7 @@ MonoBehaviour:
   knockback: 0
   stun: 0
   victim: {fileID: 0}
+  particleSystem: {fileID: 167658, guid: f005d38e68667e84590e451636f7a8e4, type: 2}
 --- !u!114 &11489764
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -514,6 +517,7 @@ MonoBehaviour:
   knockback: 0
   stun: 1
   victim: {fileID: 0}
+  particleSystem: {fileID: 167658, guid: f005d38e68667e84590e451636f7a8e4, type: 2}
 --- !u!114 &11497902
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -530,6 +534,7 @@ MonoBehaviour:
   knockback: 0
   stun: 1
   victim: {fileID: 0}
+  particleSystem: {fileID: 167658, guid: f005d38e68667e84590e451636f7a8e4, type: 2}
 --- !u!143 &14305528
 CharacterController:
   m_ObjectHideFlags: 1
@@ -565,9 +570,7 @@ SpriteRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_MinimumChartSize: 4
   m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}

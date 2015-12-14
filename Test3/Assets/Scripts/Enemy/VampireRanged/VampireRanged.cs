@@ -29,7 +29,7 @@ public class VampireRanged : Enemy {
     {
         if (this.distance < this.attackDistance)
         {
-            this.enemyAnimator.Play("Vampire_Melee_Attack");
+            this.enemyAnimator.Play("Vampire_Ranged_Attack");
             Instantiate(can, throwPoint.position, throwPoint.localRotation);
             this.state = CharacterState.Moving;
             StartCoroutine(WaitForAnimation());
@@ -37,7 +37,7 @@ public class VampireRanged : Enemy {
         else
         {
             this.Seek(distVec);
-            this.enemyAnimator.Play("Vampire_Walking");
+            this.enemyAnimator.Play("Vampire_Ranged_Walking");
         }
     }
 
@@ -54,7 +54,7 @@ public class VampireRanged : Enemy {
             this.Seek(this.distVec * -1);
         }
 
-        this.enemyAnimator.Play("Vampire_Walking");
+        this.enemyAnimator.Play("Vampire_Ranged_Walking");
 
         if (!this.strafing)
         {
@@ -64,7 +64,7 @@ public class VampireRanged : Enemy {
 
     override protected void Stunned()
     {
-        this.enemyAnimator.Play("Vampire_Stunned");
+        this.enemyAnimator.Play("Vampire_Ranged_Stunned");
     }
 
     IEnumerator WaitForAttack()

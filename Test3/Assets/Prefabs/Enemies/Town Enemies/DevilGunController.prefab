@@ -43,8 +43,8 @@ GameObject:
   - 4: {fileID: 404534}
   - 143: {fileID: 14375136}
   - 114: {fileID: 11474366}
-  - 114: {fileID: 11408028}
   - 114: {fileID: 11476970}
+  - 114: {fileID: 11409006}
   m_Layer: 0
   m_Name: DevilGunController
   m_TagString: Untagged
@@ -59,7 +59,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 141290}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1310, y: 152, z: -442}
+  m_LocalPosition: {x: -1881, y: 76, z: -309}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 491584}
@@ -119,7 +119,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &11408028
+--- !u!114 &11409006
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -127,7 +127,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 141290}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 540125c1393900548bf7d4930555c7f3, type: 3}
+  m_Script: {fileID: 11500000, guid: 9f31ce6ecfac583478d2ff5ea6a3e708, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &11474366
@@ -165,7 +165,7 @@ MonoBehaviour:
   attackDistance: 200
   dangerDistance: 200
   attackRate: 5
-  bullet: {fileID: 135292, guid: 01257cf27dbc1334bb8e15b2b1b777b6, type: 2}
+  bullet: {fileID: 157842, guid: 78ead17a97cb54748ae9b5d535760ecf, type: 2}
   throwPoint: {fileID: 477072}
 --- !u!143 &14375136
 CharacterController:
