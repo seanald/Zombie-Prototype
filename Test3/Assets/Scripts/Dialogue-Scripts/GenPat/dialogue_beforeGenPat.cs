@@ -39,7 +39,7 @@ public class dialogue_beforeGenPat : MonoBehaviour {
             timeLeft -= Time.deltaTime;
 			print(timeLeft);
         }
-        if (Input.GetKeyDown(KeyCode.Return))
+		if (Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.JoystickButton0))
 		{
 			counter++;
             if (counter == 0)

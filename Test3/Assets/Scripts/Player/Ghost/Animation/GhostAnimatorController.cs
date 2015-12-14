@@ -14,11 +14,11 @@ public class GhostAnimatorController : MonoBehaviour
 
 	void Update()
 	{
-		if (Input.GetKeyDown(KeyCode.X) && GameObject.Find("GhostController").tag == "ActivePlayer")
+		if ((Input.GetKeyDown(KeyCode.X) || Input.GetKeyDown(KeyCode.JoystickButton1)) && GameObject.Find("GhostController").tag == "ActivePlayer")
 		{
 			StartCoroutine(this.Fire());
 		}
-		else if (Input.GetKeyDown(KeyCode.P) && this.GetComponentInChildren<Plasma>().CurPlasma >= 20 && GameObject.Find("GhostController").tag == "ActivePlayer")
+		else if ((Input.GetKeyDown(KeyCode.P) || Input.GetKeyDown(KeyCode.JoystickButton0)) && this.GetComponentInChildren<Plasma>().CurPlasma >= 20 && GameObject.Find("GhostController").tag == "ActivePlayer")
 		{
 			StartCoroutine(this.Haunt());
 		}

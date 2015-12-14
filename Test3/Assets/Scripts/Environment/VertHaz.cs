@@ -33,7 +33,7 @@ public class VertHaz : MonoBehaviour {
 		
 	}
 	void OnTriggerEnter(Collider collision){
-		Instantiate(explosion, collision.transform.position, transform.rotation);
+		Instantiate(explosion, this.transform.position, transform.rotation);
 		Destroy(this.gameObject);
 		
 	}
