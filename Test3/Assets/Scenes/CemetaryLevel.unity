@@ -649,12 +649,12 @@ Transform:
   - {fileID: 445861959}
   - {fileID: 1124001614}
   - {fileID: 139904154}
+  - {fileID: 1879844743}
   - {fileID: 793157696}
   - {fileID: 1758727296}
   - {fileID: 1661862902}
   - {fileID: 1004795779}
   - {fileID: 178815424}
-  - {fileID: 1879844743}
   - {fileID: 1275566070}
   - {fileID: 2086811358}
   - {fileID: 1165752879}
@@ -1001,7 +1001,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22435368, guid: e3cca2460351a854b82ab0e69f4ebcd5, type: 2}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 22435368, guid: e3cca2460351a854b82ab0e69f4ebcd5, type: 2}
       propertyPath: m_AnchoredPosition.x
@@ -1049,11 +1049,11 @@ Prefab:
       objectReference: {fileID: 2005339961}
     - target: {fileID: 22405420, guid: e3cca2460351a854b82ab0e69f4ebcd5, type: 2}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 22405420, guid: e3cca2460351a854b82ab0e69f4ebcd5, type: 2}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 22479446, guid: e3cca2460351a854b82ab0e69f4ebcd5, type: 2}
       propertyPath: m_AnchorMax.x
@@ -1073,11 +1073,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22452018, guid: e3cca2460351a854b82ab0e69f4ebcd5, type: 2}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 22452018, guid: e3cca2460351a854b82ab0e69f4ebcd5, type: 2}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 22490402, guid: e3cca2460351a854b82ab0e69f4ebcd5, type: 2}
       propertyPath: m_AnchoredPosition.x
@@ -1965,7 +1965,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 498640, guid: c201ea4a1139dc04eb4c5f488b18e3c4, type: 2}
       propertyPath: m_RootOrder
-      value: 24
+      value: 23
       objectReference: {fileID: 0}
     - target: {fileID: 11409538, guid: c201ea4a1139dc04eb4c5f488b18e3c4, type: 2}
       propertyPath: levelSelect
@@ -2356,7 +2356,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11428978, guid: 471d4a4c556e78741948bb46264c28bc, type: 2}
       propertyPath: side.Array.data[3]
-      value: left
+      value: right
       objectReference: {fileID: 0}
     - target: {fileID: 11428978, guid: 471d4a4c556e78741948bb46264c28bc, type: 2}
       propertyPath: spawnQueueArray.Array.data[0]
@@ -2376,7 +2376,7 @@ Prefab:
       objectReference: {fileID: 131726, guid: 5d4137c0ddb82b342a58e97fa34f61cd, type: 2}
     - target: {fileID: 11428978, guid: 471d4a4c556e78741948bb46264c28bc, type: 2}
       propertyPath: side.Array.data[2]
-      value: left
+      value: right
       objectReference: {fileID: 0}
     - target: {fileID: 473578, guid: 471d4a4c556e78741948bb46264c28bc, type: 2}
       propertyPath: m_LocalScale.y
@@ -2428,11 +2428,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11428978, guid: 471d4a4c556e78741948bb46264c28bc, type: 2}
       propertyPath: side.Array.data[7]
-      value: left
+      value: right
       objectReference: {fileID: 0}
     - target: {fileID: 11428978, guid: 471d4a4c556e78741948bb46264c28bc, type: 2}
       propertyPath: side.Array.data[8]
-      value: left
+      value: right
       objectReference: {fileID: 0}
     - target: {fileID: 11428978, guid: 471d4a4c556e78741948bb46264c28bc, type: 2}
       propertyPath: side.Array.data[9]
@@ -2528,7 +2528,7 @@ Transform:
   m_LocalScale: {x: 1, y: .724137843, z: .689655244}
   m_Children: []
   m_Father: {fileID: 416503373}
-  m_RootOrder: 16
+  m_RootOrder: 11
 --- !u!212 &1879844744
 SpriteRenderer:
   m_ObjectHideFlags: 0
