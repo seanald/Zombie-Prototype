@@ -39,13 +39,14 @@
 	<Reference Include="System.Core" />
 	<Reference Include="System.Xml.Linq" />
 	<Reference Include="UnityEngine">
-	  <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
+	  <HintPath>E:/Unity_5/Editor/Data/Managed/UnityEngine.dll</HintPath>
 	</Reference>
 	<Reference Include="UnityEditor">
-	  <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
+	  <HintPath>E:/Unity_5/Editor/Data/Managed/UnityEditor.dll</HintPath>
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\KillOnContact.cs" />
      <Compile Include="Assets\Scripts\Dialogue-Scripts\GenPat\dialogue_beforeGenPat.cs" />
      <Compile Include="Assets\Scripts\Dialogue-Scripts\GenPat\genpatDead.cs" />
      <Compile Include="Assets\Scripts\Dialogue-Scripts\GenPat\names_GenPat.cs" />
@@ -65,6 +66,7 @@
      <Compile Include="Assets\Scripts\Enemy\DevilBoss\Devil.cs" />
      <Compile Include="Assets\Scripts\Enemy\DevilKnife\DevilKnife.cs" />
      <Compile Include="Assets\Scripts\Enemy\EnemySpawner.cs" />
+     <Compile Include="Assets\Scripts\Enemy\EnemySpawnerNOWALLS.cs" />
      <Compile Include="Assets\Scripts\Enemy\FootballWolf\FootballScript.cs" />
      <Compile Include="Assets\Scripts\Enemy\FootballWolf\FootballWolf.cs" />
      <Compile Include="Assets\Scripts\Enemy\General\Avoid.cs" />
@@ -79,6 +81,7 @@
      <Compile Include="Assets\Scripts\Enemy\WitchBoss\WitchBoss.cs" />
      <Compile Include="Assets\Scripts\Enemy\ZombieBoss\ZombieBoss.cs" />
      <Compile Include="Assets\Scripts\Enemy\Zombie_Female\ZombieFemale.cs" />
+     <Compile Include="Assets\Scripts\Environment\DestroyerScript.cs" />
      <Compile Include="Assets\Scripts\Environment\FearObject.cs" />
      <Compile Include="Assets\Scripts\Environment\Hazard.cs" />
      <Compile Include="Assets\Scripts\Environment\HazardTurret.cs" />
@@ -97,11 +100,14 @@
      <Compile Include="Assets\Scripts\Player\General\PlayerSwitch.cs" />
      <Compile Include="Assets\Scripts\Player\Ghost\Animation\GhostAnimatorController.cs" />
      <Compile Include="Assets\Scripts\Player\Ghost\Attacks\GhostBullet.cs" />
+     <Compile Include="Assets\Scripts\Player\Ghost\Attacks\GhostHaunt.cs" />
      <Compile Include="Assets\Scripts\Player\Ghost\Attacks\GhostHypnotize.cs" />
      <Compile Include="Assets\Scripts\Player\Ghost\Attacks\GhostPossess.cs" />
      <Compile Include="Assets\Scripts\Player\Zombie\Animation\Zombie.cs" />
      <Compile Include="Assets\Scripts\Player\Zombie\Chomp.cs" />
+     <Compile Include="Assets\Scripts\Scene\ButtonNavigationScript.cs" />
      <Compile Include="Assets\Scripts\Scene\CameraOrthoSize.cs" />
+     <Compile Include="Assets\Scripts\Scene\DestroyFinishedParticle.cs" />
      <Compile Include="Assets\Scripts\Scene\FollowCamera.cs" />
      <Compile Include="Assets\Scripts\Scene\LevelTransition.cs" />
      <Compile Include="Assets\Scripts\Scene\LocalPositionSnapper.cs" />
@@ -112,16 +118,16 @@
      <Compile Include="Assets\Scripts\Scene\WorldScaler.cs" />
      <None Include="Assets\Materials\$Sprites-Bumped Diffuse.shader" />
  <Reference Include="UnityEngine.UI">
- <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
+ <HintPath>E:/Unity_5/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.Networking">
- <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
+ <HintPath>E:/Unity_5/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.Analytics">
- <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
+ <HintPath>E:/Unity_5/Editor/Data/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.iOS.Extensions.Xcode">
- <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
+ <HintPath>E:/Unity_5/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
  </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

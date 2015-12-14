@@ -3,7 +3,7 @@ using System.Collections;
 
 public class GhostBullet : MonoBehaviour {
 	
-	float Speed = 25f;
+	float Speed = 6f;
 	float BulletLifeTime = 1f;
 	private float startTime;
 	private bool left;
@@ -38,11 +38,22 @@ public class GhostBullet : MonoBehaviour {
 		}
 	}
 	
-	void OnCollisionEnter(Collision collision){
+	void OnCollisionEnter(Collision collision)
+	{
 
+			Collider[] hitColliders = Physics.OverlapSphere(this.transform.position, 200f);
+			int i = 0;
+			while(i<hitColliders.Length)
+			{
+				if (hitColliders[i].tag == "Enemy" || hitColliders[i].tag == "EnemyScared")
+				{
+					hitColliders[i].SendMessage("IsStunned");
+				}
+				i++;
+			}
 			Destroy(this.gameObject);
 		
-		
+
 	}
 }
 
