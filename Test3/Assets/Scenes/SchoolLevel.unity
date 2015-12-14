@@ -2149,6 +2149,18 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 108.599129
       objectReference: {fileID: 0}
+    - target: {fileID: 11465630, guid: 83d264aabb61bfe4699ac065b86428a2, type: 2}
+      propertyPath: HZoffset.x
+      value: -1800
+      objectReference: {fileID: 0}
+    - target: {fileID: 11465630, guid: 83d264aabb61bfe4699ac065b86428a2, type: 2}
+      propertyPath: HZoffset.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11465630, guid: 83d264aabb61bfe4699ac065b86428a2, type: 2}
+      propertyPath: direction
+      value: left
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 3361294, guid: 83d264aabb61bfe4699ac065b86428a2, type: 2}
     - {fileID: 2389098, guid: 83d264aabb61bfe4699ac065b86428a2, type: 2}
@@ -3295,6 +3307,18 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 108.599129
       objectReference: {fileID: 0}
+    - target: {fileID: 11465630, guid: 83d264aabb61bfe4699ac065b86428a2, type: 2}
+      propertyPath: HZoffset.x
+      value: -1800
+      objectReference: {fileID: 0}
+    - target: {fileID: 11465630, guid: 83d264aabb61bfe4699ac065b86428a2, type: 2}
+      propertyPath: HZoffset.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11465630, guid: 83d264aabb61bfe4699ac065b86428a2, type: 2}
+      propertyPath: direction
+      value: left
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 3361294, guid: 83d264aabb61bfe4699ac065b86428a2, type: 2}
     - {fileID: 2389098, guid: 83d264aabb61bfe4699ac065b86428a2, type: 2}
@@ -3775,6 +3799,18 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 108.599129
       objectReference: {fileID: 0}
+    - target: {fileID: 11465630, guid: 83d264aabb61bfe4699ac065b86428a2, type: 2}
+      propertyPath: HZoffset.x
+      value: -1800
+      objectReference: {fileID: 0}
+    - target: {fileID: 11465630, guid: 83d264aabb61bfe4699ac065b86428a2, type: 2}
+      propertyPath: HZoffset.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11465630, guid: 83d264aabb61bfe4699ac065b86428a2, type: 2}
+      propertyPath: direction
+      value: left
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 3361294, guid: 83d264aabb61bfe4699ac065b86428a2, type: 2}
     - {fileID: 2389098, guid: 83d264aabb61bfe4699ac065b86428a2, type: 2}
@@ -3838,6 +3874,18 @@ Prefab:
     - target: {fileID: 456786, guid: 83d264aabb61bfe4699ac065b86428a2, type: 2}
       propertyPath: m_LocalScale.z
       value: 108.599129
+      objectReference: {fileID: 0}
+    - target: {fileID: 11465630, guid: 83d264aabb61bfe4699ac065b86428a2, type: 2}
+      propertyPath: HZoffset.x
+      value: -1800
+      objectReference: {fileID: 0}
+    - target: {fileID: 11465630, guid: 83d264aabb61bfe4699ac065b86428a2, type: 2}
+      propertyPath: HZoffset.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11465630, guid: 83d264aabb61bfe4699ac065b86428a2, type: 2}
+      propertyPath: direction
+      value: left
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 3361294, guid: 83d264aabb61bfe4699ac065b86428a2, type: 2}
@@ -3976,6 +4024,18 @@ Prefab:
     - target: {fileID: 456786, guid: 83d264aabb61bfe4699ac065b86428a2, type: 2}
       propertyPath: m_LocalScale.z
       value: 108.599136
+      objectReference: {fileID: 0}
+    - target: {fileID: 11465630, guid: 83d264aabb61bfe4699ac065b86428a2, type: 2}
+      propertyPath: direction
+      value: left
+      objectReference: {fileID: 0}
+    - target: {fileID: 11465630, guid: 83d264aabb61bfe4699ac065b86428a2, type: 2}
+      propertyPath: HZoffset.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11465630, guid: 83d264aabb61bfe4699ac065b86428a2, type: 2}
+      propertyPath: HZoffset.x
+      value: -1800
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 3361294, guid: 83d264aabb61bfe4699ac065b86428a2, type: 2}
@@ -4254,6 +4314,18 @@ Prefab:
     - target: {fileID: 456786, guid: 83d264aabb61bfe4699ac065b86428a2, type: 2}
       propertyPath: m_LocalScale.z
       value: 108.599136
+      objectReference: {fileID: 0}
+    - target: {fileID: 11465630, guid: 83d264aabb61bfe4699ac065b86428a2, type: 2}
+      propertyPath: HZoffset.x
+      value: -1800
+      objectReference: {fileID: 0}
+    - target: {fileID: 11465630, guid: 83d264aabb61bfe4699ac065b86428a2, type: 2}
+      propertyPath: HZoffset.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11465630, guid: 83d264aabb61bfe4699ac065b86428a2, type: 2}
+      propertyPath: direction
+      value: left
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 3361294, guid: 83d264aabb61bfe4699ac065b86428a2, type: 2}
