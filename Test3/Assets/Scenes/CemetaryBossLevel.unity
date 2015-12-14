@@ -403,6 +403,10 @@ Prefab:
       propertyPath: textBox
       value: 
       objectReference: {fileID: 9624253}
+    - target: {fileID: 11445414, guid: 281547d93450841858ccf1fff2bcf28d, type: 2}
+      propertyPath: healthBar
+      value: 
+      objectReference: {fileID: 1296959411}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 281547d93450841858ccf1fff2bcf28d, type: 2}
   m_IsPrefabParent: 0
@@ -679,7 +683,7 @@ Prefab:
     - target: {fileID: 11466094, guid: d1d692c46d4c38944b61596f9b91d608, type: 2}
       propertyPath: plasmaBar
       value: 
-      objectReference: {fileID: 1296959411}
+      objectReference: {fileID: 1443154807}
     - target: {fileID: 11421572, guid: d1d692c46d4c38944b61596f9b91d608, type: 2}
       propertyPath: target
       value: 
@@ -991,6 +995,14 @@ Prefab:
       propertyPath: m_AnchoredPosition.y
       value: -82.2438965
       objectReference: {fileID: 0}
+    - target: {fileID: 129654, guid: e3cca2460351a854b82ab0e69f4ebcd5, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 165668, guid: e3cca2460351a854b82ab0e69f4ebcd5, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 11479968, guid: e3cca2460351a854b82ab0e69f4ebcd5, type: 2}
     - {fileID: 11426030, guid: e3cca2460351a854b82ab0e69f4ebcd5, type: 2}
@@ -1084,6 +1096,12 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
+--- !u!114 &1443154807 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 11416780, guid: e3cca2460351a854b82ab0e69f4ebcd5,
+    type: 2}
+  m_PrefabInternal: {fileID: 1296959409}
+  m_Script: {fileID: -113659843, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
 --- !u!1 &1586222014
 GameObject:
   m_ObjectHideFlags: 0

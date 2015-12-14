@@ -648,12 +648,6 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 456786, guid: 83d264aabb61bfe4699ac065b86428a2, type: 2}
   m_PrefabInternal: {fileID: 957155512}
---- !u!114 &377506419 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 11456626, guid: e3cca2460351a854b82ab0e69f4ebcd5,
-    type: 2}
-  m_PrefabInternal: {fileID: 1511937757}
-  m_Script: {fileID: -113659843, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
 --- !u!1001 &404673226
 Prefab:
   m_ObjectHideFlags: 0
@@ -1294,7 +1288,7 @@ Prefab:
     - target: {fileID: 11466094, guid: d1d692c46d4c38944b61596f9b91d608, type: 2}
       propertyPath: plasmaBar
       value: 
-      objectReference: {fileID: 377506419}
+      objectReference: {fileID: 1511937758}
     - target: {fileID: 11421572, guid: d1d692c46d4c38944b61596f9b91d608, type: 2}
       propertyPath: target
       value: 
@@ -3013,11 +3007,11 @@ Prefab:
       objectReference: {fileID: 519315688}
     - target: {fileID: 22405420, guid: e3cca2460351a854b82ab0e69f4ebcd5, type: 2}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 22405420, guid: e3cca2460351a854b82ab0e69f4ebcd5, type: 2}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 22479446, guid: e3cca2460351a854b82ab0e69f4ebcd5, type: 2}
       propertyPath: m_AnchorMax.x
@@ -3122,6 +3116,12 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e3cca2460351a854b82ab0e69f4ebcd5, type: 2}
   m_IsPrefabParent: 0
+--- !u!114 &1511937758 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 11416780, guid: e3cca2460351a854b82ab0e69f4ebcd5,
+    type: 2}
+  m_PrefabInternal: {fileID: 1511937757}
+  m_Script: {fileID: -113659843, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
 --- !u!4 &1523394084 stripped
 Transform:
   m_PrefabParentObject: {fileID: 473578, guid: 471d4a4c556e78741948bb46264c28bc, type: 2}

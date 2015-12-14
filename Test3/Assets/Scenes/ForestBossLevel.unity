@@ -1211,7 +1211,7 @@ Transform:
   - {fileID: 1235438373}
   - {fileID: 1443856104}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
 --- !u!114 &636320429
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1307,6 +1307,66 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 687317918}
+--- !u!1 &756702023
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 756702025}
+  - 108: {fileID: 756702024}
+  m_Layer: 0
+  m_Name: Directional Light
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!108 &756702024
+Light:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 756702023}
+  m_Enabled: 1
+  serializedVersion: 6
+  m_Type: 1
+  m_Color: {r: 1, g: .956862748, b: .839215696, a: 1}
+  m_Intensity: 1
+  m_Range: 10
+  m_SpotAngle: 30
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 2
+    m_Resolution: -1
+    m_Strength: 1
+    m_Bias: .0500000007
+    m_NormalBias: .400000006
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_Lightmapping: 4
+  m_BounceIntensity: 1
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
+  m_AreaSize: {x: 1, y: 1}
+--- !u!4 &756702025
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 756702023}
+  m_LocalRotation: {x: .408217937, y: -.234569728, z: .109381676, w: .875426054}
+  m_LocalPosition: {x: 0, y: 3, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
 --- !u!1 &786850064
 GameObject:
   m_ObjectHideFlags: 0
@@ -1601,7 +1661,7 @@ RectTransform:
   - {fileID: 1176441731}
   - {fileID: 1794249387}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
@@ -2003,7 +2063,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
@@ -2151,7 +2211,7 @@ Prefab:
     - target: {fileID: 11466094, guid: d1d692c46d4c38944b61596f9b91d608, type: 2}
       propertyPath: plasmaBar
       value: 
-      objectReference: {fileID: 1594798156}
+      objectReference: {fileID: 1762373491}
     - target: {fileID: 11421572, guid: d1d692c46d4c38944b61596f9b91d608, type: 2}
       propertyPath: target
       value: 
@@ -2281,6 +2341,22 @@ Prefab:
       propertyPath: m_RootOrder
       value: 9
       objectReference: {fileID: 0}
+    - target: {fileID: 11465634, guid: 4c310e42815e2be4c8b058b289804753, type: 2}
+      propertyPath: healthBar
+      value: 
+      objectReference: {fileID: 1594798156}
+    - target: {fileID: 11440132, guid: 4c310e42815e2be4c8b058b289804753, type: 2}
+      propertyPath: particleSystem
+      value: 
+      objectReference: {fileID: 149890, guid: ed6404d4d52d97b428478b1eac001061, type: 2}
+    - target: {fileID: 11425216, guid: 4c310e42815e2be4c8b058b289804753, type: 2}
+      propertyPath: particleSystem
+      value: 
+      objectReference: {fileID: 149890, guid: ed6404d4d52d97b428478b1eac001061, type: 2}
+    - target: {fileID: 11412418, guid: 4c310e42815e2be4c8b058b289804753, type: 2}
+      propertyPath: particleSystem
+      value: 
+      objectReference: {fileID: 149890, guid: ed6404d4d52d97b428478b1eac001061, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4c310e42815e2be4c8b058b289804753, type: 2}
   m_IsPrefabParent: 0
@@ -2459,7 +2535,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
@@ -2489,7 +2565,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 100
   m_WholeNumbers: 1
-  m_Value: 100
+  m_Value: 43
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -2826,7 +2902,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
