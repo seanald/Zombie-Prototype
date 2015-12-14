@@ -88,6 +88,8 @@
      <Compile Include="Assets\Scripts\Environment\HazardTurret.cs" />
      <Compile Include="Assets\Scripts\Environment\VertHaz.cs" />
      <Compile Include="Assets\Scripts\Environment\VertHazTurret.cs" />
+     <Compile Include="Assets\Scripts\Explosion.cs" />
+     <Compile Include="Assets\Scripts\Mine.cs" />
      <Compile Include="Assets\Scripts\Model\Common\Attack.cs" />
      <Compile Include="Assets\Scripts\Model\Common\Character.cs" />
      <Compile Include="Assets\Scripts\Model\Common\GameOverManager.cs" />

@@ -10,7 +10,7 @@ public class GhostHaunt : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetKeyDown(KeyCode.H) && this.GetComponentInParent<Plasma>().CurPlasma >= 50)
+		if ((Input.GetKeyDown(KeyCode.H) || Input.GetKeyDown(KeyCode.JoystickButton2)) && this.GetComponentInParent<Plasma>().CurPlasma >= 50 && GameObject.Find("GhostController").tag == "ActivePlayer")
 		{
 			this.CauseHaunt();
 			this.GetComponentInParent<Plasma>().CurPlasma -= 50;

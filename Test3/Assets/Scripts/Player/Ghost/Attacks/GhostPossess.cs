@@ -11,7 +11,7 @@ public class GhostPossess : MonoBehaviour
 	void Update()
 	{
 		//print(mytarget);
-		if ((Input.GetKeyDown(KeyCode.T) || Input.GetKeyDown(KeyCode.JoystickButton2)))
+		if ((Input.GetKeyDown(KeyCode.T) || Input.GetKeyDown(KeyCode.JoystickButton0)) && GameObject.Find("GhostController").tag == "ActivePlayer")
 		{
 			//mytarget.Possessable.Possessed = true;
 			if(this.gameObject.activeSelf)

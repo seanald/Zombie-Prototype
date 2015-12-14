@@ -8,6 +8,7 @@ public class VertHaz : MonoBehaviour {
 	private float startTime;
 	AudioSource strongAttack;
 	public string traveldirection;
+	public GameObject explosion;
 	
 	void Awake()
 	{
@@ -32,11 +33,8 @@ public class VertHaz : MonoBehaviour {
 		
 	}
 	void OnTriggerEnter(Collider collision){
-		if(collision.gameObject.tag == "Player" || collision.gameObject.tag == "ActivePlayer"){
-			
-			collision.gameObject.GetComponent<Health>().CurHealth = collision.gameObject.GetComponent<Health>().CurHealth - 100;
-			
-		}
+		Instantiate(explosion, collision.transform.position, transform.rotation);
+		Destroy(this.gameObject);
 		
 	}
 }
