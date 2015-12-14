@@ -1,0 +1,72 @@
+diff a/Test3/Assets/Scenes/MallBossLevel.unity b/Test3/Assets/Scenes/MallBossLevel.unity	(rejected hunks)
+@@ -84,9 +84,70 @@
+     cellSize: .166666672
+     manualCellSize: 0
+   m_NavMeshData: {fileID: 0}
++<<<<<<< HEAD
+ --- !u!127 &5
+ LevelGameManager:
+   m_ObjectHideFlags: 0
++=======
++--- !u!1001 &68310428
++Prefab:
++  m_ObjectHideFlags: 0
++  serializedVersion: 2
++  m_Modification:
++    m_TransformParent: {fileID: 1475137875}
++    m_Modifications:
++    - target: {fileID: 466828, guid: 567470c8c9e37b041adb7d4095cd2792, type: 2}
++      propertyPath: m_LocalPosition.x
++      value: -1962
++      objectReference: {fileID: 0}
++    - target: {fileID: 466828, guid: 567470c8c9e37b041adb7d4095cd2792, type: 2}
++      propertyPath: m_LocalPosition.y
++      value: 42.0724068
++      objectReference: {fileID: 0}
++    - target: {fileID: 466828, guid: 567470c8c9e37b041adb7d4095cd2792, type: 2}
++      propertyPath: m_LocalPosition.z
++      value: -246.5
++      objectReference: {fileID: 0}
++    - target: {fileID: 466828, guid: 567470c8c9e37b041adb7d4095cd2792, type: 2}
++      propertyPath: m_LocalRotation.x
++      value: 0
++      objectReference: {fileID: 0}
++    - target: {fileID: 466828, guid: 567470c8c9e37b041adb7d4095cd2792, type: 2}
++      propertyPath: m_LocalRotation.y
++      value: 0
++      objectReference: {fileID: 0}
++    - target: {fileID: 466828, guid: 567470c8c9e37b041adb7d4095cd2792, type: 2}
++      propertyPath: m_LocalRotation.z
++      value: 0
++      objectReference: {fileID: 0}
++    - target: {fileID: 466828, guid: 567470c8c9e37b041adb7d4095cd2792, type: 2}
++      propertyPath: m_LocalRotation.w
++      value: 1
++      objectReference: {fileID: 0}
++    - target: {fileID: 466828, guid: 567470c8c9e37b041adb7d4095cd2792, type: 2}
++      propertyPath: m_RootOrder
++      value: 11
++      objectReference: {fileID: 0}
++    - target: {fileID: 466828, guid: 567470c8c9e37b041adb7d4095cd2792, type: 2}
++      propertyPath: m_LocalScale.y
++      value: .724137843
++      objectReference: {fileID: 0}
++    - target: {fileID: 466828, guid: 567470c8c9e37b041adb7d4095cd2792, type: 2}
++      propertyPath: m_LocalScale.z
++      value: .689655244
++      objectReference: {fileID: 0}
++    - target: {fileID: 129748, guid: 567470c8c9e37b041adb7d4095cd2792, type: 2}
++      propertyPath: m_Name
++      value: Bat (2)
++      objectReference: {fileID: 0}
++    m_RemovedComponents: []
++  m_ParentPrefab: {fileID: 100100000, guid: 567470c8c9e37b041adb7d4095cd2792, type: 2}
++  m_IsPrefabParent: 0
++--- !u!4 &68310429 stripped
++Transform:
++  m_PrefabParentObject: {fileID: 466828, guid: 567470c8c9e37b041adb7d4095cd2792, type: 2}
++  m_PrefabInternal: {fileID: 68310428}
++>>>>>>> Sean/RTM
+ --- !u!114 &216795842 stripped
+ MonoBehaviour:
+   m_PrefabParentObject: {fileID: 11416780, guid: e3cca2460351a854b82ab0e69f4ebcd5,

@@ -46,6 +46,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\KillOnContact.cs" />
+     <Compile Include="Assets\Scripts\DecayHealth.cs" />
      <Compile Include="Assets\Scripts\Dialogue-Scripts\GenPat\dialogue_beforeGenPat.cs" />
      <Compile Include="Assets\Scripts\Dialogue-Scripts\GenPat\genpatDead.cs" />
      <Compile Include="Assets\Scripts\Dialogue-Scripts\GenPat\names_GenPat.cs" />
@@ -84,6 +85,10 @@
      <Compile Include="Assets\Scripts\Environment\FearObject.cs" />
      <Compile Include="Assets\Scripts\Environment\Hazard.cs" />
      <Compile Include="Assets\Scripts\Environment\HazardTurret.cs" />
+     <Compile Include="Assets\Scripts\Environment\VertHaz.cs" />
+     <Compile Include="Assets\Scripts\Environment\VertHazTurret.cs" />
+     <Compile Include="Assets\Scripts\Explosion.cs" />
+     <Compile Include="Assets\Scripts\Mine.cs" />
      <Compile Include="Assets\Scripts\Model\Common\Attack.cs" />
      <Compile Include="Assets\Scripts\Model\Common\Character.cs" />
      <Compile Include="Assets\Scripts\Model\Common\GameOverManager.cs" />
@@ -113,6 +118,7 @@
      <Compile Include="Assets\Scripts\Scene\MainMenu.cs" />
      <Compile Include="Assets\Scripts\Scene\PauseMenu.cs" />
      <Compile Include="Assets\Scripts\Scene\ScoreManager.cs" />
+     <Compile Include="Assets\Scripts\Scene\UI\CreditsScript.cs" />
      <Compile Include="Assets\Scripts\Scene\UI\PlayerCamera.cs" />
      <Compile Include="Assets\Scripts\Scene\WorldScaler.cs" />
      <None Include="Assets\Materials\$Sprites-Bumped Diffuse.shader" />

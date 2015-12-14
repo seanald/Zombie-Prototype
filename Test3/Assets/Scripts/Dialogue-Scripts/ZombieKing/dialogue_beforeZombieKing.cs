@@ -34,7 +34,7 @@ public class dialogue_beforeZombieKing : MonoBehaviour
 			textBox.transform.localPosition = new Vector3 (textBox.transform.localPosition.x + 12000.0f, textBox.transform.localPosition.y, textBox.transform.localPosition.z);
 			print ("countdownstarted");
 			timeLeft -= Time.deltaTime;
-		} else if (Input.GetKeyDown (KeyCode.Return)) {
+		} else if (Input.GetKeyDown (KeyCode.Return) || Input.GetKeyDown(KeyCode.JoystickButton0)) {
 			counter++;
 			if (counter == 0) {
 				text.text = "You there! Why aren’t you obeying my orders? You should be attacking the town.";
