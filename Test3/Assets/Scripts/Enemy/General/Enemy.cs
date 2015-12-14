@@ -61,7 +61,7 @@ public class Enemy : Character
 		print(this.health.CurHealth);
 		base.FixedUpdate();
 		this.alwaysFacePlayer();
-		UpdateDistance();
+		this.UpdateDistance();
 
 		Enemy[] enemies = GameObject.FindObjectsOfType(typeof(Enemy)) as Enemy[];
 		this.enemyList = new List<Enemy>(enemies);

@@ -24,7 +24,10 @@ public class Attack : MonoBehaviour
 		owner = this.gameObject;
 		AudioSource[] allmyAudioSources = GetComponentsInParent<AudioSource>();
 		//swingAttack = allmyAudioSources[0];
-		weakAttack = allmyAudioSources[0];
+		if (allmyAudioSources.Length >= 1)
+		{
+			weakAttack = allmyAudioSources[0];
+		}
 	}
 
 	static public int CalculateDamage(int damage, int armor)
