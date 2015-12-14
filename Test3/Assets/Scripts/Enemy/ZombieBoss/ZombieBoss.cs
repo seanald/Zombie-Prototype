@@ -5,6 +5,9 @@ using System.Collections.Generic;
 public class ZombieBoss : Enemy
 {
 	private int random = 0;
+	public GameObject spawnEnemy;
+	public Vector3 spawnOffset = new Vector3(-500, 0, 0);
+	private GameObject newEnemy;
 	
 	void IsFeared()
 	{
@@ -25,7 +28,7 @@ public class ZombieBoss : Enemy
 				if (this.distance < this.attackDistance)
 				{
 					this.Dash();
-					StartCoroutine(WaitForAnimation());
+					StartCoroutine(WaitForAnimation(2.0f));
 				}
 				else
 				{
@@ -38,7 +41,7 @@ public class ZombieBoss : Enemy
 				if (this.distance < this.attackDistance + 100)
 				{
 					this.Spin();
-					StartCoroutine(WaitForAnimation());
+					StartCoroutine(WaitForAnimation(2.0f));
 				}
 				else
 				{
@@ -46,7 +49,7 @@ public class ZombieBoss : Enemy
 					this.enemyAnimator.Play("Walk");
 				}
 			}
-			else if (random == 3)
+			else if (random == 3 && this.newEnemy == null)
 			{
 				this.Summon();
 				StartCoroutine(WaitForAnimation());
@@ -61,6 +64,7 @@ public class ZombieBoss : Enemy
 	private void Summon()
 	{
 		this.enemyAnimator.Play("Summon");
+		this.newEnemy = Instantiate(spawnEnemy, this.transform.position + spawnOffset, this.transform.rotation) as GameObject;
 		this.attacking = true;
 	}
 	
@@ -102,7 +106,15 @@ public class ZombieBoss : Enemy
 	{
 		
 	}
-	
+
+	IEnumerator WaitForAnimation(float seconds)
+	{
+		yield return new WaitForSeconds(seconds);
+		this.attacking = false;
+		this.strafing = false;
+		this.Move();
+	}
+
 	IEnumerator WaitForAnimation()
 	{
 		yield return new WaitForSeconds(1.0f);
