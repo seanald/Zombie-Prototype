@@ -1,82 +1,82 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &136932
+--- !u!1 &116246
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 4
   m_Component:
-  - 4: {fileID: 465074}
-  - 212: {fileID: 21204858}
-  - 65: {fileID: 6515982}
-  - 114: {fileID: 11488294}
-  - 114: {fileID: 11499174}
+  - 4: {fileID: 499404}
+  - 212: {fileID: 21228200}
+  - 65: {fileID: 6571096}
+  - 114: {fileID: 11411998}
+  - 114: {fileID: 11433096}
   m_Layer: 0
-  m_Name: TombStone Spawner
+  m_Name: Mine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &465074
+--- !u!4 &499404
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 136932}
+  m_GameObject: {fileID: 116246}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -337.899994, y: 80, z: -289}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 18.3199997, z: -173.820007}
+  m_LocalScale: {x: 1, y: .724137843, z: .689655244}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!65 &6515982
+--- !u!65 &6571096
 BoxCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 136932}
+  m_GameObject: {fileID: 116246}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 70, y: 149, z: 62.7999992}
+  m_Size: {x: 100, y: 100, z: 100}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &11488294
+--- !u!114 &11411998
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 136932}
+  m_GameObject: {fileID: 116246}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 342b647e586e0b442aac6c88ac9310fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &11499174
+--- !u!114 &11433096
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 136932}
+  m_GameObject: {fileID: 116246}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 45585afd9699a8d49b046fd62875e611, type: 3}
+  m_Script: {fileID: 11500000, guid: ab43fb29a30a6364798a6efb8e5c8572, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   alert: {fileID: 151236, guid: 1a8cf391f120e164fa112736412a8b88, type: 2}
---- !u!212 &21204858
+--- !u!212 &21228200
 SpriteRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 136932}
+  m_GameObject: {fileID: 116246}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  - {fileID: 2100000, guid: b3bfd84fcd0d8f743ae2b343efe700a7, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -90,7 +90,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 17f8dc6dbff4e4347a96c229523cae72, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 69e611b02fb30ab4aba256383834c2aa, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &100100000
 Prefab:
@@ -98,12 +98,8 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 0}
-      propertyPath: alert
-      value: 
-      objectReference: {fileID: 151236, guid: 1a8cf391f120e164fa112736412a8b88, type: 2}
+    m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 136932}
+  m_RootGameObject: {fileID: 116246}
   m_IsPrefabParent: 1
