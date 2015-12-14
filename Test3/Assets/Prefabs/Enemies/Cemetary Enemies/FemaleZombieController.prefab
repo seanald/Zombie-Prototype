@@ -30,6 +30,7 @@ GameObject:
   - 114: {fileID: 11499394}
   - 114: {fileID: 11489068}
   - 82: {fileID: 8241500}
+  - 114: {fileID: 11437396}
   m_Layer: 9
   m_Name: FemaleZombieController
   m_TagString: Enemy
@@ -78,7 +79,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 131726}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1634, y: 273, z: -515}
+  m_LocalPosition: {x: -1571, y: 89, z: -146}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 440616}
@@ -237,7 +238,7 @@ MonoBehaviour:
   knockback: 0
   stun: 0
   victim: {fileID: 0}
-  particleSystem: {fileID: 0}
+  particleSystem: {fileID: 149890, guid: ed6404d4d52d97b428478b1eac001061, type: 2}
 --- !u!114 &11413484
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -254,6 +255,17 @@ MonoBehaviour:
   invincibilityDuration: 1
   invincibleWhenHit: 0
   healthBar: {fileID: 0}
+--- !u!114 &11437396
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 131726}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f31ce6ecfac583478d2ff5ea6a3e708, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &11484960
 MonoBehaviour:
   m_ObjectHideFlags: 1
