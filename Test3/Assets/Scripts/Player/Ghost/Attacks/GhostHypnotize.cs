@@ -21,7 +21,7 @@ public class GhostHypnotize : MonoBehaviour {
 	{
 
 
-		if ((Input.GetKeyDown(KeyCode.X) || Input.GetKeyDown(KeyCode.JoystickButton1)) && this.GetComponentInParent<Plasma>().CurPlasma >= 10)
+		if ((Input.GetKeyDown(KeyCode.X) || Input.GetKeyDown(KeyCode.JoystickButton1)) && this.GetComponentInParent<Plasma>().CurPlasma >= 10 && GameObject.Find("GhostController").tag == "ActivePlayer")
 		{
 			Fire();
 

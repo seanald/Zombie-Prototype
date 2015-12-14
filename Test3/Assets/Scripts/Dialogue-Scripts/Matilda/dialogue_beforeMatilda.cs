@@ -31,7 +31,7 @@ public class dialogue_beforeMatilda : MonoBehaviour {
             print("countdownstarted");
             timeLeft -= Time.deltaTime;
         }
-        if (Input.GetKeyDown(KeyCode.Return))
+		if (Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.JoystickButton0))
 		{
 			counter++;
 			if (counter == 0)
