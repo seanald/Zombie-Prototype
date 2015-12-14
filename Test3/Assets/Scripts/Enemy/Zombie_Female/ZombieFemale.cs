@@ -9,6 +9,20 @@ public class ZombieFemale : Enemy {
 		this.state = CharacterState.Fleeing;
 		StartCoroutine(WaitForDeath());
 	}
+
+	void IsHaunted()
+	{
+		if(GameObject.Find("GhostController").transform.position.x - this.transform.position.x < 0)
+		{
+			this.target = GameObject.Find("Right").transform;
+		}
+		else if(GameObject.Find("GhostController").transform.position.x - this.transform.position.x > 0)
+		{
+			this.target = GameObject.Find("Left").transform;
+		}
+		this.state = CharacterState.Fleeing;
+		StartCoroutine(WaitForHauntEnd());
+	}
 	
 	IEnumerator WaitForDeath()
 	{
@@ -77,4 +91,11 @@ public class ZombieFemale : Enemy {
         }
         this.strafing = false;
     }
+
+	IEnumerator WaitForHauntEnd()
+	{
+		yield return new WaitForSeconds(3f);
+		this.target = GameObject.Find("ZombieController").transform;
+		this.state = CharacterState.Attacking;
+	}
 }

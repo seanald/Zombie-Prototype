@@ -25,6 +25,20 @@ public class VampireRanged : Enemy {
         }
     }
 
+	void IsHaunted()
+	{
+		if(GameObject.Find("GhostController").transform.position.x - this.transform.position.x < 0)
+		{
+			this.target = GameObject.Find("Right").transform;
+		}
+		else if(GameObject.Find("GhostController").transform.position.x - this.transform.position.x > 0)
+		{
+			this.target = GameObject.Find("Left").transform;
+		}
+		this.state = CharacterState.Fleeing;
+		StartCoroutine(WaitForHauntEnd());
+	}
+
     override protected void Attack()
     {
         if (this.distance < this.attackDistance)
@@ -83,4 +97,11 @@ public class VampireRanged : Enemy {
         yield return new WaitForSeconds(1f);
         this.Move();
     }
+
+	IEnumerator WaitForHauntEnd()
+	{
+		yield return new WaitForSeconds(3f);
+		this.target = GameObject.Find("ZombieController").transform;
+		this.state = CharacterState.Attacking;
+	}
 }
