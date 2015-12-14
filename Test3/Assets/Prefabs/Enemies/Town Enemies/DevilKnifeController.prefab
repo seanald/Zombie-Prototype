@@ -78,7 +78,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 110354}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1380, y: 86, z: -325}
+  m_LocalPosition: {x: -1949, y: 368, z: -1129}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 483642}
@@ -237,7 +237,7 @@ MonoBehaviour:
   knockback: 0
   stun: 0
   victim: {fileID: 0}
-  particleSystem: {fileID: 0}
+  particleSystem: {fileID: 149890, guid: ed6404d4d52d97b428478b1eac001061, type: 2}
 --- !u!114 &11440598
 MonoBehaviour:
   m_ObjectHideFlags: 1

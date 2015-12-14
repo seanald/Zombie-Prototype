@@ -17,7 +17,7 @@ public class LevelTransition : MonoBehaviour {
 
     void OnTriggerEnter (Collider other)
     {
-        if (other.gameObject.tag == "Player" && enemiesInScene.Length == 0)
+		if (other.gameObject.tag == "Player" || other.gameObject.tag == "ActivePlayer" && enemiesInScene.Length == 0)
         {
             Application.LoadLevel(levelSelect);
         }
