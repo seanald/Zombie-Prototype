@@ -16,12 +16,13 @@ public class CreditsScript : MonoBehaviour {
 	private void Update()
 	{
 		this.offset -= Time.deltaTime * this.speed;
+		StartCoroutine(this.ResetGame());
 	}
 
 	IEnumerator ResetGame()
 	{
-		yield return new WaitForSeconds(100.0f);
-		Application.LoadLevel(Application.loadedLevel);
+		yield return new WaitForSeconds(60.0f);
+		Application.LoadLevel("MenuScene");
 	}
 	private void OnGUI()
 	{

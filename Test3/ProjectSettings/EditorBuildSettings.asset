@@ -27,3 +27,5 @@ EditorBuildSettings:
     path: Assets/Scenes/ForestLevel.unity
   - enabled: 1
     path: Assets/Scenes/ForestBossLevel.unity
+  - enabled: 1
+    path: Assets/Scenes/Credits.unity
