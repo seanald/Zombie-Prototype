@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\KillOnContact.cs" />
+     <Compile Include="Assets\Scripts\DecayHealth.cs" />
      <Compile Include="Assets\Scripts\Dialogue-Scripts\GenPat\dialogue_beforeGenPat.cs" />
      <Compile Include="Assets\Scripts\Dialogue-Scripts\GenPat\genpatDead.cs" />
      <Compile Include="Assets\Scripts\Dialogue-Scripts\GenPat\names_GenPat.cs" />
@@ -85,6 +86,8 @@
      <Compile Include="Assets\Scripts\Environment\FearObject.cs" />
      <Compile Include="Assets\Scripts\Environment\Hazard.cs" />
      <Compile Include="Assets\Scripts\Environment\HazardTurret.cs" />
+     <Compile Include="Assets\Scripts\Environment\VertHaz.cs" />
+     <Compile Include="Assets\Scripts\Environment\VertHazTurret.cs" />
      <Compile Include="Assets\Scripts\Model\Common\Attack.cs" />
      <Compile Include="Assets\Scripts\Model\Common\Character.cs" />
      <Compile Include="Assets\Scripts\Model\Common\GameOverManager.cs" />

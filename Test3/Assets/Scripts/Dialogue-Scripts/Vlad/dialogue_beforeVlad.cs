@@ -29,7 +29,7 @@ public class dialogue_beforeVlad : MonoBehaviour {
             text.text = "Oh, my break’s over";
             counter++;
         }
-        else if (counter == 21)
+        else if (counter >= 21)
         {
             Time.timeScale = 1;
             textBox.transform.localPosition = new Vector3(textBox.transform.localPosition.x + 12000.0f, textBox.transform.localPosition.y, textBox.transform.localPosition.z);
