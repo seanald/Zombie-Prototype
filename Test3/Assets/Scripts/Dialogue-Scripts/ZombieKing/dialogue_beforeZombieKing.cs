@@ -26,7 +26,7 @@ public class dialogue_beforeZombieKing : MonoBehaviour
 	void Update ()
 	{
 		if (timeLeft <= 0.0f) {
-			Application.LoadLevel ("MallLevel");
+			Application.LoadLevel ("SchoolLevel");
 		} else if (counter == 10) {
 			text.text = "You fool!Do you realize what you’ve done!? ";
 			counter++;

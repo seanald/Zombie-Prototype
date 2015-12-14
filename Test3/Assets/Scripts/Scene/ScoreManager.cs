@@ -23,7 +23,10 @@ public class ScoreManager : MonoBehaviour {
         {
             score = 0;
         }
-        text.text = "" + score;
+		if (this.text != null)
+		{
+			text.text = "" + score;
+		}
         
 	}
 

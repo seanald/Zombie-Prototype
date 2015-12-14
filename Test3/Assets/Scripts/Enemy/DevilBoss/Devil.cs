@@ -5,7 +5,7 @@ using System.Collections.Generic;
 public class Devil : Enemy
 {
 	private int random = 0;
-
+	
 	void IsFeared()
 	{
 		this.state = CharacterState.Fleeing;
@@ -22,27 +22,27 @@ public class Devil : Enemy
 		{
 			if (random == 1)
 			{
-				if (this.distance < this.attackDistance)
+				if (this.distance <= this.attackDistance)
 				{
 					this.Throw();
 					StartCoroutine(WaitForAnimation());
 				}
 				else
 				{
-					base.Seek(distVec);
+					base.Seek(this.distVec);
 					this.enemyAnimator.Play("Walk");
 				}
 			}
 			else if (random == 2)
 			{
-				if (this.distance < this.attackDistance + 100)
+				if (this.distance <= this.attackDistance + 100)
 				{
 					this.Spell();
 					StartCoroutine(WaitForAnimation());
 				}
 				else
 				{
-					base.Seek(distVec);
+					base.Seek(this.distVec);
 					this.enemyAnimator.Play("Walk");
 				}
 			}
@@ -90,11 +90,11 @@ public class Devil : Enemy
 		}
 
 		this.enemyAnimator.Play("Walk");
-		
+
 		
 		if (!this.strafing)
 		{
-			StartCoroutine(WaitForAttack());
+			StartCoroutine(this.WaitForAttack());
 		}
 	}
 	
